@@ -64,11 +64,8 @@
 
   &__label {
     align-self: flex-start;
-
-    display: block;
     cursor: pointer;
     font-size: 22px;
-
     display: flex;
     align-items: center;
     margin-bottom: 16px;
@@ -84,24 +81,12 @@
     padding: 12px 12px 12px 17px;
   }
 
-  &__remember {
-    display: none;
-
-    &:checked {
-      & + .modal__checkbox {
-        &:after {
-          background: url(../img/checkbox/checkbox.svg) no-repeat;
-        }
-      }
-    }
-  }
-
   &__checkbox {
     position: relative;
     display: block;
     height: 16px;
     width: 16px;
-    border: 1px solid #333333;
+    border: 1px solid #333;
     border-radius: 4px;
     margin: 0 8px 0 0;
 
@@ -112,6 +97,16 @@
       left: 2px;
       right: 2px;
       bottom: 2px;
+    }
+  }
+
+  &__remember {
+    display: none;
+
+    &:checked + .modal__checkbox {
+      &:after {
+        background: url('../img/checkbox/checkbox.svg') no-repeat;
+      }
     }
   }
 }

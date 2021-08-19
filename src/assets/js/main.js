@@ -30,9 +30,9 @@ window.onload = function () {
   };
 
   const hideOverlayByKeydown = (e) => {
-    e = e || window.event;
-    if (e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27) {
-      hideOverlay(e);
+    const elem = e || window.event;
+    if (elem.key === 'Escape' || elem.key === 'Esc' || elem.keyCode === 27) {
+      hideOverlay(elem);
     }
   };
 
@@ -44,18 +44,18 @@ window.onload = function () {
   const buttonTabs = document.querySelectorAll('.js-tabs');
   const tabsContent = document.querySelectorAll('.js-tabs-content');
 
-  buttonTabs.forEach((tab, e) => {
-    tabToggle(tab, e);
-  });
-
   function tabToggle(tab, tabPost) {
-    tab.addEventListener('click', function () {
+    tab.addEventListener('click', () => {
       buttonTabs.forEach((e) => e.classList.remove('button__tabs_active'));
       tab.classList.add('button__tabs_active');
       tabsContent.forEach((e) => e.classList.add('hidden'));
       tabsContent[tabPost].classList.remove('hidden');
     });
   }
+
+  buttonTabs.forEach((tab, e) => {
+    tabToggle(tab, e);
+  });
 
   // Login form with localStorage
 
@@ -74,7 +74,7 @@ window.onload = function () {
   };
 
   (function () {
-    checkbox.checked = localStorage.getItem('checkbox') === 'true' ? true : false;
+    checkbox.checked = localStorage.getItem('checkbox') === 'true';
 
     if (checkbox.checked && sessionStorage.getItem('reloaded') === 'true') {
       buttonOpenSignIn.classList.add('hidden');
@@ -83,7 +83,7 @@ window.onload = function () {
       userAuth.value = localStorage.getItem('user');
     }
     buttonSignOut.addEventListener('click', signOut);
-  })();
+  }());
 
   const submitForm = (e) => {
     const isName = userName.value;
@@ -91,10 +91,10 @@ window.onload = function () {
     e.preventDefault();
 
     if (
-      isName.trim() !== null &&
-      isPass.trim() !== null &&
-      isName.trim() !== '' &&
-      isPass.trim() !== ''
+      isName.trim() !== null
+      && isPass.trim() !== null
+      && isName.trim() !== ''
+      && isPass.trim() !== ''
     ) {
       sessionStorage.setItem('reloaded', true);
       localStorage.setItem('user', isName.replace(/\s+/g, ' ').trim());

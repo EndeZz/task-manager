@@ -4,6 +4,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const ESLintPlugin = require('eslint-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = (options) => {
   const isDev = options.name === 'development';
@@ -39,11 +41,13 @@ module.exports = (options) => {
       new ImageminPlugin({
         test: /\.(png|gif|svg|jpg|jpeg)$/i,
       }),
+      new ESLintPlugin({ extensions: ['ts', 'tsx', 'js', 'jsx'] }),
+      new StylelintPlugin({ extensions: ['css', 'scss', 'sass'] }),
     ],
     module: {
       rules: [
         {
-          test: /\.js$/,
+          test: /\.jsx?$/,
           exclude: /node_modules/,
           use: 'babel-loader',
         },
@@ -57,7 +61,7 @@ module.exports = (options) => {
         },
         {
           test: /\.css$/i,
-          use: [MiniCssExtractPlugin.loader, 'css-loader'],
+          use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
         },
         {
           test: /\.(s[ac]ss)$/i,

@@ -47,10 +47,13 @@
   }
 
   .movie-card {
+    margin-bottom: 26px;
+
     &:last-child {
       margin-right: 20px;
     }
   }
+
   .nav {
     display: flex;
     flex-direction: column;
@@ -82,10 +85,6 @@
   .genre__list {
     flex-wrap: wrap;
     justify-content: center;
-  }
-
-  .movie-card {
-    margin-bottom: 26px;
   }
 
   .footer {

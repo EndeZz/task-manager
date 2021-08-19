@@ -16,7 +16,7 @@
 
   &__item {
     cursor: pointer;
-    box-shadow: inset 0px 0px 16px rgba(15, 6, 6, 0.15);
+    box-shadow: inset 0 0 16px rgba(15, 6, 6, 0.15);
     border-radius: 6px;
     opacity: 0.8;
     transition: 0.2s ease-in-out;
@@ -42,7 +42,7 @@
     }
 
     &:nth-child(5n + 4) {
-      background: linear-gradient(127.83deg, #828282 8.44%, #333333 91.36%);
+      background: linear-gradient(127.83deg, #828282 8.44%, #333 91.36%);
     }
 
     &:hover {

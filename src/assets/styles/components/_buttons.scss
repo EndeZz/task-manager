@@ -1,5 +1,5 @@
 .button {
-  border: none;
+  border: 0;
   background: 0;
   cursor: pointer;
   outline: none;
@@ -19,7 +19,6 @@
 
   &__sign-in {
     @include font_config(normal, 500, $font-size-16, 19px);
-    border: 0 solid $color-red;
     border-radius: 4px;
     color: $color-light;
     background: $color-red;
