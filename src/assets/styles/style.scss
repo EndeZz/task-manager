@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+
+@import 'base/fonts';
+@import 'base/base';
+
+@import 'layout/header';
+@import 'layout/tabs';
+@import 'layout/news';
+@import 'layout/genre';
+@import 'layout/channels';
+@import 'layout/footer';
+
+@import 'components/buttons';
+@import 'components/title';
+@import 'components/hidden';
+@import 'components/modals';
+@import 'components/movie-cards';
+@import 'components/media';

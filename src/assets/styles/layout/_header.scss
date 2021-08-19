@@ -1,0 +1,53 @@
+.header {
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 44px;
+
+  &__search {
+    display: flex;
+    justify-content: space-between;
+    width: 402px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    @include font_config(normal, 400, $font-size-16, 19px);
+    padding: 6px 0;
+    border: 0;
+    border-bottom: 1px solid $color-gray;
+    outline: none;
+    line-height: 19px;
+    width: 320px;
+  }
+
+  &__auth {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__user-name {
+    @include font_config(normal, 400, $font-size-16, 19px);
+    padding: 6px 0;
+    margin-right: 16px;
+    border: 0;
+    outline: none;
+    line-height: 19px;
+    text-align: end;
+    max-width: 190px;
+
+    &:hover {
+      border-bottom: 1px solid $color-gray;
+      border-top: 1px solid $color-light;
+    }
+  }
+}

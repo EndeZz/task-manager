@@ -1,0 +1,117 @@
+.modal {
+  &__overlay {
+    position: fixed;
+    z-index: $z-fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color-gray-opacity;
+    cursor: pointer;
+  }
+
+  &__body {
+    position: fixed;
+    z-index: $z-fixed;
+    left: 50%;
+    top: 50%;
+    max-width: 304px;
+    min-height: 10rem;
+    transform: translate(-50%, -50%);
+  }
+
+  &__content {
+    background-color: $color-light;
+    padding: 36px;
+    width: 304px;
+    height: 394px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__auth {
+    position: absolute;
+    bottom: 36px;
+    left: 96px;
+  }
+
+  &__title {
+    @include font_config(normal, 500, 28px, 33.18px);
+    margin-bottom: 24px;
+  }
+
+  &__input {
+    @include font_config(normal, 400, $font-size-16, 19px);
+    border: 0;
+    border-bottom: 1px solid $color-gray;
+    outline: none;
+    width: 232px;
+    margin-bottom: 24px;
+    padding-bottom: 6px;
+  }
+
+  &__text {
+    @include font_config(normal, 400, $font-size-16, 18.96px);
+  }
+
+  &__label {
+    align-self: flex-start;
+
+    display: block;
+    cursor: pointer;
+    font-size: 22px;
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+
+  &__error {
+    color: #cc2e12;
+    border-radius: 8px;
+    background: #ffebea;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    padding: 12px 12px 12px 17px;
+  }
+
+  &__remember {
+    display: none;
+
+    &:checked {
+      & + .modal__checkbox {
+        &:after {
+          background: url(../img/checkbox/checkbox.svg) no-repeat;
+        }
+      }
+    }
+  }
+
+  &__checkbox {
+    position: relative;
+    display: block;
+    height: 16px;
+    width: 16px;
+    border: 1px solid #333333;
+    border-radius: 4px;
+    margin: 0 8px 0 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 2px;
+      right: 2px;
+      bottom: 2px;
+    }
+  }
+}
