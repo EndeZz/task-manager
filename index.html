@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Видеосервис</title>
+    <link rel="shortcut icon" href="image/video-ico.ico" type="image/x-icon">
+    <!--<link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap" rel="stylesheet">-->
+    <script defer src="browser.js"></script>
+    
+    <link rel="stylesheet" href="styles/scroll.css">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/modal.css">
+
+
+</head>
+    <body>
+        <header>
+            <a href="index.html" class="logo-wrap">
+                <img class="logo-img" src="image/video-logo.png" alt="video-logo">
+                <h1 class="logo-text">Видеосервис</h1>
+            </a>
+            <div class="search-wrap">
+                <input class="input-search" placeholder="Поиск..." maxlength="30">
+                <button class="btn-search">Найти</button>
+            </div>
+            <div class="btn-wrap">
+                <button class="modal-btn header-btn-js">Войти</button>
+            </div>
+        </header>
+        <nav class="nav-wrap">
+            <button class="nav-btn tab_film-js nav-btn_active">Фильмы</button>
+            <button class="nav-btn tab_tv-js">Телеканалы</button>
+        </nav>
+        <main>
+            <section class="section-content_film film-js">
+                <h1 class="section-title">&#128293; Новинки</h1>
+                <a class="elem-film">
+                    <div class="blackout">
+                        В новом выпуске ми-ми-мишки изобретут машину сна,
+                        а Дракоша Тоша научит завязывать шнурки.
+                        Также зрители увидят новые серии мультфильмов «Четверо в кубе»,
+                        «Лео и Тиг» и совершенно новый мультсериал «Снежная королева: Хранители чудес».
+                        «МУЛЬТ в кино. Выпуск 103. Некогда грустить!» — в кинотеатрах с 28 сентября!
+                    </div>
+                    <img class="section-img" src="image/kat.jpg" alt="Мультфильм" >
+                    <p class="film-elem_text">Мульт в кино. Выпуск №103. Некогда грустить!</p>
+                </a>
+                <a class="elem-film">
+                    <div class="blackout">Бэтмен поднимает ставки в войне с криминалом.
+                        С помощью лейтенанта Джима Гордона и прокурора Харви Дента он намерен очистить улицы от преступности,
+                        отравляющей город. Сотрудничество оказывается эффективным, но скоро они обнаружат себя посреди хаоса,
+                        развязанного восходящим криминальным гением, известным испуганным горожанам под именем Джокер.
+                    </div>
+                    <img class="section-img" src="image/bat.jpg" alt="Бэтмен" >
+                    <p class="film-elem_text">Новый Бэтмен</p>
+                </a>
+                <a class="elem-film">
+                    <div class="blackout">Фильм повествует о череде событий, произошедших в Голливуде в 1969 году,
+                        на закате его «золотого века».
+                        Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в
+                        стремительно меняющемся мире киноиндустрии.
+                    </div>
+                    <img class="section-img" src="image/Holly.jpg" alt="Однажды в голливуде" >
+                    <p class="film-elem_text">Однажды... в Голливуде</p>
+                </a>
+                <a class="elem-film">
+                    <div class="blackout">Танцовщицы элитного стриптиз-клуба,
+                        клиенты которого — известные финансисты с Уолл-Стрит — привыкли к большим заработкам и роскошной жизни.
+                        Но после финансового кризиса 2008 года посетителей в клубе заметно поубавилось, и деньги к девушкам уже не текут рекой.
+                        Тяжёлые времена требуют отчаянных мер, и бывшие танцовщицы решаются на авантюрный шаг.
+                    </div>
+                    <img class="section-img" src="image/girl.jpg" alt="Стриптизёрши" >
+                    <p class="film-elem_text">Стриптизёрши</p>
+                </a>
+            </section>
+            <section class="section-content_film genre-js">
+                <h1 class="section-title">Жанры</h1>
+                <div class="elem-wrap">
+                    <a class="genre-comedy">
+                        <p class="genre-elem_text">Комедии</p>
+                    </a>
+                    <img class="genre-img" src="image/comedy.png">
+                </div>
+                <div class="elem-wrap">
+                    <a class="genre-dramas">
+                        <p class="genre-elem_text">Драмы</p>
+                    </a>
+                    <img class="genre-img" src="image/dramas.png">
+                </div>
+                <div class="elem-wrap">
+                    <a class="genre-fantastic">
+                        <p class="genre-elem_text">Фантастика</p>
+                    </a>
+                    <img class="genre-img" src="image/fantastic.png">
+                </div>
+                <div class="elem-wrap">
+                    <a class="genre-horrors">
+                        <p class="genre-elem_text">Ужасы</p>
+                    </a>
+                    <img class="genre-img" src="image/horrors.png">
+                </div>
+            </section>
+            <section class="section-content_tv section-content_deactive tv-js">
+                <div class="content_tv-wrap">
+                    <div class="elem-tv">
+                        <div class="elem-tv_img">
+                            <img src="image/first.png" alt="Первый канал">
+                        </div>
+                        <article class="elem-tv_text">
+                            <p class="elem-tv_title">
+                                <img src="image/first.png" alt="Первый канал" class="tv-img_mobile">
+                                Первый канал
+                            </p>
+                            <ul class="elem-tv_channels">
+                                <li>13:00</li>
+                                <li>Новости (с субтитрами)</li>
+                                <li>14:00</li>
+                                <li>Давай поженимся</li>
+                                <li>15:00</li>
+                                <li>Другие новости</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="elem-tv">
+                        <div class="elem-tv_img">
+                            <img src="image/2x2.png" alt="2x2">
+                        </div>
+                    <article class="elem-tv_text">
+                        <p class="elem-tv_title">
+                            <img src="image/2x2.png" alt="2x2" class="tv-img_mobile">
+                            2x2
+                        </p>
+                        <ul class="elem-tv_channels">
+                            <li>13:00</li>
+                            <li>МУЛЬТ ТВ. Сезон 4, 7 серия</li>
+                            <li>14:00</li>
+                            <li>ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон&nbsp7, 7 серия </li>
+                            <li>15:00</li>
+                            <li>БУРДАШЕВ. Сезон 1, 20 серия</li>
+                        </ul>
+                    </article>
+                </div>
+                    <div class="elem-tv">
+                        <div class="elem-tv_img">
+                            <img src="image/rbc.png" alt="РБК">
+                        </div>
+                        <article class="elem-tv_text">
+                            <p class="elem-tv_title">
+                                <img src="image/rbc.png" alt="РБК" class="tv-img_mobile">
+                                РБК
+                            </p>
+                            <ul class="elem-tv_channels">
+                                <li>13:00</li>
+                                <li>ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС </li>
+                                <li>14:00</li>
+                                <li>ДЕНЬ. Главные темы</li>
+                                <li>15:00</li>
+                                <li>Главные новости</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="elem-tv">
+                        <div class="elem-tv_img">
+                            <img src="image/amedia.png" alt="AMEDIA PREMIUM">
+                        </div>
+                        <article class="elem-tv_text">
+                            <p class="elem-tv_title">
+                                <img src="image/amedia.png" alt="AMEDIA PREMIUM" class="tv-img_mobile">
+                                AMEDIA PREMIUM
+                            </p>
+                            <ul class="elem-tv_channels">
+                                <li>13:00</li>
+                                <li>Клиент всегда мёртв</li>
+                                <li>14:00</li>
+                                <li>Голодные игры: Сойка-пересмешница. Часть I</li>
+                                <li>15:00</li>
+                                <li>Секс в большом городе</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="elem-tv">
+                        <div class="elem-tv_img">
+                            <img src="image/first.png" alt="Первый канал">
+                        </div>
+                        <article class="elem-tv_text">
+                            <p class="elem-tv_title">
+                                <img src="image/first.png" alt="Первый канал" class="tv-img_mobile">
+                                Первый канал
+                            </p>
+                            <ul class="elem-tv_channels">
+                                <li>13:00</li>
+                                <li>Новости (с субтитрами)</li>
+                                <li>14:00</li>
+                                <li>Давай поженимся</li>
+                                <li>15:00</li>
+                                <li>Другие новости</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+                <div class="scroll">
+                    <div class="scroll-thumb"></div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="footer-wrap">
+                <img class="footer-img" src="image/htc-logo.png">
+                <section class="footer-text">
+                    <p class="footer-text">426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК&nbsp;«Металлург»)</p>
+                    <p class="footer-text_mobile">г. Ижевск, ул. Карла Маркса, 246 (ДК&nbsp;«Металлург»)</p>
+                    <p>+7 (3412) 93-88-61, 43-29-29</p>
+                    <a href="http://htc-cs.ru">htc-cs.ru</a>
+                </section>
+            </div>
+        </footer>
+        <div class="modal-wrap modal-wrap_deactive">
+            <form class="modal-form modal-form-js">
+                <p>Вход</p>
+                <input class="modal-input login-js" placeholder="Логин" type="text" required>
+                <input class="modal-input password-js" placeholder="Пароль" type="password" required>
+                <input class="check-modal" type="checkbox" id="checkbox-id" />
+                <label for="checkbox-id" class="modal-label">Запомнить</label>
+                <button type="button" class="modal-btn modal-btn-js">Войти</button>
+            </form>
+        </div>
+    </body>
+</html>
