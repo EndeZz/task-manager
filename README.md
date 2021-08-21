@@ -1,3 +1,16 @@
-# Frontend
+## Installation
+Clone this repo and npm install.
+```bash
+npm i
+```
 
-Вся информация в [wiki](https://gitlab.study.htc-cs.com/root/frontend/fe-21-1/-/wikis/home).
+## Usage
+```bash
+npm start
+```
+You can view the development server at [localhost:8080/public](http://localhost:8080/public/).
+
+## Production build
+```bash
+npm run build
+```
