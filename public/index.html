@@ -12,7 +12,7 @@
 </head>
 <body>
   <header class="header">
-    <a href="index.html"><img src="img/logo.svg" class="logo" alt="logo"></a>
+    <a href="index.html"><img src="/src/img/logo.svg" class="logo" alt="logo"></a>
     <form class="search">
       <div>
         <input type="search" class="search_field" placeholder="Поиск...">
@@ -23,14 +23,14 @@
     </form>
     <div class="autorized-user">
       <div class="user"></div>
-      <button class="logout-button" id="login" data-toggle="collapse">Выйти</button>
+      <button class="logout-button" id="logout" data-toggle="collapse">Выйти</button>
     </div>
-    <button class="login-button" id="login" data-toggle="collapse">Войти</button>
+    <button class="login-button active" id="login" data-toggle="collapse">Войти</button>
   </header>
   <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <h2 class="modal-title" id="exampleModalLabel">Войти</h5>
+        <h2 class="modal-title" id="exampleModalLabel">Войти</h2>
         <div class="modal-body">
           <input id="sign-up-login" type="text" class="sign-up-field" name="login" placeholder="Логин" value=''>
           <input id="sign-up-password" required="" type="password" class="sign-up-field" name="password" placeholder="Пароль" value=''>  
@@ -42,28 +42,28 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button class="sign-up-btn" id="login">Войти</button>
+          <button class="sign-up-btn">Войти</button>
         </div>
       </div>
     </div>
   </div>
   <div class="overlay"></div>
-  <section class="nav">
+  <div class="nav">
     <div class="tabs">
       <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
-          <button class="nav-link" id="movies-tab" data-bs-toggle="tab" type="button" data-bs-target="#movies">Фильмы</button>
+          <button class="nav-link active" id="movies-tab" data-bs-toggle="tab" type="button" data-bs-target="#movies">Фильмы</button>
         </li>
         <li class="nav-item">
-          <button class="nav-link active" id="tv_programme-tab" data-bs-toggle="tab"  type="button" data-bs-target="#tv_programme">Телеканалы</button>
+          <button class="nav-link" id="tv_programme-tab" data-bs-toggle="tab"  type="button" data-bs-target="#tv_programme">Телеканалы</button>
         </li>
       </ul>
     </div>
-  </section>
-  <section class="tv_programme active" id="tv_programme">
+  </div>
+  <section class="tv_programme" id="tv_programme">
     <div class="channels">
       <div class="channel scrollbar">
-        <img src="img/channel 1.svg" class="channel_logo" alt="channel-logo">
+        <img src="/src/img/channel1.svg" class="channel_logo" alt="channel-logo">
         <div class="programme_list">
           <h3 class="channel__heading">Первый канал</h3>
           <ul class="programme_list">
@@ -83,7 +83,7 @@
         </div>
       </div>
       <div class="channel">
-        <img src="img/2x2.svg" class="channel_logo" alt="channel-logo">
+        <img src="/src/img/2x2.svg" class="channel_logo" alt="channel-logo">
         <div class="programme_list">
           <h3 class="channel__heading">2х2</h3>
           <ul class="programme_list">
@@ -103,7 +103,7 @@
         </div>
       </div>
       <div class="channel">
-        <img src="img/rbk.svg" class="channel_logo" alt="channel-logo">
+        <img src="/src/img/rbk.svg" class="channel_logo" alt="channel-logo">
         <div class="programme_list">
           <h3 class="channel__heading">РБК</h3>
           <ul class="programme_list">
@@ -123,7 +123,7 @@
         </div>
       </div>
       <div class="channel">
-        <img src="img/amedia.svg" class="channel_logo" alt="channel-logo">
+        <img src="/src/img/amedia.svg" class="channel_logo" alt="channel-logo">
         <div class="programme_list">
           <h3 class="channel__heading">AMEDIA PREMIUM</h3>
           <ul class="programme_list">
@@ -144,7 +144,7 @@
       </div>
       <!-- additional channels for scrolling -->
       <div class="channel">
-        <img src="img/channel 1.svg" class="channel_logo" alt="channel-logo">
+        <img src="/src/img/channel1.svg" class="channel_logo" alt="channel-logo">
         <div >
           <h3 class="channel__heading">Первый канал</h3>
           <ul class="programme_list">
@@ -164,7 +164,7 @@
         </div>
       </div>
       <div class="channel">
-        <img src="img/2x2.svg" class="channel_logo" alt="channel-logo">
+        <img src="/src/img/2x2.svg" class="channel_logo" alt="channel-logo">
         <div class="programme_list">
           <h3 class="channel__heading">2х2</h3>
           <ul class="programme_list">
@@ -185,12 +185,12 @@
       </div>
     </div>
   </section>
-  <section class="movies" id="movies">
+  <section class="movies active" id="movies">
     <h2 class="text movies_heading">🔥 Новинки</h2>
     <div class="new">
       <div class="movie">
         <div class="movie_cover">
-          <img src="img/cat.jpg" alt="">
+          <img src="/src/img/cat.jpg" alt="">
           <p class="film_description"></p>
         </div>
         <h3 class="film_name">Мульт в кино. Выпуск №103. Некогда грустить!</h3>
@@ -198,21 +198,21 @@
       </div>
       <div class="movie">
         <div class="movie_cover">
-          <img src="img/batman.jpg" alt="">
+          <img src="/src/img/batman.jpg" alt="">
           <p class="film_description"></p>
         </div>
         <h3 class="film_name">Новый Бэтмен</h3>
       </div>
       <div class="movie">
         <div class="movie_cover">
-          <img src="img/hoolywood.jpg" alt="">
+          <img src="/src/img/hoolywood.jpg" alt="">
           <p class="film_description">Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.</p>
         </div>
         <h3 class="film_name">Однажды... в Голливуде</h3>
       </div>
       <div class="movie">
         <div class="movie_cover">
-          <img src="img/strippers.jpg" alt="">
+          <img src="/src/img/strippers.jpg" alt="">
           <p class="film_description"></p>
         </div>
         <h3 class="film_name">Стриптизёрши</h3>
@@ -240,13 +240,13 @@
     </div>
   </section>
   <footer class="footer">
-    <img src="img/htc-cs-logo.svg" width="32" height="64" alt="htc-cs-logo">
+    <img src="/src/img/htc-cs-logo.svg" width="32" height="64" alt="htc-cs-logo">
     <div class="contacts">
       <p class="footer_text">426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</p>
       <p class="footer_text">+7 (3412) 93-88-61, 43-29-29</p>
       <a href="htc-cs.ru" class="text htc-cs_link">htc-cs.ru</a>
     </div>
   </footer>
-  <script type="module" src='src/index.js'></script>
+  <script type="module" src='../dist/main.js'></script>
 </body>
 </html>
