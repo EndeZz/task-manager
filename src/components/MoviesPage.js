@@ -2,32 +2,37 @@ import { useState } from 'react';
 import Movies from './Movies';
 import Genres from './Genres';
 
+import catImg from '../../public/images/cat.png';
+import batmanImg from '../../public/images/batman.png';
+import hollywoodImg from '../../public/images/hollywood.png';
+import girlImg from '../../public/images/girl.png';
+
 const MoviesPage = () => {
   const [movies, setMovies] = useState([
     {
       id: 1,
       name: 'Мульт в кино. Выпуск №103. Некогда грустить!',
       description: '',
-      img: '../images/cat.png',
+      img: catImg,
     },
     {
       id: 2,
       name: 'Новый бэтмен',
       description: '',
-      img: '../images/batman.png',
+      img: batmanImg,
     },
     {
       id: 3,
       name: 'Однажды... в Голливуде',
       description:
         'Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.',
-      img: '../images/hollywood.png',
+      img: hollywoodImg,
     },
     {
       id: 4,
       name: 'Стриптизёрши',
       description: '',
-      img: '../images/girl.png',
+      img: girlImg,
     },
   ]);
 
