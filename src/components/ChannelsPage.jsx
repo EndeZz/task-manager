@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+
 import Channels from './Channels';
 
 import firstImg from '../../public/images/first.png';
@@ -7,7 +8,7 @@ import rbcImg from '../../public/images/rbc.png';
 import amediaImg from '../../public/images/amedia.png';
 
 const ChannelsPage = () => {
-  const [channels, setChannels] = useState([
+  const [channels] = useState([
     {
       id: 1,
       title: 'Первый канал',

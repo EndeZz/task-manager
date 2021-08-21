@@ -1,13 +1,14 @@
-import react, { useState } from "react";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
-const SignIn = ({ signin, error }) => {
-  /*const [login, setLogin] = useState("");
+const SignIn = ({ signin }) => {
+  /* const [login, setLogin] = useState("");
   const [password, setPassword] = useState("");
   const [keep, setKeep] = useState(false);
 */
   const [details, setDetails] = useState({
-    login: "",
-    password: "",
+    login: '',
+    password: '',
     keep: false,
   });
 
@@ -51,6 +52,10 @@ const SignIn = ({ signin, error }) => {
       </form>
     </div>
   );
+};
+
+SignIn.propTypes = {
+  signin: PropTypes.func.isRequired,
 };
 
 export default SignIn;

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Movies from './Movies';
 import Genres from './Genres';
 
@@ -8,7 +8,7 @@ import hollywoodImg from '../../public/images/hollywood.png';
 import girlImg from '../../public/images/girl.png';
 
 const MoviesPage = () => {
-  const [movies, setMovies] = useState([
+  const [movies] = useState([
     {
       id: 1,
       name: 'Мульт в кино. Выпуск №103. Некогда грустить!',
@@ -36,7 +36,7 @@ const MoviesPage = () => {
     },
   ]);
 
-  const [genres, setGenres] = useState([
+  const [genres] = useState([
     {
       id: 1,
       title: 'Комедии',
@@ -69,9 +69,9 @@ const MoviesPage = () => {
 
   return (
     <>
-      <h1 className='page-header'>🔥 Новинки</h1>
+      <h1 className="page-header">🔥 Новинки</h1>
       <Movies movies={movies} />
-      <h1 className='page-header'>Жанры</h1>
+      <h1 className="page-header">Жанры</h1>
       <Genres genres={genres} />
     </>
   );

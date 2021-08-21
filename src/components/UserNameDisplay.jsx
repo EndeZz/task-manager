@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 
 const UserNameDisplay = ({ user, onChangeUserName }) => {
   const [isEditing, setIsEditing] = useState(false);
@@ -39,6 +40,13 @@ const UserNameDisplay = ({ user, onChangeUserName }) => {
       )}
     </div>
   );
+};
+
+UserNameDisplay.propTypes = {
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
+  onChangeUserName: PropTypes.func.isRequired,
 };
 
 export default UserNameDisplay;

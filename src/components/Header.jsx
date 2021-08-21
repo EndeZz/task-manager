@@ -1,6 +1,6 @@
+import React, { useState, useEffect } from 'react';
 import SignInModalWindow from './SignInModalWindow';
 import UserNameDisplay from './UserNameDisplay';
-import { useState, useEffect } from 'react';
 
 import logoImg from '../../public/images/logo.png';
 
@@ -16,6 +16,8 @@ const initialUser = { login: '', name: '' };
 
 const Header = () => {
   const [signInModalActive, setSignInModalActive] = useState(false);
+  const [user, setUser] = useState(initialUser);
+  const [error] = useState('');
 
   useEffect(() => {
     const loggedInUserString = localStorage.getItem(loggedInUserKey);
@@ -27,18 +29,11 @@ const Header = () => {
     }
   }, []);
 
-  const [user, setUser] = useState(initialUser);
-
-  const [error, setError] = useState('');
-
   const signin = (details) => {
-    console.log(details);
-
     if (
-      details.login === adminUser.login &&
-      details.password === adminUser.password
+      details.login === adminUser.login
+      && details.password === adminUser.password
     ) {
-      console.log('Logged in');
       const loggedInUser = {
         login: details.login,
         name: adminUser.name,
@@ -47,13 +42,10 @@ const Header = () => {
       localStorage.setItem(loggedInUserKey, JSON.stringify(loggedInUser));
       setUser(loggedInUser);
       setSignInModalActive(false);
-    } else {
-      console.log('details do not match');
     }
   };
 
   const logout = () => {
-    console.log('Logout');
     localStorage.removeItem(loggedInUserKey);
     setUser(initialUser);
   };
@@ -65,29 +57,30 @@ const Header = () => {
   };
 
   return (
-    <div className='header'>
-      <div className='logo'>
-        <img src={logoImg} alt='' />
+    <div className="header">
+      <div className="logo">
+        <img src={logoImg} alt="" />
         <h1>Видеосервис</h1>
       </div>
 
-      <form action='' className='finder'>
-        <input type='text' placeholder='Поиск...' className='input-field' />
-        <button className='find-btn' type='submit'>
+      <form action="" className="finder">
+        <input type="text" placeholder="Поиск..." className="input-field" />
+        <button className="find-btn" type="submit">
           Найти
         </button>
       </form>
 
       {user.login !== '' ? (
-        <div className='welcome-user'>
+        <div className="welcome-user">
           <UserNameDisplay user={user} onChangeUserName={onChangeUserName} />
-          <button onClick={logout} className='sign-out-btn'>
+          <button type="button" onClick={logout} className="sign-out-btn">
             Выйти
           </button>
         </div>
       ) : (
         <button
-          className='sign-in-btn'
+          type="button"
+          className="sign-in-btn"
           onClick={() => setSignInModalActive(true)}
         >
           Войти

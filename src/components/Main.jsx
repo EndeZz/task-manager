@@ -1,7 +1,7 @@
-import { useState } from "react";
-import MainHeader from "./MainHeader";
-import MoviesPage from "./MoviesPage";
-import ChannelsPage from "./ChannelsPage";
+import React, { useState } from 'react';
+import MainHeader from './MainHeader';
+import MoviesPage from './MoviesPage';
+import ChannelsPage from './ChannelsPage';
 
 const PagesTab = {
   MOVIES: 0,
