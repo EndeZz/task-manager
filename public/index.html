@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Видеосервис</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a href="index.html"><img src="img/logo.svg" class="logo" alt="logo"></a>
+    <form class="search">
+      <div>
+        <input type="search" class="search_field" placeholder="Поиск...">
+      </div>
+      <div>
+        <button type="submit" class="text search_btn">Найти</button>
+      </div>
+    </form>
+    <div class="autorized-user">
+      <div class="user"></div>
+      <button class="logout-button" id="login" data-toggle="collapse">Выйти</button>
+    </div>
+    <button class="login-button" id="login" data-toggle="collapse">Войти</button>
+  </header>
+  <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <h2 class="modal-title" id="exampleModalLabel">Войти</h5>
+        <div class="modal-body">
+          <input id="sign-up-login" type="text" class="sign-up-field" name="login" placeholder="Логин" value=''>
+          <input id="sign-up-password" required="" type="password" class="sign-up-field" name="password" placeholder="Пароль" value=''>  
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id='checkbox'>
+            <label class="form-check-label" for='checkbox'>
+              Запомнить
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="sign-up-btn" id="login">Войти</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="overlay"></div>
+  <section class="nav">
+    <div class="tabs">
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+          <button class="nav-link" id="movies-tab" data-bs-toggle="tab" type="button" data-bs-target="#movies">Фильмы</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link active" id="tv_programme-tab" data-bs-toggle="tab"  type="button" data-bs-target="#tv_programme">Телеканалы</button>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="tv_programme active" id="tv_programme">
+    <div class="channels">
+      <div class="channel scrollbar">
+        <img src="img/channel 1.svg" class="channel_logo" alt="channel-logo">
+        <div class="programme_list">
+          <h3 class="channel__heading">Первый канал</h3>
+          <ul class="programme_list">
+            <li class="list_element">
+              <time class="current_programme">13:00</time>
+              <p class="programme_text current_programme">Новости (с субтитрами)</p>
+            </li>
+            <li class="list_element">
+              <time>14:00</time>
+              <p class="programme_text">Давай поженимся</p>
+            </li>
+            <li class="list_element">
+              <time>15:00</time>
+              <p  class="programme_text">Другие новости</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="channel">
+        <img src="img/2x2.svg" class="channel_logo" alt="channel-logo">
+        <div class="programme_list">
+          <h3 class="channel__heading">2х2</h3>
+          <ul class="programme_list">
+            <li class="list_element">
+              <time class="current_programme">13:00</time>
+              <p class="programme_text current_programme">МУЛЬТ ТВ. Сезон 4, 7 серия</p>
+            </li>
+            <li class="list_element">
+              <time>14:00</time>
+              <p class="programme_text">ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</p>
+            </li>
+            <li class="list_element">
+              <time>15:00</time>
+              <p class="programme_text">БУРДАШЕВ. Сезон 1, 20 серия</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="channel">
+        <img src="img/rbk.svg" class="channel_logo" alt="channel-logo">
+        <div class="programme_list">
+          <h3 class="channel__heading">РБК</h3>
+          <ul class="programme_list">
+            <li class="list_element">
+              <time class="current_programme">13:00</time>
+              <p class="programme_text current_programme">ДЕНЬ. Горючая смесь: как бороться с суррогатом на АЗС</p>
+            </li>
+            <li class="list_element">
+              <time>14:00</time>
+              <p class="programme_text">ДЕНЬ. Главные темы</p>
+            </li>
+            <li class="list_element">
+              <time>15:00</time>
+              <p class="programme_text">Главные новости</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="channel">
+        <img src="img/amedia.svg" class="channel_logo" alt="channel-logo">
+        <div class="programme_list">
+          <h3 class="channel__heading">AMEDIA PREMIUM</h3>
+          <ul class="programme_list">
+            <li class="list_element">
+              <time class="current_programme">13:00</time>
+              <p class="programme_text current_programme">Клиент всегда мёртв</p>
+            </li>
+            <li class="list_element">
+              <time>14:00</time>
+              <p class="programme_text">Голодные игры: Сойка-пересмешница. Часть I</p>
+            </li>
+            <li class="list_element">
+              <time>15:00</time>
+              <p class="programme_text">Секс в большом городе</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- additional channels for scrolling -->
+      <div class="channel">
+        <img src="img/channel 1.svg" class="channel_logo" alt="channel-logo">
+        <div >
+          <h3 class="channel__heading">Первый канал</h3>
+          <ul class="programme_list">
+            <li class="list_element">
+              <time class="current_programme">13:00</time>
+              <p class="programme_text current_programme">Новости (с субтитрами)</p>
+            </li>
+            <li class="list_element">
+              <time>14:00</time>
+              <p class="programme_text">Давай поженимся</p>
+            </li>
+            <li class="list_element">
+              <time>15:00</time>
+              <p  class="programme_text">Другие новости</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="channel">
+        <img src="img/2x2.svg" class="channel_logo" alt="channel-logo">
+        <div class="programme_list">
+          <h3 class="channel__heading">2х2</h3>
+          <ul class="programme_list">
+            <li class="list_element">
+              <time class="current_programme">13:00</time>
+              <p class="programme_text current_programme">МУЛЬТ ТВ. Сезон 4, 7 серия</p>
+            </li>
+            <li class="list_element">
+              <time>14:00</time>
+              <p class="programme_text">ПОДОЗРИТЕЛЬНАЯ СОВА. Сезон 7, 7 серия</p>
+            </li>
+            <li class="list_element">
+              <time>15:00</time>
+              <p class="programme_text">БУРДАШЕВ. Сезон 1, 20 серия</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="movies" id="movies">
+    <h2 class="text movies_heading">🔥 Новинки</h2>
+    <div class="new">
+      <div class="movie">
+        <div class="movie_cover">
+          <img src="img/cat.jpg" alt="">
+          <p class="film_description"></p>
+        </div>
+        <h3 class="film_name">Мульт в кино. Выпуск №103. Некогда грустить!</h3>
+        <p class="film_description">
+      </div>
+      <div class="movie">
+        <div class="movie_cover">
+          <img src="img/batman.jpg" alt="">
+          <p class="film_description"></p>
+        </div>
+        <h3 class="film_name">Новый Бэтмен</h3>
+      </div>
+      <div class="movie">
+        <div class="movie_cover">
+          <img src="img/hoolywood.jpg" alt="">
+          <p class="film_description">Фильм повествует о череде событий, произошедших в Голливуде в 1969 году, на закате его «золотого века». Известный актер Рик Далтон и его дублер Клифф Бут пытаются найти свое место в стремительно меняющемся мире киноиндустрии.</p>
+        </div>
+        <h3 class="film_name">Однажды... в Голливуде</h3>
+      </div>
+      <div class="movie">
+        <div class="movie_cover">
+          <img src="img/strippers.jpg" alt="">
+          <p class="film_description"></p>
+        </div>
+        <h3 class="film_name">Стриптизёрши</h3>
+      </div>
+    </div>
+
+    <h2 class="movies_heading">Жанры</h2>
+    <div class="genres">
+      <div class="genre genre_1">
+        <p class="genre_emoji">&#128513;</p>
+        <h3 class="text genre_name">Комедии</h3>
+      </div>
+      <div class="genre genre_2">
+        <p class="genre_emoji">&#128557;</p>
+        <h3 class="genre_name">Драмы</h3>
+      </div>
+      <div class="genre genre_3">
+        <p class="genre_emoji">&#128125;</p>
+        <h3 class="genre_name">Фантастика</h3>
+      </div>
+      <div class="genre genre_4">
+        <p class="genre_emoji">&#128123;</p>
+        <h3 class="genre_name">Ужасы</h3>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <img src="img/htc-cs-logo.svg" width="32" height="64" alt="htc-cs-logo">
+    <div class="contacts">
+      <p class="footer_text">426057, Россия, Удмуртская Республика, г. Ижевск, ул. Карла Маркса, 246 (ДК «Металлург»)</p>
+      <p class="footer_text">+7 (3412) 93-88-61, 43-29-29</p>
+      <a href="htc-cs.ru" class="text htc-cs_link">htc-cs.ru</a>
+    </div>
+  </footer>
+  <script type="module" src='src/index.js'></script>
+</body>
+</html>
