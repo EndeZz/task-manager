@@ -1,0 +1,439 @@
+:root {
+  --htc-color: #1f4766;
+  --red: #e5261e;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+*:focus {
+  outline: none;
+}
+
+body {
+  height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.header {
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header .logo {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+}
+
+.header .logo .img {
+  margin: 30px;
+}
+
+.header h1 {
+  margin-left: 15px;
+  font-size: 20px;
+  color: #333333;
+  font-family: "Rubik", sans-serif;
+}
+
+.finder {
+  display: flex;
+  align-items: center;
+}
+
+.input-field {
+  border: none;
+  border-bottom: 1px solid #333333;
+  width: 320px;
+  height: 25px;
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #828282;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #828282;
+  opacity: 1;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #828282;
+  opacity: 1;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #828282;
+}
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #828282;
+}
+
+::placeholder {
+  /* Most modern browsers support this now. */
+  color: #828282;
+}
+
+.find-btn {
+  margin-left: 20px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--red);
+  background-color: #ffffff;
+}
+
+.welcome-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.welcome-user h3 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.welcome-user input {
+  width: fit-content;
+}
+
+.sign-in-btn {
+  margin-top: 15px;
+  height: 38px;
+  width: 113px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: var(--red);
+}
+
+.sign-out-btn {
+  height: 38px;
+  width: 113px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--red);
+  background-color: #ffffff;
+}
+
+.sign-in-btn:hover {
+  background-color: #cc221b;
+}
+
+.sign-in-container {
+  height: 100vh;
+  width: 100vw;
+  background: rgb(51, 51, 51, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+}
+
+.sign-in-container.active {
+  transform: scale(1);
+  z-index: 10;
+}
+
+.sign-in-card {
+  opacity: none;
+  padding: 20px;
+  background-color: #ffffff;
+  width: 304px;
+  height: 395px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.sign-in-card form {
+  margin-top: 20px;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-in-card form .input-field {
+  width: 90%;
+  margin-top: 20px;
+}
+
+.sign-in-checkbox {
+  margin-top: 20px;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-in-checkbox input {
+  margin-left: 15px;
+  margin-right: 15px;
+  height: 16px;
+  width: 16px;
+  border-radius: 4px;
+}
+
+.sign-in-checkbox p {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+}
+
+.sign-in-card h1 {
+  margin: 0;
+  margin-top: 20px;
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 28px;
+}
+
+.sign-in-card button {
+  margin-top: 100px;
+}
+
+.main {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 80vw;
+}
+
+.main-headers {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.main-headers button {
+  background-color: #ffffff;
+  border: none;
+  font-size: 28px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.main-headers .active-page {
+  color: var(--red);
+  border-bottom: 2px solid var(--red);
+}
+
+.page-header {
+  font-family: "Rubik", sans-serif;
+  font-size: 24px;
+  color: #333333;
+  font-style: medium;
+}
+
+.movies {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.movie-item {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 280px;
+  height: 370px;
+  border: 2px solid #ffff;
+  border-radius: 8px;
+}
+
+.movie-item img {
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.img-overlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 8px;
+  position: absolute;
+  background: rgb(51, 51, 51, 0.8);
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.movie-item-description {
+  padding: 15px;
+  color: #fff;
+}
+
+.image-wrapper:hover .img-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.movie-item-name {
+  color: #333333;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.genres {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.genre {
+  align-items: center;
+  justify-content: flex-end;
+  margin: 10px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  opacity: 0.8;
+  color: #ffffff;
+  font-size: 24px;
+  width: 280px;
+  height: 208px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 0px 0px 16px rgba(0, 0, 0, 0.15);
+}
+
+.genre:hover {
+  opacity: 1;
+}
+
+.channels {
+  overflow-y: auto;
+
+  overflow-y: auto; /**/
+  margin-top: 50px;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.channel-item {
+  display: flex;
+  flex-direction: row;
+  background-color: #f2f2f2;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.channel-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+}
+
+.channel-title {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #333333;
+}
+
+.programs {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.program {
+  font-size: 16px;
+  color: #333333;
+  font-family: "Rubik", sans-serif;
+  display: flex;
+  flex-direction: row;
+  margin-top: -15px;
+}
+
+/*Makes first element in program red*/
+.programs > :first-child {
+  color: var(--red);
+}
+
+.program .program-hour {
+  margin-right: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.footer {
+  width: 80vw;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer img {
+  margin: 30px;
+  margin-left: 0px;
+}
+
+.footer-texts {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  justify-content: center;
+}
+
+.footer p {
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  color: #333333;
+  margin: 5px;
+}
+
+.footer a {
+  font-size: 16px;
+  font-family: "Rubik", sans-serif;
+  color: var(--htc-color);
+  text-decoration: none;
+
+  margin: 5px;
+}

@@ -1,3 +1,4 @@
-# Frontend
+## Instructions
+`npm install` - для установки node модулей
 
-Вся информация в [wiki](https://gitlab.study.htc-cs.com/root/frontend/fe-21-1/-/wikis/home).
+`npm start` - для запуска приложения
