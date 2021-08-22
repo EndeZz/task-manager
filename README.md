@@ -1,4 +1,11 @@
-## Instructions
-`npm install` - для установки node модулей
+# Video service htc
 
-`npm start` - для запуска приложения
+Автор Шклярова Елизавета
+
+## Instructions
+
+`yarn install` - для установки node модулей
+
+`yarn dev` - для разработки
+
+`yarn build` - для продакшена
