@@ -1,9 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #828282;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #828282;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #828282;
+}
+
+::placeholder {
+  /* Most modern browsers support this now. */
+  color: #828282;
+}
+
 :root {
   --htc-color: #1f4766;
   --red: #e5261e;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #828282;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #828282;
+  opacity: 1;
+}
 
 *:focus {
   outline: none;
@@ -60,38 +92,6 @@ body {
   font-family: 'Rubik', sans-serif;
   font-style: normal;
   font-weight: normal;
-}
-
-::-webkit-input-placeholder {
-  /* WebKit, Blink, Edge */
-  color: #828282;
-}
-
-:-moz-placeholder {
-  /* Mozilla Firefox 4 to 18 */
-  color: #828282;
-  opacity: 1;
-}
-
-::-moz-placeholder {
-  /* Mozilla Firefox 19+ */
-  color: #828282;
-  opacity: 1;
-}
-
-:-ms-input-placeholder {
-  /* Internet Explorer 10-11 */
-  color: #828282;
-}
-
-::-ms-input-placeholder {
-  /* Microsoft Edge */
-  color: #828282;
-}
-
-::placeholder {
-  /* Most modern browsers support this now. */
-  color: #828282;
 }
 
 .find-btn {
@@ -347,7 +347,6 @@ body {
 
 .channels {
   overflow-y: auto;
-  overflow-y: auto; /*  */
   margin-top: 50px;
   width: inherit;
   display: flex;
