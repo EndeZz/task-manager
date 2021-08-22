@@ -3,7 +3,8 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
   },
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
@@ -11,5 +12,8 @@
   "[javascriptreact]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
-  "eslint.validate": ["javascript"]
+  "eslint.validate": ["javascript"],
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false
 }
