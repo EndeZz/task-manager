@@ -1,6 +1,12 @@
 {
-  "name": "Test Project webpack",
+  "name": "ibusyrev-week1-webpack",
   "version": "1.0.0",
+  "scripts": {
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development",
+    "lint": "eslint ./src",
+    "fix": "eslint ./src --fix"
+  },
   "dependencies": {},
   "devDependencies": {
     "eslint": "^7.32.0",
