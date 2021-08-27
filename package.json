@@ -1,0 +1,24 @@
+{
+  "name": "fe-21-1",
+  "version": "1.0.0",
+  "description": "Вся информация в [wiki](https://gitlab.study.htc-cs.com/root/frontend/fe-21-1/-/wikis/home).",
+  "private": true,
+  "scripts": {
+    "start": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.study.htc-cs.com/root/frontend/fe-21-1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^6.2.0",
+    "eslint": "^7.32.0",
+    "eslint-webpack-plugin": "^3.0.1",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+  }
+}
