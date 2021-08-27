@@ -1,4 +1,5 @@
-# Игнор-лист файлов проекта
-#
-# ---- ФАЙЛЫ ----
-/README.md
+.idea
+/dist
+/node_modules
+.git
+

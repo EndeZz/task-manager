@@ -1,0 +1,35 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "webpack course",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandr74736/Task.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "webpack"
+  ],
+  "author": "Alexander Svalov <a17230@yandex.ru>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandr74736/Task/issues"
+  },
+  "homepage": "https://github.com/alexandr74736/Task#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "4.0.0-alpha.0",
+    "css-loader": "6.2.0",
+    "file-loader": "6.2.0",
+    "html-webpack-plugin": "5.3.2",
+    "style-loader": "3.2.1",
+    "webpack": "5.51.1",
+    "webpack-cli": "4.8.0"
+  }
+}

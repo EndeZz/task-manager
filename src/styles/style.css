@@ -623,22 +623,7 @@ body {
 }
 
 @media (max-width: 1440px) {
-    /* .genres__types, .news__new-films {
-        grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    } */
-
-    /* .wrapper-tabs {
-        max-width: calc(100% - 18.055%);
-
-    }
-
-    .header {
-        max-width: calc(100% - 18.055%);
-    }
-
-    .footer {
-
-    } */
+    
     .name-picture, .title, .text-title, .name-background-picture, .name-background-picture,
      .header, .search__button, .search__field, .header__user-info-logout, .name-tv-channel{
         font-size: 20px;
