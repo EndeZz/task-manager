@@ -4,12 +4,7 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
-  mode:"development",
   entry:"./src/index.js",
-  output:{
-    filename:"main.[contenthash].js",
-    path: path.resolve(__dirname, "dist")
-  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html"
@@ -30,7 +25,12 @@ module.exports = {
           "style-loader", //2. inject styles into dom
           "css-loader"    //1. css -> commonjs
           ]
-      }
+      },
+      {
+        test: /\.html$/,
+        use: ["html-loader"]
+      },
+
     ]
   }
 };
