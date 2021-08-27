@@ -32,7 +32,7 @@ module.exports = (options) => {
       }),
       new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
       new CopyPlugin({
-        patterns: [{ from: './src/assets', to: 'assets' }],
+        patterns: [{ from: './src/assets/img', to: 'assets/img' }],
       }),
       new MiniCssExtractPlugin({
         filename: '[name].[contenthash].css',
