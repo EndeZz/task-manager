@@ -1,12 +1,23 @@
-$default: #333;
-$accent: #e5261e;
+$color1: #107eff;
+$photo: #43dd9c;
+$audio: #ffac2f;
+$color-text: #313131;
+$color4: #d8e3ec;
+$color5: #95aecd;
+$color6: #e8f3ff;
+$color7: #ff603e;
+$color-bg: #f3f8fb;
 
-%rubik-500{
-  font-family: 'Rubik-Medium', sans-serif;
+$color8: #d663ff;
+$color9: #2cccff;
+$color10: #97dc26;
+
+%roboto-500{
+  font-family: 'Roboto-Medium', sans-serif;
   font-weight: 500;
 }
 
-%rubik-400{
-  font-family: 'Rubik-Regular', sans-serif;
+%roboto-400{
+  font-family: 'Roboto-Regular', sans-serif;
   font-weight: 400;
 }

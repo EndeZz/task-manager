@@ -2,12 +2,415 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+// @import 'media.scss'; поставить в конец
 
-.header {
+.header{
+  background: fff;
+  border-bottom: 1px solid #c8d8ed;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+
+  &-btn__img{
+    margin-right: 30px;
+  }
+
+  &-btn__block {
+    display: flex;
+    align-items: center;
+
+    .btn {
+      @extend %roboto-500;
+      padding: 9px 12px;
+      margin-right: 16px;
+      border-radius: 4px;
+      color: $color-text;
+      transition: all .3s;
+    }
+
+    .btn:hover {
+      color: $color1;
+    }
+
+    .btn.active {
+      margin-right: 16px;
+      background: $color6;
+      border-radius: 4px;
+      color: $color1;
+    }
+  }
+
+  &-user__block {
+    display: flex;
+    align-items: center;
+  }
+
+  &-user__icon {
+    width: 20px;
+    height: 24px;
+  }
+
+  &-user__link {
+    position: relative;
+    border: 1px solid #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+    transition: all .3s;
+  }
+
+  &-user__link:hover {
+    border: 1px solid $color6;
+  }
+
+  &-user__link.active {
+    border: 1px solid $color6;
+    background-color: $color6;
+  }
+
+  &-user__num {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: $color7;
+    color: #fff;
+    border: 2px solid #fff;
+    @extend %roboto-500;
+    font-size: 12px;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-user__title {
+    margin-right: 20px;
+  }
+
+  &-user__img {
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: all .3s;
+    margin-right: 15px;
+  }
+
+  &-user__img:hover {
+    border: 1px solid #107eff;
+  }
+
+  &-user__img.active {
+    border: 1px solid #107eff;
+  }
+
+  &-user__profile-box::before {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 4px;
+    right: 0;
+    bottom: 15px;
+    background-image: url(../images/arrow_down-icon.svg);
+  }
+
+  &-user__profile-box {
+    position: relative;
+  }
+
+  &-user__profile {
+    position: absolute;
+    right: 15px;
+    bottom: -104px;
+    border: 1px solid $color4;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    color: $color-text;
+    display: none;
+  }
+
+  &-user__profile a {
+    display: block;
+  }
+
+  &-user__prof {
+    padding: 12px 14px;
+    border-bottom: 1px solid $color4;
+    color: $color-text;
+    transition: all .3s;
+  }
+
+  &-user__prof:hover {
+    background-color: $color6;
+  }
+
+  &-user__out {
+    padding: 12px 14px;
+    text-align: end;
+    color: $color-text;
+  }
+
+  &-user__out:hover {
+    background-color: $color6;
+  }
 }
 
+main {
+  background-color: $color-bg;
+}
 
+.data {
+  margin-top: 38px;
+  margin-bottom: 30px;
+}
 
+.data__search {
+  display: flex;
 
+  &-block {
+    margin-right: 20px;
+    position: relative;
 
-@import 'media.scss';
+    a {
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+
+  &-title {
+    @extend %roboto-500;
+    font-size: 12px;
+    margin-bottom: 9px;
+  }
+
+  &-inp {
+    width: 393px;
+    padding: 12px 35px 12px 15px;
+    border: 1px solid $color4;
+    border-radius: 4px;
+    transition: all .3s;
+    outline: none;
+    background-repeat: no-repeat;
+    background-position: center right 13px;
+
+    &::placeholder {
+      font-size: 14px;
+      line-height: 16px;
+      opacity: 0.6;
+    }
+  }
+
+  &-inp.search-name {
+    background-image: url(../images/search.svg);
+  }
+
+  &-inp.search-date {
+    background-image: url(../images/calendar-icon.svg);
+  }
+
+  input.search-name:focus{
+    border: 1px solid $color1;
+    padding-left: 35px;
+    background-image: url(../images/search.svg);
+    background-repeat: no-repeat;
+    background-position: center left 13px;
+  }
+
+  input.search-date:focus{
+    border: 1px solid $color1;
+    padding-left: 35px;
+    background-image: url(../images/calendar-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center left 13px;
+  }
+
+  &-inp:hover {
+    border: 1px solid $color5;
+  }
+
+  &-video {
+    border: 1px solid $color1;
+    border-radius: 4px;
+    padding: 12px 12px 12px 27px;
+    color: $color1;
+    position: relative;
+    transition: all .3s;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      left: 15px;
+      top: 16px;
+      background-image: url(../images/videoicon.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &:hover {
+      background-color: rgba(16, 126, 255, 0.1);
+    }
+
+    &.active {
+      background-color: $color1;
+      color: #fff;
+
+      &::before {
+        background-image: url(../images/video-icon-white.svg);
+      }
+    }
+  }
+
+  &-photo {
+    border: 1px solid $photo;
+    border-radius: 4px;
+    padding: 12px 12px 12px 31px;
+    color: $photo;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 9px;
+      left: 15px;
+      top: 16px;
+      background-image: url(../images/photo-icon.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &:hover {
+      background: rgba(67, 221, 156, 0.1);
+    }
+
+    &.active {
+      background-color: $photo;
+      color: #fff;
+
+      &::before {
+        background-image: url(../images/photo-icon-white.svg);
+      }
+    }
+
+  }
+
+  &-audio {
+    border: 1px solid $audio;
+    border-radius: 4px;
+    padding: 12px 12px 12px 27px;
+    color: $audio;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      left: 12px;
+      top: 16px;
+      background-image: url(../images/audio-icon.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    &:hover {
+      background: rgba(255, 172, 47, 0.1);
+    }
+
+    &.active {
+      background-color: $audio;
+      color: #fff;
+      fill: #fff;
+
+      &::before {
+        background-image: url(../images/audio-icon-white.svg);
+      }
+    }
+  }
+}
+
+.content {
+  margin-bottom: 155px;
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__card {
+    max-width: 393px
+  }
+
+  &__card-img {
+    margin-bottom: 15px;
+    border-radius: 6px;
+  }
+
+  &__card-video {
+    color: $color1;
+
+    span {
+      opacity: 0.6;
+    }
+  }
+
+  &__card-photo {
+    color: $photo;
+  }
+
+  &__card-audio{
+    color: $audio;
+
+    span {
+      opacity: 0.6;
+    }
+  }
+
+  &__card-title {
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+  }
+
+  &__card-author {
+    font-size: 12px;
+    line-height: 14px;
+    opacity: 0.6;
+    margin-bottom: 10px;
+
+    span {
+      margin-left: 14px;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-image: url(../images/dots.svg);
+        width: 3px;
+        height: 3px;
+        top: 5px;
+        left: -10px;
+      }
+    }
+  }
+
+  .audio-icon,
+  .video-icon,
+  .photo-icon {
+    width: 10px;
+    height: 9px;
+  }
+}
