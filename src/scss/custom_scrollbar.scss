@@ -1,0 +1,63 @@
+/*** channels ***/
+
+.channels__container::-webkit-scrollbar-thumb::-webkit-scrollbar {
+  width: 12px;
+}
+
+.channels__container::-webkit-scrollbar-track {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.channels__container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+///*** new-product movie description ***/
+
+.new-product__movie-description::-webkit-scrollbar {
+  width: 12px;
+}
+
+.new-product__movie-description::-webkit-scrollbar-track {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
+}
+
+.new-product__movie-description::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
+}
+
+///*** "slide" movie ***/
+
+.new-product__flexbox::-webkit-scrollbar {
+  height: 0;
+}
+
+.new-product__flexbox::-webkit-scrollbar-track {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
+}
+
+.new-product__flexbox::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
+}
+
+///*** "slide" genre ***/
+
+.genre__flexbox::-webkit-scrollbar {
+  height: 0;
+}
+
+.genre__flexbox::-webkit-scrollbar-track {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
+}
+
+.genre__flexbox::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 1);
+}
