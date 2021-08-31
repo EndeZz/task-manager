@@ -1,0 +1,20 @@
+{
+  "name": "fe-21-1",
+  "version": "1.0.0",
+  "description": "Вся информация в [wiki](https://gitlab.study.htc-cs.com/root/frontend/fe-21-1/-/wikis/home).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.study.htc-cs.com/root/frontend/fe-21-1.git"
+  },
+  "author": "",
+  "license": "ISC"
+}
