@@ -8,16 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mrn-mrz/test-task-htc.git"
-  },
   "author": "Mrn",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mrn-mrz/test-task-htc/issues"
-  },
-  "homepage": "https://github.com/mrn-mrz/test-task-htc#readme",
   "devDependencies": {
     "eslint": "^7.31.0",
     "eslint-config-airbnb-base": "^14.2.1",
