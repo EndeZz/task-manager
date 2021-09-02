@@ -23,7 +23,7 @@
     url('./fonts/rubik-v14-latin_cyrillic-500.woff') format('woff');
 }
 
-body {
+* {
   font-family: 'Rubik', sans-serif;
 }
 
