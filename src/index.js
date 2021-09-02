@@ -1,3 +1,5 @@
+/* eslint-disable guard-for-in */
+/* eslint-disable no-param-reassign */
 import './style.css';
 
 const filmBtn = document.getElementById('film-tab-btn');
@@ -32,6 +34,7 @@ function setCookie(name, value, options = {}) {
 
   let updatedCookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
 
+  // eslint-disable-next-line no-restricted-syntax
   for (const optionKey in options) {
     updatedCookie += `; ${optionKey}`;
     const optionValue = options[optionKey];
