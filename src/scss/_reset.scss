@@ -1,0 +1,60 @@
+@import "vars";
+
+
+html{
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::after,
+  *::before{
+    box-sizing: inherit;
+  }
+  
+body {
+  font-family: 'Roboto-Regular', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $night;
+}
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  li {
+    margin: 0;
+  }
+  
+  ul[class] {
+    list-style: none;
+  }
+
+  ul {
+    padding: 0;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  
+  a {
+    font-size: 14px;
+    line-height: 16px;
+    color: $night;
+    text-decoration: none;
+  }
+  

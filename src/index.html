@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-block">
+                <div class="header__logo-img">
+                    <a href="#">
+                        <img src="./img/logo.svg" alt="Логотип сайта">
+                    </a>
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-list_item">
+                            <a class="header__menu-list_link active" href="#">Главная</a>
+                        </li>
+                        <li class="header__menu-list_item">
+                            <a class="header__menu-list_link" href="#">Задачи</a>
+                        </li>
+                        <li class="header__menu-list_item">
+                            <a class="header__menu-list_link" href="#">Пользователи</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__notif-block">
+                    <a href="#" class="header__notif-link">
+                        <img src="./img/bluebell.svg" alt="Количество оповещений">
+                        <span class="header__notif-count">3</span>
+                    </a>
+                </div>
+                <div class="header__user-block">
+                    Семён Щеглов
+                    <!-- <span class="header-user__title">Семён Щеглов</span> -->
+                </div>
+                <div class="header__user-photo">
+                    <img class="header__user-img" src="./img/logo-person.svg" alt="Логотип пользователя">
+                    <div class="header__user-profile">
+                        <a class="header__user-log" href="#">Профиль</a>
+                        <a class="header__user-goout" href="#">Выход</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="info">
+            <div class="container">
+                <div class="info__search">
+                    <div class="info__search-block">
+                        <div class="info__search-title title">Поиск</div>
+                        <input class="info__search-input search-info" type="text" placeholder="Введите название имя исполнителя">
+                        <img class="info__search-search" src="./img/search.svg" alt="">
+                    </div>
+                    <div class="info__data-block">
+                        <div class="info__search-title title">Дата публикации</div>
+                        <input class="info__search-input search-info" type="text" placeholder="Укажите дату публикации">
+                        <img class="info__search-calendar" src="./img/calendar.svg" alt="">
+                    </div>
+                    <div class="info__content">
+                        <div class="info__content-type title">Тип контента</div>
+                        <div class="info__content-block">
+                            <div class="info__content-btn">
+                                <img class="info__img-video" src="./img/videoicon.svg" alt="">
+                                <button class="info__btn-video btn">Видео</button>
+                            </div>
+                            <div class="info__content-btn">
+                                <img class="info__img-video" src="./img/photoicon.svg" alt="">
+                                <button class="info__btn-photo btn">Фото</button>
+                            </div>
+                            <div class="info__content-btn">
+                                <img class="info__img-video" src="./img/audioicon.svg" alt="">
+                                <button class="info__btn-audio btn">Аудио</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="container">
+                <div class="card__row">
+                    <div class="card__column">
+                        <img class="card__column-img" src="./img/content-1.png" alt="">
+                        <div class="card__column-content">
+                            <a class="card__column-video" href="#">
+                                <img src="./img/videoicon.svg" alt="">
+                                <span class="card__column-video">Видео</span>
+                                <span class="card__column-duration_video">02:31</span>
+                            </a>
+                            <p class="card__column-text">Название повседневная практика показывает</p>
+                            <span class="card__column-author">Аркадий Юрченко</span>
+                            <span class="card__column-data">09:21 14.02.2020</span>
+                        </div>
+                    </div>
+                    <div class="card__column">
+                        <img class="card__column-img" src="./img/content-2.png" alt="">
+                        <div class="card__column-content">
+                            <a class="card__column-video" href="#">
+                                <img src="./img/photoicon.svg" alt="">
+                                <span class="card__column-photo">Фото</span>
+                            </a>
+                            <p class="card__column-text">Название повседневная практика показывает</p>
+                            <span class="card__column-author">Оскар Калинин</span>
+                            <span class="card__column-data">09:21 14.02.2020</span>
+                        </div>
+                    </div>
+                    <div class="card__column">
+                        <img class="card__column-img" src="./img/content-3.jpg" alt="">
+                        <div class="card__column-content">
+                            <a class="card__column-video" href="#">
+                                <img src="./img/audioicon.svg" alt="">
+                                <span class="card__column-audio">Аудио</span>
+                                <span class="card__column-duration_audio">02:31</span>
+                            </a>
+                            <p class="card__column-text">Название повседневная практика показывает</p>
+                            <span class="card__column-author">Валерий Яковлев</span>
+                            <span class="card__column-data">09:21 14.02.2020</span>
+                        </div>
+                    </div>
+                    <div class="card__column">
+                        <img class="card__column-img" src="./img/content-4.png" alt="">
+                        <div class="card__column-content">
+                            <a class="card__column-video" href="#">
+                                <img src="./img/photoicon.svg" alt="">
+                                <span class="card__column-photo">Фото</span>
+                            </a>
+                            <p class="card__column-text">Название повседневная практика показывает</p>
+                            <span class="card__column-author">София Лебедевa</span>
+                            <span class="card__column-data">09:21 14.02.2020</span>
+                        </div>
+                    </div>
+                    <div class="card__column">
+                        <img class="card__column-img" src="./img/content-5.png" alt="">
+                        <div class="card__column-content">
+                            <a class="card__column-video" href="#">
+                                <img src="./img/videoicon.svg" alt="">
+                                <span class="card__column-video">Видео</span>
+                                <span class="card__column-duration_video">02:31</span>
+                            </a>
+                            <p class="card__column-text">Название повседневная практика показывает</p>
+                            <span class="card__column-author">Аркадий Юрченко</span>
+                            <span class="card__column-data">09:21 14.02.2020</span>
+                        </div>
+                    </div>
+                    <div class="card__column">
+                        <img class="card__column-img" src="./img/content-6.png" alt="">
+                        <div class="card__column-content">
+                            <a class="card__column-video" href="#">
+                                <img src="./img/photoicon.svg" alt="">
+                                <span class="card__column-photo">Фото</span>
+                            </a>
+                            <p class="card__column-text">Название повседневная практика показывает</p>
+                            <span class="card__column-author">Данил Плотников</span>
+                            <span class="card__column-data">09:21 14.02.2020</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
