@@ -9,11 +9,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/template.html"
     }),
-    // new ESLintPlugin({
-    //   context: "./src/",
-    //   extensions: [".js"],
-    // }),
-    // new StylelintPlugin(),
+    new ESLintPlugin({
+      context: "./src/",
+      extensions: [".js"],
+    }),
+    new StylelintPlugin(),
   ],
   
 
@@ -30,7 +30,6 @@ module.exports = {
         test: /\.html$/,
         use: ["html-loader"]
       },
-
     ]
   }
 };
