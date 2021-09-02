@@ -1,0 +1,65 @@
+.btn {
+  border: 0;
+  background: 0;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 12px 15px;
+
+  &__profile {
+    @include font_config(normal, 400, 14px, 16.41px);
+
+    color: $color-txt;
+    text-decoration: none;
+  }
+
+  &__link {
+    @include font_config(normal, 500, 14px, 16.41px);
+
+    color: $color-txt;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    &:active {
+      background-color: $color-ltblue;
+    }
+  }
+
+  &_active {
+    background-color: $color-ltblue;
+  }
+
+  &__new-task {
+    background: $color-primary;
+    color: $color-light;
+  }
+
+  &__accept {
+    background: $color-success;
+    color: $color-light;
+  }
+
+  &__edit-bg {
+    background: $color-primary;
+    color: $color-ltblue;
+  }
+
+  &__edit-sm {
+    background: $color-ltblue;
+    color: $color-primary;
+  }
+
+  &__back {
+    color: $color-primary;
+  }
+
+  &__delete {
+    color: $color-danger;
+  }
+
+  &__cross {
+    color: $color-blue-icon;
+  }
+}

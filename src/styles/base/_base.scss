@@ -1,0 +1,46 @@
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font;
+  font-size: 14px;
+  font-weight: 400;
+  color: $color-txt;
+  line-height: 16.5px;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-bg;
+}
+
+ul {
+  list-style: none;
+}
+
+a,
+button,
+input {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1242px;
+}
