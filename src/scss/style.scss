@@ -5,11 +5,6 @@
 // @import 'mixins';
 
 
-
-
-
-
-
 .container {
     max-width: 1230px;
     margin: 0 auto;
@@ -96,12 +91,6 @@
         border: 1px solid $brightblue;
     }
 
-
-    // &__notif-count {
-    //     display: block;
-    // }
-
-
     &__user-block {
         margin-right: 20px;
         min-width: 100px;
@@ -167,18 +156,23 @@
 
     &__search {
         display: flex;
+        flex-wrap: wrap;
     }
 
     &__search-block {
         position: relative;
         margin-right: 20px;
+        margin-bottom: 20px;
     }
 
-    .title {
+    &__search-title {
         font-weight: 500;
-
+        font-size: 12px;
+        line-height: 14px;
+        color: $night;
         margin-bottom: 10px;
     }
+
 
     .search-info {
         position: relative;
@@ -208,12 +202,9 @@
 
     &__search-calendar {
         position: absolute;
-        bottom: 13px;
+        top: 40px;
         right: 20px;
     }
-
-
-
 
     &__content-block {
         display: flex;
@@ -242,15 +233,12 @@
         }
     }
 
-
-
     &__img-video {
         position: absolute;
         top: 16px;
         left: 15px;
         margin-right: 10px;
     }
-
 
     &__btn-photo {
         color: $green;
@@ -275,24 +263,31 @@
 }
 
 
-
 .card {
-
+    margin-bottom: 60px;
 
     &__row {
         display: flex;
         flex-wrap: wrap;
-        flex: 0 1 33.3333%;
     }
 
     &__column {
-        max-width: 393px;
-        margin-bottom: 50px;
+        // width: calc((100% - 40px ) / 3);
+        max-width: 380px;
+        margin: 0 0 20px;
+        // margin-bottom: 50px;
+
+    }
+
+    &__column:nth-child(3n-1) {
+        margin-right: 20px;
+        margin-left: 20px;
     }
 
     &__column-img {
-        flex: 0 0 393px;
+        // flex: 0 1 393px;
         transition: all .3s;
+        margin-bottom: 10px;
     }
 
     &__column-img:hover {
@@ -315,10 +310,12 @@
     }
 
     &__column-photo {
+        display: inline-block;
         color: $green;
     }
 
     &__column-audio {
+        display: inline-block;
         color: $yellow;
         margin-right: 5px;
     }
@@ -359,6 +356,17 @@
     &__column-data {
         opacity: 0.6;
     }
+}
 
 
+.loading {
+    width: 36px;
+    height: 36px;
+    margin: 0 auto;
+    cursor: pointer;
+    padding-bottom: 80px;
+
+    &__img {
+        width: 100%;
+    }
 }
