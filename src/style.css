@@ -330,7 +330,7 @@ body::-webkit-scrollbar-track {
   font-size: 16px;
 }
 
-.show p#time {
+.show p .time {
   margin: 0;
   margin-bottom: 1vh;
 }
@@ -362,11 +362,11 @@ body::-webkit-scrollbar-track {
   width: 110vh;
 }
 
-.footer-text footer {
+.footer-text span {
   margin-bottom: 1vh;
 }
 
-.footer-text footer#last-footer {
+.footer-text span#last-span {
   margin-bottom: 1.5vh;
 }
 
