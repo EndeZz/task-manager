@@ -9,87 +9,245 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__left">
-        <img src="./images/logo.png" alt="" class="header__left__logo" />
-        <div class="header__left__container_active">
-          <a href="#" class="header__left__container_active__page">Главная</a>
+      <div class="header__container">
+        <div class="header__container__left">
+          <img
+            src="./images/logo.png"
+            alt=""
+            class="header__container__left__logo"
+          />
+          <div class="header__container__left__container_active">
+            <a href="#" class="header__container__left__container_active__page"
+              >Главная</a
+            >
+          </div>
+          <div class="header__container__left__container_normal">
+            <a href="#" class="header__container__left__container_normal__page"
+              >Задачи</a
+            >
+          </div>
+          <div class="header__container__left__container_normal">
+            <a href="#" class="header__container__left__container_normal__page"
+              >Пользователи</a
+            >
+          </div>
         </div>
-        <div class="header__left__container_normal">
-          <a href="#" class="header__left__container_normal__page">Задачи</a>
-        </div>
-        <div class="header__left__container_normal">
-          <a href="#" class="header__left__container_normal__page"
-            >Пользователи</a
-          >
-        </div>
-      </div>
-      <div class="header__right">
-        <img src="" alt="" class="header__right__img" />
-        <div class="header__right__user">
-          <p class="header__right__user__name">Семён Щеглов</p>
-          <div class="header__right__user__container">
-            <img
-              src="./images/user_img.png"
-              alt=""
-              class="header__right__user__container__img"
-            />
+        <div class="header__container__right">
+          <img src="" alt="" class="header__container__right__img" />
+          <div class="header__container__right__user">
+            <p class="header__container__right__user__name">Семён Щеглов</p>
+            <div class="header__container__right__user__container">
+              <img
+                src="./images/user_img.png"
+                alt=""
+                class="header__container__right__user__container__img"
+              />
+            </div>
           </div>
         </div>
       </div>
     </header>
     <section class="main-section">
-      <section class="filter-section">
-        <div class="search-container">
-          <label class="search-container__lable">Поиск</label>
-          <div class="search-container__form">
-            <i class="search-container__form__icon"></i>
-            <input
-              type="text"
-              class="search-container__form__input"
-              placeholder="Введите название имя исполнителя"
-            />
+      <div class="main-section__container">
+        <section class="filter-section">
+          <div class="search-container">
+            <label class="search-container__lable">Поиск</label>
+            <div class="search-container__form">
+              <i class="search-container__form__icon"></i>
+              <input
+                type="text"
+                class="search-container__form__input"
+                placeholder="Введите название имя исполнителя"
+              />
+            </div>
           </div>
-        </div>
-        <div class="search-container">
-          <label class="search-container__lable">Дата публикации</label>
-          <div class="search-container__form">
-            <i class="search-container__form__icon"></i>
-            <input
-              type="text"
-              class="search-container__form__input"
-              placeholder="Укажите дату публикации"
-            />
+          <div class="search-container">
+            <label class="search-container__lable">Дата публикации</label>
+            <div class="search-container__form">
+              <i class="search-container__form__icon"></i>
+              <input
+                type="text"
+                class="search-container__form__input"
+                placeholder="Укажите дату публикации"
+              />
+            </div>
           </div>
-        </div>
-        <div class="search-container">
-          <label class="search-container__lable">Тип контента</label>
-          <div class="search-container__buttons">
-            <button class="search-container__buttons__video">Видео</button>
-            <button class="search-container__buttons__photo">Фото</button>
-            <button class="search-container__buttons__audio">Аудио</button>
+          <div class="search-container">
+            <label class="search-container__lable">Тип контента</label>
+            <div class="search-container__buttons">
+              <button class="search-container__buttons__video">Видео</button>
+              <button class="search-container__buttons__photo">Фото</button>
+              <button class="search-container__buttons__audio">Аудио</button>
+            </div>
           </div>
-        </div>
-      </section>
-      <section class="content">
-        <div class="content__item">
-          <div class="content__item__container">
-            <img
-              src="./images/content/1.jpg"
-              alt=""
-              class="content__item__container__img"
-            />
+        </section>
+        <section class="content">
+          <div class="content__item">
+            <div class="content__item__container">
+              <img
+                src="./images/content/1.jpg"
+                alt=""
+                class="content__item__container__img"
+              />
+            </div>
+            <div class="content__item__type"></div>
+            <p class="content__item__name">
+              Название повседневная практика показывает
+            </p>
+            <div class="content__item__info">
+              <span class="content__item__info__owner">Аркадий Юрченко</span>
+              <span>•</span>
+              <span class="content__item__info__date">09:21 14.02.2020</span>
+            </div>
           </div>
-          <div class="content__item__type"></div>
-          <p class="content__item__name">
-            Название повседневная практика показывает
-          </p>
-          <div class="content__item__info">
-            <span class="content__item__info__owner">Аркадий Юрченко</span>
-            <span>•</span>
-            <span class="content__item__info__date">09:21 14.02.2020</span>
+          <div class="content__item">
+            <div class="content__item__container">
+              <img
+                src="./images/content/2.jpg"
+                alt=""
+                class="content__item__container__img"
+              />
+            </div>
+            <div class="content__item__type"></div>
+            <p class="content__item__name">
+              Название равным образом начало повседневной работы
+            </p>
+            <div class="content__item__info">
+              <span class="content__item__info__owner">Оскар Калинин</span>
+              <span>•</span>
+              <span class="content__item__info__date">15:41 14.02.2020</span>
+            </div>
           </div>
-        </div>
-      </section>
+          <div class="content__item">
+            <div class="content__item__container">
+              <img
+                src="./images/content/3.jpg"
+                alt=""
+                class="content__item__container__img"
+              />
+            </div>
+            <div class="content__item__type"></div>
+            <p class="content__item__name">
+              Название с другой стороны начало повседневной работы по
+              формированию позиции
+            </p>
+            <div class="content__item__info">
+              <span class="content__item__info__owner">Валерий Яковлев</span>
+              <span>•</span>
+              <span class="content__item__info__date">20:18 13.02.2020</span>
+            </div>
+          </div>
+          <div class="content__item">
+            <div class="content__item__container">
+              <img
+                src="./images/content/4.jpg"
+                alt=""
+                class="content__item__container__img"
+              />
+            </div>
+            <div class="content__item__type"></div>
+            <p class="content__item__name">
+              Название равным образом начало повседневной работы
+            </p>
+            <div class="content__item__info">
+              <span class="content__item__info__owner">София Лебедевa</span>
+              <span>•</span>
+              <span class="content__item__info__date">10:41 12.02.2020</span>
+            </div>
+          </div>
+          <div class="content__item">
+            <div class="content__item__container">
+              <img
+                src="./images/content/5.jpg"
+                alt=""
+                class="content__item__container__img"
+              />
+            </div>
+            <div class="content__item__type"></div>
+            <p class="content__item__name">
+              Название повседневная практика показывает
+            </p>
+            <div class="content__item__info">
+              <span class="content__item__info__owner">Альбина Ткаченко</span>
+              <span>•</span>
+              <span class="content__item__info__date">14:56 11.02.2020</span>
+            </div>
+          </div>
+          <div class="content__item">
+            <div class="content__item__container">
+              <img
+                src="./images/content/6.jpg"
+                alt=""
+                class="content__item__container__img"
+              />
+            </div>
+            <div class="content__item__type"></div>
+            <p class="content__item__name">
+              Название повседневная практика показывает
+            </p>
+            <div class="content__item__info">
+              <span class="content__item__info__owner">Данил Плотников</span>
+              <span>•</span>
+              <span class="content__item__info__date">08:47 11.02.2020</span>
+            </div>
+          </div>
+          <div class="content__item">
+            <div class="content__item__container">
+              <img
+                src="./images/content/3.jpg"
+                alt=""
+                class="content__item__container__img"
+              />
+            </div>
+            <div class="content__item__type"></div>
+            <p class="content__item__name">
+              Название с другой стороны начало повседневной работы по
+              формированию позиции
+            </p>
+            <div class="content__item__info">
+              <span class="content__item__info__owner">Валерий Яковлев</span>
+              <span>•</span>
+              <span class="content__item__info__date">20:18 13.02.2020</span>
+            </div>
+          </div>
+          <div class="content__item">
+            <div class="content__item__container">
+              <img
+                src="./images/content/2.jpg"
+                alt=""
+                class="content__item__container__img"
+              />
+            </div>
+            <div class="content__item__type"></div>
+            <p class="content__item__name">
+              Название равным образом начало повседневной работы
+            </p>
+            <div class="content__item__info">
+              <span class="content__item__info__owner">Оскар Калинин</span>
+              <span>•</span>
+              <span class="content__item__info__date">15:41 14.02.2020</span>
+            </div>
+          </div>
+          <div class="content__item">
+            <div class="content__item__container">
+              <img
+                src="./images/content/1.jpg"
+                alt=""
+                class="content__item__container__img"
+              />
+            </div>
+            <div class="content__item__type"></div>
+            <p class="content__item__name">
+              Название повседневная практика показывает
+            </p>
+            <div class="content__item__info">
+              <span class="content__item__info__owner">Аркадий Юрченко</span>
+              <span>•</span>
+              <span class="content__item__info__date">09:21 14.02.2020</span>
+            </div>
+          </div>
+        </section>
+      </div>
     </section>
     <script src="../src/index.js"></script>
   </body>
