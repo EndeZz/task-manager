@@ -1,6 +1,4 @@
 /* eslint-disable no-restricted-syntax */
-/* eslint-disable guard-for-in */
-/* eslint-disable no-param-reassign */
 import './style.css';
 
 const filmBtn = document.getElementById('film-tab-btn');
@@ -24,22 +22,25 @@ function getCookie(name) {
 }
 
 function setCookie(name, value, options = {}) {
-  options = {
+  let theOptions = options;
+  theOptions = {
     path: '/',
     ...options,
   };
 
-  if (options.expires instanceof Date) {
-    options.expires = options.expires.toUTCString();
+  if (theOptions.expires instanceof Date) {
+    theOptions.expires = options.expires.toUTCString();
   }
 
   let updatedCookie = `${encodeURIComponent(name)}=${encodeURIComponent(value)}`;
 
   for (const optionKey in options) {
-    updatedCookie += `; ${optionKey}`;
-    const optionValue = options[optionKey];
-    if (optionValue !== true) {
-      updatedCookie += `=${optionValue}`;
+    if ({}.hasOwnProperty.call(options, optionKey)) {
+      updatedCookie += `; ${optionKey}`;
+      const optionValue = options[optionKey];
+      if (optionValue !== true) {
+        updatedCookie += `=${optionValue}`;
+      }
     }
   }
 
