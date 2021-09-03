@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task</title>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header__wrapper">
+        <div class="header__wrapper-left__side">
+          <img class="header__logo" src="images/logo.svg" alt="Две стрелки как проекция голубая над зеленой">
+            <ul class="menu__list">
+            <li class="menu__item"><a class="menu__item-link menu__item-link--active" href="#">Главная</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Задачи</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Пользователи</a></li>
+          </ul>
+        </div>
+        <div class="header__wrapper-right__side">
+          <button class="notification__button" type="button">
+            <img class="notification__button-icon bell-icon" src="images/icons/bell-icon.svg" alt="иконка колокольчика с уведомлениями">
+            <span class="notification__button-text">3</span>
+          </button>
+          <div class="user">
+            <span class="user__name">Семён Щеглов</span>
+            <div class="dropdown">
+              <button class="dropdown__btn dropdown__btn--avatar" type="button">
+                <img class="dropdown__avatar user__avatar" src="images/profile-photo.png" alt="Аватар - фото пользователя">
+              </button>
+              <div class="dropdown__content">
+                <a class="dropdown__content-link dropdown__content-link--avatar" href="#">Профиль</a>
+                <a class="dropdown__content-link" href="#">Выход</a>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="wrapper">
+    <main class="main">
+        <div class="container">
+          <section class="search__block">
+            <h1 class="visually-hidden" aria-hidden="true">Заголовок сервиса</h1>
+            <div class="search__block-wrapper">
+                <form class="input__block">
+                  <div class="input__block-box">
+                    <input class="input__block-text input__block-text--search" type="text" id="search" placeholder="Введите название имя исполнителя">
+                    <label class="input__block-label" for="search">Поиск</label>
+                    <button class="input__block-button input__block-button--search" type="button">
+                      <img class="input__block-icon input__block-icon--search" src="images/icons/search-icon.svg" alt="Голубая иконка лупы">
+                    </button>
+                  <!-- <button class="input__block-button hide">
+                    <svg class="icon icon--close">
+                      <use xlink:href="images/icon.svg#close-icon"></use>
+                    </svg>
+                  </button> -->
+                  </div>
+                  <div class="input__block-box">
+                    <input class="input__block-text input__block-text--calendar" type="text" id="date" placeholder="Укажите дату публикации">
+                    <label class="input__block-label" for="date">Дата публикации</label>
+                    <button class="input__block-button" type="button">
+                      <img class="input__block-icon" src="images/icons/calendar.svg" alt="Голубая иконка календаря">
+                    </button>
+                  </div>
+                  
+                </form>
+                <div class="search__block-tags">
+                  <div class="search__block-tags__wrapper" id="tags">
+                    <button class="search__block-tags__button search__block-tags__button--video">
+                      <div class="content__box content__box--video">
+                        <svg class="icon icon--play">
+                          <use xlink:href="images/icons/icon.svg#play-icon"></use>
+                        </svg>
+                        <span class="content__box-text">Видео</span>
+                      </div>
+                    </button>
+                    <button class="search__block-tags__button search__block-tags__button--photo">
+                      <div class="content__box content__box--photo">
+                        <svg class="icon icon--photo">
+                          <use xlink:href="images/icons/icon.svg#photo-icon"></use>
+                        </svg>
+                        <span class="content__box-text">Фото</span>
+                      </div>
+                    </button>
+                    <button class="search__block-tags__button search__block-tags__button--audio">
+                      <div class="content__box content__box--audio">
+                        <svg class="icon icon--audio">
+                          <use xlink:href="images/icons/icon.svg#audio-icon"></use>
+                        </svg>
+                        <span class="content__box-text">Аудио</span>
+                      </div>
+                    </button>
+                  </div>
+                  <label class="input__block-label" for="tags">Тип контента</label>
+                </div>
+            </div>
+            <div class="card">
+              <div class="card__wrapper">
+                <ul class="card__list">
+                  <li class="card__item">
+                    <img class="card__item-img" src="images/cards/1.jpg" alt="Видео - скалистый берег">
+                    <a href="" class="card__item-title">
+                      <div class="content__box content__box--video">
+                        <svg class="icon icon--play">
+                          <use xlink:href="images/icons/icon.svg#play-icon"></use>
+                        </svg>
+                        <span class="content__box-text">Видео</span>
+                        <span class="content__box-time">2:31</span>
+                      </div>
+                    </a>
+                    <p class="card__item-descr">Название повседневная практика показывает</p>
+                    <div class="card__item-info">
+                      <span class="card__item-author">Аркадий Юрченко</span>
+                      <time class="card__item-date" datetime="09:21 14.02.2020">09:21 14.02.2020</time>
+                    </div>
+                  </li>
+                  <li class="card__item">
+                    <img class="card__item-img" src="images/cards/2.jpg" alt="Человек в метро у подножия лестницы">
+                    <a href="" class="card__item-title">
+                      <div class="content__box content__box--photo">
+                        <svg class="icon icon--photo">
+                          <use xlink:href="images/icons/icon.svg#photo-icon"></use>
+                        </svg>
+                        <span class="content__box-text">Фото</span>
+                      </div>
+                    </a>
+                    <p class="card__item-descr">Название равным образом начало повседневной работы</p>
+                    <div class="card__item-info">
+                      <span class="card__item-author">Оскар Калинин</span>
+                      <time class="card__item-date" datetime="15:41 14.02.2020">15:41 14.02.2020</time>
+                    </div>
+                  </li>
+                  <li class="card__item">
+                    <img class="card__item-img" src="images/cards/3.jpg" alt="Аудиодорожка на темно-синем фоне">
+                    <a href="" class="card__item-title">
+                      <div class="content__box content__box--audio">
+                        <svg class="icon icon--audio">
+                          <use xlink:href="images/icons/icon.svg#audio-icon"></use>
+                        </svg>
+                        <span class="content__box-text">Аудио</span>
+                        <span class="content__box-time">2:31</span>
+                      </div>
+                    </a>
+                    <p class="card__item-descr">Название с другой стороны начало повседневной работы по формированию позиции</p>
+                    <div class="card__item-info">
+                      <span class="card__item-author">Валерий Яковлев</span>
+                      <time class="card__item-date" datetime="09:21 14.02.2020">20:18 13.02.2020</time>
+                    </div>
+                  </li>
+                  <li class="card__item">
+                    <img class="card__item-img" src="images/cards/4.jpg" alt="Горы и дома, занесенные снегом">
+                    <a href="" class="card__item-title">
+                      <div class="content__box content__box--photo">
+                        <svg class="icon icon--photo">
+                          <use xlink:href="images/icons/icon.svg#photo-icon"></use>
+                        </svg>
+                        <span class="content__box-text">Фото</span>
+                      </div>
+                    </a>
+                    <p class="card__item-descr">Название равным образом начало повседневной работы</p>
+                    <div class="card__item-info">
+                      <span class="card__item-author">София Лебедевa</span>
+                      <time class="card__item-date" datetime="10:41 12.02.2020">10:41 12.02.2020</time>
+                    </div>
+                  </li>
+                  <li class="card__item">
+                    <img class="card__item-img" src="images/cards/5.jpg" alt="Озеро в горах">
+                    <a href="" class="card__item-title">
+                      <div class="content__box content__box--video">
+                        <svg class="icon icon--play">
+                          <use xlink:href="images/icons/icon.svg#play-icon"></use>
+                        </svg>
+                        <span class="content__box-text">Видео</span>
+                        <span class="content__box-time">2:31</span>
+                      </div>
+                    </a>
+                    <p class="card__item-descr">Название повседневная практика показывает</p>
+                    <div class="card__item-info">
+                      <span class="card__item-author">Альбина Ткаченко</span>
+                      <time class="card__item-date" datetime="14:56 11.02.2020">14:56 11.02.2020</time>
+                    </div>
+                  </li>
+                  <li class="card__item">
+                    <img class="card__item-img" src="images/cards/6.jpg" alt="Волны, бьющиеся о скалы">
+                    <a href="" class="card__item-title">
+                      <div class="content__box content__box--photo">
+                        <svg class="icon icon--photo">
+                          <use xlink:href="images/icons/icon.svg#photo-icon"></use>
+                        </svg>
+                        <span class="content__box-text">Фото</span>
+                      </div>
+                    </a>
+                    <p class="card__item-descr">Название повседневная практика показывает</p>
+                    <div class="card__item-info">
+                      <span class="card__item-author">Данил Плотников</span>
+                      <time class="card__item-date" datetime="09:21 14.02.2020">08:47 11.02.2020</time>
+                    </div>
+                  </li>
+                  <li class="card__item">
+                    <img class="card__item-img" src="images/cards/3.jpg" alt="Аудиодорожка на темно-синем фоне">
+                    <a href="" class="card__item-title">
+                      <div class="content__box content__box--audio">
+                        <svg class="icon icon--audio">
+                          <use xlink:href="images/icons/icon.svg#audio-icon"></use>
+                        </svg>
+                        <span class="content__box-text">Аудио</span>
+                        <span class="content__box-time">2:31</span>
+                      </div>
+                    </a>
+                    <p class="card__item-descr">Название с другой стороны начало повседневной работы по формированию позиции</p>
+                    <div class="card__item-info">
+                      <span class="card__item-author">Валерий Яковлев</span>
+                      <time class="card__item-date" datetime="10:04 10.02.2020">10:04 10.02.2020</time>
+                    </div>
+                  </li>
+                  <li class="card__item">
+                    <img class="card__item-img" src="images/cards/2.jpg" alt="Человек в метро у подножия лестницы">
+                    <a href="" class="card__item-title">
+                      <div class="content__box content__box--photo">
+                        <svg class="icon icon--photo">
+                          <use xlink:href="images/icons/icon.svg#photo-icon"></use>
+                        </svg>
+                        <span class="content__box-text">Фото</span>
+                      </div>
+                    </a>
+                    <p class="card__item-descr">Название равным образом начало повседневной работы</p>
+                    <div class="card__item-info">
+                      <span class="card__item-author">Оскар Калинин</span>
+                      <time class="card__item-date" datetime="08:47 10.02.2020">08:47 10.02.2020</time>
+                    </div>
+                  </li>
+                  <li class="card__item">
+                    <img class="card__item-img" src="images/cards/1.jpg" alt="Видео - скалистый берег">
+                    <a href="" class="card__item-title">
+                      <div class="content__box content__box--video">
+                        <svg class="icon icon--play">
+                          <use xlink:href="images/icons/icon.svg#play-icon"></use>
+                        </svg>
+                        <span class="content__box-text">Видео</span>
+                        <span class="content__box-time">2:31</span>
+                      </div>
+                    </a>
+                    <p class="card__item-descr">Название повседневная практика показывает</p>
+                    <div class="card__item-info">
+                      <span class="card__item-author">Аркадий Юрченко</span>
+                      <time class="card__item-date" datetime="08:47 10.02.2020">08:47 10.02.2020</time>
+                    </div>
+                  </li>
+                </ul>
+                <img class="card__loader" src="images/loader.png" alt="иконка голубого круга">
+              </div>
+            </div>
+          </section>
+        </div>
+
+
+      <div class="modal close">
+        <div class="modal__content">
+            
+        </div>
+      </div>
+
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <!-- <button class="btn__kit btn__kit--blue">
+          <img class="btn__kit-icon--blue" src="images/icons/plus-icon.svg" alt="">
+          <span class="btn__kit-text btn__kit-text--blue">Новая задача</span>
+        </button>
+        <button class="btn__kit btn__kit--green">
+          <img class="btn__kit-icon--green" src="images/icons/tick-green.svg" alt="">
+          <span class="btn__kit-text btn__kit-text--green">Утвердить и обубликовать</span>
+        </button>
+        <button class="btn__kit btn__kit--edit">
+          <svg class="icon icon--edit">
+            <use xlink:href="images/icons/icon.svg#edit-icon"></use>
+          </svg>
+        </button>
+        <button class="btn__kit btn__kit--edit-small">
+          <svg class="icon icon--edit-small">
+            <use xlink:href="images/icons/icon.svg#edit-icon"></use>
+          </svg>
+        </button>
+        <button class="btn__kit btn__kit--trans">
+          <img class="btn__kit-icon btn__kit-icon--trans" src="images/icons/back-blue.svg" alt="">
+          <span class="btn__kit-text btn__kit-text--trans">К списку задач</span>
+        </button>
+        <button class="btn__kit btn__kit--red">
+          <img class="btn__kit-icon btn__kit-icon--red" src="images/icons/delete-icon.svg" alt="">
+          <span class="btn__kit-text btn__kit-text--red">Удалить</span>
+        </button> -->
+      </div>
+    </footer>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+
+/* Notification */
+.notification__button {
+  padding: 8px 9px;
+  background: transparent;
+  border: none;
+  position: relative;
+
+  &:focus { background: $blue-outline; }
+
+  &:hover,
+  &:focus { @include outline(1px, $blue-outline, 4px); }
+
+  &-text {
+    padding: 1px 4px;
+    position: absolute;
+    top: 4%;
+
+    @include outline(2px, $white, 50%);
+
+    background-color: $red;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 500;
+    color: $white;
+    transform: translateY(-4%);
+  }
+}
+
+/* Dropdown */
+
+.dropdown {
+  position: relative;
+
+  &__btn {
+    border: none;
+    position: relative;
+    background: none;
+
+    &::after {
+      content: '';
+      width: 6px;
+      height: 4px;
+      background: url('../images/icons/arrow-down.svg') no-repeat center;
+      position: absolute;
+      top: 50%;
+      right: -10px;
+    }
+
+    &:focus .user__avatar { @include outline(1px, $blue, 50%); }
+  }
+
+  &__content {
+    margin-top: 10px;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: -70%;
+    background: $white;
+    transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    @include outline(1px, $blue-outline, 4px);
+
+    &--show {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &__content-link {
+    padding: 12px 14px 12px;
+    display: block;
+    color: inherit;
+    text-align: right;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $blue-outline;
+    }
+
+    &:hover,
+    &:focus {
+      background: $itblue;
+    }
+  }
+
+  &__content-link--avatar { text-align: right; }
+}
+
+/* Input */
+
+.input__block {
+  display: flex;
+  align-items: center;
+
+  &-box { position: relative; }
+
+  &-button {
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translate(-15px, -50%);
+  }
+
+  &-icon {
+    border: none;
+    background: transparent;
+  }
+
+  &-text {
+    width: 394px;
+    padding: 12px 15px;
+    margin-right: 20px;
+    position: relative;
+
+    @include outline(1px, $blue-outline, 4px);
+
+    &:hover { border-color: $gray-blue-icon; }
+
+    &:focus { border-color: $blue; }
+
+    &--calendar:focus { caret-color: transparent; }
+
+    &--empty { border-color: $red; }
+
+    &--search:focus.input__block-button--search {
+      transform: translate(-375px, 50%);
+
+      &::placeholder {
+        color: transparent;
+        transition: color 0.3s ease-in-out;
+      }
+    }
+  }
+
+  &-label {
+    position: absolute;
+    top: -18px;
+    left: 0;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
+
+/* Content */
+
+.content__box {
+  &--video {
+    color: $blue;
+  }
+
+  &--audio {
+    color: $yellow-audio;
+  }
+
+  &--photo {
+    color: $green;
+  }
+
+  &-text {
+    font-weight: 500;
+  }
+
+  &--photo,
+  &--video,
+  &--audio {
+    &:focus .content__box-text {
+      color: $white;
+    }
+  }
+}
+
+/* === Buttons === */
+
+.btn__kit {
+  padding: 12px 15px;
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+
+  &--blue {
+    background: $blue;
+
+    &:hover { background: $blue-btn-hover; }
+
+    &--active,
+    &:focus { background: $blue-btn-active; }
+
+    &:disabled { background: rgba($blue, 0.5); }
+  }
+
+  &--green {
+    background: $green;
+
+    &:hover { background: $green-hover; }
+
+    &--active,
+    &:focus { background: $green-active; }
+
+    &:disabled { background: rgba($green, 0.5); }
+  }
+
+  &--trans {
+    &:hover { background: $itblue; }
+
+    &--active,
+    &:focus { background: $itblue-active; }
+
+    &:disabled { opacity: 0.3; }
+  }
+
+  &--red {
+    &:hover { background: $red-hover; }
+
+    &--active,
+    &:focus { background: $red-active; }
+
+    &:disabled { opacity: 0.3; }
+  }
+
+  &--edit {
+    padding: 10px;
+    background: $blue;
+
+    &:hover { background: $blue-btn-hover; }
+
+    &--active,
+    &:focus { background: $blue-btn-active; }
+
+    &:disabled { background: rgba($blue, 0.5); }
+  }
+
+  &--edit-small {
+    padding: 6px;
+    background: $itblue;
+
+    &:hover { background: $blue-btn-hover; }
+
+    &:hover .icon--edit-small { fill: $white; }
+
+    &--active,
+    &:focus { background: $blue-btn-active; }
+
+    &:focus .icon--edit-small { fill: $white; }
+
+    &:disabled { background: rgba($itblue, 0.3); }
+
+    &:disabled .icon--edit-small { fill: rgba($blue, 0.3); }
+  }
+
+  &-text {
+    padding-left: 10px;
+    color: $white;
+    font-weight: 500;
+
+    &--trans {
+      color: $blue;
+    }
+
+    &--red {
+      color: $red;
+    }
+  }
+}
