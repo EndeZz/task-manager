@@ -1,21 +1,20 @@
 .btn {
+  @include font_config(normal, 500, 14px, 16.41px);
+
   border: 0;
   background: 0;
   cursor: pointer;
   border-radius: 4px;
   padding: 12px 15px;
+  color: $color-txt;
 
   &__profile {
     @include font_config(normal, 400, 14px, 16.41px);
 
-    color: $color-txt;
     text-decoration: none;
   }
 
   &__link {
-    @include font_config(normal, 500, 14px, 16.41px);
-
-    color: $color-txt;
     text-decoration: none;
 
     &:hover {
@@ -23,7 +22,7 @@
     }
 
     &:active {
-      background-color: $color-ltblue;
+      background-color: $color-ltblue-active;
     }
   }
 
@@ -34,16 +33,42 @@
   &__new-task {
     background: $color-primary;
     color: $color-light;
+
+    &:hover {
+      background: $color-primary-hover;
+    }
+  }
+
+  &__img {
+    background: url('../assets/img/icons/edit-icon.svg');
+    background-repeat: no-repeat;
+    display: inherit;
+    align-items: center;
+    min-height: 20px;
+    min-width: 20px;
   }
 
   &__accept {
     background: $color-success;
     color: $color-light;
+
+    &:hover {
+      background: $color-success-hover;
+    }
   }
 
   &__edit-bg {
     background: $color-primary;
     color: $color-ltblue;
+
+    &::after {
+      content: '';
+      background: url('../assets/img/icons/edit-icon.svg');
+      background-repeat: repeat;
+      display: block;
+      min-height: 20px;
+      min-width: 20px;
+    }
   }
 
   &__edit-sm {
@@ -61,5 +86,52 @@
 
   &__cross {
     color: $color-blue-icon;
+  }
+
+  &__filter {
+    text-decoration: none;
+    border: 1px solid $color-txt;
+
+    &-video {
+      color: $color-primary;
+      border-color: $color-primary;
+
+      &:hover {
+        background: rgba(16, 126, 255, 0.1);
+      }
+
+      &:active {
+        background: $color-primary;
+        color: $color-light;
+      }
+    }
+
+    &-photo {
+      color: $color-success;
+      border-color: $color-success;
+
+      &:hover {
+        background: rgba(67, 221, 156, 0.1);
+      }
+
+      &:active {
+        background: $color-success;
+        color: $color-light;
+      }
+    }
+
+    &-audio {
+      color: $color-warning;
+      border-color: $color-warning;
+
+      &:hover {
+        background: rgba(255, 172, 47, 0.1);
+      }
+
+      &:active {
+        background: $color-warning;
+        color: $color-light;
+      }
+    }
   }
 }
