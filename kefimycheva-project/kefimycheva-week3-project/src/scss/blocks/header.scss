@@ -68,4 +68,22 @@
       @include outline(1px, $blue, 50%);
     }
   }
+
+  &__btn {
+    border: none;
+    background: none;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 6px;
+      height: 4px;
+      background: url('../images/icons/arrow-down.svg') no-repeat center;
+      position: absolute;
+      top: 50%;
+      right: -10px;
+    }
+
+    &:focus .user__avatar { @include outline(1px, $blue, 50%); }
+  }
 }

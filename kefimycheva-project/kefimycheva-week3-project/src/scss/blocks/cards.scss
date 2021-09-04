@@ -15,6 +15,7 @@
   &__item {
     display: flex;
     flex-direction: column;
+    cursor: pointer;
   }
 
   &__item-img {

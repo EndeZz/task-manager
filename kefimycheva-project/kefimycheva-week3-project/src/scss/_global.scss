@@ -38,7 +38,17 @@ button { cursor: pointer; }
   width: 9px;
   height: 9px;
 
-  &--close { fill: transparent; }
+  &--close {
+    fill: $gray-blue-icon;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    right: 20px;
+    top: 35%;
+    cursor: pointer;
+
+    &:hover { fill: $blue; }
+  }
 
   &--play { fill: $blue; }
 
@@ -59,4 +69,9 @@ button { cursor: pointer; }
   }
 }
 
-.hide { display: block; }
+.hidden { display: block; }
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}

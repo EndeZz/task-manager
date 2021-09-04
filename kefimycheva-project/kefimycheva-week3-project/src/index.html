@@ -26,14 +26,14 @@
           </button>
           <div class="user">
             <span class="user__name">Семён Щеглов</span>
+            <button class="user__btn" type="button">
+              <img class="user__avatar" src="images/profile-photo.png" alt="Аватар - фото пользователя">
+            </button>
             <div class="dropdown">
-              <button class="dropdown__btn dropdown__btn--avatar" type="button">
-                <img class="dropdown__avatar user__avatar" src="images/profile-photo.png" alt="Аватар - фото пользователя">
-              </button>
-              <div class="dropdown__content">
-                <a class="dropdown__content-link dropdown__content-link--avatar" href="#">Профиль</a>
-                <a class="dropdown__content-link" href="#">Выход</a>
-              </div>
+              <ul class="dropdown__content dropdown__content--avatar">
+                <li class="dropdown__content-item"><a class="dropdown__content-link" href="#">Профиль</a></li>
+                <li class="dropdown__content-item"><a class="dropdown__content-link" href="#">Выход</a></li>
+              </ul>
             </div>
             
           </div>
@@ -48,27 +48,69 @@
             <h1 class="visually-hidden" aria-hidden="true">Заголовок сервиса</h1>
             <div class="search__block-wrapper">
                 <form class="input__block">
-                  <div class="input__block-box">
-                    <input class="input__block-text input__block-text--search" type="text" id="search" placeholder="Введите название имя исполнителя">
-                    <label class="input__block-label" for="search">Поиск</label>
-                    <button class="input__block-button input__block-button--search" type="button">
-                      <img class="input__block-icon input__block-icon--search" src="images/icons/search-icon.svg" alt="Голубая иконка лупы">
-                    </button>
-                  <!-- <button class="input__block-button hide">
-                    <svg class="icon icon--close">
-                      <use xlink:href="images/icon.svg#close-icon"></use>
-                    </svg>
-                  </button> -->
-                  </div>
-                  <div class="input__block-box">
-                    <input class="input__block-text input__block-text--calendar" type="text" id="date" placeholder="Укажите дату публикации">
-                    <label class="input__block-label" for="date">Дата публикации</label>
-                    <button class="input__block-button" type="button">
-                      <img class="input__block-icon" src="images/icons/calendar.svg" alt="Голубая иконка календаря">
-                    </button>
-                  </div>
-                  
+                    <div class="input__block-box input__block-box--search" tabindex="0">
+                      <input class="input__block-text input__block-text--search" type="text" id="search" placeholder="Введите название имя исполнителя">
+                      <label class="input__block-label" for="search">Поиск</label>
+                      <svg class="icon icon--close">
+                        <use xlink:href="images/icons/icon.svg#close-icon"></use>
+                      </svg>
+                    </div>
                 </form>
+                  <form class="input__block">
+                    <div class="input__block-box input__block-box--calendar">
+                      <input class="input__block-text input__block-text--calendar" type="text" id="date" placeholder="Укажите дату публикации">
+                      <label class="input__block-label" for="date">Дата публикации</label>
+                    </div>
+                    <div class="calendar">
+                      <div class="calendar__wrapper">
+                        <div class="calendar__header">
+                          <div class="calendar__title">
+                            <h2 class="calendar__title-text">Февраль, 2020</h2>
+                          </div>
+                          <div class="calendar__buttons">
+                            <button class="calendar__buttons-btnPrev" type="button">
+                              <img  class="arrow-prev" src="images/icons/btn-prev.svg" alt="">
+                            </button>
+                            <button class="calendar__buttons-btnNext" type="button">
+                              <img  class="arrow-next" src="images/icons/btn-next.svg" alt="">
+                            </button>
+                          </div>
+                        </div>
+                          <div class="calendar__content">
+                            <ul class="calendar__nameOfWeek">
+                              <li class="calendar__weekName"><span class="text">Пн</span></li>
+                              <li class="calendar__weekName"><span class="text">Вт</span></li>
+                              <li class="calendar__weekName"><span class="text">Ср</span></li>
+                              <li class="calendar__weekName"><span class="text">Чт</span></li>
+                              <li class="calendar__weekName"><span class="text">Пт</span></li>
+                              <li class="calendar__weekName"><span class="text">Сб</span></li>
+                              <li class="calendar__weekName"><span class="text">Вс</span></li>
+                            </ul>
+                            <ul class="calendar__days">
+                              <li class="calendar__days-item"><a class="calendar__days-item__num" tabindex="1">1</a></li>
+                              <li class="calendar__days-item"><a class="calendar__days-item__num" tabindex="1">2</a></li>
+                              <li class="calendar__days-item"><a class="calendar__days-item__num" tabindex="1">3</a></li>
+                              <li class="calendar__days-item"><a class="calendar__days-item__num" tabindex="1">4</a></li>
+                              <li class="calendar__days-item"><a class="calendar__days-item__num" tabindex="1">5</a></li>
+                              <li class="calendar__days-item"><a class="calendar__days-item__num" tabindex="1">16</a></li>
+                              <li class="calendar__days-item"><a class="calendar__days-item__num" tabindex="1">1</a></li>
+                              <li class="calendar__days-item"><a class="calendar__days-item__num" tabindex="1">2</a></li>
+                              <li class="calendar__days-item"><a class="calendar__days-item__num" tabindex="1">3</a></li>
+                              <li class="calendar__days-item"><a class="calendar__days-item__num" tabindex="1">4</a></li>
+                              <li class="calendar__days-item"><a class="calendar__days-item__num" tabindex="1">5</a></li>
+                              <li class="calendar__days-item"><a class="calendar__days-item__num" tabindex="1">16</a></li>
+                              <li class="calendar__days-item"><a class="calendar__days-item__num" tabindex="1">1</a></li>
+                              <li class="calendar__days-item"><a class="calendar__days-item__num" tabindex="1">2</a></li>
+                              <li class="calendar__days-item"><a class="calendar__days-item__num" tabindex="1">3</a></li>
+                              <li class="calendar__days-item"><a class="calendar__days-item__num" tabindex="1">4</a></li>
+                              <li class="calendar__days-item"><a class="calendar__days-item__num" tabindex="1">5</a></li>
+                              <li class="calendar__days-item"><a class="calendar__days-item__num" tabindex="1">16</a></li>
+                            </ul>
+                          </div>
+                      </div>
+                    </div>  
+                  </form>
+                  
                 <div class="search__block-tags">
                   <div class="search__block-tags__wrapper" id="tags">
                     <button class="search__block-tags__button search__block-tags__button--video">
@@ -294,6 +336,42 @@
           <img class="btn__kit-icon btn__kit-icon--red" src="images/icons/delete-icon.svg" alt="">
           <span class="btn__kit-text btn__kit-text--red">Удалить</span>
         </button> -->
+        <div class="input__block">
+          <input class="input__block-text input__block-text--select" type="hidden" placeholder="Выберите ответственного">
+          <div class="input__block-text input__block-text--select" tabindex="0">Выберите ответственного</div>
+            <div class="dropdown dropdown">
+              <ul class="dropdown__content dropdown__content--select">
+                <li class="dropdown__content-item">Альбина Ткаченко</li>
+                <li class="dropdown__content-item">Альбина Ткаченко</li>
+                <li class="dropdown__content-item">Альбина Ткаченко</li>
+                <li class="dropdown__content-item">Альбина Ткаченко</li>
+                <li class="dropdown__content-item">Альбина Ткаченко</li>
+                <li class="dropdown__content-item">Альбина Ткаченко</li>
+                <li class="dropdown__content-item">Альбина Ткаченко</li>
+                <li class="dropdown__content-item">Альбина Ткаченко</li>
+                <li class="dropdown__content-item">Альбина Ткаченко</li>
+                <li class="dropdown__content-item">Альбина Ткаченко</li>
+                <li class="dropdown__content-item">Альбина Ткаченко</li>
+                <li class="dropdown__content-item">Альбина Ткаченко</li>
+                <li class="dropdown__content-item">Альбина Ткаченко</li>
+                <li class="dropdown__content-item">Альбина Ткаченко</li>
+                <li class="dropdown__content-item">Альбина Ткаченко</li>
+                <li class="dropdown__content-item">Альбина Ткаченко</li>
+              </ul>
+            </div>
+        </div>
+        <div class="input__block">
+          <input class="input__block-text input__block-text--status" type="hidden" placeholder="Статус">
+          <div class="input__block-text input__block-text--status" tabindex="0">Выберите статус</div>
+          <div class="dropdown">
+            <ul class="dropdown__content dropdown__content--status">
+              <li class="dropdown__content-item dropdown__content-item--status">Любой</li>
+              <li class="dropdown__content-item dropdown__content-item--status">В работе</li>
+              <li class="dropdown__content-item dropdown__content-item--status">Ожидает</li>
+              <li class="dropdown__content-item dropdown__content-item--status">Принято</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </footer>
   </div>

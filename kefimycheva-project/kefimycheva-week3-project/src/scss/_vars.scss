@@ -19,6 +19,9 @@ $dot: #70bdff;
 $black: #000;
 $blue-btn-hover: #308fff;
 $blue-btn-active: #0067df;
+$inwork: #d663ff;
+$wait: #2cccff;
+$done: #97dc26;
 
 @mixin outline($width, $color, $radius) {
   border: $width solid $color;

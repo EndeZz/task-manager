@@ -32,48 +32,47 @@
 
 .dropdown {
   position: relative;
-
-  &__btn {
-    border: none;
-    position: relative;
-    background: none;
-
-    &::after {
-      content: '';
-      width: 6px;
-      height: 4px;
-      background: url('../images/icons/arrow-down.svg') no-repeat center;
-      position: absolute;
-      top: 50%;
-      right: -10px;
-    }
-
-    &:focus .user__avatar { @include outline(1px, $blue, 50%); }
-  }
+  display: flex;
 
   &__content {
+    width: 334px;
     margin-top: 10px;
     visibility: hidden;
     opacity: 0;
     position: absolute;
-    left: -70%;
     background: $white;
     transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
     @include outline(1px, $blue-outline, 4px);
 
+    &--avatar {
+      width: 88px;
+      top: 40px;
+      left: -25px;
+      text-align: right;
+    }
+
     &--show {
       visibility: visible;
       opacity: 1;
     }
+
+    &--select {
+      height: 274px;
+      transform: translate(-100%, 20px);
+    }
+
+    &--status {
+      width: 186px;
+      transform: translate(-100%, 20px);
+    }
   }
 
-  &__content-link {
-    padding: 12px 14px 12px;
+  &__content-item {
+    padding: 12px 14px;
     display: block;
     color: inherit;
-    text-align: right;
 
     &:not(:last-child) {
       border-bottom: 1px solid $blue-outline;
@@ -83,9 +82,28 @@
     &:focus {
       background: $itblue;
     }
+
+    &--status {
+      &:nth-child(2) { color: $inwork; }
+      &:nth-child(3) { color: $wait; }
+      &:nth-child(4) { color: $done; }
+    }
   }
 
-  &__content-link--avatar { text-align: right; }
+  &__content-link {
+    color: inherit;
+  }
+}
+
+.simplebar {
+  &-scrollbar::before {
+    height: 102px;
+    background: $gray-blue-icon;
+    border-radius: 21px;
+    width: 4px;
+    margin: 0 auto;
+    opacity: 1;
+  }
 }
 
 /* Input */
@@ -94,15 +112,15 @@
   display: flex;
   align-items: center;
 
-  &-box { position: relative; }
-
   &-button {
     border: none;
     background: transparent;
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translate(-15px, -50%);
+
+    &--close {
+      position: absolute;
+      top: 30%;
+      right: 20px;
+    }
   }
 
   &-icon {
@@ -113,26 +131,60 @@
   &-text {
     width: 394px;
     padding: 12px 15px;
-    margin-right: 20px;
     position: relative;
+    background: transparent;
+    background: $white;
+    // margin-right: 20px;
 
     @include outline(1px, $blue-outline, 4px);
 
+    &::after {
+      content: '';
+      width: 6px;
+      height: 4px;
+      background: url("../images/icons/arrow-down.svg");
+      position: absolute;
+      top: 45%;
+      right: 20px;
+    }
+
+    &:focus.input__block-text::after {
+      transform: rotate(180deg);
+      transition: rotate 0.3s ease-in-out;
+    }
+
     &:hover { border-color: $gray-blue-icon; }
 
-    &:focus { border-color: $blue; }
-
-    &--calendar:focus { caret-color: transparent; }
+    &:focus {
+      border-color: $blue;
+      caret-color: transparent;
+    }
 
     &--empty { border-color: $red; }
 
-    &--search:focus.input__block-button--search {
-      transform: translate(-375px, 50%);
+    &--search {
+      &:focus {
+        caret-color: $txt;
+        padding-left: 40px;
+        color: inherit;
 
-      &::placeholder {
-        color: transparent;
-        transition: color 0.3s ease-in-out;
+        &::placeholder {
+          color: transparent;
+          transition: color 0.3s ease-in-out;
+        }
       }
+
+      &:focus.icon--close {
+        fill: $gray-blue-icon;
+      }
+    }
+
+    &--select {
+      width: 334px;
+    }
+
+    &--status {
+      width: 187px;
     }
   }
 
@@ -142,6 +194,52 @@
     left: 0;
     font-size: 12px;
     font-weight: 500;
+  }
+
+  &-box {
+    position: relative;
+    margin-right: 20px;
+    outline: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    &--search {
+      &::after {
+        width: 12px;
+        height: 13px;
+        background: url("../images/icons/search-icon.svg");
+        top: 30%;
+        transform: translate(-30px);
+        transition: transform 0.2s ease-in-out;
+      }
+
+      &:focus-within.input__block-box--search::after {
+        transform: translate(-380px);
+        transition: transform 0.2s ease-in-out;
+      }
+
+      &:focus-within.icon--close {
+        fill: $gray-blue-icon;
+        position: absolute;
+        cursor: pointer;
+      }
+
+      &:focus { @include outline(1px, $blue, 4px); }
+    }
+
+    &--calendar {
+      &::after {
+        width: 15px;
+        height: 14px;
+        background: url("../images/icons/calendar.svg");
+        right: 20px;
+      }
+    }
   }
 }
 
@@ -263,5 +361,80 @@
     &--red {
       color: $red;
     }
+  }
+}
+
+/* Calendar */
+
+.calendar {
+  position: relative;
+
+  &__wrapper {
+    padding: 19px 20px;
+    background: $white;
+    display: inline-block;
+    position: absolute;
+    top: 35px;
+    left: -405px;
+
+    @include outline(1px, $blue-outline, 4px);
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+
+  &__title-text {
+    font-size: inherit;
+    font-weight: 500;
+  }
+
+  &__buttons-btnPrev {
+    margin-right: 30px;
+  }
+
+  &__nameOfWeek,
+  &__days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-column-gap: 22px;
+    grid-row-gap: 15px;
+  }
+
+  &__nameOfWeek {
+    margin-bottom: 15px;
+    grid-template-rows: repeat(1, 1fr);
+  }
+
+  &__days {
+    grid-template-rows: repeat(5, 1fr);
+  }
+
+  &__days-item__num {
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 4px;
+
+    &:hover { color: $blue; }
+
+    &:focus,
+    &--active {
+      padding: 6px;
+      background: $blue;
+      color: $white;
+    }
+
+    &--today { background: $itblue; }
+  }
+
+  &__weekName {
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba($txt, 0.7);
   }
 }
