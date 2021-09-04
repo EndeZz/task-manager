@@ -29,6 +29,28 @@
     filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.15));
     border-radius: 6px;
 
+    &-audio {
+      // filter: blur(5px);
+      position: relative;
+      &_sound {
+        background: url('../assets/img/icons/sound.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+
+      &_bg {
+        background: #5b6c7a;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
     &:hover {
       filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
     }
@@ -39,11 +61,24 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    &-audio {
+      // filter: blur(67px);
+      filter: blur(21px);
+    }
   }
 
   &__filter {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     row-gap: 2rem;
+
+    &-block {
+      padding-top: 12px;
+    }
   }
 
   &__item {
@@ -79,7 +114,7 @@
   }
 
   &__input {
-    @include font_config(normal, 500, 16px, 19px);
+    @include font_config(normal, 400, 14px, 16px);
     border-bottom: 1px solid #333;
     outline: none;
     width: 393px;
@@ -118,6 +153,7 @@
         background-image: url('../assets/img/icons/videoicon.svg');
         background-size: contain;
         background-repeat: no-repeat;
+        margin-right: 5px;
       }
     }
 
@@ -132,6 +168,7 @@
         background-image: url('../assets/img/icons/photo-icon.svg');
         background-size: contain;
         background-repeat: no-repeat;
+        margin-right: 5px;
       }
     }
 
@@ -146,6 +183,7 @@
         background-image: url('../assets/img/icons/audio-icon.svg');
         background-size: contain;
         background-repeat: no-repeat;
+        margin-right: 5px;
       }
     }
   }

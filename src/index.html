@@ -79,9 +79,11 @@
 
             <li class="feed__item">
               <p class="feed__search-title">Тип контента</p>
-              <a href="" class="btn btn__filter btn__filter-video">Видео</a>
-              <a href="" class="btn btn__filter btn__filter-photo">Фото</a>
-              <a href="" class="btn btn__filter btn__filter-audio">Аудио</a>
+              <div class="feed__filter-block">
+                <a href="" class="btn btn__filter btn__filter-video">Видео</a>
+                <a href="" class="btn btn__filter btn__filter-photo">Фото</a>
+                <a href="" class="btn btn__filter btn__filter-audio">Аудио</a>
+              </div>
             </li>
           </ul>
         </div>
@@ -123,8 +125,10 @@
           </article>
 
           <article class="feed__card">
-            <div class="feed__img">
-              <img src="./assets/img/card/img6.jpg" alt="" class="feed__pic" />
+            <div class="feed__img feed__img-audio">
+              <p class="feed__img-audio_sound"></p>
+              <img src="./assets/img/card/img6.jpg" alt="" class="feed__pic feed__pic-audio" />
+              <p class="feed__img-audio_bg"></p>
             </div>
 
             <div class="feed__card_container">
