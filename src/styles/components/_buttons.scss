@@ -1,5 +1,5 @@
 .btn {
-  @include font_config(normal, 500, 14px, 16.41px);
+  @include font_config(normal, 500, 14px, 16px);
 
   border: 0;
   background: 0;
@@ -9,7 +9,7 @@
   color: $color-txt;
 
   &__profile {
-    @include font_config(normal, 400, 14px, 16.41px);
+    @include font_config(normal, 400, 14px, 16px);
 
     text-decoration: none;
   }
@@ -104,6 +104,17 @@
         background: $color-primary;
         color: $color-light;
       }
+
+      &::before {
+        content: '';
+        display: inline-block;
+        height: 9px;
+        width: 7px;
+        background-image: url('../assets/img/icons/videoicon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 5px;
+      }
     }
 
     &-photo {
@@ -118,6 +129,17 @@
         background: $color-success;
         color: $color-light;
       }
+
+      &::before {
+        content: '';
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        background-image: url('../assets/img/icons/photo-icon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 5px;
+      }
     }
 
     &-audio {
@@ -131,6 +153,17 @@
       &:active {
         background: $color-warning;
         color: $color-light;
+      }
+
+      &::before {
+        content: '';
+        display: inline-block;
+        height: 9px;
+        width: 7px;
+        background-image: url('../assets/img/icons/audio-icon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-right: 5px;
       }
     }
   }
