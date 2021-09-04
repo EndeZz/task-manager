@@ -48,11 +48,24 @@
       padding-left: 40px;
     }
 
+    &_arrow {
+      &::after {
+        content: '';
+        display: inline-block;
+        height: 4px;
+        width: 6px;
+        background-image: url('../assets/img/icons/arrow_down-icon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+
     &_img {
       width: 40px;
       height: 40px;
       border-radius: 50%;
       margin-right: 10px;
+      border: 2px solid $color-light;
     }
 
     &:hover {
