@@ -21,6 +21,8 @@
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-webpack-plugin": "^3.0.1",
+    "svg-inline-loader": "^0.8.2",
+    "url-loader": "^4.1.1",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.0.0"
@@ -30,5 +32,8 @@
     "url": "http://gitlab.study.htc-cs.com/root/frontend/fe-21-1.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4"
+  }
 }
