@@ -1,36 +1,28 @@
-// import SimpleBar from 'simplebar';
+import SimpleBar from 'simplebar';
+import {
+  selectList,
+  searchInput,
+  userMenu,
+} from './modules/select';
 
-// const scrollbar = new SimpleBar(document.querySelector('.dropdown__content--select'));
-// scrollbar.getContentElement();
+import Calendar from './modules/Calendar';
 
-const search = document.querySelector('.input__block-text--search');
-const closeBtn = document.querySelector('.icon--close');
+try {
+  const scrollbar = new SimpleBar(document.querySelector('.select__dropdown-content'));
+  scrollbar.getContentElement();
+} catch (err) {
+  console.log(err);
+}
 
-search.addEventListener('click', () => {
-  closeBtn.classList.add('show');
+const calendar = document.querySelector('.calendar');
+const inputCalendar = document.querySelector('.input__block-text--calendar');
+const calendarCreate = new Calendar();
+calendar.append(calendarCreate.render());
+
+inputCalendar.addEventListener('click', () => {
+  document.querySelector('.calendar__wrapper').classList.toggle('show');
 });
 
-search.addEventListener('focusout', () => {
-  closeBtn.classList.remove('show');
-});
-
-document.querySelector('.user__btn').addEventListener('click', () => {
-  document.querySelector('.user__btn').nextElementSibling.querySelector('.dropdown__content').classList.toggle('show');
-});
-
-document.querySelectorAll('.input__block-text').forEach((input) => input.addEventListener('click', (e) => {
-  const target = e.currentTarget;
-  if (input === target) {
-    input.nextElementSibling.querySelector('.dropdown__content').classList.toggle('show');
-    input.blur();
-  }
-}));
-
-document.querySelectorAll('.dropdown__content-item').forEach((item) => item.addEventListener('click', (e) => {
-  const target = e.currentTarget;
-  for (let i = 0; i < target.closest('.input__block').children.length; i += 1) {
-    target.closest('.input__block').querySelector('div.input__block-text').textContent = target.textContent;
-  }
-  target.closest('.dropdown__content').classList.remove('show');
-  target.closest('.dropdown__content').blur();
-}));
+selectList();
+searchInput();
+userMenu();
