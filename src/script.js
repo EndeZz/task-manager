@@ -5,6 +5,7 @@ const PAGE_TABS = {
 	films: 'films-tab',
 	genre: 'genre-tab'
 };
+
 const SELECTORS = {
 	showPopupBtn: '.header-enter__button',
 	popup: '.popup',
@@ -61,6 +62,7 @@ const getTvScrollContainer = () => {
 };
 
 const updateScrollbar = () => {
+  let SimpleScrollbar;
 	SimpleScrollbar.initEl(getTvScrollContainer());
 };
 

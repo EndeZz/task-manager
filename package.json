@@ -1,35 +1,66 @@
 {
   "name": "webpack",
   "version": "1.0.0",
-  "description": "webpack course",
-  "main": "index.js",
+  "description": "webpack",
+  "private": true,
   "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production",
-    "watch": "webpack --mode development --watch"
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alexandr74736/Task.git"
-  },
+  "browserslist": "> 0.25%, not dead",
   "keywords": [
     "js",
     "javascript",
     "webpack"
   ],
-  "author": "Alexander Svalov <a17230@yandex.ru>",
+  "author": "asvalov <a17230@yandex.ru>",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/alexandr74736/Task/issues"
-  },
-  "homepage": "https://github.com/alexandr74736/Task#readme",
   "devDependencies": {
-    "clean-webpack-plugin": "4.0.0-alpha.0",
-    "css-loader": "6.2.0",
-    "file-loader": "6.2.0",
-    "html-webpack-plugin": "5.3.2",
-    "style-loader": "3.2.1",
-    "webpack": "5.51.1",
-    "webpack-cli": "4.8.0"
-  }
+    "@babel/core": "^7.15.0",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.15.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.2.0",
+    "csv-loader": "^3.0.3",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-webpack-plugin": "^3.0.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.3.2",
+    "less": "^4.1.1",
+    "less-loader": "^10.0.1",
+    "mini-css-extract-plugin": "^2.2.2",
+    "node-sass": "^6.0.1",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "papaparse": "^5.3.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "stylelint-config-standard": "^22.0.0",
+    "stylelint-webpack-plugin": "^3.0.1",
+    "terser-webpack-plugin": "^5.2.1",
+    "webpack": "^5.51.2",
+    "webpack-bundle-analyzer": "^4.4.2",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.1.0",
+    "xml-loader": "^1.2.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.8.3",
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
+    "normalize.css": "^8.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "main": "webpack.config.js"
 }
