@@ -1,30 +1,75 @@
 
 /* Notification */
-.notification__button {
-  padding: 8px 9px;
-  background: transparent;
-  border: none;
-  position: relative;
+.notification {
+  &__button {
+    padding: 8px 9px;
+    background: transparent;
+    border: none;
+    position: relative;
 
-  &:focus { background: $blue-outline; }
+    &:focus { background: $blue-outline; }
 
-  &:hover,
-  &:focus { @include outline(1px, $blue-outline, 4px); }
+    &:hover,
+    &:focus { @include outline(1px, $blue-outline, 4px); }
 
-  &-text {
-    padding: 1px 4px;
-    position: absolute;
-    top: 4%;
+    &-text {
+      padding: 1px 4px;
+      position: absolute;
+      top: 4%;
 
-    @include outline(2px, $white, 50%);
+      @include outline(2px, $white, 50%);
 
-    background-color: $red;
-    border-radius: 50%;
-    font-size: 12px;
-    line-height: 14px;
-    font-weight: 500;
-    color: $white;
-    transform: translateY(-4%);
+      background-color: $red;
+      border-radius: 50%;
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 500;
+      color: $white;
+      transform: translateY(-4%);
+
+      &--dot {
+        padding: 3px;
+
+        @include outline(2px, $white, 50%);
+
+        top: 3px;
+        right: 0;
+      }
+    }
+  }
+
+  &__card {
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      padding: 16px 21px;
+      background: $white;
+
+      &:hover {
+        box-shadow: 0 4px 15px rgba($black, 0.15);
+      }
+    }
+
+    &-img {
+      margin-right: 10px;
+      padding: 16px 14px;
+      background: $itblue;
+      border-radius: 50%;
+      position: relative;
+      margin-bottom: 4px;
+    }
+
+    &-info {
+      &__task {
+        font-weight: 500;
+      }
+
+      &__meta {
+        font-size: 12px;
+        line-height: 14px;
+        color: rgba($txt, 0.6);
+      }
+    }
   }
 }
 
@@ -410,7 +455,7 @@
   }
 
   &--edit-small {
-    padding: 6px;
+    padding: 7px;
     background: $itblue;
 
     &:hover { background: $blue-btn-hover; }
@@ -425,6 +470,28 @@
     &:disabled { background: rgba($itblue, 0.3); }
 
     &:disabled .icon--edit-small { fill: rgba($blue, 0.3); }
+  }
+
+  &--delete {
+    padding: 7px;
+    background: $itblue;
+
+    &:hover { background: $blue-btn-hover; }
+
+    &:disabled { background: rgba($itblue, 0.3); }
+
+    &--active,
+    &:focus { background: $blue-btn-active; }
+
+    &:focus .icon--delete {
+      stroke: $white;
+    }
+
+    &:hover .icon--delete {
+      stroke: $white;
+    }
+
+    &:disabled .icon--delete { fill: rgba($blue, 0.3); }
   }
 
   &-text {
@@ -545,16 +612,58 @@
   }
 }
 
-.cards__user {
-  &-item {
+/* Card user */
+.card__user {
+  &-wrapper {
+    padding: 17px 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     @include outline(1px, $blue-outline, 4px);
 
     &:hover {
       box-shadow: 0 4px 15px rgba($black, 0.15);
     }
+  }
+
+  &-descr,
+  &-status,
+  &-buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  &-descr {
+    &__text {
+      margin-left: 20px;
+      font-weight: 500;
+    }
+  }
+
+  &-status {
+    &__auth {
+      margin-right: 85px;
+    }
+
+    &__due {
+      position: relative;
+      margin-right: 40px;
+
+      &::after {
+        content: '';
+        width: 15px;
+        height: 14px;
+        background: url('../images/icons/calendar-gray.svg');
+        position: absolute;
+        top: 0;
+        left: -20px;
+      }
+    }
+  }
+
+  &-button + .card__user-button {
+    margin-left: 15px;
   }
 }
 

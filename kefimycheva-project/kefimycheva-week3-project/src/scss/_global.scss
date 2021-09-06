@@ -79,6 +79,14 @@ button { cursor: pointer; }
       fill: $blue;
     }
   }
+
+  &--delete {
+    margin: 2px;
+    width: 16px;
+    height: 16px;
+    fill: transparent;
+    stroke: $blue;
+  }
 }
 
 .player-icons {
@@ -113,6 +121,12 @@ button { cursor: pointer; }
     }
   }
 }
+
+.inwork { color: $inwork; }
+
+.wait { color: $wait; }
+
+.done { color: $done; }
 
 .hidden { display: block; }
 
