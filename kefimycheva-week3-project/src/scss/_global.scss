@@ -1,0 +1,140 @@
+html,
+body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $txt;
+}
+
+a,
+button { cursor: pointer; }
+
+.main {
+  flex: 1 0 auto;
+  background: $background;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px); /* this kind of fail in Webkit and Opera */
+  height: 1px; /* since clip is not reliable we need that */
+  width: 1px; /* since clip is not reliable we need that too */
+  overflow: hidden; /* since clip is not reliable we also need that */
+}
+
+.icon {
+  width: 9px;
+  height: 9px;
+
+  &--close {
+    fill: $gray-blue-icon;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    right: 20px;
+    top: 35%;
+    cursor: pointer;
+
+    &:hover { fill: $blue; }
+  }
+
+  &--play { fill: $blue; }
+
+  &--photo { fill: $green; }
+
+  &--audio { fill: $yellow-audio; }
+
+  &--edit {
+    width: 20px;
+    height: 20px;
+    fill: $white;
+  }
+
+  &--edit-small {
+    width: 20px;
+    height: 20px;
+    fill: $blue;
+  }
+
+  &--plus {
+    width: 14px;
+    height: 14px;
+    fill: $gray-blue-icon;
+
+    &:hover {
+      fill: $blue;
+    }
+  }
+
+  &--delete {
+    margin: 2px;
+    width: 16px;
+    height: 16px;
+    fill: transparent;
+    stroke: $blue;
+  }
+}
+
+.player-icons {
+  &--back {
+    width: 25px;
+    height: 11px;
+  }
+
+  &--fullscreen {
+    width: 16px;
+    height: 16px;
+  }
+
+  &--volume {
+    width: 18px;
+    height: 15px;
+  }
+
+  &--play {
+    width: 9px;
+    height: 12px;
+  }
+
+  &--back,
+  &--fullscreen,
+  &--volume,
+  &--play {
+    fill: $white;
+
+    &:hover {
+      fill: rgba($white, 0.8);
+    }
+  }
+}
+
+.inwork { color: $inwork; }
+
+.wait { color: $wait; }
+
+.done { color: $done; }
+
+.hidden { display: block; }
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dayBeforeAfter {
+  color: rgba($txt, 0.6);
+}
