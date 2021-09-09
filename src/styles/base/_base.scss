@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
   box-sizing: border-box;
+  font-size: 10px;
 }
 
 *,
@@ -16,13 +17,10 @@ html {
 }
 
 body {
+  @include font_config(normal, 400, 1.4rem, 1.6rem);
+
   font-family: $font;
-  font-size: 14px;
-  font-weight: 400;
   color: $color-txt;
-  line-height: 16.5px;
-  display: flex;
-  flex-direction: column;
   background-color: $color-bg;
 }
 
@@ -34,9 +32,8 @@ a,
 button,
 input {
   font-family: inherit;
-  font-size: 100%;
-  line-height: 1.15;
   margin: 0;
+  transition: 0.2s;
 }
 
 .container {

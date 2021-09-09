@@ -31,9 +31,6 @@ module.exports = (options) => {
         template: path.resolve(__dirname, './src/index.html'),
       }),
       new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
-      new CopyPlugin({
-        patterns: [{ from: './src/assets/img', to: 'assets/img' }],
-      }),
       new MiniCssExtractPlugin({
         filename: '[name].[contenthash].css',
         chunkFilename: '[id].css',
@@ -47,6 +44,10 @@ module.exports = (options) => {
     module: {
       rules: [
         {
+          test: /\.html$/,
+          loader: 'html-loader',
+        },
+        {
           test: /\.jsx?$/,
           exclude: /node_modules/,
           use: 'babel-loader',
@@ -54,6 +55,9 @@ module.exports = (options) => {
         {
           test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
           type: 'asset/resource',
+          generator: {
+            filename: 'assets/[hash][ext][query]'
+          }
         },
         {
           test: /\.(woff(2)?|eot|ttf|otf|svg)$/i,

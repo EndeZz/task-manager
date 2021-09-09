@@ -8,12 +8,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 18px;
+  padding-bottom: 18px;
 
   &__logo {
     display: block;
-    padding-right: 30px;
+    margin-right: 30px;
   }
 
   &__menu {
@@ -28,7 +28,7 @@
   }
 
   &__item {
-    padding-right: 10px;
+    padding-right: 16px;
     display: inherit;
 
     &:last-child {
@@ -40,15 +40,15 @@
     &_new {
       padding: 0 4px;
       position: absolute;
-      top: 8%;
+      top: 0%;
       left: 50%;
-      border: 2px solid #fff;
+      border: 2px solid $color-light;
       border-radius: 10px;
-      background-color: #ff603e;
-      font-size: 12px;
-      line-height: 14px;
+      background-color: $color-danger;
+      font-size: 1.2rem;
+      line-height: 1.4rem;
       font-weight: 500;
-      color: #fff;
+      color: $color-light;
       transform: translateY(-4%);
     }
   }
@@ -65,12 +65,10 @@
       width: auto;
       text-align: right;
       margin-top: 28px;
-      // visibility: hidden;
-      // opacity: 0;
-
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 15px $color-shadow-item;
       border-radius: 4px;
       background-color: $color-light;
+      border: 1px solid $color-blue-outline;
     }
 
     &_item {
@@ -80,18 +78,26 @@
       &:not(:last-child) {
         border-bottom: 1px solid $color-blue-outline;
       }
+
+      &:hover:first-child {
+        background: $color-ltblue;
+        border-radius: 4px 4px 0 0;
+      }
+
+      &:hover:last-child {
+        background: $color-ltblue;
+        border-radius: 0 0 4px 4px;
+      }
     }
   }
 
   &__profile {
-    @include font_config(normal, 500, 14px, 16px);
-
     display: flex;
     align-items: center;
     position: relative;
 
     &:not(:last-child) {
-      margin-right: 20px;
+      margin-right: 30px;
     }
 
     &_name {

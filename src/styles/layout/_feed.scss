@@ -1,16 +1,10 @@
 .feed {
   display: grid;
-  gap: rem(30px);
+  gap: 3rem;
   padding-top: 40px;
 
-  &__cards {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    // grid-column-gap: 20px;
-  }
-
+  &__cards,
   &__list {
-    display: grid;
     grid-template-columns: auto auto auto;
   }
 
@@ -21,17 +15,20 @@
     &_container {
       padding-top: 15px;
     }
+
+    &_link {
+      color: $color-txt;
+      text-decoration: none;
+    }
   }
 
   &__img {
     height: 250px;
     overflow: hidden;
-    filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.15));
     border-radius: 6px;
+    position: relative;
 
     &-audio {
-      // filter: blur(5px);
-      position: relative;
       &_sound {
         background: url('../assets/img/icons/sound.svg');
         background-position: center;
@@ -41,18 +38,18 @@
         position: absolute;
         top: 0;
         left: 0;
-        z-index: 2;
+        z-index: $z-fixed;
       }
 
       &_bg {
-        background: #5b6c7a;
+        background: $color-card-bg;
         height: 100%;
         width: 100%;
       }
     }
 
     &:hover {
-      filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
+      filter: drop-shadow(0 8px 20px $color-shadow-content);
     }
   }
 
@@ -64,7 +61,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
 
     &-audio {
       // filter: blur(67px);
@@ -72,31 +68,26 @@
     }
   }
 
-  &__filter {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    row-gap: 2rem;
-
-    &-block {
-      padding-top: 12px;
-    }
-  }
-
   &__item {
     width: 393px;
+    position: relative;
   }
 
   &__title {
-    @include font_config(normal, 400, 14px, 16px);
+    @include font_config(normal, 400, 1.4rem, 1.6rem);
 
     padding-bottom: 6px;
   }
 
   &__subtitle {
-    font-size: 12px;
-    line-height: 14px;
-    padding-right: 15px;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
     position: relative;
     opacity: 0.6;
+
+    &:first-child {
+      padding-right: 15px;
+    }
 
     &-date {
       &::before {
@@ -113,27 +104,14 @@
     }
   }
 
-  &__input {
-    @include font_config(normal, 400, 14px, 16px);
-    border-bottom: 1px solid #333;
-    outline: none;
-    width: 393px;
-
-    background: #fff;
-    border: 1px solid #d8e3ec;
-    box-sizing: border-box;
-    border-radius: 4px;
-
-    padding: 12px 15px;
-  }
-
   &__search-title {
-    @include font_config(normal, 500, 12px, 14px);
+    @include font_config(normal, 500, 1.2rem, 1.4rem);
+
     margin-bottom: 9px;
   }
 
   &__type {
-    @include font_config(normal, 500, 14px, 16px);
+    @include font_config(normal, 500, 1.4rem, 1.6rem);
 
     margin-bottom: 10px;
 
@@ -144,47 +122,14 @@
 
     &-video {
       color: $color-primary;
-
-      &::before {
-        content: '';
-        display: inline-block;
-        height: 9px;
-        width: 7px;
-        background-image: url('../assets/img/icons/videoicon.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin-right: 5px;
-      }
     }
 
     &-photo {
       color: $color-success;
-
-      &::before {
-        content: '';
-        display: inline-block;
-        height: 10px;
-        width: 10px;
-        background-image: url('../assets/img/icons/photo-icon.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin-right: 5px;
-      }
     }
 
     &-audio {
       color: $color-warning;
-
-      &::before {
-        content: '';
-        display: inline-block;
-        height: 9px;
-        width: 7px;
-        background-image: url('../assets/img/icons/audio-icon.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin-right: 5px;
-      }
     }
   }
 }

@@ -12,7 +12,7 @@
       <h1 class="hidden">Выпускная работа</h1>
       <div class="container nav">
         <a href="#" class="nav__logo">
-          <img src="./assets/img/icons/logotype.svg" alt="Логотип" />
+          <img src="./assets/img/icons/logo.svg" alt="Логотип" />
         </a>
         <nav class="nav__menu">
           <ul class="nav__list">
@@ -31,32 +31,23 @@
             <li class="nav__item">
               <button class="btn btn__notify btn__link nav__profile">
                 <span class="nav__notify">
-                  <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M18.2499 21.1997H1.74994C0.784973 21.1997 0 20.4169 0 19.4546C0 18.9438 0.223023 18.4603 0.611939 18.1281C2.133 16.8466 3 14.9839 3 13.0103V10.2298C3 6.38053 6.14008 3.24907 9.99994 3.24907C13.86 3.24907 17.0001 6.38053 17.0001 10.2298V13.0103C17.0001 14.9839 17.8671 16.8466 19.3781 18.1212C19.777 18.4603 20.0001 18.9438 20.0001 19.4546C20.0001 20.4169 19.2151 21.1997 18.2499 21.1997Z"
-                      fill="#E8F3FF"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M10.9844 1.00524C10.9844 0.450059 10.5367 0 9.98438 0C9.43209 0 8.98438 0.450059 8.98438 1.00524V3.32233C5.60407 3.81433 3 6.72443 3 10.2298V13.0103C3 14.9839 2.133 16.8466 0.611939 18.1281C0.223023 18.4603 0 18.9438 0 19.4546C0 20.4169 0.784973 21.1997 1.74994 21.1997H6.63702C6.92074 22.7953 8.31881 24 9.98447 24C11.6504 24 13.0482 22.7953 13.3319 21.1997H18.2499C19.2151 21.1997 20.0001 20.4169 20.0001 19.4546C20.0001 18.9438 19.777 18.4603 19.3781 18.1212C17.8671 16.8466 17.0001 14.9839 17.0001 13.0103V10.2298C17.0001 6.71366 14.38 3.79646 10.9844 3.31787V1.00524ZM9.98447 21.9895C9.42484 21.9895 8.94669 21.6639 8.72182 21.1997H11.2472C11.0223 21.664 10.5442 21.9895 9.98447 21.9895ZM17.5761 19.1892C15.9341 17.5628 15.0001 15.3469 15.0001 13.0103V10.2298C15.0001 7.50599 12.7705 5.25954 9.99994 5.25954C7.22959 5.25954 5 7.50596 5 10.2298V13.0103C5 15.3457 4.06705 17.5589 2.42162 19.1892H17.5761Z"
-                      fill="#107EFF"
-                    />
+                  <svg class="icon-notify" width="20" height="24">
+                    <use xlink:href="assets/img/icons/icons.svg#icon-notify"></use>
                   </svg>
                 </span>
                 <span class="nav__notify_new">3</span>
               </button>
               <button class="btn btn__profile nav__profile">
                 <span class="nav__profile_name">Семён Щеглов</span>
-                <img class="nav__profile_img" src="./assets/img/profile/pic_1.png" alt="" />
+                <img class="nav__profile_img" src="./assets/img/profile/pic1.png" alt="Аватар профиля" />
                 <span class="nav__profile_arrow"></span>
                 <div class="nav__tooltip">
                   <ul class="nav__tooltip_content">
                     <li class="nav__tooltip_item">
-                      <a href="#" class="btn btn__profile nav__profile">Профиль</a>
+                      <a href="#" class="btn btn__profile">Профиль</a>
                     </li>
                     <li class="nav__tooltip_item">
-                      <a href="#" class="btn btn__profile nav__profile">Выход</a>
+                      <a href="#" class="btn btn__profile">Выход</a>
                     </li>
                   </ul>
                 </div>
@@ -69,140 +60,278 @@
 
     <section class="main">
       <div class="container feed">
-        <div class="feed__filter">
-          <ul class="feed__list grid">
-            <li class="feed__item">
-              <p class="feed__search-title">Поиск</p>
-              <input type="text" class="feed__input" placeholder="Введите" />
-            </li>
+        <ul class="feed__list grid">
+          <li class="feed__item">
+            <p class="feed__search-title">Поиск</p>
+            <input type="text" class="input input_search" placeholder="Введите название имя исполнителя" />
+            <span class="feed__input_close"></span>
+          </li>
 
-            <li class="feed__item">
-              <p class="feed__search-title">Дата публикации</p>
-              <input type="text" class="feed__input" placeholder="Введите" />
-            </li>
+          <li class="feed__item">
+            <p class="feed__search-title">Дата публикации</p>
+            <input type="text" class="input input_date" placeholder="Укажите дату публикации" />
+          </li>
 
-            <li class="feed__item">
-              <p class="feed__search-title">Тип контента</p>
-              <div class="feed__filter-block">
-                <a href="" class="btn btn__filter btn__filter-video">Видео</a>
-                <a href="" class="btn btn__filter btn__filter-photo">Фото</a>
-                <a href="" class="btn btn__filter btn__filter-audio">Аудио</a>
-              </div>
-            </li>
-          </ul>
-        </div>
+          <li class="feed__item">
+            <p class="feed__search-title">Тип контента</p>
+            <label class="btn btn__filter btn__filter-video btn_checkbox">
+              <input type="checkbox" class="btn__filter-checkbox hidden" checked />
+              <svg class="icon icon_video">
+                <use xlink:href="assets/img/icons/icons.svg#video-icon"></use>
+              </svg>
+              <span>Видео</span>
+            </label>
+
+            <label class="btn btn__filter btn__filter-photo btn_checkbox">
+              <input type="checkbox" class="btn__filter-checkbox hidden" />
+              <svg class="icon icon_photo">
+                <use xlink:href="assets/img/icons/icons.svg#photo-icon"></use>
+              </svg>
+              <span>Фото</span>
+            </label>
+
+            <label class="btn btn__filter btn__filter-audio btn_checkbox">
+              <input type="checkbox" class="btn__filter-checkbox hidden" />
+              <svg class="icon icon_audio">
+                <use xlink:href="assets/img/icons/icons.svg#video-icon"></use>
+              </svg>
+              <span>Аудио</span>
+            </label>
+            <!-- <div class="">
+                <button class="btn btn__filter btn__filter-video">Видео</button>
+                <button class="btn btn__filter btn__filter-photo">Фото</button>
+                <button class="btn btn__filter btn__filter-audio">Аудио</button>
+              </div> -->
+          </li>
+        </ul>
 
         <div class="feed__cards grid">
           <article class="feed__card">
-            <div class="feed__img">
-              <img src="./assets/img/card/img1.jpg" alt="" class="feed__pic" />
-            </div>
+            <a href="#" class="feed__card_link">
+              <div class="feed__img">
+                <img class="feed__pic" src="./assets/img/card/img1.jpg" alt="Закат на море" />
+              </div>
 
-            <div class="feed__card_container">
-              <div class="feed__type feed__type-video">
-                <span>Видео</span>
-                <span class="feed__type_time">02:31</span>
+              <div class="feed__card_container">
+                <div class="feed__type feed__type-video">
+                  <svg class="icon icon_video">
+                    <use xlink:href="assets/img/icons/icons.svg#video-icon"></use>
+                  </svg>
+                  <span>Видео</span>
+                  <span class="feed__type_time">02:31</span>
+                </div>
+
+                <h2 class="feed__title">Название повседневная практика показывает</h2>
+                <div class="feed__info">
+                  <span class="feed__subtitle">Аркадий Юрченко</span>
+                  <span class="feed__subtitle feed__subtitle-date">09:21 14.02.2020</span>
+                </div>
               </div>
-              <h2 class="feed__title">Название повседневная практика показывает</h2>
-              <div class="feed__info">
-                <span class="feed__subtitle">Аркадий Юрченко</span>
-                <span class="feed__subtitle feed__subtitle-date">09:21 14.02.2020</span>
-              </div>
-            </div>
+            </a>
           </article>
 
           <article class="feed__card">
-            <div class="feed__img">
-              <img src="./assets/img/card/img2.jpg" alt="" class="feed__pic" />
-            </div>
+            <a href="#" class="feed__card_link">
+              <div class="feed__img">
+                <img class="feed__pic" src="./assets/img/card/img2.jpg" alt="Человек идет по подземному переходу" />
+              </div>
 
-            <div class="feed__card_container">
-              <div class="feed__type feed__type-photo">
-                <span>Фото</span>
+              <div class="feed__card_container">
+                <div class="feed__type feed__type-photo">
+                  <svg class="icon icon_photo">
+                    <use xlink:href="assets/img/icons/icons.svg#photo-icon"></use>
+                  </svg>
+                  <span>Фото</span>
+                </div>
+
+                <h2 class="feed__title">Название равным образом начало повседневной работы</h2>
+                <div class="feed__info">
+                  <span class="feed__subtitle">Оскар Калинин</span>
+                  <span class="feed__subtitle feed__subtitle-date">15:41 14.02.2020</span>
+                </div>
               </div>
-              <h2 class="feed__title">Название равным образом начало повседневной работы</h2>
-              <div class="feed__info">
-                <span class="feed__subtitle">Оскар Калинин</span>
-                <span class="feed__subtitle feed__subtitle-date">15:41 14.02.2020</span>
-              </div>
-            </div>
+            </a>
           </article>
 
           <article class="feed__card">
-            <div class="feed__img feed__img-audio">
-              <p class="feed__img-audio_sound"></p>
-              <img src="./assets/img/card/img6.jpg" alt="" class="feed__pic feed__pic-audio" />
-              <p class="feed__img-audio_bg"></p>
-            </div>
+            <a href="#" class="feed__card_link">
+              <div class="feed__img feed__img-audio">
+                <p class="feed__img-audio_sound"></p>
+                <img class="feed__pic feed__pic-audio" src="./assets/img/card/img6.jpg" alt="Светящийся мост ночью" />
+                <p class="feed__img-audio_bg"></p>
+              </div>
 
-            <div class="feed__card_container">
-              <div class="feed__type feed__type-audio">
-                <span>Аудио</span>
-                <span class="feed__type_time">02:31</span>
+              <div class="feed__card_container">
+                <div class="feed__type feed__type-audio">
+                  <svg class="icon icon_audio">
+                    <use xlink:href="assets/img/icons/icons.svg#audio-icon"></use>
+                  </svg>
+                  <span>Аудио</span>
+                  <span class="feed__type_time">02:31</span>
+                </div>
+
+                <h2 class="feed__title">
+                  Название с другой стороны начало повседневной работы по формированию позиции
+                </h2>
+                <div class="feed__info">
+                  <span class="feed__subtitle">Валерий Яковлев</span>
+                  <span class="feed__subtitle feed__subtitle-date">20:18 13.02.2020</span>
+                </div>
               </div>
-              <h2 class="feed__title">
-                Название с другой стороны начало повседневной работы по формированию позиции
-              </h2>
-              <div class="feed__info">
-                <span class="feed__subtitle">Валерий Яковлев</span>
-                <span class="feed__subtitle feed__subtitle-date">20:18 13.02.2020</span>
-              </div>
-            </div>
+            </a>
           </article>
 
           <article class="feed__card">
-            <div class="feed__img">
-              <img src="./assets/img/card/img3.jpg" alt="" class="feed__pic" />
-            </div>
+            <a href="#" class="feed__card_link">
+              <div class="feed__img">
+                <img class="feed__pic" src="./assets/img/card/img3.jpg" alt="Дома, занесенные снегом в горах" />
+              </div>
 
-            <div class="feed__card_container">
-              <div class="feed__type feed__type-photo">
-                <span>Фото</span>
+              <div class="feed__card_container">
+                <div class="feed__type feed__type-photo">
+                  <svg class="icon icon_photo">
+                    <use xlink:href="assets/img/icons/icons.svg#photo-icon"></use>
+                  </svg>
+                  <span>Фото</span>
+                </div>
+
+                <h2 class="feed__title">Название равным образом начало повседневной работы</h2>
+                <div class="feed__info">
+                  <span class="feed__subtitle">София Лебедевa</span>
+                  <span class="feed__subtitle feed__subtitle-date">10:41 12.02.2020</span>
+                </div>
               </div>
-              <h2 class="feed__title">Название равным образом начало повседневной работы</h2>
-              <div class="feed__info">
-                <span class="feed__subtitle">София Лебедевa</span>
-                <span class="feed__subtitle feed__subtitle-date">10:41 12.02.2020</span>
-              </div>
-            </div>
+            </a>
           </article>
 
           <article class="feed__card">
-            <div class="feed__img">
-              <img src="./assets/img/card/img4.jpg" alt="" class="feed__pic" />
-            </div>
+            <a href="#" class="feed__card_link">
+              <div class="feed__img">
+                <img class="feed__pic" src="./assets/img/card/img4.jpg" alt="Голубое озеро в горах" />
+              </div>
 
-            <div class="feed__card_container">
-              <div class="feed__type feed__type-video">
-                <span>Видео</span>
-                <span class="feed__type_time">02:31</span>
+              <div class="feed__card_container">
+                <div class="feed__type feed__type-video">
+                  <svg class="icon icon_video">
+                    <use xlink:href="assets/img/icons/icons.svg#video-icon"></use>
+                  </svg>
+                  <span>Видео</span>
+                  <span class="feed__type_time">02:31</span>
+                </div>
+
+                <h2 class="feed__title">Название повседневная практика показывает</h2>
+                <div class="feed__info">
+                  <span class="feed__subtitle">Альбина Ткаченко</span>
+                  <span class="feed__subtitle feed__subtitle-date">14:56 11.02.2020</span>
+                </div>
               </div>
-              <h2 class="feed__title">Название повседневная практика показывает</h2>
-              <div class="feed__info">
-                <span class="feed__subtitle">Альбина Ткаченко</span>
-                <span class="feed__subtitle feed__subtitle-date">14:56 11.02.2020</span>
-              </div>
-            </div>
+            </a>
           </article>
 
           <article class="feed__card">
-            <div class="feed__img">
-              <img src="./assets/img/card/img5.jpg" alt="" class="feed__pic" />
-            </div>
+            <a href="#" class="feed__card_link">
+              <div class="feed__img">
+                <img
+                  class="feed__pic"
+                  src="./assets/img/card/img5.jpg"
+                  alt="Морские волны бирюзового цвета, бьющееся об скалы"
+                />
+              </div>
 
-            <div class="feed__card_container">
-              <div class="feed__type feed__type-video">
-                <span>Видео</span>
-                <span class="feed__type_time">02:31</span>
+              <div class="feed__card_container">
+                <div class="feed__type feed__type-photo">
+                  <svg class="icon icon_photo">
+                    <use xlink:href="assets/img/icons/icons.svg#photo-icon"></use>
+                  </svg>
+                  <span>Фото</span>
+                </div>
+
+                <h2 class="feed__title">Название повседневная практика показывает</h2>
+                <div class="feed__info">
+                  <span class="feed__subtitle">Данил Плотников</span>
+                  <span class="feed__subtitle feed__subtitle-date">08:47 11.02.2020</span>
+                </div>
               </div>
-              <h2 class="feed__title">Название повседневная практика показывает</h2>
-              <div class="feed__info">
-                <span class="feed__subtitle">Данил Плотников</span>
-                <span class="feed__subtitle feed__subtitle-date">08:47 11.02.2020</span>
+            </a>
+          </article>
+
+          <article class="feed__card">
+            <a href="#" class="feed__card_link">
+              <div class="feed__img feed__img-audio">
+                <p class="feed__img-audio_sound"></p>
+                <img class="feed__pic feed__pic-audio" src="./assets/img/card/img6.jpg" alt="Светящийся мост ночью" />
+                <p class="feed__img-audio_bg"></p>
               </div>
-            </div>
+
+              <div class="feed__card_container">
+                <div class="feed__type feed__type-audio">
+                  <svg class="icon icon_audio">
+                    <use xlink:href="assets/img/icons/icons.svg#audio-icon"></use>
+                  </svg>
+                  <span>Аудио</span>
+                  <span class="feed__type_time">02:31</span>
+                </div>
+
+                <h2 class="feed__title">
+                  Название с другой стороны начало повседневной работы по формированию позиции
+                </h2>
+                <div class="feed__info">
+                  <span class="feed__subtitle">Валерий Яковлев</span>
+                  <span class="feed__subtitle feed__subtitle-date">10:04 10.02.2020</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="feed__card">
+            <a href="#" class="feed__card_link">
+              <div class="feed__img">
+                <img class="feed__pic" src="./assets/img/card/img2.jpg" alt="Человек идет по подземному переходу" />
+              </div>
+
+              <div class="feed__card_container">
+                <div class="feed__type feed__type-photo">
+                  <svg class="icon icon_photo">
+                    <use xlink:href="assets/img/icons/icons.svg#photo-icon"></use>
+                  </svg>
+                  <span>Фото</span>
+                </div>
+
+                <h2 class="feed__title">Название повседневная практика показывает</h2>
+                <div class="feed__info">
+                  <span class="feed__subtitle">Оскар Калинин</span>
+                  <span class="feed__subtitle feed__subtitle-date">08:47 10.02.2020</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="feed__card">
+            <a href="#" class="feed__card_link">
+              <div class="feed__img">
+                <img class="feed__pic" src="./assets/img/card/img1.jpg" alt="Закат на море" />
+              </div>
+
+              <div class="feed__card_container">
+                <div class="feed__type feed__type-video">
+                  <svg class="icon icon_video">
+                    <use xlink:href="assets/img/icons/icons.svg#video-icon"></use>
+                  </svg>
+                  <span>Видео</span>
+                  <span class="feed__type_time">02:31</span>
+                </div>
+
+                <h2 class="feed__title">Название повседневная практика показывает</h2>
+                <div class="feed__info">
+                  <span class="feed__subtitle">Аркадий Ткаченко</span>
+                  <span class="feed__subtitle feed__subtitle-date">08:47 10.02.2020</span>
+                </div>
+              </div>
+            </a>
           </article>
         </div>
+
+        <div class="loader"></div>
       </div>
     </section>
   </body>
