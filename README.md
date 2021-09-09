@@ -1,3 +1,5 @@
-# Frontend
-
-Вся информация в [wiki](https://gitlab.study.htc-cs.com/root/frontend/fe-21-1/-/wikis/home).
+## Как собрать тестовое задание с помощью webpack:
+- npm i
+После загрузки модулей:
+- npm run build для продакшн;
+- npm run dev для разработки.
