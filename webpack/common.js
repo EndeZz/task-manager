@@ -2,7 +2,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
+const fs = require('fs');
 const paths = require('./path');
+
+const pagesDir = `${paths.src}/pug/pages/`;
+const pages = fs.readdirSync(pagesDir).filter((fileName) => fileName.endsWith('.pug'));
 
 module.exports = {
   context: paths.src,
@@ -16,8 +20,16 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.html$/,
-        loader: 'html-loader',
+        test: /\.pug$/,
+        use: [
+          'html-loader',
+          {
+            loader: 'pug-html-loader',
+            options: {
+              pretty: true,
+            },
+          },
+        ],
       },
       {
         test: /\.m?js$/,
@@ -44,7 +56,7 @@ module.exports = {
         test: /.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
         type: 'asset/resource',
         generator: {
-          filename: 'fonts/[name][ext]',
+          filename: 'assets/fonts/[name][ext]',
         },
       },
       /** images */
@@ -52,15 +64,24 @@ module.exports = {
         test: /\.(?:ico|gif|png|jpg|jpeg|svg)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'images/[name][ext]',
+          filename: 'assets/images/[name][ext]',
         },
       },
     ],
   },
   plugins: [
+    // new HtmlWebpackPlugin({
+    //   template: `${paths.src}/pages/index.html`,
+    //   filename: 'index.html',
+    // }),
+    ...pages.map((page) => new HtmlWebpackPlugin({
+      template: `${pagesDir}/${page}`,
+      filename: `./${page.replace(/\.pug/, '.html')}`,
+    })),
     new HtmlWebpackPlugin({
-      template: `${paths.src}/index.html`,
-      filename: 'index.html',
+      template: `${pagesDir}/index.pug`,
+      filename: './index.html',
+      inject: true,
     }),
     new StylelintPlugin(),
     new ESLintPlugin(),

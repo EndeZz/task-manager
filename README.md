@@ -44,12 +44,15 @@ npm run clean
 - css-loader - Интерпритирует @import и url()
 - style-loader - Помещает CSS в DOM
 - html-loader - Экспортирует HTML как строку и минимизирует, когда этого требует компилятор.
+- pug - шаблонизатор Html
+- pug-html-loader - преобразует pug файлы в html
 ## Plugins
 - html-webpack-plugin - Создает HTML файлы из шаблона
 - mini-css-extract-plugin - Извлекает CSS в отдельные файлы
 - css-minimizer-webpack-plugin - Оптимизирует и минифицирует CSS
 - imagemin-webpack-plugin - Оптимизирует изображения
 - simplebar - Плагин для создания уникального скроллбара
+
 ## Linters
 - eslint - Применяет руководства по стилю в приложении
 - eslint-config-airbnb-base - Базовое руководство по стилю для обеспечения соблюдения правил

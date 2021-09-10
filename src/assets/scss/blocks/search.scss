@@ -5,9 +5,19 @@
     padding-top: 40px;
   }
 
-  &-tags { position: relative; }
+  &-tags {
+    position: relative;
 
-  &-tags__button {
+    &-label {
+      position: absolute;
+      top: -1.8rem;
+      left: 0;
+
+      @include font(1.2rem, 500, 1.4rem);
+    }
+  }
+
+  &-tags__btn {
     padding: 12px 15px;
     background: $white;
 
@@ -29,7 +39,7 @@
 
       &:focus .content__box-text { color: $white; }
 
-      &:focus .icon--play { fill: $white; }
+      &:focus .icon--video { fill: $white; }
     }
 
     &--audio {

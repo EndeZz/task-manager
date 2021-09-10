@@ -1,0 +1,18 @@
+include ../mixins/mixin
+block variables
+doctype
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title Менеджер задач
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+  body
+    include ../components/header
+    .wrapper 
+      main.main 
+        .container
+          section.search__block
+              h1(class="visually-hidden" aria-hidden="true") Заголовок сервиса
+              include ../components/search
+              block cards
+                  

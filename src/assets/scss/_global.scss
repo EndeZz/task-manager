@@ -2,10 +2,12 @@ html,
 body {
   height: 100%;
   font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 400;
   color: $txt;
+  font-size: 10px;
+}
+
+body {
+  @include font(14px, 400, 1rem);
 }
 
 a,
@@ -22,9 +24,9 @@ button { cursor: pointer; }
 
 .container {
   width: 100%;
-  max-width: 1220px;
+  max-width: 122rem;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 1.5rem;
 }
 
 .visually-hidden {
@@ -37,8 +39,8 @@ button { cursor: pointer; }
 }
 
 .icon {
-  width: 9px;
-  height: 9px;
+  width: 0.9rem;
+  height: 0.9rem;
 
   &--close {
     fill: $gray-blue-icon;
@@ -52,27 +54,27 @@ button { cursor: pointer; }
     &:hover { fill: $blue; }
   }
 
-  &--play { fill: $blue; }
+  &--video { fill: $blue; }
 
   &--photo { fill: $green; }
 
   &--audio { fill: $yellow-audio; }
 
   &--edit {
-    width: 20px;
-    height: 20px;
+    width: 2rem;
+    height: 2rem;
     fill: $white;
   }
 
   &--edit-small {
-    width: 20px;
-    height: 20px;
+    width: 2rem;
+    height: 2rem;
     fill: $blue;
   }
 
   &--plus {
-    width: 14px;
-    height: 14px;
+    width: 1.4rem;
+    height: 1.4rem;
     fill: $gray-blue-icon;
 
     &:hover {
@@ -81,9 +83,9 @@ button { cursor: pointer; }
   }
 
   &--delete {
-    margin: 2px;
-    width: 16px;
-    height: 16px;
+    margin: 0.2rem;
+    width: 1.6rem;
+    height: 1.6rem;
     fill: transparent;
     stroke: $blue;
   }
@@ -91,23 +93,23 @@ button { cursor: pointer; }
 
 .player-icons {
   &--back {
-    width: 25px;
-    height: 11px;
+    width: 2.5rem;
+    height: 1.1rem;
   }
 
   &--fullscreen {
-    width: 16px;
-    height: 16px;
+    width: 1.6rem;
+    height: 1.6rem;
   }
 
   &--volume {
-    width: 18px;
-    height: 15px;
+    width: 1.8rem;
+    height: 1.5rem;
   }
 
   &--play {
-    width: 9px;
-    height: 12px;
+    width: 0.9rem;
+    height: 1.2rem;
   }
 
   &--back,

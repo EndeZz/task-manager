@@ -2,10 +2,12 @@
 /* Notification */
 .notification {
   &__button {
-    padding: 8px 9px;
+    padding: 0.8rem 0.9rem;
     background: transparent;
     border: none;
     position: relative;
+
+    @include outline(1px, transparent, 4px);
 
     &:focus { background: $blue-outline; }
 
@@ -13,26 +15,24 @@
     &:focus { @include outline(1px, $blue-outline, 4px); }
 
     &-text {
-      padding: 1px 4px;
+      padding: 0.1rem 0.4rem;
       position: absolute;
-      top: 4%;
+      top: 0.3rem;
+      right: 0.2rem;
 
       @include outline(2px, $white, 50%);
+      @include font(1.2rem, 500, 1.4rem);
 
       background-color: $red;
       border-radius: 50%;
-      font-size: 12px;
-      line-height: 14px;
-      font-weight: 500;
       color: $white;
-      transform: translateY(-4%);
 
       &--dot {
-        padding: 3px;
+        padding: 0.3rem;
 
         @include outline(2px, $white, 50%);
 
-        top: 3px;
+        top: 0.3rem;
         right: 0;
       }
     }
@@ -42,7 +42,7 @@
     &-wrapper {
       display: flex;
       align-items: center;
-      padding: 16px 21px;
+      padding: 1.6rem 2.1rem;
       background: $white;
 
       &:hover {
@@ -51,22 +51,22 @@
     }
 
     &-img {
-      margin-right: 10px;
-      padding: 16px 14px;
+      margin-right: 1rem;
+      padding: 1.6rem 1.4rem;
       background: $itblue;
       border-radius: 50%;
       position: relative;
-      margin-bottom: 4px;
+      margin-bottom: 0.4rem;
     }
 
     &-info {
       &__task {
-        font-weight: 500;
+        @include font(1.4rem, 500, 1.6rem);
       }
 
       &__meta {
-        font-size: 12px;
-        line-height: 14px;
+        @include font(1.2rem, 500, 1.4rem);
+
         color: rgba($txt, 0.6);
       }
     }
@@ -80,8 +80,8 @@
   display: flex;
 
   &__content {
-    width: 334px;
-    margin-top: 10px;
+    width: 33.4rem;
+    margin-top: 1rem;
     visibility: hidden;
     opacity: 0;
     position: absolute;
@@ -92,9 +92,9 @@
     @include outline(1px, $blue-outline, 4px);
 
     &--avatar {
-      width: 88px;
-      top: 20px;
-      right: -15px;
+      width: 8.8rem;
+      top: 2rem;
+      right: -1.5rem;
       text-align: right;
     }
 
@@ -105,7 +105,7 @@
   }
 
   &__content-item {
-    padding: 12px 14px;
+    padding: 1.2rem 1.4rem;
     display: block;
     color: inherit;
 
@@ -132,9 +132,9 @@
 
 .simplebar {
   &-scrollbar::before {
-    height: 102px;
+    height: 10.2rem;
     background: $gray-blue-icon;
-    border-radius: 21px;
+    border-radius: 2.1rem;
     width: 4px;
     margin: 0 auto;
     opacity: 1;
@@ -148,8 +148,8 @@
   align-items: center;
 
   &__text {
-    width: 334px;
-    padding: 12px 15px;
+    width: 33.4rem;
+    padding: 1.2rem 1.5rem;
     position: relative;
     background: transparent;
     background: $white;
@@ -158,12 +158,12 @@
 
     &::after {
       content: '';
-      width: 6px;
-      height: 4px;
+      width: 0.6rem;
+      height: 0.4rem;
       background: url("../images/icons/arrow-down.svg");
       position: absolute;
       top: 45%;
-      right: 20px;
+      right: 2rem;
     }
 
     &:focus.select__text::after {
@@ -179,7 +179,7 @@
     }
 
     &--status {
-      width: 187px;
+      width: 18.7rem;
     }
   }
 
@@ -189,27 +189,27 @@
   }
 
   &__dropdown-content {
-    width: 334px;
-    max-height: 274px;
-    margin-top: 10px;
+    width: 33.4rem;
+    max-height: 27.4rem;
+    margin-top: 1rem;
     visibility: hidden;
     opacity: 0;
     position: absolute;
     background: $white;
     transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
     box-shadow: 0 4px 4px rgba($black, 0.25);
-    transform: translate(-100%, 20px);
+    transform: translate(-100%, 2rem);
 
     @include outline(1px, $blue-outline, 4px);
 
     &--status {
       width: 186px;
-      transform: translate(-100%, 20px);
+      transform: translate(-100%, 2rem);
     }
   }
 
   &__dropdown-content__item {
-    padding: 12px 14px;
+    padding: 1.2rem 1.4rem;
     display: block;
     color: inherit;
 
@@ -243,7 +243,7 @@
     &--close {
       position: absolute;
       top: 30%;
-      right: 20px;
+      right: 2rem;
     }
   }
 
@@ -253,8 +253,8 @@
   }
 
   &-text {
-    width: 394px;
-    padding: 12px 15px;
+    width: 39.4rem;
+    padding: 1.2rem 1.5rem;
     position: relative;
     background: transparent;
     background: $white;
@@ -263,12 +263,12 @@
 
     &::after {
       content: '';
-      width: 6px;
-      height: 4px;
+      width: 0.6rem;
+      height: 0.4rem;
       background: url("../images/icons/arrow-down.svg");
       position: absolute;
       top: 45%;
-      right: 20px;
+      right: 2rem;
     }
 
     &:focus.input__block-text::after {
@@ -288,7 +288,7 @@
     &--search {
       &:focus {
         caret-color: $txt;
-        padding-left: 40px;
+        padding-left: 4rem;
         color: inherit;
 
         &::placeholder {
@@ -301,27 +301,19 @@
         fill: $gray-blue-icon;
       }
     }
-
-    &--select {
-      width: 334px;
-    }
-
-    &--status {
-      width: 187px;
-    }
   }
 
   &-label {
     position: absolute;
-    top: -18px;
+    top: -1.8rem;
     left: 0;
-    font-size: 12px;
-    font-weight: 500;
+
+    @include font(1.2rem, 500, 1.4rem);
   }
 
   &-box {
     position: relative;
-    margin-right: 20px;
+    margin-right: 2rem;
     outline: none;
 
     &::after {
@@ -333,16 +325,16 @@
 
     &--search {
       &::after {
-        width: 12px;
-        height: 13px;
+        width: 1.2rem;
+        height: 1.3rem;
         background: url("../images/icons/search-icon.svg");
         top: 30%;
-        transform: translate(-30px);
+        transform: translate(-3rem);
         transition: transform 0.2s ease-in-out;
       }
 
       &:focus-within.input__block-box--search::after {
-        transform: translate(-380px);
+        transform: translate(-38rem);
         transition: transform 0.2s ease-in-out;
       }
 
@@ -357,10 +349,10 @@
 
     &--calendar {
       &::after {
-        width: 15px;
-        height: 14px;
+        width: 1.5rem;
+        height: 1.4rem;
         background: url("../images/icons/calendar.svg");
-        right: 20px;
+        right: 2rem;
       }
     }
   }
@@ -382,7 +374,21 @@
   }
 
   &-text {
-    font-weight: 500;
+    @include font(1.4rem, 500, 1.6rem);
+
+    margin-left: 5px;
+
+    &--video {
+      color: $blue;
+    }
+
+    &--audio {
+      color: $yellow-audio;
+    }
+
+    &--photo {
+      color: $green;
+    }
   }
 
   &--photo,
@@ -392,12 +398,14 @@
       color: $white;
     }
   }
+
+  &-time { margin-left: 5px; }
 }
 
 /* === Buttons === */
 
 .btn__kit {
-  padding: 12px 15px;
+  padding: 1.2rem 1.5rem;
   display: flex;
   border-radius: 4px;
   align-items: center;
@@ -443,7 +451,7 @@
   }
 
   &--edit {
-    padding: 10px;
+    padding: 1rem;
     background: $blue;
 
     &:hover { background: $blue-btn-hover; }
@@ -455,7 +463,7 @@
   }
 
   &--edit-small {
-    padding: 7px;
+    padding: 0.7rem;
     background: $itblue;
 
     &:hover { background: $blue-btn-hover; }
@@ -473,7 +481,7 @@
   }
 
   &--delete {
-    padding: 7px;
+    padding: 0.7rem;
     background: $itblue;
 
     &:hover { background: $blue-btn-hover; }
@@ -495,9 +503,10 @@
   }
 
   &-text {
-    padding-left: 10px;
+    padding-left: 1rem;
     color: $white;
-    font-weight: 500;
+
+    @include font(1.4rem, 500, 1.6rem);
 
     &--trans {
       color: $blue;
@@ -515,14 +524,14 @@
   position: relative;
 
   &__wrapper {
-    padding: 19px 20px;
+    padding: 1.9rem 2rem;
     background: $white;
     display: inline-block;
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    top: 35px;
-    left: -388px;
+    top: 3.5rem;
+    left: -38.8rem;
 
     @include outline(1px, $blue-outline, 4px);
 
@@ -533,12 +542,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 18px;
+    margin-bottom: 1.8rem;
   }
 
   &__title-text {
-    font-size: inherit;
-    font-weight: 500;
+    @include font(1.4rem, 500, 1.6rem);
   }
 
   &__buttons-container {
@@ -550,15 +558,15 @@
   &__buttons {
     &::after {
       content: '';
-      width: 10px;
-      height: 10px;
+      width: 1rem;
+      height: 1rem;
       position: absolute;
       top: -4px;
     }
 
     &--btnPrev {
       &::after {
-        right: 30px;
+        right: 3rem;
         background: url('../images/icons/btn-prev.svg') no-repeat center;
       }
     }
@@ -574,13 +582,13 @@
   &__days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-column-gap: 22px;
-    grid-row-gap: 15px;
+    grid-column-gap: 2.2rem;
+    grid-row-gap: 1.5rem;
     text-align: center;
   }
 
   &__nameOfWeek {
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
     grid-template-rows: repeat(1, 1fr);
   }
 
@@ -589,7 +597,7 @@
   }
 
   &__days-item__num {
-    padding: 6px;
+    padding: 0.6rem;
     cursor: pointer;
     border-radius: 4px;
 
@@ -597,7 +605,7 @@
 
     &:focus,
     &--active {
-      padding: 6px;
+      padding: 0.6rem;
       background: $blue;
       color: $white;
     }
@@ -606,8 +614,8 @@
   }
 
   &__weekName {
-    font-size: 12px;
-    line-height: 14px;
+    @include font(1.2rem, 500, 1.4rem);
+
     color: rgba($txt, 0.7);
   }
 }
@@ -615,7 +623,7 @@
 /* Card user */
 .card__user {
   &-wrapper {
-    padding: 17px 20px;
+    padding: 1.7rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -636,48 +644,49 @@
 
   &-descr {
     &__text {
-      margin-left: 20px;
-      font-weight: 500;
+      margin-left: 2rem;
+
+      @include font(1.4rem, 500, 1.6rem);
     }
   }
 
   &-status {
     &__auth {
-      margin-right: 85px;
+      margin-right: 8.5rem;
     }
 
     &__due {
       position: relative;
-      margin-right: 40px;
+      margin-right: 4rem;
 
       &::after {
         content: '';
-        width: 15px;
-        height: 14px;
+        width: 1.5rem;
+        height: 1.4rem;
         background: url('../images/icons/calendar-gray.svg');
         position: absolute;
         top: 0;
-        left: -20px;
+        left: -2rem;
       }
     }
   }
 
   &-button + .card__user-button {
-    margin-left: 15px;
+    margin-left: 1.5rem;
   }
 }
 
 .player__controls {
   &-wrapper {
-    width: 200px;
-    height: 200px;
+    width: 20rem;
+    height: 20rem;
     display: flex;
     justify-content: space-between;
   }
 
   &-btn {
-    width: 40px;
-    height: 30px;
+    width: 4rem;
+    height: 3rem;
     background: $black;
   }
 }
@@ -686,9 +695,9 @@
 
 .load {
   &__wrapper {
-    width: 425px;
-    height: 180px;
-    padding: 30px;
+    width: 42.5rem;
+    height: 18rem;
+    padding: 3rem;
 
     @include outline(1px, $blue-outline, 4px);
   }
@@ -696,18 +705,17 @@
   &__wrapper-descr {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
   }
 
   &__title {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    margin-right: 20px;
+    @include font(1.6rem, 500, 1.9rem);
+
+    margin-right: 2rem;
   }
 
   &__text {
-    margin-right: 8px;
+    margin-right: 0.8rem;
     color: rgba($txt, 0.6);
   }
 
@@ -716,7 +724,7 @@
     align-items: center;
 
     &-icon + .load__types-icon {
-      margin-left: 5px;
+      margin-left: 0.5rem;
     }
   }
 
@@ -725,31 +733,31 @@
     justify-content: space-between;
 
     &-progress {
-      width: 96px;
-      height: 3px;
+      width: 9.6rem;
+      height: 3rem;
     }
   }
 
   &__content-value {
-    font-size: 12px;
-    line-height: 14px;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
     color: $blue;
     text-align: center;
   }
 
   &__content-border {
-    width: 116px;
-    height: 74px;
-    padding: 3px;
+    width: 11.6rem;
+    height: 7.4rem;
+    padding: 0.3rem;
 
     @include outline(1px, $blue-outline, 4px);
 
     &--progress {
-      padding: 25px 10px;
+      padding: 2.5rem 1rem;
     }
 
     &--add {
-      padding: 27px 48px;
+      padding: 2.7rem 4.8rem;
       border-style: dashed;
       border-width: 2px;
     }
