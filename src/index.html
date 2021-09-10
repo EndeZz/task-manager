@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/simplebar.css">
+    <link rel="stylesheet" href="./css/jsCalendar.css">
     <title>Document</title>
 </head>
 <body>
@@ -41,12 +43,12 @@
                 </div>
                 <div class="header__user-photo">
                     <img class="header__user-img" src="./img/logo-person.svg" alt="Логотип пользователя">
-                    <div class="header__user-profile">
-                        <a class="header__user-log" href="#">Профиль</a>
-                        <a class="header__user-goout" href="#">Выход</a>
-                    </div>
                 </div>
-            </div>
+                <div class="header__user-profile">
+                    <a class="header__user-log" href="#">Профиль</a>
+                    <a class="header__user-goout" href="#">Выход</a>
+                </div>
+            </div>  
         </div>
     </header>
 
@@ -66,18 +68,18 @@
                     </div>
                     <div class="info__content">
                         <h3 class="info__search-title">Тип контента</h3>
-                        <div class="info__content-block-btn">
-                            <div class="info__content">
+                        <div class="info__content-block">
+                            <div class="info__content-btn">
                                 <img class="info__img-video" src="./img/videoicon.svg" alt="">
-                                <button class="info__btn-video btn">Видео</button>
+                                <button class="info__btn-video btn-content">Видео</button>
                             </div>
                             <div class="info__content-btn">
                                 <img class="info__img-video" src="./img/photoicon.svg" alt="">
-                                <button class="info__btn-photo btn">Фото</button>
+                                <button class="info__btn-photo btn-content">Фото</button>
                             </div>
                             <div class="info__content-btn">
                                 <img class="info__img-video" src="./img/audioicon.svg" alt="">
-                                <button class="info__btn-audio btn">Аудио</button>
+                                <button class="info__btn-audio btn-content">Аудио</button>
                             </div>
                         </div>
                     </div>
@@ -87,21 +89,21 @@
 
         <section class="card">
             <div class="container">
-                <div class="card__row">
-                    <div class="card__column">
+                <ul class="card__row">
+                    <li class="card__column">
                         <img class="card__column-img" src="./img/content-1.png" alt="">
                         <div class="card__column-content">
                             <a class="card__column-video" href="#">
                                 <img src="./img/videoicon.svg" alt="">
                                 <h4 class="card__column-video">Видео</h4>
-                                <span class="card__column-duration_video">02:31</span>
+                                <span class="card__column-duration_video"><time datetime="02:31">02:31</time></span>
                             </a>
                             <p class="card__column-text">Название повседневная практика показывает</p>
                             <span class="card__column-author">Аркадий Юрченко</span>
-                            <span class="card__column-data">09:21 14.02.2020</span>
+                            <span class="card__column-data"><time datetime="14.02.2020 09:21">09:21 14.02.2020</time></span>
                         </div>
-                    </div>
-                    <div class="card__column">
+                    </li>
+                    <li class="card__column">
                         <img class="card__column-img" src="./img/content-2.png" alt="">
                         <div class="card__column-content">
                             <a class="card__column-video" href="#">
@@ -110,23 +112,23 @@
                             </a>
                             <p class="card__column-text">Название повседневная практика показывает</p>
                             <span class="card__column-author">Оскар Калинин</span>
-                            <span class="card__column-data">09:21 14.02.2020</span>
+                            <span class="card__column-data"><time datetime="14.02.2020 09:21">09:21 14.02.2020</time></span>
                         </div>
-                    </div>
-                    <div class="card__column">
+                    </li>
+                    <li class="card__column">
                         <img class="card__column-img" src="./img/content-3.jpg" alt="">
                         <div class="card__column-content">
                             <a class="card__column-video" href="#">
                                 <img src="./img/audioicon.svg" alt="">
                                 <h4 class="card__column-audio">Аудио</h4>
-                                <span class="card__column-duration_audio">02:31</span>
+                                <span class="card__column-duration_audio"><time datetime="02:31">04:49</time></span>
                             </a>
                             <p class="card__column-text">Название повседневная практика показывает</p>
                             <span class="card__column-author">Валерий Яковлев</span>
-                            <span class="card__column-data">09:21 14.02.2020</span>
+                            <span class="card__column-data"><time datetime="14.02.2020 09:21">09:21 14.02.2020</time></span>
                         </div>
-                    </div>
-                    <div class="card__column">
+                    </li>
+                    <li class="card__column">
                         <img class="card__column-img" src="./img/content-4.png" alt="">
                         <div class="card__column-content">
                             <a class="card__column-video" href="#">
@@ -135,10 +137,10 @@
                             </a>
                             <p class="card__column-text">Название повседневная практика показывает</p>
                             <span class="card__column-author">София Лебедевa</span>
-                            <span class="card__column-data">09:21 14.02.2020</span>
+                            <span class="card__column-data"><time datetime="14.02.2020 09:21">09:21 14.02.2020</time></span>
                         </div>
-                    </div>
-                    <div class="card__column">
+                    </li>
+                    <li class="card__column">
                         <img class="card__column-img" src="./img/content-5.png" alt="">
                         <div class="card__column-content">
                             <a class="card__column-video" href="#">
@@ -148,10 +150,10 @@
                             </a>
                             <p class="card__column-text">Название повседневная практика показывает</p>
                             <span class="card__column-author">Аркадий Юрченко</span>
-                            <span class="card__column-data">09:21 14.02.2020</span>
+                            <span class="card__column-data"><time datetime="14.02.2020 09:21">09:21 14.02.2020</time></span>
                         </div>
-                    </div>
-                    <div class="card__column">
+                    </li>
+                    <li class="card__column">
                         <img class="card__column-img" src="./img/content-6.png" alt="">
                         <div class="card__column-content">
                             <a class="card__column-video" href="#">
@@ -160,15 +162,23 @@
                             </a>
                             <p class="card__column-text">Название повседневная практика показывает</p>
                             <span class="card__column-author">Данил Плотников</span>
-                            <span class="card__column-data">09:21 14.02.2020</span>
+                            <span class="card__column-data"><time datetime="14.02.2020 09:21">09:21 14.02.2020</time></span>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
-        <div class="loading">
-            <img class="loading__img" src="./img/loading.png" alt="">
+        
+        <div class="circle-loader">
+            <div class="loader">
+                <!-- <img class="loading__img" src="./img/loading.png" alt=""> -->
+            </div>
         </div>
+
     </main>
+
+        <!-- Русифицированная поддержка календря-->
+    <script src="./js/modules/jsCalendar.lang.ru.js"></script>
+    <script src="./js/modules/jsCalendar.js"></script>
 </body>
 </html>
