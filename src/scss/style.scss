@@ -2,6 +2,7 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+@import 'dycalendar';
 // @import 'media.scss'; поставить в конец
 
 .header{
@@ -23,20 +24,22 @@
     display: flex;
     align-items: center;
 
-    .btn {
+    .menu__btn {
       @extend %roboto-500;
       padding: 9px 12px;
       margin-right: 16px;
       border-radius: 4px;
       color: $color-text;
       transition: all .3s;
+      border: none;
+      background-color: #fff;
     }
 
-    .btn:hover {
+    .menu__btn:hover {
       color: $color1;
     }
 
-    .btn.active {
+    .menu__btn:focus {
       margin-right: 16px;
       background: $color6;
       border-radius: 4px;
@@ -47,11 +50,6 @@
   &-user__block {
     display: flex;
     align-items: center;
-  }
-
-  &-user__icon {
-    width: 20px;
-    height: 24px;
   }
 
   &-user__link {
@@ -85,9 +83,10 @@
     color: #fff;
     border: 2px solid #fff;
     @extend %roboto-500;
-    font-size: 12px;
-    top: 0;
-    right: 0;
+    font-size: 10px;
+    line-height: 14px;
+    top: 2px;
+    right: 1px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -135,6 +134,10 @@
     border-radius: 4px;
     color: $color-text;
     display: none;
+
+    &.active {
+      display: block;
+    }
   }
 
   &-user__profile a {
@@ -183,6 +186,33 @@ main {
       display: inline-block;
       margin-right: 10px;
     }
+
+    .data__search-wraper{
+      max-width: 393px;
+      max-width: 100%;
+      background-image: url(../images/cancel-icon.svg);
+      background-repeat: no-repeat;
+      background-position: center right 13px;
+      transition: all .3s;
+      background-color: #fff;
+    }
+  }
+
+  .search-status {
+    @extend %roboto-400;
+    width: 187px;
+    padding: 12px 35px 12px 15px;
+    border: 1px solid $color4;
+    border-radius: 4px;
+    transition: all .3s;
+    color: $color-text;
+    background-color: #fff;
+    background-image: url(../images/arrow_down-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center right 10px;
+    outline: none;
+    appearance: none;
+    opacity: 0.6;
   }
 
   &-title {
@@ -191,70 +221,69 @@ main {
     margin-bottom: 9px;
   }
 
-  &-inp {
-    width: 393px;
-    padding: 12px 35px 12px 15px;
-    border: 1px solid $color4;
-    border-radius: 4px;
-    transition: all .3s;
-    outline: none;
-    background-repeat: no-repeat;
-    background-position: center right 13px;
+  .search-input {
+    @extend %search-input;
 
     &::placeholder {
       font-size: 14px;
       line-height: 16px;
       opacity: 0.6;
     }
+
+    &:hover {
+      border: 1px solid $color5;
+    }
+
+    &:focus {
+      border: 1px solid $color1;
+      padding-left: 35px;
+      background-repeat: no-repeat;
+      background-position: center left 13px;
+      background-color: transparent;
+    }
   }
 
-  &-inp.search-name {
-    background-image: url(../images/search.svg);
+  &-name {
+    width: 393px;
+
+    &.search-input {
+      background-image: url(../images/search.svg);
+    }
   }
 
-  &-inp.search-date {
-    background-image: url(../images/calendar-icon.svg);
+  &-date {
+    &.search-input {
+      background-image: url(../images/calendar-icon.svg);
+      position: relative;
+    }
   }
 
-  input.search-name:focus{
-    border: 1px solid $color1;
-    padding-left: 35px;
-    background-image: url(../images/search.svg);
-    background-repeat: no-repeat;
-    background-position: center left 13px;
-  }
+  .btn__type-content{
+    @extend %bt-content;
+    border-radius: 4px;
+    padding: 12px;
+    transition: all .3s;
+    background-color: #fff;
 
-  input.search-date:focus{
-    border: 1px solid $color1;
-    padding-left: 35px;
-    background-image: url(../images/calendar-icon.svg);
-    background-repeat: no-repeat;
-    background-position: center left 13px;
-  }
+    &:nth-child(3){
+      margin-left: 10px;
+      margin-right: 10px;
+    }
 
-  &-inp:hover {
-    border: 1px solid $color5;
+    &.active {
+      color: #fff;
+
+      .video-icon,
+      .audio-icon,
+      .photo-icon {
+        fill: #fff;
+      }
+    }
   }
 
   &-video {
     border: 1px solid $color1;
-    border-radius: 4px;
-    padding: 12px 12px 12px 27px;
     color: $color1;
-    position: relative;
-    transition: all .3s;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 9px;
-      height: 9px;
-      left: 15px;
-      top: 16px;
-      background-image: url(../images/videoicon.svg);
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
 
     &:hover {
       background-color: rgba(16, 126, 255, 0.1);
@@ -262,32 +291,12 @@ main {
 
     &.active {
       background-color: $color1;
-      color: #fff;
-
-      &::before {
-        background-image: url(../images/video-icon-white.svg);
-      }
     }
   }
 
   &-photo {
     border: 1px solid $photo;
-    border-radius: 4px;
-    padding: 12px 12px 12px 31px;
     color: $photo;
-    position: relative;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 10px;
-      height: 9px;
-      left: 15px;
-      top: 16px;
-      background-image: url(../images/photo-icon.svg);
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
 
     &:hover {
       background: rgba(67, 221, 156, 0.1);
@@ -295,33 +304,12 @@ main {
 
     &.active {
       background-color: $photo;
-      color: #fff;
-
-      &::before {
-        background-image: url(../images/photo-icon-white.svg);
-      }
     }
-
   }
 
   &-audio {
     border: 1px solid $audio;
-    border-radius: 4px;
-    padding: 12px 12px 12px 27px;
     color: $audio;
-    position: relative;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 9px;
-      height: 9px;
-      left: 12px;
-      top: 16px;
-      background-image: url(../images/audio-icon.svg);
-      background-repeat: no-repeat;
-      background-position: center center;
-    }
 
     &:hover {
       background: rgba(255, 172, 47, 0.1);
@@ -329,12 +317,6 @@ main {
 
     &.active {
       background-color: $audio;
-      color: #fff;
-      fill: #fff;
-
-      &::before {
-        background-image: url(../images/audio-icon-white.svg);
-      }
     }
   }
 }
@@ -356,10 +338,17 @@ main {
   &__card-img {
     margin-bottom: 15px;
     border-radius: 6px;
+    transition: all .3s;
+
+    &:hover {
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    }
   }
 
   &__card-video {
     color: $color1;
+    @extend %roboto-500;
+    width: 60px;
 
     span {
       opacity: 0.6;
@@ -368,10 +357,12 @@ main {
 
   &__card-photo {
     color: $photo;
+    width: 60px;
   }
 
   &__card-audio{
     color: $audio;
+    width: 60px;
 
     span {
       opacity: 0.6;
@@ -406,11 +397,107 @@ main {
       }
     }
   }
+}
 
-  .audio-icon,
-  .video-icon,
-  .photo-icon {
-    width: 10px;
-    height: 9px;
+.tasks {
+  &__btn {
+    margin-left: auto;
   }
+
+  .new__task-btn {
+    background-color: $color1;
+    border: none;
+    padding: 12px 15px 12px 15px;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    margin-bottom: 20px;
+
+    .plas-icon {
+      margin-right: 10px;
+    }
+  }
+
+  &__items {
+    background-color: #fff;
+    border: 1px solid $color4;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border-radius: 4px;
+    min-height: 70px;
+    padding: 0 20px;
+    display: flex;
+    transition: all .3s;
+    margin-bottom: 15px;
+
+    &:hover {
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .task__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &-link {
+      display: flex;
+      max-width: 560px;
+      width: 100%;
+    }
+
+    .task__title {
+      margin-left: 20px;
+    }
+  }
+
+  .task__autor-data {
+    display: flex;
+    width: 510px;
+  }
+
+  .task__autor {
+    margin-right: 30px;
+    width: 140px;
+    max-width: 100%;
+  }
+
+  .task__date {
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+
+    .calendar-icon-gray {
+      margin-right: 10px;
+    }
+  }
+
+  .task__status {
+    &.inwork {
+      @extend %roboto-500;
+      color: $color8;
+    }
+
+    &.done {
+      @extend %roboto-500;
+      color: $color10;
+    }
+
+    &.approval {
+      @extend %roboto-500;
+      color: $color9;
+    }
+  }
+
+  .task__icon {
+    display: flex;
+    align-items: center;
+
+    .edit-icon {
+      margin-right: 15px;
+    }
+  }
+
 }
