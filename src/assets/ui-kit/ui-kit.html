@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <div class="new-task_block new-task_block--disabled">
+        <img class="new-task_block__img" src="./img/UIKit/plus.svg" alt="">
+        <button class="new-task_block__btn btn">Новая задача</button>
+    </div>
+
+    <div class="tweet-block">
+        <img class="tweet-block__img" src="./img/UIKit/tweet.svg" alt="">
+        <button class="tweet-block__btn btn">Утвердить и опубликовать</button>
+    </div>
+
+    <div class="note_blue-block">
+        <button class="note_blue-block__btn btn">
+            <img class="note_blue-block__img" src="./img/UIKit/note-white.svg" alt="">
+        </button>
+    </div>
+
+
+    <div class="note_white-block">
+        <img class="note_white-block__img" src="./img/UIKit/note-blue.svg" alt="">
+        <button class="note_white-block__btn btn"></button>
+    </div>
+
+
+    <div class="list-task_block">
+        <img class="list-task_block__img" src="./img/UIKit/back.svg" alt="">
+        <button class="list-task_block__btn btn list-task_block--hover">К списку задач</button>
+    </div>
+
+    <div class="delete_block">
+        <img class="delete_block__img" src="./img/UIKit/delete.svg" alt="">
+        <button class="delete_block__btn btn delete_block--active">Удалить</button>
+    </div>
+
+
+    <!-- <span class="close">
+        <svg viewBox="0 0 10 10">
+            <use xlink:href="./img/UIKit/close.svg#close-img"></use>
+         </svg>
+    </span> -->
+
+
+
+     <div class="notif-block notif-block--active">
+            <img class="notif-block__img" src="./img/bluebell.svg" alt="Количество оповещений">
+            <span class="notif-block__count">3</span>
+     </div>
+
+
+     <div class="block">
+        <div class="task-block task-block--hover">
+            <div class="task-block__img">
+                <img src="./img/UIKit/comment-task.svg" alt="">
+            </div>
+            <div class="task-block__content">
+                <p class="task-block__title">Новый комментарий в задаче<span class="task-block__name"> Название задачи</span></p>
+                <span class="task-block__data">14.02.2020, 08:51</span>
+            </div>
+        </div>
+        <div class="task-block--hover">
+            <div class="task-block__img">
+                <img src="./img/UIKit/comment-task.svg" alt="">
+            </div>
+            <div class="task-block__content">
+                <p class="task-block__title">Новый комментарий в задаче<span class="task-block__name"> Название задачи</span></p>
+                <span class="task-block__data">14.02.2020, 08:51</span>
+            </div>
+        </div>
+     </div>
+
+
+
+     <div class="card">
+            <div class="user-card user-card--hover">
+                <span class="user-card__title">Видео</span>
+                <p class="user-card__text">Название повседневная практика показывает</p>
+                <span class="user-card__author">Аркадий Юрченко</span>
+                <span class="user-card__data">10.02.2020</span>
+                <span class="user-card__process">В работе</span>
+                <div class="user-card__buttons">
+                    <button class="user-card__note-btn">
+                        <img src="./img/UIKit/note-blue.svg" alt="Добавить в заметку карточку">
+                    </button>
+                    <button class="user-card__delete-btn">
+                        <img src="./img/UIKit/delete.svg" alt="Удалить карточку">
+                    </button>
+                </div>
+            </div>
+     </div>
+
+     <div class="date-publication">
+         <h3 class="date-publication__title">Дата публикации</h3>
+         <div class="date-publication__block">
+            <input class="date-publication__input date-publication__input--active" type="text" placeholder="Укажите дату публикации">
+            <img class="date-publication__img" src="./img/UIKit/calendar-ui.svg" alt="">
+         </div>
+         <div class="auto-jsCalendar" id="my-calendar" data-language="ru"></div>
+     </div>
+
+
+     <div class="fio-block">
+         <h3 class="fio-block__title">Имя, фамилия</h3>
+         <input class="fio-block__input fio-block--incorrect" type="text" placeholder="Введите имя и фамилию">
+     </div>
+
+
+     <div class="search-block">
+        <h3 class="search-block__title">Поиск</h3>
+        <div class="search-block__content">
+            <input class="search-block__input" type="text" placeholder="Введите название имя исполнителя">
+            <img class="search-block__img" src="./img/UIKit/search.svg" alt="">
+        </div>
+     </div>
+
+     <div class="search-block--focus">
+        <h3 class="search-block--focus__title">Поиск</h3>
+        <div class="search-block--focus__content">
+            <input class="search-block--focus__input" type="text" placeholder="">
+            <img class="search-block--focus__img" src="./img/UIKit/search.svg" alt="">
+        </div>
+     </div>
+
+
+     <div class="respons-block">
+        <h3 class="respons-block__title">Ответственный</h3>
+        <div class="respons-block__content">
+            <input class="respons-block__input respons-block--hover" type="text" placeholder="Выберите ответственного">
+            <!-- <img class="search-block--focus__img" src="./img/UIKit/search.svg" alt=""> -->
+        </div>
+        <ul class="respons-block__users" data-simplebar>
+            <li class="respons-block__user">Альбина Ткаченко</li>
+            <li class="respons-block__user">София Мельник</li>
+            <li class="respons-block__user">Альбина Ткаченко</li>
+            <li class="respons-block__user">София Мельник</li>
+            <li class="respons-block__user">Альбина Ткаченко</li>
+            <li class="respons-block__user">София Мельник</li>
+            <li class="respons-block__user">Альбина Ткаченко</li>
+            <li class="respons-block__user">София Мельник</li>
+            <li class="respons-block__user">Альбина Ткаченко</li>
+            <li class="respons-block__user">София Мельник</li>
+            <li class="respons-block__user">Альбина Ткаченко</li>
+        </ul>
+     </div>
+
+
+     <div class="status-block">
+        <h3 class="status-block__title">Ответственный</h3>
+        <div class="status-block__content">
+            <input class="status-block__input" type="text" placeholder="Выберите статус">
+            <!-- <img class="search-block--focus__img" src="./img/UIKit/search.svg" alt=""> -->
+        </div>
+        <ul class="status-block__users">
+            <li class="status-block__user anyone" href="#">Любой</li>
+            <li class="status-block__user status-block__user--hover work" href="#">В работе</li>
+            <li class="status-block__user wait" href="#">Ожидает согласования</li>
+            <li class="status-block__user fulfilled" href="#">Выполнено</li>
+        </ul>
+     </div>
+
+
+        <div class="content-upload">
+            <div class="content-upload__body">
+                <div class="content-upload__descr">
+                    <h3 class="content-upload__result">Результат</h3>
+                    <span class="content-upload__format">Допустимые форматы:</span>
+                    <div class="content-upload__types">
+                        <img class="content-upload__type" src="./img/UIKit/type-1.svg" alt="">
+                        <img class="content-upload__type" src="./img/UIKit/type-1.svg" alt="">
+                        <img class="content-upload__type" src="./img/UIKit/type-1.svg" alt="">
+                    </div>
+                </div>
+                <ul class="content-upload__row">
+                    <li class="content-upload__column">
+                        <div class="content-upload__border-img">
+                            <img class="content-upload__img" src="./img/UIKit/upload/content-logo-1.jpg" alt="">
+                        </div>
+                    </li>
+                    <li class="content-upload__column">
+                        <div class="content-upload__border-progress">
+                            <span class="content-upload__value">25%</span>
+                            <progress class="content-upload__prog" value="25" max="100"></progress>
+                        </div>
+                    </li>
+                    <li class="content-upload__column">
+                        <div class="content-upload__border-dashed">
+                            <!-- <img class="content-upload__img-plus" src="./img/UIKit/plus-gray.svg" alt=""> -->
+                            <svg class="icon--plus">
+                                <use xlink:href="./img/UIKit/plus-gray.svg#plus"></use>
+                              </svg>              
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+</body>
+</html>

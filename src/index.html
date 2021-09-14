@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/simplebar.css">
     <link rel="stylesheet" href="./css/jsCalendar.css">
+    <link rel="stylesheet" href="./assets/ui-kit/ui-kit.html">
     <title>Document</title>
 </head>
 <body>
-
     <header class="header">
         <div class="container">
             <div class="header-block">
@@ -39,7 +39,6 @@
                 </div>
                 <div class="header__user-block">
                     Семён Щеглов
-                    <!-- <span class="header-user__title">Семён Щеглов</span> -->
                 </div>
                 <div class="header__user-photo">
                     <img class="header__user-img" src="./img/logo-person.svg" alt="Логотип пользователя">
@@ -65,6 +64,7 @@
                         <h3 class="info__search-title">Дата публикации</h3>
                         <input class="info__search-input search-info" type="text" placeholder="Укажите дату публикации">
                         <img class="info__search-calendar" src="./img/calendar.svg" alt="">
+                        <div class="auto-jsCalendar" id="my-calendar" data-language="ru"></div>
                     </div>
                     <div class="info__content">
                         <h3 class="info__search-title">Тип контента</h3>
@@ -172,9 +172,43 @@
             <div class="loader"></div>
 
     </main>
+    <!-- <div class="status-block">
+        <h3 class="status-block__title">Ответственный</h3>
+        <div class="status-block__content">
+            <input class="status-block__input" type="text" placeholder="Выберите статус">
+        </div>
+        <ul class="status-block__users">
+            <li class="status-block__user anyone" href="#">Любой</li>
+            <li class="status-block__user status-block__user--hover work" href="#">В работе</li>
+            <li class="status-block__user wait" href="#">Ожидает согласования</li>
+            <li class="status-block__user fulfilled" href="#">Выполнено</li>
+        </ul>
+     </div> -->
 
-        <!-- Русифицированная поддержка календря-->
+
     <script src="./js/modules/jsCalendar.lang.ru.js"></script>
     <script src="./js/modules/jsCalendar.js"></script>
 </body>
 </html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    @include('/html/header.html')
+    ${require('/html/header.html')}
+
+    
+    <main class="main">
+    
+    </main>
+</body>
+</html> -->

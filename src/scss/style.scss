@@ -2,20 +2,22 @@
 @import 'vendor';
 @import 'fonts';
 @import 'reset';
+@import 'ui-kit';
 // @import 'mixins';
 
 
 .container {
-    max-width: 1230px;
+    width: 100%;
+    max-width: 87rem;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 1.07rem;
 }
 
 
 .header-block {
     display: flex;
     align-items: center;
-    height: 80px;
+    height: 5.7rem;
 }
 
 .header {
@@ -23,11 +25,11 @@
     // margin-bottom: 40px;
 
     &__logo-img {
-        margin-right: 30px;
+        margin-right: 2.14rem;
     }
 
     &__menu {
-        margin-right: 580px;
+        margin-right: 41.42rem;
     }
 
     &__menu-list {
@@ -35,13 +37,13 @@
     }
 
     li:not(:last-child) {
-        margin-right: 40px;
+        margin-right: 2.85rem;
     }
 
     .active {
         color: $blue;
         background-color: $brightblue;
-        padding: 9px 12px;
+        padding: 0.64rem 0.85rem;
     }
 
     &__menu-list_link {
@@ -55,14 +57,14 @@
 
     &__notif-link {
         position: relative;
-        margin-right: 30px;
-        width: 25px;
-        height: 25px;
+        margin-right: 2.14rem;
+        width: 1.78rem;
+        height: 1.78rem;
         display: flex;
         justify-content: center;
         // align-items: center;
-        border-radius: 4px;
-        margin-right: 20px;
+        border-radius: 0.28rem;
+        margin-right: 1.42rem;
         transition: all .3s;
     }
 
@@ -76,8 +78,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 16px;
-        line-height: 18px;
+        font-size: 1.14rem;
         width: 20px;
         height: 20px;
         top: -8px;
@@ -94,8 +95,8 @@
     }
 
     &__user-block {
-        margin-right: 20px;
-        min-width: 100px;
+        margin-right: 1.42rem;
+        min-width: 7.14rem;
     }
 
     &__user-photo {
@@ -107,18 +108,18 @@
 
         &::after {
             content: "";
-            width: 6px;
-            height: 4px;
-            margin-left: 10px;
-            margin-top: 15px;
+            width: 0.42rem;
+            height: 0.28rem;
+            margin-left: 0.71rem;
+            margin-top: 1.07rem;
             cursor: pointer;
             background-image: url("../img/arrow-down.svg");
         }
     }
 
     &__user-img:hover {
-        width: 40px;
-        height: 40px;
+        width: 2.85rem;
+        height: 2.85rem;
         border-radius: 100%;
         border: 2px solid $blue;
     }
@@ -127,11 +128,11 @@
         position: absolute;
         display: flex;
         flex-direction: column;
-        width: 90px;
-        height: 83px;
-        top: 90px;
-        right: 150px;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        width: 6.42rem;
+        height: 5.85rem;
+        top: 6.42rem;
+        right: 15.71rem;
+        box-shadow: 0px 0.28rem 1.07rem rgba(0, 0, 0, 0.15);
         opacity: 0;
     }
     .photo-active {
@@ -139,7 +140,7 @@
     }
 
     &__user-log {
-        padding: 13px 14px;
+        padding: 0.90rem 1rem;
         border: 1px solid $blue-outline;
         transition: all .3s;
         cursor: default;
@@ -149,7 +150,7 @@
     }
 
     &__user-goout {
-        padding: 12px 14px 9px 31px;
+        padding: 0.85rem 1rem 0.64rem 2.21rem;
         border: 1px solid $blue-outline;
         transition: all .3s;
         cursor: default;
@@ -160,15 +161,17 @@
 
 }
 
+
+
 .main {
-    padding-bottom: 80px;
+    padding-bottom: 7.14rem;
     background-color: #F3F8FB;;
 }
 
 
 .info {
-    padding-top: 80px;
-    margin-bottom: 25px;
+    padding-top: 5.71rem;
+    margin-bottom: 1.78rem;
 
     &__search {
         display: flex;
@@ -177,14 +180,14 @@
 
     &__search-block {
         position: relative;
-        margin-right: 20px;
-        margin-bottom: 20px;
+        margin-right: 1.42rem;
+        margin-bottom: 1.42rem;
     }
 
     &__search-title {
         font-weight: 500;
-        font-size: 12px;
-        line-height: 14px;
+        font-size: 0.85rem;
+        line-height: 1rem;
         color: $night;
         margin-bottom: 10px;
     }
@@ -192,8 +195,8 @@
 
     .search-info {
         position: relative;
-        padding: 12px 90px 12px 15px;
-        width: 393px;
+        padding: 0.85rem 6.42rem 0.85rem 1.07rem;
+        width: 28.07rem;
         border-radius: 4px;
         border: 1px solid $blue-outline;
         outline: none;
@@ -205,21 +208,57 @@
 
     &__search-search {
         position: absolute;
-        bottom: 13px;
-        right: 20px;
+        bottom: 0.90rem;
+        right: 1.42rem;
     }
 
 
 
     &__data-block {
         position: relative;
-        margin-right: 20px;
+        margin-right: 1.42rem;
+
+
+        .auto-jsCalendar {
+            position: absolute;
+            display: inline-block;
+            right: 0;
+            top: 5rem;
+            opacity: 0;
+        }
+        .date-publication__input--active {
+            border: 1px solid $blue;
+        }
+        
+        .auto-jsCalendar td:hover {
+            color: $blue;
+            background-color: #fff;
+        }
+        .jsCalendar tbody td.jsCalendar-current {
+            background-color: $brightblue;
+            border-radius: inherit;
+            color: #000;
+        }
+        .jsCalendar thead .jsCalendar-week-days th, .jsCalendar tbody td {
+            width: 2.85rem;
+            height: 2.14rem;
+            align-items: center;
+            // display: flex;
+        }
+        .jsCalendar thead .jsCalendar-nav-left, 
+        .jsCalendar thead .jsCalendar-nav-right {
+            color: $blue;
+        }
+        .calendar-view {
+            opacity: 1;
+        }
     }
 
     &__search-calendar {
         position: absolute;
-        top: 40px;
-        right: 20px;
+        top: 2.85rem;
+        right: 1.42rem;
+        cursor: pointer;
     }
 
     &__content-block {
@@ -234,15 +273,15 @@
     .btn-content {
         outline: none;
         cursor: pointer;
-        border-radius: 4px;
+        border-radius: 0.28rem;
         background-color: #fff;
     }
 
     &__btn-video {
         color: $blue;
-        padding: 12px 15px 12px 27px;
+        padding: 0.85rem 1.07rem 0.85rem 1.92rem;
         border: 1px solid $blue;
-        margin-right: 10px;
+        margin-right: 0.71rem;
 
         &:hover {
             background-color: rgba(16, 126, 255, 0.1);;
@@ -251,14 +290,14 @@
 
     &__img-video {
         position: absolute;
-        top: 16px;
-        left: 15px;
+        top: 1.14rem;
+        left: 1.07rem;
         margin-right: 10px;
     }
 
     &__btn-photo {
         color: $green;
-        padding: 12px 15px 12px 31px;
+        padding: 0.85rem 1.07rem 0.85rem 2.21rem;
         border: 1px solid $green;
         margin-right: 10px;
 
@@ -269,7 +308,7 @@
 
     &__btn-audio {
         color: $yellow;
-        padding: 12px 15px 12px 27px;
+        padding: 0.85rem 1.07rem 0.85rem 1.92rem;
         border: 1px solid $yellow;
 
         &:hover {
@@ -280,7 +319,7 @@
 
 
 .card {
-    margin-bottom: 60px;
+    margin-bottom: 4.28rem;
 
     &__row {
         display: flex;
@@ -289,29 +328,29 @@
 
     &__column {
         // width: calc((100% - 40px ) / 3);
-        max-width: 380px;
-        margin: 0 0 20px;
+        max-width: 27.14rem;
+        margin: 0 0 1.42rem;
 
     }
 
     &__column:nth-child(3n-1) {
-        margin-right: 20px;
-        margin-left: 20px;
+        margin-right: 1.42rem;
+        margin-left: 1.42rem;
     }
 
     &__column-img {
         // flex: 0 1 393px;
         transition: all .3s;
-        margin-bottom: 10px;
+        margin-bottom: 0.71rem;
     }
 
     &__column-img:hover {
-        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
-        border-radius: 6px;
+        box-shadow: 0px 0.57rem 1.42rem rgba(0, 0, 0, 0.4);
+        border-radius: 0.42rem;
     }
 
     &__column-content {
-        margin-left: 15px;
+        margin-left: 1.07rem;
     }
 
     &__column-video {
@@ -321,7 +360,7 @@
 
     &__column-video {
         color: $blue;
-        margin-right: 5px;
+        margin-right: 0.30rem;
     }
 
     &__column-photo {
@@ -354,15 +393,15 @@
     &__column-author {
         position: relative;
         opacity: 0.6;
-        margin-right: 15px;
+        margin-right: 1.07rem;
 
         &::after {
             content: "";
             position: absolute;
-            width: 4px;
-            height: 4px;
-            top: 7px;
-            right: -12px;
+            width: 0.28rem;
+            height: 0.28rem;
+            top: 0.5rem;
+            right: -0.85rem;
             border-radius: 100%;
             background-color: $blue;
         }
@@ -377,8 +416,8 @@
 .loader {
     display: block;
     margin-top: 250px;
-    width: 50px;
-    height: 50px;
+    width: 3.57rem;
+    height: 3.57rem;
     margin: 0 auto;
     border: 5px solid rgba(25, 113, 247, 0.6);
     border-radius: 50%;
@@ -395,3 +434,4 @@
 //     0% { transform: rotate(0deg); }
 //     100% { transform: rotate(360deg); }
 // }
+
