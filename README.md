@@ -52,6 +52,8 @@ npm run clean
 - css-minimizer-webpack-plugin - Оптимизирует и минифицирует CSS
 - imagemin-webpack-plugin - Оптимизирует изображения
 - simplebar - Плагин для создания уникального скроллбара
+- air-datepicker - Плагин для создания календаря
+- jquery - Плагин-библиотека для правильной работы air-datepicker
 
 ## Linters
 - eslint - Применяет руководства по стилю в приложении
