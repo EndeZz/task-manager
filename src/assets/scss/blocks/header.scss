@@ -1,0 +1,90 @@
+.header {
+  border-bottom: 1px solid $gray-line;
+  background: $white;
+
+  &__wrapper {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__wrapper-left__side,
+  &__wrapper-right__side {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 3rem;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+  }
+
+  &__item + &__item {
+    margin-left: 4rem;
+  }
+
+  &__item-link {
+    @include font(1.4rem, 500, 1.6rem);
+
+    color: inherit;
+
+    &:hover,
+    &_active {
+      color: $blue;
+    }
+
+    &--active,
+    &:focus {
+      padding: 0.9rem 1.2rem;
+      background-color: $itblue;
+      border-radius: 0.4rem;
+    }
+  }
+}
+
+.user {
+  display: flex;
+  align-items: center;
+
+  &__name {
+    margin-right: 2rem;
+    margin-left: 4rem;
+  }
+
+  &__avatar {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+
+    @include outline(1px, transparent, 50%);
+
+    &:focus,
+    &:hover {
+      @include outline(1px, $blue, 50%);
+    }
+  }
+
+  &__btn {
+    border: none;
+    background: none;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 0.6rem;
+      height: 0.4rem;
+      background: url('../images/icons/arrow-down.svg') no-repeat center;
+      position: absolute;
+      top: 50%;
+      right: -1rem;
+    }
+
+    &:focus .user__avatar { @include outline(1px, $blue, 50%); }
+  }
+}

@@ -1,0 +1,20 @@
+mixin select(className, items, mod, text)
+    form(class=`${className}`)
+      case mod
+        when 'undefined'
+          input(class=`${className}__text` type="hidden" placeholder="Выберите ответственного" id=`${mod}`)
+          div(class=`${className}__text` tabindex="0")=`Выберите ${text}`
+          div(class=`${className}__dropdown`)
+            ul(class=`${className}__dropdown-content`)
+              for item in items
+                li(class=`${className}__dropdown-content__item`)=item
+          label(class=`${className}__text-label` for=`${mod}`)=text
+        when "status" 
+          input(class=`${className}__text ${className}__text--${mod}` type="hidden" placeholder="Выберите ответственного" id=`${mod}`)
+          div(class=`${className}__text ${className}__text--${mod}` tabindex="0")=`Выберите ${text.toLowerCase()}`
+          div(class=`${className}__dropdown`)
+            ul(class=`${className}__dropdown-content ${className}__dropdown-content--${mod}`)
+              for item in items
+                li(class=`${className}__dropdown-content__item ${className}__dropdown-content__item--${mod}`)=item
+          label(class=`${className}__text-label` for=`${mod}`)=text
+

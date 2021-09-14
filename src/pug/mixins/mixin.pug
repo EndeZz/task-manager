@@ -1,0 +1,50 @@
+mixin navigation(className, items, activeItem)
+    nav(class=`${className}`)
+        ul(class=`${className}__list`)
+            each nav, ndx in items
+                li(class=`${className}__item`)
+                    a(href="#" class=`${className}__item-link ${(ndx === activeItem) ? `${className}__item-link--active` : ''}`)=nav
+
+mixin selectAvatar(className, items, mod)
+    div(class=`${className}`)
+      ul(class=`${className}__content ${mod ? `${className}__content--avatar` : ''}`)
+        for item in items
+          li(class=`${className}__content-item`)
+            a(href="#" class=`${className}__content-link`)=item
+
+mixin input(className, mod, placeholder, name)
+    form(class=`${className}`)
+        case mod
+          when "search"
+            div(class=`${className}-box ${className}-box--${mod}` tabindex="0")
+              input(class=`${className}-text ${className}-text--${mod}` type="text" id="search" placeholder="Введите название имя исполнителя" name="search")
+              label(for="search" class=`${className}-label`) Поиск
+              svg(class="icon icon--close")
+                use(xlink:href="../../assets/images/icons/icon.svg#close-icon")
+          when "calendar"
+            div(class=`${className}-box ${className}-box--${mod}` tabindex="0")
+              input(class=`${className}-text input__block-text--${mod}` type="text" id="date" placeholder="Укажите дату публикации" name="date")
+              label(for="date" class=`${className}-label`) Дата публикации
+          when "calendar-small"
+            div(class=`${className}-box ${className}-box--${mod}` tabindex="0")
+                input(class=`${className}-text input__block-text--${mod}` type="text" id="date" placeholder="Укажите дату" name="date")
+                label(for="date" class=`${className}-label`) Срок выполнения
+          default 
+            input(class=`${className}-text` type="text" placeholder=`${placeholder}` id=`${name}`)
+            label(for=`${name}` class=`${className}-label`) 
+
+mixin contentType(className, items)
+    div(class=`${className} ${className}--${items.type}`)
+        svg(class=`icon icon--${items.type}`)
+          use(xlink:href=`../../assets/images/icons/icon.svg#${items.type}-icon`)
+        span(class=`${className}-text`)=`${items.typeText}`
+        if (`${items.time}` !== 'undefined')
+          span(class=`${className}-time`)=`${items.time}`
+
+mixin filter(className, items)
+    each item in items
+      button(class=`${className}__btn ${className}__btn--${item.type}`)
+        block
+        +contentType("content__box", item)
+
+

@@ -1,0 +1,9 @@
+mixin button(className, classNameAdd, mod, text)
+  if text === undefined
+    button(class=`${classNameAdd} ${className} ${className}--${mod}`)
+      svg(class=`icon icon--${mod}`)
+        use(xlink:href=`../../assets/images/icons/icon.svg#${mod}-icon`)
+  else 
+    button(class=`${className} ${className}--${mod}`)
+      img(class=`${className}-icon--${mod}` src=`../../assets/images/icons/${mod}-icon.svg` alt=`Кнопка ${mod}`)
+      span(class=`${className}-text ${className}-text--${mod}`)=text

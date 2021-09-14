@@ -1,0 +1,146 @@
+html,
+body {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+  color: $txt;
+  font-size: 10px;
+}
+
+body {
+  @include font(14px, 400, 1rem);
+}
+
+a,
+button { cursor: pointer; }
+
+.main {
+  flex: 1 0 auto;
+  background: $background;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 122rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px); /* this kind of fail in Webkit and Opera */
+  height: 1px; /* since clip is not reliable we need that */
+  width: 1px; /* since clip is not reliable we need that too */
+  overflow: hidden; /* since clip is not reliable we also need that */
+}
+
+.icon {
+  width: 0.9rem;
+  height: 0.9rem;
+
+  &--close {
+    fill: $gray-blue-icon;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    right: 20px;
+    top: 35%;
+    cursor: pointer;
+
+    &:hover { fill: $blue; }
+  }
+
+  &--video { fill: $blue; }
+
+  &--photo { fill: $green; }
+
+  &--audio { fill: $yellow-audio; }
+
+  &--edit {
+    width: 2rem;
+    height: 2rem;
+    fill: $white;
+  }
+
+  &--edit-small {
+    width: 2rem;
+    height: 2rem;
+    fill: $blue;
+  }
+
+  &--plus {
+    width: 1.4rem;
+    height: 1.4rem;
+    fill: $gray-blue-icon;
+
+    &:hover {
+      fill: $blue;
+    }
+  }
+
+  &--delete {
+    margin: 0.2rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: transparent;
+    stroke: $blue;
+  }
+}
+
+.player-icons {
+  &--back {
+    width: 2.5rem;
+    height: 1.1rem;
+  }
+
+  &--fullscreen {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  &--volume {
+    width: 1.8rem;
+    height: 1.5rem;
+  }
+
+  &--play {
+    width: 0.9rem;
+    height: 1.2rem;
+  }
+
+  &--back,
+  &--fullscreen,
+  &--volume,
+  &--play {
+    fill: $white;
+
+    &:hover {
+      fill: rgba($white, 0.8);
+    }
+  }
+}
+
+.inwork { color: $inwork; }
+
+.wait { color: $wait; }
+
+.done { color: $done; }
+
+.hidden { display: block; }
+
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.dayBeforeAfter {
+  color: rgba($txt, 0.6);
+}
+
+.wrapper__cards {
+  height: 100vh;
+}

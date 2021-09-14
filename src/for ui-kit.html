@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+        <button class="btn__kit btn__kit--blue">
+          <img class="btn__kit-icon--blue" src="../assets/images/icons/blue-icon.svg" alt="">
+          <span class="btn__kit-text btn__kit-text--blue">Новая задача</span>
+        </button>
+        <button class="btn__kit btn__kit--green">
+          <img class="btn__kit-icon--green" src="../assets/images/icons/green-icon.svg" alt="">
+          <span class="btn__kit-text btn__kit-text--green">Утвердить и обубликовать</span>
+        </button>
+        <button class="btn__kit btn__kit--edit">
+          <svg class="icon icon--edit">
+            <use xlink:href="../assets/images/icons/icon.svg#edit-icon"></use>
+          </svg>
+        </button>
+        <button class="btn__kit btn__kit--edit-small">
+          <svg class="icon icon--edit-small">
+            <use xlink:href="../assets/images/icons/icon.svg#edit-icon"></use>
+          </svg>
+        </button>
+        <button class="btn__kit btn__kit--trans">
+          <img class="btn__kit-icon btn__kit-icon--trans" src="../assets/images/icons/trans-icon.svg" alt="">
+          <span class="btn__kit-text btn__kit-text--trans">К списку задач</span>
+        </button>
+        <button class="btn__kit btn__kit--red">
+          <img class="btn__kit-icon btn__kit-icon--red" src="../assets/images/icons/delete-icon.svg" alt="">
+          <span class="btn__kit-text btn__kit-text--red">Удалить</span>
+        </button> 
+        <div class="select">
+          <input class="select__text" type="hidden" placeholder="Выберите ответственного">
+          <div class="select__text" tabindex="0">Выберите ответственного</div>
+            <div class="select__dropdown">
+              <ul class="select__dropdown-content">
+                <li class="select__dropdown-content__item">Альбина Ткаченко</li>
+                <li class="select__dropdown-content__item">Альбина Ткаченко</li>
+                <li class="select__dropdown-content__item">Альбина Ткаченко</li>
+                <li class="select__dropdown-content__item">Альбина Ткаченко</li>
+                <li class="select__dropdown-content__item">Альбина Ткаченко</li>
+                <li class="select__dropdown-content__item">Альбина Ткаченко</li>
+                <li class="select__dropdown-content__item">Альбина Ткаченко</li>
+                <li class="select__dropdown-content__item">Альбина Ткаченко</li>
+                <li class="select__dropdown-content__item">Альбина Ткаченко</li>
+                <li class="select__dropdown-content__item">Альбина Ткаченко</li>
+                <li class="select__dropdown-content__item">Альбина Ткаченко</li>
+                <li class="select__dropdown-content__item">Альбина Ткаченко</li>
+                <li class="select__dropdown-content__item">Альбина Ткаченко</li>
+                <li class="select__dropdown-content__item">Альбина Ткаченко</li>
+                <li class="select__dropdown-content__item">Альбина Ткаченко</li>
+                <li class="select__dropdown-content__item">Альбина Ткаченко</li>
+              </ul>
+            </div>
+        </div>
+        <div class="select">
+          <input class="select__text select__text--status" type="hidden" placeholder="Статус">
+          <div class="select__text select__text--status" tabindex="0">Выберите статус</div>
+          <div class="select__dropdown">
+            <ul class="select__dropdown-content select__dropdown-content--status">
+              <li class="select__dropdown-content__item select__dropdown-content__item--status">Любой</li>
+              <li class="select__dropdown-content__item select__dropdown-content__item--status">В работе</li>
+              <li class="select__dropdown-content__item select__dropdown-content__item--status">Ожидает</li>
+              <li class="select__dropdown-content__item select__dropdown-content__item--status">Принято</li>
+            </ul>
+          </div>
+        </div>
+      <div class="player__controls">
+        <div class="player__controls-wrapper">
+          <button class="player__controls-btn" type="button">
+            <svg class="player-icons player-icons--back">
+              <use xlink:href="../assets/images/icons/player/player-icons.svg#back"></use>
+            </svg>
+          </button>
+          <button class="player__controls-btn" type="button">
+            <svg class="player-icons player-icons--play">
+              <use xlink:href="../assets/images/icons/player/player-icons.svg#play-icon"></use>
+            </svg>
+          </button>
+          <button class="player__controls-btn" type="button">
+            <svg class="player-icons player-icons--volume">
+              <use xlink:href="../assets/images/icons/player/player-icons.svg#volume-icon"></use>
+            </svg>
+          </button>
+          <button class="player__controls-btn" type="button">
+            <svg class="player-icons player-icons--fullscreen">
+              <use xlink:href="../assets/images/icons/player/player-icons.svg#fullscreen-icon"></use>
+            </svg>
+          </button>
+        </div>
+      <div class="load">
+        <div class="load__wrapper">
+          <div class="load__wrapper-descr">
+            <h3 class="load__title">Результат</h3>
+            <span class="load__text">Допустимые форматы:</span>
+            <div class="load__types">
+              <img class="load__types-icon" src="../assets/images/icons/avi.svg" alt="формат ави">
+              <img class="load__types-icon" src="../assets/images/icons/flv.svg" alt="формат flv">
+              <img class="load__types-icon" src="../assets/images/icons/mov.svg" alt="формат mov">
+            </div>
+          </div>
+          <ul class="load__content">
+            <li class="load__content-item">
+              <div class="load__content-border">
+                <img class="load__content-img" src="../assets/images/load-preview.jpg" alt="скалистый берег">
+              </div>
+            </li>
+            <li class="load__content-item">
+              <div class="load__content-border load__content-border--progress">
+                <p class="load__content-value">25%</p>
+                <progress class="load__content-progress" max="100" value="25"></progress>
+              </div>
+            </li>
+            <li class="load__content-item">
+              <div class="load__content-border load__content-border--add">
+                <svg class="icon icon--plus">
+                  <use xlink:href="../assets/images/icons/icon.svg#plus"></use>
+                </svg>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card__user">
+        <div class="card__user-wrapper">
+          <div class="card__user-descr">
+            <div class="content__box content__box--video">
+              <svg class="icon icon--play">
+                <use xlink:href="../assets/images/icons/icon.svg#play-icon"></use>
+              </svg>
+              <span class="content__box-text">Видео</span>
+            </div>
+            <p class="card__user-descr__text">Название повседневная практика показывает</p>
+          </div>
+          <div class="card__user-status">
+            <span class="card__user-status__auth">Аркадий Юрченко</span>
+            <date class="card__user-status__due">10.02.2020</date>
+            <span class="card__user-status__text inwork">В работе</span>
+          </div>
+          <div class="card__user-buttons">
+            <button class="card__user-button btn__kit btn__kit--edit-small">
+              <svg class="icon icon--edit-small">
+                <use xlink:href="../assets/images/icons/icon.svg#edit-icon"></use>
+              </svg>
+            </button>
+            <button class="card__user-button btn__kit btn__kit--delete">
+              <svg class="icon icon--delete">
+                <use xlink:href="../assets/images/icons/icon.svg#delete-icon"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>  
+      <div class="notification__card">
+        <div class="notification__card-wrapper">
+          <div class="notification__card-img">
+            <img class="notification__card-icon" src="../assets/images/icons/message-icon.svg" alt="иконка сообщения">
+            <span class="notification__button-text notification__button-text--dot"></span>
+          </div>
+          <div class="notification__card-info">
+            <p class="notification__card-info__box">
+              <span class="notification__card-info__descr">Новый комментарий в задаче</span>
+              <span class="notification__card-info__task">Название задачи</span>
+            </p>
+            <time class="notification__card-info__meta" datetime="14.02.2020, 08:51">
+              14.02.2020, 08:51
+            </time>
+          </div>
+        </div>
+      </div>

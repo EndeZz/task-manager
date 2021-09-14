@@ -1,0 +1,21 @@
+doctype
+html
+  head
+    meta
+  body
+    header.header 
+      .container
+        .header__wrapper
+          .header__wrapper-left__side 
+            img.header__logo(src="../../assets/images/logo.svg", alt="Две стрелки как проекция голубая над зеленой")
+            block nav 
+          .header__wrapper-right__side
+            button(class="notification__button" type="button")
+                img(class="notification__button-icon bell-icon" src="../../assets/images/icons/bell-icon.svg", alt="иконка колокольчика с уведомлениями")
+                span.notification__button-text 3
+            .user
+              span.user__name Семён Щеглов
+              button(class="user__btn" type="button")
+                img(class="user__avatar" src="../../assets/images/profile-photo.png", alt="Аватар - фото пользователя")
+              block dropdown
+                +selectAvatar("dropdown", ["Профиль", "Выход"], true)
