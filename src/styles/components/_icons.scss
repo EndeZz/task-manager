@@ -1,16 +1,69 @@
 .icon {
   width: 10px;
   height: 10px;
-}
+  fill: currentColor;
 
-.icon_video {
-  fill: $color-primary;
-}
+  &_edge {
+    margin-right: 10px;
+  }
 
-.icon_photo {
-  fill: $color-success;
-}
+  &_md {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
 
-.icon_audio {
-  fill: $color-warning;
+  &_plus {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+  }
+
+  &_tick {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+  }
+
+  &_back {
+    width: 25px;
+    height: 11px;
+    fill: currentColor;
+  }
+
+  &_video {
+    fill: $color-primary;
+  }
+
+  &_photo {
+    fill: $color-success;
+  }
+
+  &_audio {
+    fill: $color-warning;
+  }
+
+  &_primary {
+    fill: $color-primary;
+  }
+
+  &_success {
+    fill: $color-success;
+  }
+
+  &_warning {
+    fill: $color-warning;
+  }
+
+  &_delete {
+    fill: $color-danger;
+  }
+
+  &_ghost {
+    fill: $color-blue-icon;
+
+    &:hover {
+      fill: $color-primary;
+    }
+  }
 }

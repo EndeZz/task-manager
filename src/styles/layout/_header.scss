@@ -54,7 +54,6 @@
   }
 
   &__tooltip {
-    display: none;
     position: relative;
 
     &_content {
@@ -124,17 +123,9 @@
       border: 1px solid $color-light;
     }
 
-    //TODO: переделать hover на tooltip
     &:hover {
       .nav__profile_img {
         border: 1px solid $color-primary;
-      }
-    }
-
-    &:focus,
-    &:active {
-      .nav__tooltip {
-        display: block;
       }
     }
   }

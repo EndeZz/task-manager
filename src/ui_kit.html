@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>UI kit</h1>
+      <section>
+        <h2>Кнопки</h2>
+        <span><em>Normal</em></span>
+        <div>
+          <button class="btn btn_primary">
+            <svg class="icon icon_primary icon_plus icon_edge">
+              <use xlink:href="assets/img/icons/icons.svg#plus-circle"></use>
+            </svg>
+            <span>Новая задача</span>
+          </button>
+
+          <button class="btn btn_success">
+            <svg class="icon icon_success icon_tick icon_edge">
+              <use xlink:href="assets/img/icons/icons.svg#tick-circle"></use>
+            </svg>
+            <span>Утвердить и опубликовать</span>
+          </button>
+
+          <button class="btn btn_primary btn_edit_md">
+            <svg class="icon icon_md" width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#edit-icon"></use>
+            </svg>
+          </button>
+
+          <button class="btn btn_primary-trans btn_edit_sm">
+            <svg class="icon icon_md" width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#edit-icon"></use>
+            </svg>
+          </button>
+
+          <button class="btn btn_trans">
+            <svg class="icon icon_back icon_edge" width="25" height="11">
+              <use xlink:href="assets/img/icons/icons.svg#back"></use>
+            </svg>
+            <span>К списку задач</span>
+          </button>
+
+          <button class="btn btn_danger">
+            <svg class="icon_delete icon_edge" width="14" height="16">
+              <use xlink:href="assets/img/icons/icons.svg#delete-icon"></use>
+            </svg>
+            <span>Удалить</span>
+          </button>
+
+          <button class="btn">
+            <svg class="icon icon_ghost">
+              <use xlink:href="assets/img/icons/icons.svg#cross-icon"></use>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <span><em>Disabled</em></span>
+        <div>
+          <button class="btn btn_primary" disabled>
+            <svg class="icon icon_primary icon_plus icon_edge">
+              <use xlink:href="assets/img/icons/icons.svg#plus-circle"></use>
+            </svg>
+            <span>Новая задача</span>
+          </button>
+
+          <button class="btn btn_success" disabled>
+            <svg class="icon icon_success icon_tick icon_edge">
+              <use xlink:href="assets/img/icons/icons.svg#tick-circle"></use>
+            </svg>
+            <span>Утвердить и опубликовать</span>
+          </button>
+
+          <button class="btn btn_primary btn_edit_md" disabled>
+            <svg class="icon icon_md" width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#edit-icon"></use>
+            </svg>
+          </button>
+
+          <button class="btn btn_primary-trans btn_edit_sm" disabled>
+            <svg class="icon icon_md" width="20" height="20">
+              <use xlink:href="assets/img/icons/icons.svg#edit-icon"></use>
+            </svg>
+          </button>
+
+          <button class="btn btn_trans" disabled>
+            <svg class="icon icon_back icon_edge" width="25" height="11">
+              <use xlink:href="assets/img/icons/icons.svg#back"></use>
+            </svg>
+            <span>К списку задач</span>
+          </button>
+
+          <button class="btn btn_danger" disabled>
+            <svg class="icon_delete icon_edge" width="14" height="16">
+              <use xlink:href="assets/img/icons/icons.svg#delete-icon"></use>
+            </svg>
+            <span>Удалить</span>
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <h2>Пункты меню</h2>
+        <button class="btn btn__link btn_active">Главная</button>
+      </section>
+
+      <section>
+        <h2>Уведомления</h2>
+        <button class="btn btn__notify btn__link nav__profile">
+          <span class="nav__notify">
+            <svg class="icon-notify" width="20" height="24">
+              <use xlink:href="assets/img/icons/icons.svg#icon-notify"></use>
+            </svg>
+          </span>
+          <span class="nav__notify_new">3</span>
+        </button>
+
+        <button class="btn btn__notify btn__link nav__profile">
+          <span class="nav__notify">
+            <svg class="icon-notify" width="20" height="24">
+              <use xlink:href="assets/img/icons/icons.svg#icon-notify"></use>
+            </svg>
+          </span>
+        </button>
+      </section>
+
+      <section>
+        <h2>Профиль</h2>
+        <button class="btn btn__profile nav__profile">
+          <span class="nav__profile_name">Семён Щеглов</span>
+          <img class="nav__profile_img" src="./assets/img/profile/pic1.png" alt="Аватар профиля" />
+          <span class="nav__profile_arrow"></span>
+        </button>
+      </section>
+
+      <section>
+        <h2>Поиск</h2>
+        <input type="text" class="input input_search" placeholder="Введите название имя исполнителя" />
+        <span class="feed__input_close"></span>
+      </section>
+
+      <section>
+        <h2>Дата публикации</h2>
+        <input type="text" class="input input_date" placeholder="Укажите дату публикации" />
+      </section>
+
+      <section>
+        <h2>Тип контента</h2>
+        <label class="btn btn__filter btn__filter-video btn_checkbox">
+          <input type="checkbox" class="btn__filter-checkbox hidden" checked />
+          <svg class="icon icon_video">
+            <use xlink:href="assets/img/icons/icons.svg#video-icon"></use>
+          </svg>
+          <span>Видео</span>
+        </label>
+
+        <label class="btn btn__filter btn__filter-photo btn_checkbox">
+          <input type="checkbox" class="btn__filter-checkbox hidden" />
+          <svg class="icon icon_photo">
+            <use xlink:href="assets/img/icons/icons.svg#photo-icon"></use>
+          </svg>
+          <span>Фото</span>
+        </label>
+
+        <label class="btn btn__filter btn__filter-audio btn_checkbox">
+          <input type="checkbox" class="btn__filter-checkbox hidden" />
+          <svg class="icon icon_audio">
+            <use xlink:href="assets/img/icons/icons.svg#video-icon"></use>
+          </svg>
+          <span>Аудио</span>
+        </label>
+      </section>
+
+      <section>
+        <h2>Карточка контента</h2>
+        <article class="feed__card">
+          <a href="#" class="feed__card_link">
+            <div class="feed__img">
+              <img class="feed__pic" src="./assets/img/card/img1.jpg" alt="Закат на море" />
+            </div>
+
+            <div class="feed__card_container">
+              <div class="feed__type feed__type-video">
+                <svg class="icon icon_video">
+                  <use xlink:href="assets/img/icons/icons.svg#video-icon"></use>
+                </svg>
+                <span>Видео</span>
+                <span class="feed__type_time">02:31</span>
+              </div>
+
+              <h2 class="feed__title">Название повседневная практика показывает</h2>
+              <div class="feed__info">
+                <span class="feed__subtitle">Аркадий Юрченко</span>
+                <span class="feed__subtitle feed__subtitle-date">09:21 14.02.2020</span>
+              </div>
+            </div>
+          </a>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>

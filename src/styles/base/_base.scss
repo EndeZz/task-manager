@@ -41,3 +41,15 @@ input {
   padding: 0 10px;
   max-width: 1242px;
 }
+
+h1 {
+  @include font_config(normal, 500, 2.4rem, 2.8rem);
+}
+
+h2 {
+  @include font_config(normal, 500, 2rem, 2.3rem);
+}
+
+h3 {
+  @include font_config(normal, 500, 1.6rem, 1.9rem);
+}

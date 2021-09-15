@@ -7,16 +7,16 @@
   border-radius: 4px;
   padding: 12px 15px;
   color: $color-txt;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 
   &__profile {
     font-weight: 400;
     padding: 0;
-
-    text-decoration: none;
   }
 
   &__link {
-    text-decoration: none;
     padding: 9px 12px;
 
     &:hover {
@@ -29,7 +29,6 @@
   }
 
   &__notify {
-    text-decoration: none;
     padding: 5px 9px;
     border: 1px solid $color-light;
 
@@ -46,64 +45,90 @@
     background-color: $color-ltblue;
     color: $color-primary;
   }
+  ///////
 
-  &__new-task {
+  &_edit {
+    &_md {
+      padding: 10px;
+    }
+
+    &_sm {
+      padding: 7px;
+    }
+  }
+
+  &_primary {
     background: $color-primary;
     color: $color-light;
 
     &:hover {
       background: $color-primary-hover;
     }
+
+    &:active {
+      background: $color-primary-active;
+    }
+
+    &-trans {
+      background-color: $color-ltblue;
+      color: $color-primary;
+
+      &:hover {
+        background: $color-primary-hover;
+        color: $color-light;
+      }
+
+      &:active {
+        background: $color-primary-active;
+        color: $color-light;
+      }
+    }
   }
 
-  &__img {
-    background: url('../assets/img/icons/edit-icon.svg');
-    background-repeat: no-repeat;
-    display: inherit;
-    align-items: center;
-    min-height: 20px;
-    min-width: 20px;
-  }
-
-  &__accept {
+  &_success {
     background: $color-success;
     color: $color-light;
 
     &:hover {
       background: $color-success-hover;
     }
-  }
 
-  &__edit-bg {
-    background: $color-primary;
-    color: $color-ltblue;
-
-    &::after {
-      content: '';
-      background: url('../assets/img/icons/edit-icon.svg');
-      background-repeat: repeat;
-      display: block;
-      min-height: 20px;
-      min-width: 20px;
+    &:active {
+      background: $color-success-active;
     }
   }
 
-  &__edit-sm {
-    background: $color-ltblue;
+  &_trans {
     color: $color-primary;
+    padding: 9px 12px;
+
+    &:hover {
+      background-color: $color-ltblue;
+    }
+
+    &:active {
+      background-color: $color-ltblue-active;
+    }
   }
 
-  &__back {
-    color: $color-primary;
-  }
-
-  &__delete {
+  &_danger {
     color: $color-danger;
+    padding: 9px 12px;
+
+    &:hover {
+      background-color: $color-danger-hover;
+    }
+
+    &:active {
+      background-color: $color-danger-active;
+    }
   }
 
-  &__cross {
-    color: $color-blue-icon;
+  &:disabled {
+    opacity: 0.5;
   }
+
+  //////
 
   &__filter {
     background: $color-light;
