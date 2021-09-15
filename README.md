@@ -3,16 +3,16 @@
 ### Installation
 Clone this repo and npm install.
 
-==npm i==
+`npm i`
 
 ### Usage
 #### Development server
-==npm start==
+`npm start`
 
-You can view the development server at ==localhost:8080.==
+You can view the development server at `localhost:8080.`
 
 #### Production build
-==npm run build==
+`npm run build`
 
 ### Features
 - [webpack](https://webpack.js.org/)
