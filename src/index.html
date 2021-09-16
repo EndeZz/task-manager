@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="favicon.ico" type="image/ico">
+  
+  <title>Project</title>
+  
+</head>
+<body>
+<header class="header">
+  <div class="header-container">
+    <div class="header-container__navigation">
+      <div class="navigation__logo">
+        <img src="bb18f91f2bcc5429ff0f8c122c2c77ca.svg" alt="Логотип" class="logo">
+      </div>  
+      <ul class="navigation__menu">
+        <li class="menu__item"><a class="menu__item-link menu__item-link_active" href="#">Главная</a></li>
+        <li class="menu__item"><a class="menu__item-link" href="#">Задачи</a></li>
+        <li class="menu__item"><a class="menu__item-link" href="#">Пользователи</a></li>
+      </ul>
+    </div>
+    <div class="header-container__user-information">
+      <button class="user-information__button" type="button">
+        <img class="button__icon" src="56eca1c984d27f505e638ba15d8ddb57.svg" alt="иконка колокольчика с уведомлениями">
+      </button>
+      <div class="user-information__user">
+        <span class="user__name">Семён Щеглов</span>
+        <button class="user__btn" type="button">
+          <img class="user__avatar" src="7f55fec4d2eb29419b63f0fef9f22bf8.png" alt="Аватар - фото пользователя">
+        </button>
+        <img src="7d2c908ebc6a43cbb6ecf4f45db5a528.svg">
+      </div>
+  </div>
+  
+</header>
+<section class="section">
+  <ul class="section__list grid">
+    <li class="list__item">
+      <p class="list__search-title">Поиск</p>
+      <input type="text" class="search-title__field" placeholder="Введите название имя исполнителя">
+    </li>
+
+    <li class="list__item">
+      <p class="list__search-title">Дата публикации</p>
+      <input type="text" class="search-title__field" placeholder="Укажите дату публикации">
+    </li>
+
+    <li class="list__item">
+      <p class="list__search-title">Тип контента</p>
+      <label class="search-title__button-type-content">
+        <input type="checkbox" class="button-type-content hidden" checked>
+        <span>Видео</span>
+      </label>
+
+      <label class="search-title__button-type-content">
+        <input type="checkbox" class="button-type-content hidden">
+        <span>Фото</span>
+      </label>
+
+      <label class="search-title__button-type-content">
+        <input type="checkbox" class="button-type-content hidden">
+        <span>Аудио</span>
+      </label>
+    </li>
+  </ul>
+</section>
+<main class="main">
+  <div class="main__content grid">
+    <article class="content__card">
+      <a href="#" class="card">
+        <div class="cards__img">
+          <img class="cards__pic" src="95fce1195d67fc93bc2530177b504495.jpg" alt="Закат на море">
+        </div>
+
+        <div class="card__container">
+          <div class="container__type container__type_video">
+            <img class="container__icon container__icon_video" src="ca9e4430d6d8894311ecc71521b2b700.svg">
+            <span>Видео</span>
+            <span class="type_time">02:31</span>
+          </div>
+
+          <h2 class="container__title">Название повседневная практика показывает</h2>
+          <div class="title__info">
+            <span class="info__subtitle">Аркадий Юрченко</span>
+            <img class="info__icon" src="e94a6b9663859da06363c273fb98e31b.svg">
+            <span class="info__subtitle info__subtitle_date">09:21 14.02.2020</span>
+          </div>
+        </div>
+      </a>
+    </article>
+    <article class="content__card">
+      <a href="#" class="card">
+        <div class="cards__img">
+          <img class="cards__pic" src="05d8aa58f3e8b1e25d6245b545d330e3.jpg" alt="Мужчина идет на работу">
+        </div>
+
+        <div class="card__container">
+          <div class="container__type container__type_photo">
+            <img class="container__icon container__icon_photo" src="f46a44ffc1b22b46e193512cb858b03c.svg">
+            <span>Фото</span>
+          </div>
+
+          <h2 class="container__title">Название равным образом начало повседневной работы</h2>
+          <div class="title__info">
+            <span class="info__subtitle">Оскар Калинин</span>
+            <img class="info__icon" src="e94a6b9663859da06363c273fb98e31b.svg">
+            <span class="info__subtitle info__subtitle_date">15:41 14.02.2020</span>
+          </div>
+        </div>
+      </a>
+    </article>
+    <article class="content__card">
+      <a href="#" class="card">
+        <div class="cards__img">
+          <img class="cards__pic" src="3113f6c0b9557b4d0e444a80cb1eb986.jpg" alt="Звуковая дорожка">
+        </div>
+
+        <div class="card__container">
+          <div class="container__type container__type_audio">
+            <img class="container__icon container__icon_audio" src="57a6d6f62b235db08f9ff8502ecc6fed.svg">
+            <span>Аудио</span>
+            <span class="type_time">02:31</span>
+          </div>
+
+          <h2 class="container__title">Название с другой стороны начало повседневной работы по формированию позиции</h2>
+          <div class="title__info">
+            <span class="info__subtitle">Валерий Яковлев</span>
+            <img class="info__icon" src="e94a6b9663859da06363c273fb98e31b.svg">
+            <span class="info__subtitle info__subtitle_date">20:18 13.02.2020</span>
+          </div>
+        </div>
+      </a>
+    </article>
+    <article class="content__card">
+      <a href="#" class="card">
+        <div class="cards__img">
+          <img class="cards__pic" src="16459da558aa14afaf49137cc389151c.jpg" alt="Заснеженные горы">
+        </div>
+
+        <div class="card__container">
+          <div class="container__type container__type_photo">
+            <img class="container__icon container__icon_photo" src="f46a44ffc1b22b46e193512cb858b03c.svg">
+            <span>Фото</span>
+          </div>
+
+          <h2 class="container__title">Название равным образом начало повседневной работы</h2>
+          <div class="title__info">
+            <span class="info__subtitle">София Лебедева</span>
+            <img class="info__icon" src="e94a6b9663859da06363c273fb98e31b.svg">
+            <span class="info__subtitle info__subtitle_date">10:41 12.02.2020</span>
+          </div>
+        </div>
+      </a>
+    </article>
+    <article class="content__card">
+      <a href="#" class="card">
+        <div class="cards__img">
+          <img class="cards__pic" src="e88c69f0e6cf9091b603416e13cb9aa6.jpg" alt="Закат на море">
+        </div>
+
+        <div class="card__container">
+          <div class="container__type container__type_video">
+            <img class="container__icon container__icon_video" src="ca9e4430d6d8894311ecc71521b2b700.svg">
+            <span>Видео</span>
+            <span class="type_time">02:31</span>
+          </div>
+
+          <h2 class="container__title">Название повседневная практика показывает</h2>
+          <div class="title__info">
+            <span class="info__subtitle">Альбина Ткаченко</span>
+            <img class="info__icon" src="e94a6b9663859da06363c273fb98e31b.svg">
+            <span class="info__subtitle info__subtitle_date">14:56 11.02.2020</span>
+          </div>
+        </div>
+      </a>
+    </article>
+    <article class="content__card">
+      <a href="#" class="card">
+        <div class="cards__img">
+          <img class="cards__pic" src="6937a6135599c84f43efa8fd310464fb.jpg" alt="Мужчина идет на работу">
+        </div>
+
+        <div class="card__container">
+          <div class="container__type container__type_photo">
+            <img class="container__icon container__icon_photo" src="f46a44ffc1b22b46e193512cb858b03c.svg">
+            <span>Фото</span>
+          </div>
+
+          <h2 class="container__title">Название равным образом начало повседневной работы</h2>
+          <div class="title__info">
+            <span class="info__subtitle">Данил Плотников</span>
+            <img class="info__icon" src="e94a6b9663859da06363c273fb98e31b.svg">
+            <span class="info__subtitle info__subtitle_date">08:47 11.02.2020</span>
+          </div>
+        </div>
+      </a>
+    </article>
+    <article class="content__card">
+      <a href="#" class="card">
+        <div class="cards__img">
+          <img class="cards__pic" src="3113f6c0b9557b4d0e444a80cb1eb986.jpg" alt="Звуковая дорожка">
+        </div>
+
+        <div class="card__container">
+          <div class="container__type container__type_audio">
+            <img class="container__icon container__icon_audio" src="57a6d6f62b235db08f9ff8502ecc6fed.svg">
+            <span>Аудио</span>
+            <span class="type_time">02:31</span>
+          </div>
+
+          <h2 class="container__title">Название с другой стороны начало повседневной работы по формированию позиции</h2>
+          <div class="title__info">
+            <span class="info__subtitle">Валерий Яковлев</span>
+            <img class="info__icon" src="e94a6b9663859da06363c273fb98e31b.svg">
+            <span class="info__subtitle info__subtitle_date">10:04 10.02.2020</span>
+          </div>
+        </div>
+      </a>
+    </article>
+    <article class="content__card">
+      <a href="#" class="card">
+        <div class="cards__img">
+          <img class="cards__pic" src="05d8aa58f3e8b1e25d6245b545d330e3.jpg" alt="Мужчина идет на работу">
+        </div>
+
+        <div class="card__container">
+          <div class="container__type container__type_photo">
+            <img class="container__icon container__icon_photo" src="f46a44ffc1b22b46e193512cb858b03c.svg">
+            <span>Фото</span>
+          </div>
+
+          <h2 class="container__title">Название равным образом начало повседневной работы</h2>
+          <div class="title__info">
+            <span class="info__subtitle">Оскар Калинин</span>
+            <img class="info__icon" src="e94a6b9663859da06363c273fb98e31b.svg">
+            <span class="info__subtitle info__subtitle_date">08:47 10.02.2020</span>
+          </div>
+        </div>
+      </a>
+    </article>
+    <article class="content__card">
+      <a href="#" class="card">
+        <div class="cards__img">
+          <img class="cards__pic" src="95fce1195d67fc93bc2530177b504495.jpg" alt="Закат на море">
+        </div>
+
+        <div class="card__container">
+          <div class="container__type container__type_video">
+            <img class="container__icon container__icon_video" src="ca9e4430d6d8894311ecc71521b2b700.svg">
+            <span>Видео</span>
+            <span class="type_time">02:31</span>
+          </div>
+
+          <h2 class="container__title">Название повседневная практика показывает</h2>
+          <div class="title__info">
+            <span class="info__subtitle">Аркадий Юрченко</span>
+            <img class="info__icon" src="e94a6b9663859da06363c273fb98e31b.svg">
+            <span class="info__subtitle info__subtitle_date">08:47 10.02.2020</span>
+          </div>
+        </div>
+      </a>
+    </article>
+  </div>
+</main>
+<footer class="footer">
+
+</footer>
+
+  
+</body>
+</html>
