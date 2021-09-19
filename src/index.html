@@ -39,53 +39,83 @@
 
   <main class="main">
 
-    <section class="data">
+    <section class="task__result">
       <div class="container">
-        <div class="data__search">
-          <div class="data__search-block ">
-            <p class="data__search-title">Поиск</p>
-            <div class="data__search-wraper">
-              <input class="data__search-name search-input" type="text" placeholder="Введите название имя исполнителя">
-            </div>
+        <div class="task-head__btn">
+          <div class="btn-back">
+            <svg class="arrow-left" viewBox="0 0 512 512" >
+              <use xlink:href="./images/sprite.svg#arrow-left"></use>
+            </svg>
+            <p>К списку задач</p>
           </div>
-          <div class="data__search-block ">
-            <p class="data__search-title">Статус</p>
-            <select name="статус" class="data__search-status search-status">
-              <option value="Выберите статус">Выберите статус</option>
-              <option class="inwork" value="В работе">В работе</option>
-              <option class="done" value="Выполнено">Выполнено</option>
-              <option class="approval" value="Ожидает согласования">Ожидает согласования</option>
-            </select>
+
+          <div class="btn-edit">
+            <svg class="edit-icon" viewBox="0 0 21 20" >
+              <use xlink:href="./images/sprite.svg#edit-icon"></use>
+            </svg>
+            <svg class="bin-icon" viewBox="0 0 14 16" >
+              <use xlink:href="./images/sprite.svg#bin-icon"></use>
+            </svg>
           </div>
-          <div class="data__search-block ">
-            <p class="data__search-title">Срок выполнения</p>
-            <div class="data__search-wraper">
-              <input class="data__search-date search-input" type="text" placeholder="Укажите дату">
-            </div>
-            <div class="calendar">
-              <div id="dycalendar"></div>
-            </div>
-          </div>
-          <div class="data__search-block">
-            <p class="data__search-title">Тип контента</p>
-            <button class="data__search-video btn__type-content active">
+        </div>
+        <div class="task__item">
+          <div class="task__item-content">
+            <div class="content-status">
               <svg class="video-icon" viewBox="0 0 7 10">
                 <use xlink:href="./images/sprite.svg#video-icon"></use>
               </svg>
               Видео
-            </button>
-            <button class="data__search-photo btn__type-content">
-              <svg class="photo-icon" viewBox="0 0 10 9">
-                <use xlink:href="./images/sprite.svg#photo-icon"></use>
-              </svg>
-              Фото
-            </button>
-            <button class="data__search-audio btn__type-content">
-              <svg class="audio-icon" viewBox="0 0 7 10">
-                <use xlink:href="./images/sprite.svg#audio-icon"></use>
-              </svg>
-              Аудио
-            </button>
+              <p class="task__status inwork">В работе</p>     
+            </div>
+            <h2 class="content__title">
+              Заголовок задачи с другой стороны консультация с широким активом позволяет
+            </h2>
+            <p class="content__text">
+              Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности позволяет оценить значение форм развития. Значимость этих проблем настолько очевидна, что новая модель организационной деятельности требуют от нас анализа системы обучения кадров, соответствует насущным потребностям. Товарищи! постоянный количественный рост и сфера нашей активности требуют определения и уточнения позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.
+            </p>
+            <div class="content__file">
+              <p class="file__title">Файлы</p>
+              <div class="file__materials">
+                <svg class="zip-icon" viewBox="0 0 22 22" >
+                  <use xlink:href="./images/sprite.svg#zip-icon"></use>
+                </svg>
+                <p class="file__materials-title">Материалы.zip</p>
+                <span class="file__materials-size">61 Мб</span>
+                <button class="download">
+                  <svg class="upload-icon" viewBox="0 0 12 13" >
+                    <use xlink:href="./images/sprite.svg#upload-icon"></use>
+                  </svg>
+                  Скачать
+                </button>
+              </div>
+              <div class="file__documentation">
+                <svg class="doc-icon" viewBox="0 0 22 22" >
+                  <use xlink:href="./images/sprite.svg#doc-icon"></use>
+                </svg>
+                <p class="file__materials-title">Техническое задание.doc</p>
+                <span class="file__materials-size">215 Кб</span>
+                <button class="download">
+                  <svg class="upload-icon" viewBox="0 0 12 13" >
+                    <use xlink:href="./images/sprite.svg#upload-icon"></use>
+                  </svg>
+                  Скачать
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="task__item-info">
+            <div class="task-created">
+              <p>Здадача созадана</p><span>05.02.2020</span>
+            </div>
+            <div class="task-deadline">
+              <p>Срок выполнения</p><span>11.02.2020</span>
+            </div>
+            <div class="task-published">
+              <p>Опубликовал</p><span>Семён Щеглов</span>
+            </div>
+            <div class="task-responsible">
+              <p>Ответственный</p><span>Станислав Щукин</span>
+            </div>
           </div>
         </div>
       </div>
@@ -93,172 +123,8 @@
 
     <section class="tasks">
       <div class="container">
-        <button class="tasks__btn new__task-btn">
-          <svg class="plas-icon" viewBox="0 0 14 14">
-            <use xlink:href="./images/sprite.svg#plas-icon"></use>
-          </svg>
-          Новая задача
-        </button>
-
-        <div class="tasks__items">
-          <div class="task__item">
-            <div class="task__item-link">
-              <a class="content__card-video" href="#">
-                <svg class="video-icon" viewBox="0 0 7 10">
-                  <use xlink:href="./images/sprite.svg#video-icon"></use>
-                </svg>
-                Видео
-              </a>
-              <h4 class="task__title">Название повседневная практика показывает</h4>
-            </div>
-            <div class="task__autor-data">
-              <p class="task__autor">Аркадий Юрченко</p>
-              <div class="task__date">
-                <svg class="calendar-icon-gray" viewBox="0 0 15 14">
-                  <use xlink:href="./images/sprite.svg#calendar-icon-gray"></use>
-                </svg>
-                <span>10.02.2020</span>
-              </div>
-              <p class="task__status inwork">В работе</p>
-            </div>
-            <div class="task__icon">
-              <svg class="edit-icon" viewBox="0 0 21 20" >
-                <use xlink:href="./images/sprite.svg#edit-icon"></use>
-              </svg>
-              <svg class="bin-icon" viewBox="0 0 14 16" >
-                <use xlink:href="./images/sprite.svg#bin-icon"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-
-        <div class="tasks__items">
-          <div class="task__item">
-            <div class="task__item-link">
-              <a class="content__card-photo" href="#">
-                <svg class="photo-icon" viewBox="0 0 10 9">
-                  <use xlink:href="./images/sprite.svg#photo-icon"></use>
-                </svg>
-                Фото
-              </a>
-              <h4 class="task__title">Название равным образом начало повседневной работы</h4>
-            </div>
-            <div class="task__autor-data">
-              <p class="task__autor">Эльза Калининa</p>
-              <div class="task__date">
-                <svg class="calendar-icon-gray" viewBox="0 0 15 14">
-                  <use xlink:href="./images/sprite.svg#calendar-icon-gray"></use>
-                </svg>
-                <span>09.02.2020</span>
-              </div>
-              <p class="task__status done">Выполнено</p>
-            </div>
-            <div class="task__icon">
-              <svg class="edit-icon" viewBox="0 0 21 20" >
-                <use xlink:href="./images/sprite.svg#edit-icon"></use>
-              </svg>
-              <svg class="bin-icon" viewBox="0 0 14 16" >
-                <use xlink:href="./images/sprite.svg#bin-icon"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-
-        <div class="tasks__items">
-          <div class="task__item">
-            <div class="task__item-link">
-              <a class="content__card-audio" href="#">
-                <svg class="audio-icon" viewBox="0 0 7 10">
-                  <use xlink:href="./images/sprite.svg#audio-icon"></use>
-                </svg>
-                Аудио
-              </a>
-              <h4 class="task__title">Название с другой стороны начало повседневной работы</h4>
-            </div>
-            <div class="task__autor-data">
-              <p class="task__autor">Дмитрий Румянцев</p>
-              <div class="task__date">
-                <svg class="calendar-icon-gray" viewBox="0 0 15 14">
-                  <use xlink:href="./images/sprite.svg#calendar-icon-gray"></use>
-                </svg>
-                <span>08.02.2020</span>
-              </div>
-              <p class="task__status approval">Ожидает согласования</p>
-            </div>
-            <div class="task__icon">
-              <svg class="edit-icon" viewBox="0 0 21 20" >
-                <use xlink:href="./images/sprite.svg#edit-icon"></use>
-              </svg>
-              <svg class="bin-icon" viewBox="0 0 14 16" >
-                <use xlink:href="./images/sprite.svg#bin-icon"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-
-        <div class="tasks__items">
-          <div class="task__item">
-            <div class="task__item-link">
-              <a class="content__card-photo" href="#">
-                <svg class="photo-icon" viewBox="0 0 10 9">
-                  <use xlink:href="./images/sprite.svg#photo-icon"></use>
-                </svg>
-                Фото
-              </a>
-              <h4 class="task__title">Название равным образом начало повседневной работы</h4>
-            </div>
-            <div class="task__autor-data">
-              <p class="task__autor">Эльза Калининa</p>
-              <div class="task__date">
-                <svg class="calendar-icon-gray" viewBox="0 0 15 14">
-                  <use xlink:href="./images/sprite.svg#calendar-icon-gray"></use>
-                </svg>
-                <span>09.02.2020</span>
-              </div>
-              <p class="task__status done">Выполнено</p>
-            </div>
-            <div class="task__icon">
-              <svg class="edit-icon" viewBox="0 0 21 20" >
-                <use xlink:href="./images/sprite.svg#edit-icon"></use>
-              </svg>
-              <svg class="bin-icon" viewBox="0 0 14 16" >
-                <use xlink:href="./images/sprite.svg#bin-icon"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
-
-        <div class="tasks__items">
-          <div class="task__item">
-            <div class="task__item-link">
-              <a class="content__card-video" href="#">
-                <svg class="video-icon" viewBox="0 0 7 10">
-                  <use xlink:href="./images/sprite.svg#video-icon"></use>
-                </svg>
-                Видео
-              </a>
-              <h4 class="task__title">Название повседневная практика показывает</h4>
-            </div>
-            <div class="task__autor-data">
-              <p class="task__autor">Аркадий Юрченко</p>
-              <div class="task__date">
-                <svg class="calendar-icon-gray" viewBox="0 0 15 14">
-                  <use xlink:href="./images/sprite.svg#calendar-icon-gray"></use>
-                </svg>
-                <span>10.02.2020</span>
-              </div>
-              <p class="task__status inwork">В работе</p>
-            </div>
-            <div class="task__icon">
-              <svg class="edit-icon" viewBox="0 0 21 20" >
-                <use xlink:href="./images/sprite.svg#edit-icon"></use>
-              </svg>
-              <svg class="bin-icon" viewBox="0 0 14 16" >
-                <use xlink:href="./images/sprite.svg#bin-icon"></use>
-              </svg>
-            </div>
-          </div>
-        </div>
+        
+        
       </div>
     </section>
 

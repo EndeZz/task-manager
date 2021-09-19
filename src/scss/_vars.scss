@@ -2,6 +2,7 @@ $color1: #107eff;
 $photo: #43dd9c;
 $audio: #ffac2f;
 $color-text: #313131;
+$text-opacity: rgba(49, 49, 49, .6);
 $color4: #d8e3ec;
 $color5: #95aecd;
 $color6: #e8f3ff;
@@ -106,6 +107,29 @@ h3 {
   height: 14px;
 }
 
+.arrow-left {
+  fill: $color1;
+  width: 50px;
+  height: 20px;
+}
+
+.upload-icon {
+  width: 12px;
+  height: 12px;
+}
+
+.doc-icon {
+  fill: #fff;
+  width: 22px;
+  height: 22px;
+}
+
+.zip-icon {
+  fill: #fff;
+  width: 22px;
+  height: 22px;
+}
+
 .edit-icon {
   padding: 7px;
   background: $color6;
@@ -156,4 +180,31 @@ h3 {
     fill: #fff;
     opacity: 0.3;
   }
+}
+
+.task__status {
+  &.inwork {
+    @extend %roboto-500;
+    color: $color8;
+  }
+
+  &.done {
+    @extend %roboto-500;
+    color: $color10;
+  }
+
+  &.approval {
+    @extend %roboto-500;
+    color: $color9;
+  }
+}
+
+.download {
+  padding: 8px 10px;
+  color: $color1;
+  border: none;
+  border-radius: 4px;
+  background: $color6;
+  @extend %roboto-500;
+  font-size: 12px;
 }
