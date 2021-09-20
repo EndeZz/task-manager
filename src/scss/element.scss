@@ -1,70 +1,21 @@
-@mixin button-color ($normal, $hover, $active) {
-  &_normal, &_disabled {
-    background: $normal
-  }
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  &_hover {
-    background: $hover;
-  }
-
-  &_active {
-    background: $active;
+  &__img {
+    width: 36px;
+    height: 36px;
+    animation: loader 1.5s infinite linear;
   }
 }
 
-@mixin img ($width, $height, $padding) {
-  width: $width;
-  height: $height;
-  padding-right: $padding;
-  vertical-align: middle;
-}
-
-
-
-.button {
-  box-sizing: border-box;
-  border: none;
-  border-radius: 4px;
-  vertical-align: middle;
-
-  &__text {
-    font-weight: 500;
-    color: $white;
+@keyframes loader {
+  0% {
+    transform: rotate(0);
   }
 
-  &__new-task {
-    width: 145px;
-    height: 40px;
-
-    @include button-color($blue, #308FFF, #0067DF);
-
-    &__img {
-      @include img (14px, 14px, 10px)
-    }
-  }
-
-  &__confirm {
-    width: 236px;
-    height: 40px;
-
-    @include button-color($green, #51EFAC, #33CD8C);
-
-    &__img {
-      @include img (18px, 18px, 10px)
-    }
-  }
-
-  &__edit-task{
-    width: 40px;
-    height: 40px;
-
-    @include button-color($blue, #308FFF, #0067DF);
-
-    &__img {
-      @include img (18px, 18px, 0)
-    }
-
-
+  100% {
+    transform: rotate(-360deg);
   }
 }
-
