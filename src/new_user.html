@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="./images/favicon/favicon.svg" sizes="any" type="image/svg+xml" />
+        <title>Пользователи</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header__content">
+                <nav class="header__menu">
+                    <img class="header__logo" src="./images/header/logo.svg" alt="Логотип сайта" />
+                    <ul>
+                        <li class="header__menu-item">
+                            <a class="menu menu_hovered menu_active" href="index.html">
+                                <span class="menu__name">Главная</span>
+                            </a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="menu menu_hovered menu_active" href="tasks.html">
+                                <span class="menu__name">Задачи</span>
+                            </a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="menu menu_hovered menu_active" href="#!">
+                                <span class="menu__name">Пользователи</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__userblock">
+                    <div class="bell-notifications bell-notifications_hovered">
+                        <a class="bell-notifications__link" href="#!">
+                            <img class="bell-notifications__img" src="./images/UI_Kit/buttons/bell-icon.svg" alt="Изображение колокольчика уведомлений" />
+                            <div class="bell-notifications__count" aria-roledescription="Количество уведомлений"></div>
+                        </a>
+                    </div>
+                    <div class="header__user-nickname"></div>
+                    <button class="profile" type="button">
+                        <div class="profile__photo profile__photo_hovered"></div>
+                        <img class="profile__button-menu" src="./images/header/Rectangle31.svg" alt="Кнопка чтобы показать меню профиля" />
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="new-user">
+            <div class="new-user__content">
+                <div class="new-user__wrapper-button-back">
+                    <a class="button-task-back button-task-back_hovered" href="users.html">
+                        <div class="button-task-back__img"></div>
+                        <span class="button-task-back__text">Пользователь</span>
+                    </a>
+                </div>
+                <form class="new-user__window-registration" action="">
+                    <div class="new-user__left-collumn">
+                        <div class="new-user__avatar"></div>
+                        <label class="new-user__avatar-button new-user__avatar-button_hovered new-user__avatar-button_actived" for="avatar">
+                            <div class="new-user__avatar-button-img"></div>
+                            <span class="new-user__avatar-button-text">Загрузить аватар</span>
+                            <input class="new-user__avatar-button-input" id="avatar" type="file" accept="image/*" />
+                        </label>
+                    </div>
+                    <div class="new-user__right-collumn">
+                        <div class="block-input">
+                            <div class="block-input__title">Имя, фамилия</div>
+                            <div class="block-input__wrapper block-input__wrapper_normal">
+                                <input class="block-input__input js_validation" type="text" placeholder="Введите имя и фамилию" />
+                            </div>
+                        </div>
+                        <div class="block-input">
+                            <div class="block-input__title">E-mail</div>
+                            <div class="block-input__wrapper block-input__wrapper_normal">
+                                <input class="block-input__input js_validation" type="email" placeholder="Введите e-mail" />
+                            </div>
+                        </div>
+                        <div class="block-input">
+                            <div class="block-input__title">Роль</div>
+                            <div class="block-input__wrapper block-input__wrapper_normal">
+                                <div class="block-input__wrap-select-custom"></div>
+                            </div>
+                        </div>
+                        <div class="new-user__wrap-button-password">
+                            <div class="block-input">
+                                <div class="block-input__title">Пароль</div>
+                                <div class="block-input__input-wrap-password">
+                                    <div class="block-input__wrapper block-input__wrapper_normal">
+                                        <input class="block-input__input js_validation" id="password_visibility" type="password" placeholder="Введите пароль" autocomplete="off" />
+                                    </div>
+                                    <button class="block-input__input-password-visibility block-input__input-password-visibility_hidden" id="button_password" type="button"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new-user__error-wrap">
+                            <div class="new-user__error">
+                                <div class="new-user__error-img"></div>
+                                <span class="new-user__error-text">Заполните отмеченные поля</span>
+                            </div>
+                        </div>
+                        <div class="new-user__buttons-wrap">
+                            <button class="button-save button-save_hovered button-save_actived" id="button_new_user_submit" type="">
+                                <div class="button-save__img"></div>
+                                <span class="button-save__text">Сохранить</span>
+                            </button>
+                            <div class="new-user__button-delete-wrap">
+                                <button class="button-delete button-delete_hovered button-delete_actived" type="reset">
+                                    <div class="button-delete__img"></div>
+                                    <span class="button-delete__text">Удалить профиль</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </body>
+</html>

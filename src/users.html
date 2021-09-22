@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="./images/favicon/favicon.svg" sizes="any" type="image/svg+xml" />
+        <title>Пользователи</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header__content">
+                <nav class="header__menu">
+                    <img class="header__logo" src="./images/header/logo.svg" alt="Логотип сайта" />
+                    <ul>
+                        <li class="header__menu-item">
+                            <a class="menu menu_hovered menu_active" href="index.html">
+                                <span class="menu__name">Главная</span>
+                            </a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="menu menu_hovered menu_active" href="tasks.html">
+                                <span class="menu__name">Задачи</span>
+                            </a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="menu menu_hovered menu_active" href="#!">
+                                <span class="menu__name">Пользователи</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__userblock">
+                    <div class="bell-notifications bell-notifications_hovered">
+                        <a class="bell-notifications__link" href="#!">
+                            <img class="bell-notifications__img" src="./images/UI_Kit/buttons/bell-icon.svg" alt="Изображение колокольчика уведомлений" />
+                            <div class="bell-notifications__count" aria-roledescription="Количество уведомлений"></div>
+                        </a>
+                    </div>
+                    <div class="header__user-nickname"></div>
+                    <button class="profile" type="button">
+                        <div class="profile__photo profile__photo_hovered"></div>
+                        <img class="profile__button-menu" src="./images/header/Rectangle31.svg" alt="Кнопка чтобы показать меню профиля" />
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="main-page">
+            <div class="main-page__content">
+                <form class="main-page__search-panel" action="#!">
+                    <div class="search">
+                        <div class="search__title">Поиск</div>
+                        <div class="search__wrap-input search__wrap-input_hovered search__wrap-input_focused">
+                            <button class="search__button-submit"></button>
+                            <input class="search__input-field" type="search" placeholder="Введите название имя исполнителя" />
+                            <button class="search__button-cross search__button-cross_hovered" type="button"></button>
+                        </div>
+                    </div>
+                    <div class="main-page__search-item">
+                        <span class="main-page__search-title">Роль</span>
+                        <div class="main-page__box-buttons">
+                            <button class="button-users-role button-users-role_hovered button-users-role_clicked" type="button" tabindex="">
+                                <span class="button-users-role__text">Все</span>
+                            </button>
+                            <button class="button-users-role button-users-role_hovered button-users-role_clicked" type="button" tabindex="">
+                                <span class="button-users-role__text">Контент-мейкер</span>
+                            </button>
+                            <button class="button-users-role button-users-role_hovered button-users-role_clicked" type="button" tabindex="">
+                                <span class="button-users-role__text">Менеджер</span>
+                            </button>
+                            <button class="button-users-role button-users-role_hovered button-users-role_clicked" type="button" tabindex="">
+                                <span class="button-users-role__text">Администратор</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="main-page__wrap-button-task">
+                    <a class="button-task button-task_hovered button-task_actived" href="new_user.html">
+                        <div class="button-task__img"></div>
+                        <span class="button-task__text">Добавить пользователя</span>
+                    </a>
+                </div>
+                <div class="main-page__wrap-card-users">
+                    <div class="card-users card-users_hovered">
+                        <div class="card-users__avatar-wrap">
+                            <img class="card-users__avatar" src="./images/users/avatars/Inessa.png" alt="" />
+                        </div>
+                        <div class="card-users__name-user">Инесса Соловьева</div>
+                        <span class="card-users__email">inessa90@gmail.com</span>
+                        <span class="card-users__role">Контент-мейкер</span>
+                        <button class="button-edit-little button-edit-little_hovered"></button>
+                        <button class="button-recycle button-recycle_hovered"></button>
+                    </div>
+                    <div class="card-users card-users_hovered">
+                        <div class="card-users__avatar-wrap">
+                            <img class="card-users__avatar" src="./images/users/avatars/Oscar.png" alt="" />
+                        </div>
+                        <div class="card-users__name-user">Оскар Калинин</div>
+                        <span class="card-users__email">oscar@gmail.com</span>
+                        <span class="card-users__role">Контент-мейкер</span>
+                        <button class="button-edit-little button-edit-little_hovered"></button>
+                        <button class="button-recycle button-recycle_hovered"></button>
+                    </div>
+                    <div class="card-users card-users_hovered">
+                        <div class="card-users__avatar-wrap">
+                            <img class="card-users__avatar" src="./images/users/avatars/Albina.png" alt="" />
+                        </div>
+                        <div class="card-users__name-user">Альбина Ткаченко</div>
+                        <span class="card-users__email">albina_t@gmail.com</span>
+                        <span class="card-users__role">Менеджер</span>
+                        <button class="button-edit-little button-edit-little_hovered"></button>
+                        <button class="button-recycle button-recycle_hovered"></button>
+                    </div>
+                    <div class="card-users card-users_hovered">
+                        <div class="card-users__avatar-wrap">
+                            <img class="card-users__avatar" src="./images/users/avatars/Adam.png" alt="" />
+                        </div>
+                        <div class="card-users__name-user">Адам Галкин</div>
+                        <span class="card-users__email">galkin@gmail.com</span>
+                        <span class="card-users__role">Администратор</span>
+                        <button class="button-edit-little button-edit-little_hovered"></button>
+                        <button class="button-recycle button-recycle_hovered"></button>
+                    </div>
+                    <div class="card-users card-users_hovered">
+                        <div class="card-users__avatar-wrap">
+                            <img class="card-users__avatar" src="./images/users/avatars/Sofia.png" alt="" />
+                        </div>
+                        <div class="card-users__name-user">София Мельник</div>
+                        <span class="card-users__email">melnik_s@gmail.com</span>
+                        <span class="card-users__role">Менеджер</span>
+                        <button class="button-edit-little button-edit-little_hovered"></button>
+                        <button class="button-recycle button-recycle_hovered"></button>
+                    </div>
+                    <div class="card-users card-users_hovered">
+                        <div class="card-users__avatar-wrap">
+                            <img class="card-users__avatar" src="./images/users/avatars/Inessa.png" alt="" />
+                        </div>
+                        <div class="card-users__name-user">Инесса Соловьева</div>
+                        <span class="card-users__email">inessa90@gmail.com</span>
+                        <span class="card-users__role">Контент-мейкер</span>
+                        <button class="button-edit-little button-edit-little_hovered"></button>
+                        <button class="button-recycle button-recycle_hovered"></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

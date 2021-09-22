@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="./images/favicon/favicon.svg" sizes="any" type="image/svg+xml" />
+        <title>Главная страница</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header__content">
+                <nav class="header__menu">
+                    <img class="header__logo" src="./images/header/logo.svg" alt="Логотип сайта" />
+                    <ul>
+                        <li class="header__menu-item">
+                            <a class="menu menu_hovered menu_active" href="calendar.html">
+                                <span class="menu__name">Главная</span>
+                            </a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="menu menu_hovered menu_active" href="tasks.html">
+                                <span class="menu__name">Задачи</span>
+                            </a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="menu menu_hovered menu_active" href="users.html">
+                                <span class="menu__name">Пользователи</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__userblock">
+                    <div class="bell-notifications bell-notifications_hovered">
+                        <a class="bell-notifications__link" href="#!">
+                            <img class="bell-notifications__img" src="./images/UI_Kit/buttons/bell-icon.svg" alt="Изображение колокольчика уведомлений" />
+                            <div class="bell-notifications__count" aria-roledescription="Количество уведомлений"></div>
+                        </a>
+                    </div>
+                    <div class="header__user-nickname"></div>
+                    <button class="profile" type="button">
+                        <div class="profile__photo profile__photo_hovered"></div>
+                        <img class="profile__button-menu" src="./images/header/Rectangle31.svg" alt="Кнопка чтобы показать меню профиля" />
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="main-page">
+            <div class="main-page__content">
+                <form class="main-page__search-panel" action="#!">
+                    <div class="search">
+                        <div class="search__title">Поиск</div>
+                        <div class="search__wrap-input search__wrap-input_hovered search__wrap-input_focused">
+                            <button class="search__button-submit"></button>
+                            <input class="search__input-field" type="search" placeholder="Введите название имя исполнителя" />
+                            <button class="search__button-cross search__button-cross_hovered" type="button"></button>
+                        </div>
+                    </div>
+                    <div class="main-page__search-date">
+                        <div class="main-page__search-date-title">Дата публикации</div>
+                        <div class="main-page__search-date-wrap-calendar main-page__search-date-wrap-calendar_hovered main-page__search-date-wrap-calendar_focused">
+                            <div class="calendar">
+                                <div class="calendar__header calendar__header_hovered calendar__header_focused calendar__header_actived">
+                                    <input class="calendar__select-date" placeholder="Укажите дату публикации" />
+                                    <button class="calendar__icon"></button>
+                                </div>
+                                <div class="calendar__body">
+                                    <div class="calendar__body-header">
+                                        <div class="calendar__body-header-left">
+                                            <span class="calendar__body-header-month-year" id="month">Февраль</span>
+                                            <span class="calendar__body-header-month-year">&#044; &#8194;</span>
+                                            <span class="calendar__body-header-month-year" id="year">2021</span>
+                                        </div>
+                                        <div class="calendar__body-switch">
+                                            <button class="calendar__body-switch-prev calendar__body-switch-prev_actived" type="button"></button>
+                                            <button class="calendar__body-switch-next calendar__body-switch-next_actived" type="button"></button>
+                                        </div>
+                                    </div>
+                                    <div class="calendar__body-content">
+                                        <div class="calendar__body-week-days">
+                                            <div class="calendar__body-week-day-name">Пн</div>
+                                            <div class="calendar__body-week-day-name">Вт</div>
+                                            <div class="calendar__body-week-day-name">Ср</div>
+                                            <div class="calendar__body-week-day-name">Чт</div>
+                                            <div class="calendar__body-week-day-name">Пт</div>
+                                            <div class="calendar__body-week-day-name">Сб</div>
+                                            <div class="calendar__body-week-day-name">Вс</div>
+                                        </div>
+                                        <div class="calendar__body-days"></div>
+                                    </div>
+                                    <div class="month-list"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-page__search-item">
+                        <span class="main-page__search-title">Тип контента</span>
+                        <div class="main-page__box-buttons">
+                            <button class="button-video button-video_hovered button-video_clicked" type="button" tabindex="">
+                                <img class="button-video__img" src="./images/main-search/videoicon.svg" alt="Значок видео" />
+                                <span class="button-video__text">Видео</span>
+                            </button>
+                            <button class="button-photo button-photo_hovered" type="button" tabindex="">
+                                <img class="button-photo__img" src="./images/main-search/photo-icon.svg" alt="Значок фото" />
+                                <span class="button-photo__text">Фото</span>
+                            </button>
+                            <button class="button-audio button-audio_hovered" type="button" tabindex="">
+                                <img class="button-audio__img" src="./images/main-search/audio-icon.svg" alt="Значок аудио" />
+                                <span class="button-audio__text">Аудио</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <ul class="main-page__list-cards">
+                    <li class="main-page__list-cards-item">
+                        <section class="card-video">
+                            <a class="card-video__link" href="">
+                                <picture class="card-video__picture card-video__picture_hovered">
+                                    <source src="" />
+                                    <img class="card-video__picture-img" src="./images/cards/Rectangle1.png" alt="Фото с изображением берега моря и гор" />
+                                </picture>
+                                <button class="card-video__button">
+                                    <img class="card-video__button-img" src="./images/cards/videoicon.svg" alt="Иконка видеоплеера" />
+                                    <span class="card-video__button-name">Видео</span>
+                                    <span class="card-video__button-duration">02:31</span>
+                                </button>
+                                <h4 class="card-video__title">Название повседневная практика показывает</h4>
+                                <div class="card-video__info">
+                                    <span class="card-video__info-author">Аркадий Юрченко</span>
+                                    <div class="card-video__info-point"></div>
+                                    <span class="card-video__info-time-date">09:21 14.02.2020</span>
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                    <li class="main-page__list-cards-item">
+                        <section class="card-photo">
+                            <a class="card-video__link" href="">
+                                <picture class="card-photo__picture card-photo__picture_hovered">
+                                    <source src="" />
+                                    <img class="card-photo__picture-img" src="./images/cards/Rectangle2.png" alt="Фото с изображением подземного перехода" />
+                                </picture>
+                                <button class="card-photo__button">
+                                    <img class="card-photo__button-img" src="./images/cards/photo-icon.svg" alt="Иконка фотоаппарата" />
+                                    <span class="card-photo__button-name">Фото</span>
+                                </button>
+                                <h4 class="card-photo__title">Название равным образом начало повседневной работы</h4>
+                                <div class="card-photo__info">
+                                    <span class="card-photo__info-author">Оскар Калинин</span>
+                                    <div class="card-photo__info-point"></div>
+                                    <span class="card-photo__info-time-date">15:41 14.02.2020</span>
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                    <li class="main-page__list-cards-item">
+                        <section class="card-audio">
+                            <a class="card-video__link" href="">
+                                <picture class="card-audio__picture card-audio__picture_hovered">
+                                    <source src="" />
+                                    <img class="card-audio__picture-img" src="./images/cards/sound.svg" alt="Фото с изображением эквалайзера" />
+                                </picture>
+                                <button class="card-audio__button">
+                                    <img class="card-audio__button-img" src="./images/cards/audio-icon.svg" alt="Иконка аудиоплеера" />
+                                    <span class="card-audio__button-name">Аудио</span>
+                                    <span class="card-audio__button-duration">02:31</span>
+                                </button>
+                                <h4 class="card-audio__title">Название с другой стороны начало повседневной работы по формированию позиции</h4>
+                                <div class="card-audio__info">
+                                    <span class="card-audio__info-author">Валерий Яковлев</span>
+                                    <div class="card-audio__info-point"></div>
+                                    <span class="card-audio__info-time-date">09:21 14.02.2020</span>
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                    <li class="main-page__list-cards-item">
+                        <section class="card-photo">
+                            <a class="card-video__link" href="">
+                                <picture class="card-photo__picture card-photo__picture_hovered">
+                                    <source src="" />
+                                    <img class="card-photo__picture-img" src="./images/cards/Rectangle4.png" alt="Фото с изображением заснеженных гор" />
+                                </picture>
+                                <button class="card-photo__button">
+                                    <img class="card-photo__button-img" src="./images/cards/photo-icon.svg" alt="Иконка фотоаппарата" />
+                                    <span class="card-photo__button-name">Фото</span>
+                                </button>
+                                <h4 class="card-photo__title">Название равным образом начало повседневной работы</h4>
+                                <div class="card-photo__info">
+                                    <span class="card-photo__info-author">София Лебедева</span>
+                                    <div class="card-photo__info-point"></div>
+                                    <span class="card-photo__info-time-date">09:21 14.02.2020</span>
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                    <li class="main-page__list-cards-item">
+                        <section class="card-video">
+                            <a class="card-video__link" href="">
+                                <picture class="card-video__picture card-video__picture_hovered">
+                                    <source src="" />
+                                    <img class="card-video__picture-img" src="./images/cards/Rectangle5.png" alt="Фото с изображением озера в горах" />
+                                </picture>
+                                <button class="card-video__button">
+                                    <img class="card-video__button-img" src="./images/cards/videoicon.svg" alt="Иконка видеоплеера" />
+                                    <span class="card-video__button-name">Видео</span>
+                                    <span class="card-video__button-duration">02:31</span>
+                                </button>
+                                <h4 class="card-video__title">Название повседневная практика показывает</h4>
+                                <div class="card-video__info">
+                                    <span class="card-video__info-author">Альбина Ткаченко</span>
+                                    <div class="card-video__info-point"></div>
+                                    <span class="card-video__info-time-date">09:21 14.02.2020</span>
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                    <li class="main-page__list-cards-item">
+                        <section class="card-photo">
+                            <a class="card-video__link" href="">
+                                <picture class="card-photo__picture card-photo__picture_hovered">
+                                    <source src="" />
+                                    <img class="card-photo__picture-img" src="./images/cards/Rectangle6.png" alt="Фото с изображением скалистого берега моря" />
+                                </picture>
+                                <button class="card-photo__button">
+                                    <img class="card-photo__button-img" src="./images/cards/photo-icon.svg" alt="Иконка фотоаппарата" />
+                                    <span class="card-photo__button-name">Фото</span>
+                                </button>
+                                <h4 class="card-photo__title">Название повседневная практика показывает</h4>
+                                <div class="card-photo__info">
+                                    <span class="card-photo__info-author">Данил Плотников</span>
+                                    <div class="card-photo__info-point"></div>
+                                    <span class="card-photo__info-time-date">09:21 14.02.2020</span>
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                    <li class="main-page__list-cards-item">
+                        <section class="card-audio">
+                            <a class="card-video__link" href="">
+                                <picture class="card-audio__picture card-audio__picture_hovered">
+                                    <source src="" />
+                                    <img class="card-audio__picture-img" src="./images/cards/sound.svg" alt="Фото с изображением эквалайзера" />
+                                </picture>
+                                <button class="card-audio__button">
+                                    <img class="card-audio__button-img" src="./images/cards/audio-icon.svg" alt="Иконка аудиоплеера" />
+                                    <span class="card-audio__button-name">Аудио</span>
+                                    <span class="card-audio__button-duration">02:31</span>
+                                </button>
+                                <h4 class="card-audio__title">Название с другой стороны начало повседневной работы по формированию позиции</h4>
+                                <div class="card-audio__info">
+                                    <span class="card-audio__info-author">Валерий Яковлев</span>
+                                    <div class="card-audio__info-point"></div>
+                                    <span class="card-audio__info-time-date">09:21 14.02.2020</span>
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                    <li class="main-page__list-cards-item">
+                        <section class="card-photo">
+                            <a class="card-video__link" href="">
+                                <picture class="card-photo__picture card-photo__picture_hovered">
+                                    <source src="" />
+                                    <img class="card-photo__picture-img" src="./images/cards/Rectangle1.png" alt="Фото с изображением подземного перехода" />
+                                </picture>
+                                <button class="card-photo__button">
+                                    <img class="card-photo__button-img" src="./images/cards/photo-icon.svg" alt="Иконка фотоаппарата" />
+                                    <span class="card-photo__button-name">Фото</span>
+                                </button>
+                                <h4 class="card-photo__title">Название повседневная практика показывает</h4>
+                                <div class="card-photo__info">
+                                    <span class="card-photo__info-author">Оскар Калинин</span>
+                                    <div class="card-photo__info-point"></div>
+                                    <span class="card-photo__info-time-date">09:21 14.02.2020</span>
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                    <li class="main-page__list-cards-item">
+                        <section class="card-video">
+                            <a class="card-video__link" href="">
+                                <picture class="card-video__picture card-video__picture_hovered">
+                                    <source src="" />
+                                    <img class="card-video__picture-img" src="./images/cards/Rectangle1.png" alt="Фото с изображением берега моря и гор" />
+                                </picture>
+                                <button class="card-video__button">
+                                    <img class="card-video__button-img" src="./images/cards/videoicon.svg" alt="Иконка видеоплеера" />
+                                    <span class="card-video__button-name">Видео</span>
+                                    <span class="card-video__button-duration">02:31</span>
+                                </button>
+                                <h4 class="card-video__title">Название повседневная практика показывает</h4>
+                                <div class="card-video__info">
+                                    <span class="card-video__info-author">Аркадий Юрченко</span>
+                                    <div class="card-video__info-point"></div>
+                                    <span class="card-video__info-time-date">09:21 14.02.2020</span>
+                                </div>
+                            </a>
+                        </section>
+                    </li>
+                </ul>
+                <div class="lazy-loader">
+                    <div class="lazy-loader__cyrcle-outer">
+                        <div class="lazy-loader__cyrcle-inner"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

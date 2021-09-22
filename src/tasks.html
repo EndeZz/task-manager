@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="./images/favicon/favicon.svg" sizes="any" type="image/svg+xml" />
+        <title>Задачи</title>
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header__content">
+                <nav class="header__menu">
+                    <img class="header__logo" src="./images/header/logo.svg" alt="Логотип сайта" />
+                    <ul>
+                        <li class="header__menu-item">
+                            <a class="menu menu_hovered" href="index.html">
+                                <span class="menu__name">Главная</span>
+                            </a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="menu menu_hovered" href="#!">
+                                <span class="menu__name">Задачи</span>
+                            </a>
+                        </li>
+                        <li class="header__menu-item">
+                            <a class="menu menu_hovered" href="users.html">
+                                <span class="menu__name">Пользователи</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__userblock">
+                    <div class="bell-notifications bell-notifications_hovered">
+                        <a class="bell-notifications__link" href="#!">
+                            <img class="bell-notifications__img" src="./images/UI_Kit/buttons/bell-icon.svg" alt="Изображение колокольчика уведомлений" />
+                            <div class="bell-notifications__count" aria-roledescription="Количество уведомлений"></div>
+                        </a>
+                    </div>
+                    <div class="header__user-nickname"></div>
+                    <button class="profile" type="button">
+                        <div class="profile__photo profile__photo_hovered"></div>
+                        <img class="profile__button-menu" src="./images/header/Rectangle31.svg" alt="Кнопка чтобы показать меню профиля" />
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="main-page">
+            <div class="main-page__content">
+                <form class="main-page__search-panel" action="#!">
+                    <div class="search">
+                        <div class="search__title">Поиск</div>
+                        <div class="search__wrap-input search__wrap-input_hovered search__wrap-input_focused">
+                            <button class="search__button-submit"></button>
+                            <input class="search__input-field" type="search" placeholder="Введите название имя исполнителя" />
+                            <button class="search__button-cross search__button-cross_hovered" type="button"></button>
+                        </div>
+                    </div>
+                    <div class="main-page__wrap-select">
+                        <div class="main-page__wrap-select-title">Статус</div>
+                    </div>
+                    <div class="main-page__search-date main-page__search-date_size_little">
+                        <div class="main-page__search-date-title">Срок выполнения</div>
+                        <div class="main-page__search-date-wrap-calendar main-page__search-date-wrap-calendar_hovered main-page__search-date-wrap-calendar_focused">
+                            <div class="calendar">
+                                <div class="calendar__header">
+                                    <input class="calendar__select-date" placeholder="Укажите дату" />
+                                    <button class="calendar__icon"></button>
+                                </div>
+                                <div class="calendar__body">
+                                    <div class="calendar__body-header">
+                                        <div class="calendar__body-header-left">
+                                            <span class="calendar__body-header-month-year" id="month">Февраль</span>
+                                            <span class="calendar__body-header-month-year">&#044; &#8194;</span>
+                                            <span class="calendar__body-header-month-year" id="year">2021</span>
+                                        </div>
+                                        <div class="calendar__body-switch">
+                                            <button class="calendar__body-switch-prev calendar__body-switch-prev_actived" type="button"></button>
+                                            <button class="calendar__body-switch-next calendar__body-switch-next_actived" type="button"></button>
+                                        </div>
+                                    </div>
+                                    <div class="calendar__body-content">
+                                        <div class="calendar__body-week-days">
+                                            <div class="calendar__body-week-day-name">Пн</div>
+                                            <div class="calendar__body-week-day-name">Вт</div>
+                                            <div class="calendar__body-week-day-name">Ср</div>
+                                            <div class="calendar__body-week-day-name">Чт</div>
+                                            <div class="calendar__body-week-day-name">Пт</div>
+                                            <div class="calendar__body-week-day-name">Сб</div>
+                                            <div class="calendar__body-week-day-name">Вс</div>
+                                        </div>
+                                        <div class="calendar__body-days"></div>
+                                    </div>
+                                    <div class="month-list"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-page__search-item">
+                        <span class="main-page__search-title">Тип контента</span>
+                        <div class="main-page__box-buttons">
+                            <button class="button-video button-video_hovered button-video_clicked" type="button" tabindex="">
+                                <img class="button-video__img" src="./images/main-search/videoicon.svg" alt="Значок видео" />
+                                <span class="button-video__text">Видео</span>
+                            </button>
+                            <button class="button-photo button-photo_hovered" type="button" tabindex="">
+                                <img class="button-photo__img" src="./images/main-search/photo-icon.svg" alt="Значок фото" />
+                                <span class="button-photo__text">Фото</span>
+                            </button>
+                            <button class="button-audio button-audio_hovered" type="button" tabindex="">
+                                <img class="button-audio__img" src="./images/main-search/audio-icon.svg" alt="Значок аудио" />
+                                <span class="button-audio__text">Аудио</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="main-page__wrap-button-task">
+                    <button class="button-task button-task_hovered">
+                        <img class="button-task__img" src="./images/UI_Kit/buttons/task.svg" alt="Кнопка новая задача" />
+                        <span class="button-task__text">Новая задача</span>
+                    </button>
+                </div>
+                <ul class="main-page__wrap-card-task">
+                    <li data-id="1">
+                        <div class="card-task card-task_hovered card-task_theme_video card-task_status_work">
+                            <div class="card-task__img"></div>
+                            <span class="card-task__name-card">Видео</span>
+                            <div class="card-task__description">
+                                <a href="tasks_edit.html?task=1">Название повседневная практика показывает</a>
+                                <div class="card-task__description-shadow"></div>
+                            </div>
+                            <span class="card-task__author-card-text">Аркадий Юрченко</span>
+                            <div class="card-task__wrap-date">
+                                <button class="card-task__button-date">
+                                    <img class="card-task__calendar" src="./images/UI_Kit/buttons/calendar-grblule-icon.svg" alt="" />
+                                </button>
+                                <span class="card-task__date">10.02.2020</span>
+                            </div>
+                            <span class="card-task__status">В работе</span>
+                            <button class="button-edit-little button-edit-little_hovered"></button>
+                            <button class="button-recycle button-recycle_hovered"></button>
+                        </div>
+                    </li>
+                    <li data-id="2">
+                        <div class="card-task card-task_hovered card-task_theme_photo card-task_status_done">
+                            <div class="card-task__img"></div>
+                            <span class="card-task__name-card">Фото</span>
+                            <div class="card-task__description">
+                                <a href="tasks_edit.html?task=2">Название равным образом начало повседневной работы</a>
+                                <div class="card-task__description-shadow"></div>
+                            </div>
+                            <span class="card-task__author-card-text">Эльза Калинина</span>
+                            <div class="card-task__wrap-date">
+                                <button class="card-task__button-date">
+                                    <img class="card-task__calendar" src="./images/UI_Kit/buttons/calendar-grblule-icon.svg" alt="" />
+                                </button>
+                                <span class="card-task__date">09.02.2020</span>
+                            </div>
+                            <span class="card-task__status">Выполнено</span>
+                            <button class="button-edit-little button-edit-little_hovered"></button>
+                            <button class="button-recycle button-recycle_hovered"></button>
+                        </div>
+                    </li>
+                    <li data-id="3">
+                        <div class="card-task card-task_hovered card-task_theme_audio card-task_status_waiting">
+                            <div class="card-task__img"></div>
+                            <span class="card-task__name-card">Аудио</span>
+                            <div class="card-task__description">
+                                <a href="tasks_edit.html?task=3">Название с другой стороны начало повседневной работы по формированию</a>
+                                <div class="card-task__description-shadow"></div>
+                            </div>
+                            <span class="card-task__author-card-text">Дмитрий Румянцев</span>
+                            <div class="card-task__wrap-date">
+                                <button class="card-task__button-date">
+                                    <img class="card-task__calendar" src="./images/UI_Kit/buttons/calendar-grblule-icon.svg" alt="" />
+                                </button>
+                                <span class="card-task__date">08.02.2020</span>
+                            </div>
+                            <span class="card-task__status">Ожидает согласования</span>
+                            <button class="button-edit-little button-edit-little_hovered"></button>
+                            <button class="button-recycle button-recycle_hovered"></button>
+                        </div>
+                    </li>
+                    <li data-id="4">
+                        <div class="card-task card-task_hovered card-task_theme_photo card-task_status_waiting">
+                            <div class="card-task__img"></div>
+                            <span class="card-task__name-card">Фото</span>
+                            <div class="card-task__description">
+                                <a href="tasks_edit.html?task=4">Название равным образом начало повседневной работы</a>
+                                <div class="card-task__description-shadow"></div>
+                            </div>
+                            <span class="card-task__author-card-text">Гена Черемнов</span>
+                            <div class="card-task__wrap-date">
+                                <button class="card-task__button-date">
+                                    <img class="card-task__calendar" src="./images/UI_Kit/buttons/calendar-grblule-icon.svg" alt="" />
+                                </button>
+                                <span class="card-task__date">06.02.2020</span>
+                            </div>
+                            <span class="card-task__status">Ожидает согласования</span>
+                            <button class="button-edit-little button-edit-little_hovered"></button>
+                            <button class="button-recycle button-recycle_hovered"></button>
+                        </div>
+                    </li>
+                    <li data-id="5">
+                        <div class="card-task card-task_hovered card-task_theme_video card-task_status_done">
+                            <div class="card-task__img"></div>
+                            <span class="card-task__name-card">Видео</span>
+                            <div class="card-task__description">
+                                <a href="tasks_edit.html?task=5">Название повседневная практика показывает</a>
+                                <div class="card-task__description-shadow"></div>
+                            </div>
+                            <span class="card-task__author-card-text">Инесса Соловьева</span>
+                            <div class="card-task__wrap-date">
+                                <button class="card-task__button-date">
+                                    <img class="card-task__calendar" src="./images/UI_Kit/buttons/calendar-grblule-icon.svg" alt="" />
+                                </button>
+                                <span class="card-task__date">10.02.2020</span>
+                            </div>
+                            <span class="card-task__status">Выполнено</span>
+                            <button class="button-edit-little button-edit-little_hovered"></button>
+                            <button class="button-recycle button-recycle_hovered"></button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </body>
+</html>

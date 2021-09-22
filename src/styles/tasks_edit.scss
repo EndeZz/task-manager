@@ -1,0 +1,263 @@
+@import './variables';
+
+.main-page {
+    &__edit-block-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left-collumn {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__edit-description {
+        background: $color-white;
+        border: 1px solid $color-border-bottom-header;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        min-height: 446px;
+        min-width: 807px;
+        padding: 30px;
+    }
+
+    &__info {
+        align-items: center;
+        display: flex;
+        font-family: 'RM';
+        font-size: $font-size14;
+        margin-bottom: 15px;
+    }
+
+    &__img {
+        background: url(../images/UI_Kit/buttons/video-icon.svg);
+        height: 10px;
+        margin-right: 5px;
+        width: 7px;
+    }
+
+    &__type-file {
+        color: $color-blue;
+        margin-right: 20px;
+    }
+
+    &__status {
+        color: $color-status-pink;
+    }
+
+    &__title {
+        color: $color-black;
+        font-family: 'RM';
+        font-size: $font-size20;
+        margin-bottom: 15px;
+    }
+
+    &__text {
+        color: $color-black;
+        font-family: 'RR';
+        font-size: $font-size14;
+        line-height: 21px;
+        margin-bottom: 20px;
+    }
+
+    &__caption {
+        border-bottom: 1px solid $color-blue-outline;
+        color: $color-black;
+        font-family: 'RM';
+        font-size: $font-size14;
+        padding-bottom: 10px;
+    }
+
+    &__download-content {
+        background: $color-white;
+        border: 1px solid $color-border-bottom-header;
+        border-radius: 4px;
+        margin-right: 20px;
+        overflow: hidden;
+
+        &-wrap {
+            align-items: center;
+            display: flex;
+        }
+
+        &-box {
+            padding: 30px;
+        }
+
+        &__formats {
+            align-items: center;
+            display: flex;
+            flex-wrap: nowrap;
+            margin-bottom: 23px;
+        }
+
+        &__title {
+            color: $color-black;
+            font-family: 'RM';
+            font-size: $font-size16;
+            margin-right: 20px;
+        }
+
+        &__text {
+            color: $text-black-opacity;
+            font-family: 'RR';
+            font-size: $font-size14;
+            margin-right: 9px;
+        }
+
+        &__format {
+            margin-right: 5px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &_avi {
+                background: url(../images/UI_Kit/icons/avi.svg) center no-repeat;
+                border-radius: 2px;
+                height: 16px;
+                width: 30px;
+            }
+
+            &_flv {
+                background: url(../images/UI_Kit/icons/flv.svg) center no-repeat;
+                border-radius: 2px;
+                height: 16px;
+                width: 30px;
+            }
+
+            &_mov {
+                background: url(../images/UI_Kit/icons/mov.svg) center no-repeat;
+                border-radius: 2px;
+                height: 16px;
+                width: 37px;
+            }
+        }
+
+        &__downloaded-block-files {
+            align-items: center;
+            display: flex;
+        }
+    }
+
+    &__download-files {
+        &__wrap-message {
+            border-top: 1px solid $color-blue-outline;
+            padding: 30px;
+        }
+
+        &__form {
+            position: relative;
+        }
+
+        &__message {
+            appearance: none;
+            border: 0;
+            border: 1px solid $color-blue-outline;
+            border-radius: 4px;
+            box-shadow: none;
+            color: $color-black;
+            font-family: 'RR';
+            font-size: $font-size14;
+            height: 117px;
+            outline: 0;
+            overflow: auto;
+            padding: 10px;
+            resize: none;
+            width: 100%;
+        }
+
+        &__button {
+            background: $color-blue;
+            border-radius: 4px;
+            bottom: 10px;
+            color: $color-white;
+            font-family: 'RM';
+            font-size: $font-size12;
+            height: 30px;
+            line-height: 14px;
+            max-width: 100%;
+            padding: 8px 10px;
+            position: absolute;
+            right: 10px;
+
+            &_hovered:hover {
+                background: $color-hovered;
+            }
+
+            &_actived:active {
+                background: $color-blue-actived;
+            }
+        }
+    }
+
+    &__right-collumn {
+        background: $color-white;
+        border: 1px solid $color-border-bottom-header;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        height: 204px;
+        min-width: 394px;
+        padding: 30px;
+    }
+
+    &__info-block {
+        align-items: center;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        line-height: 21px;
+        margin-bottom: 20px;
+    }
+
+    &__text-first {
+        color: $color-black;
+        font-family: 'RR';
+        font-size: $font-size14;
+        margin-right: 5px;
+    }
+
+    &__fill {
+        border-bottom: 1px solid $color-blue-outline;
+        flex-grow: 1;
+        height: 11px;
+        margin-right: 5px;
+    }
+
+    &__text-last {
+        color: $color-black;
+        font-family: 'RM';
+        font-size: $font-size14;
+    }
+}
+
+.main-page__wrap-button-task_edit {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.main-page__wrap-button-task_edit .button-edit-big {
+    position: absolute;
+    right: 60px;
+}
+
+.main-page__wrap-button-task_edit .button-recycle-big {
+    position: absolute;
+    right: 0;
+}
+
+.download-block_type_zip .download-block__icon {
+    background: url(../images/UI_Kit/icons/zip.svg) center no-repeat;
+}
+
+.download-block_type_doc .download-block__icon {
+    background: url(../images/UI_Kit/icons/doc.svg) center no-repeat;
+}

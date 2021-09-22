@@ -1,0 +1,15 @@
+import './lib/lib.js';
+import './tasks.js';
+import './new_user.js';
+import './main_page.js';
+import '@/fonts/Roboto-Medium.woff';
+import '@/fonts/Roboto-Regular.woff';
+import '@/styles/variables.scss';
+import '@/styles/nullstyle.scss';
+import '@/styles/UI_Kit.scss';
+import '@/styles/fonts.scss';
+import '@/styles/users.scss';
+import '@/styles/tasks.scss';
+import '@/styles/tasks_edit.scss';
+import '@/styles/new_user.scss';
+import '@/styles/main.scss';

@@ -1,0 +1,140 @@
+@import './variables';
+
+.header__userblock .bell-notifications {
+    margin-right: 30px;
+}
+
+.main-page__wrap-select {
+    width: 187px;
+
+    &-title {
+        color: $color-black;
+        font-family: 'RM';
+        font-size: $font-size12;
+        margin-bottom: 9px;
+    }
+}
+
+.select_theme_status {
+    .select__header {
+        width: 187px;
+    }
+
+    .select__current {
+        text-overflow: ellipsis;
+        width: 135px;
+    }
+
+    .select__body {
+        height: auto;
+        top: 121%;
+        width: 187px;
+    }
+}
+
+.main-page__search-date_size_little {
+    .calendar {
+        &__header {
+            width: 187px;
+        }
+
+        &__select-date {
+            width: 100px;
+        }
+
+        &__body {
+            left: 0;
+            top: 120%;
+        }
+    }
+}
+
+.main-page__search-panel > * {
+    margin-right: 20px;
+}
+
+.main-page__box-buttons > * {
+    margin-right: 10px;
+}
+
+.main-page__wrap-button-task {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.main-page__wrap-card-task {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-page__wrap-card-task > * {
+    margin-bottom: 15px;
+
+    &:last-child {
+        margin: 0;
+    }
+}
+
+.card-task_theme_video {
+    .card-task {
+        &__img {
+            background: url(../images/UI_Kit/buttons/video-icon.svg) center no-repeat;
+        }
+
+        &__name-card {
+            color: $color-blue;
+        }
+    }
+}
+
+.card-task_theme_photo {
+    .card-task {
+        &__img {
+            background: url(../images/UI_Kit/buttons/photo-icon.svg) center no-repeat;
+            height: 8px;
+            width: 10px;
+        }
+
+        &__name-card {
+            color: $color-green;
+        }
+    }
+}
+
+.card-task_theme_audio {
+    .card-task {
+        &__img {
+            background: url(../images/UI_Kit/buttons/audio-icon.svg) center no-repeat;
+        }
+
+        &__name-card {
+            color: $color-red;
+        }
+    }
+}
+
+.card-task_status_work {
+    .card-task {
+        &__status {
+            color: $color-status-pink;
+        }
+    }
+}
+
+.card-task_status_done {
+    .card-task {
+        &__status {
+            color: $color-status-green;
+        }
+    }
+}
+
+.card-task_status_waiting {
+    .card-task {
+        &__status {
+            color: $color-status-blue;
+        }
+    }
+}

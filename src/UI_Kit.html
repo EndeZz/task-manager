@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Main page</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<!-- *** menu *** -->
+		<a class="menu menu_hovered menu_active" href="#!">
+			<span class="menu__name">Главная</span>
+		</a>
+		<!-- *** buttons *** -->
+		<button class="button-video button-video_hovered button-video_clicked" type="button" tabindex="">
+			<img class="button-video__img" src="./images/main-search/videoicon.svg" alt="Значок видео" />
+			<span class="button-video__text">Видео</span>
+		</button>
+		<!-- *** -->
+		<button class="button-photo button-photo_hovered" type="button" tabindex="">
+			<img class="button-photo__img" src="./images/main-search/photo-icon.svg" alt="Значок фото" />
+			<span class="button-photo__text">Фото</span>
+		</button>
+		<!-- *** -->
+		<button class="button-audio button-audio_hovered" type="button" tabindex="">
+			<img class="button-audio__img" src="./images/main-search/audio-icon.svg" alt="Значок аудио" />
+			<span class="button-audio__text">Аудио</span>
+		</button>
+		<!-- *** bell empty *** -->
+		<div class="bell-empty bell-empty_hovered">
+			<a class="bell-empty__link" href="#!">
+				<img class="bell-empty__img" src="./images/UI_Kit/buttons/bell-icon.svg"
+					alt="Изображение колокольчика уведомлений" />
+			</a>
+		</div>
+		<!-- *** bell wiht notifications *** -->
+		<div class="bell-notifications bell-notifications_hovered">
+			<a class="bell-notifications__link" href="#!">
+				<img class="bell-notifications__img" src="./images/UI_Kit/buttons/bell-icon.svg"
+					alt="Изображение колокольчика уведомлений" />
+				<div class="bell-notifications__count" aria-roledescription="Количество уведомлений"></div>
+			</a>
+		</div>
+		<!-- *** profile *** -->
+		<button class="profile" type="button">
+			<div class="profile__photo profile__photo_hovered"></div>
+			<img class="profile__button-menu" src="./images/header/Rectangle31.svg"
+				alt="Кнопка чтобы показать меню профиля" />
+		</button>
+		<!-- *** cards *** -->
+		<section class="card-video">
+			<a class="card-video__link" href="#!">
+				<picture class="card-video__picture card-video__picture_hovered">
+					<source src="" />
+					<img class="card-video__picture-img" src="./images/cards/Rectangle1.png"
+						alt="Фото с изображением берега моря и гор" />
+				</picture>
+				<button class="card-video__button">
+					<img class="card-video__button-img" src="./images/cards/videoicon (1).svg"
+						alt="Иконка видеоплеера" />
+					<span class="card-video__button-name">Видео</span>
+					<span class="card-video__button-duration">02:31</span>
+				</button>
+				<h4 class="card-video__title">Название повседневная практика показывает</h4>
+				<div class="card-video__info">
+					<span class="card-video__info-author">Аркадий Юрченко</span>
+					<div class="card-video__info-point"></div>
+					<span class="card-video__info-time-date">09:21 14.02.2020</span>
+				</div>
+			</a>
+		</section>
+		<!-- ************ -->
+		<section class="card-photo">
+			<a class="card-video__link" href="#!">
+				<picture class="card-photo__picture card-photo__picture_hovered">
+					<source src="" />
+					<img class="card-photo__picture-img" src="./images/cards/Rectangle1.png"
+						alt="Фото с изображением берега моря и гор" />
+				</picture>
+				<button class="card-photo__button">
+					<img class="card-photo__button-img" src="./images/cards/photo-icon (1).svg"
+						alt="Иконка фотоаппарата" />
+					<span class="card-photo__button-name">Фото</span>
+				</button>
+				<h4 class="card-photo__title">Название повседневная практика показывает</h4>
+				<div class="card-photo__info">
+					<span class="card-photo__info-author">Аркадий Юрченко</span>
+					<div class="card-photo__info-point"></div>
+					<span class="card-photo__info-time-date">09:21 14.02.2020</span>
+				</div>
+			</a>
+		</section>
+		<!-- ************ -->
+		<section class="card-audio">
+			<a class="card-video__link" href="#!">
+				<picture class="card-audio__picture card-audio__picture_hovered">
+					<source src="" />
+					<img class="card-audio__picture-img" src="./images/cards/sound.svg"
+						alt="Фото с изображением эквалайзера" />
+				</picture>
+				<button class="card-audio__button">
+					<img class="card-audio__button-img" src="./images/cards/audio-icon (1).svg"
+						alt="Иконка аудиоплеера" />
+					<span class="card-audio__button-name">Аудио</span>
+					<span class="card-audio__button-duration">02:31</span>
+				</button>
+				<h4 class="card-audio__title">Название повседневная практика показывает</h4>
+				<div class="card-audio__info">
+					<span class="card-audio__info-author">Аркадий Юрченко</span>
+					<div class="card-audio__info-point"></div>
+					<span class="card-audio__info-time-date">09:21 14.02.2020</span>
+				</div>
+			</a>
+		</section>
+		<!-- *** button task *** -->
+		<a class="button-task button-task_hovered button-task_actived" href="">
+			<div class="button-task__img"></div>
+			<span class="button-task__text">Добавить пользователя</span>
+		</a>
+		<!-- *** button approve *** -->
+		<button class="button-approve button-approve_hovered">
+			<img class="button-approve__img" src="./images/UI_Kit/buttons/approve.svg"
+				alt="Кнопка утвердить и опубликовать" />
+			<span class="button-approve__text">Утвердить и опубликовать</span>
+		</button>
+		<!-- *** button go to the task back *** -->
+		<a class="button-task-back button-task-back_hovered">
+			<div class="button-task-back__img"></div>
+			<span class="button-task-back__text">К списку задач</span>
+		</a>
+		<!-- *** button edit big *** -->
+		<button class="button-edit-big button-edit-big_hovered">
+			<div class="button-edit-big__img"></div>
+		</button>
+		<!-- *** button recycle big *** -->
+		<button class="button-recycle-big button-recycle-big_hovered">
+			<div class="button-recycle-big__img"></div>
+		</button>
+		<!-- *** button edit little *** -->
+		<button class="button-edit-little button-edit-little_hovered"></button>
+		<!-- *** button recycle little*** -->
+		<button class="button-recycle button-recycle_hovered"></button>
+		<!-- *** button delete *** -->
+		<button class="button-delete button-delete_hovered button-delete_actived" type="reset">
+			<div class="button-delete__img"></div>
+			<span class="button-delete__text">Удалить профиль</span>
+		</button>
+		<!-- *** button users role *** -->
+		<button class="button-users-role button-users-role_hovered button-users-role_clicked" type="button" tabindex="">
+			<span class="button-users-role__text">Все</span>
+		</button>
+		<!-- *** button close *** -->
+		<button class="button-close button-close_hovered"></button>
+		<!-- *** comment *** -->
+		<div class="block-comment block-comment_hovered">
+			<div class="block-comment__box-img">
+				<img class="block-comment__img" src="./images/UI_Kit/buttons/comment1.svg" alt="" />
+				<div class="block-comment__cyrcle"></div>
+			</div>
+			<div class="block-comment__wrap">
+				<div class="block-comment__text">
+					Новый комментарий в задаче
+					<span class="block-comment__name-task">Название задачи</span>
+				</div>
+				<span class="block-comment__date-time">14.02.2020, 08:51</span>
+			</div>
+		</div>
+		<!-- *** select menu profile ***  -->
+		<div class="select-profile">
+			<a class="select-profile__link select-profile__link_hovered" href="">
+				<span class="select-profile__text">Профиль</span>
+			</a>
+			<button class="select-profile__button select-profile__button_hovered">
+				<span class="select-profile__text">Выход</span>
+			</button>
+		</div>
+		<!--  *** card task *** -->
+		<div class="card-task card-task_hovered">
+			<div class="card-task__img"></div>
+			<span class="card-task__name-card">Видео</span>
+			<div class="card-task__description">
+				Название повседневная практика показывает
+				<div class="card-task__description-shadow"></div>
+			</div>
+			<span class="card-task__author-card-text">Аркадий Юрченко</span>
+			<div class="card-task__wrap-date">
+				<button class="card-task__button-date">
+					<img class="card-task__calendar" src="./images/UI_Kit/buttons/calendar-grblule-icon.svg" alt="" />
+				</button>
+				<span class="card-task__date">10.02.2020</span>
+			</div>
+			<span class="card-task__status">В работе</span>
+			<button class="button-edit-little button-edit-little_hovered"></button>
+			<button class="button-recycle button-recycle_hovered"></button>
+		</div>
+		<!-- *** download content ***  -->
+		<div class="download-content">
+			<div class="download-content__formats">
+				<h3 class="download-content__title">Результат</h3>
+				<span class="download-content__text">Допустимые форматы:</span>
+				<img class="download-content__format" src="./images/UI_Kit/icons/avi.svg" alt="" />
+				<img class="download-content__format" src="./images/UI_Kit/icons/flv.svg" alt="" />
+				<img class="download-content__format" src="./images/UI_Kit/icons/mov.svg" alt="" />
+			</div>
+			<div class="download-content__downloaded-files">
+				<div class="download-content__wrap download-content__wrap_hovered">
+					<button class="download-content__wrap-delete-attachment"></button>
+					<div class="download-content__box">
+						<img class="download-content__box-img" src="./images/UI_Kit/picture/Rectangle1.png" alt="" />
+					</div>
+				</div>
+				<div class="download-content__wrap download-content__wrap_hovered">
+					<button class="download-content__wrap-delete-attachment"></button>
+					<div class="download-content__box">
+						<img class="download-content__box-img" src="./images/UI_Kit/picture/Rectangle1.png" alt="" />
+					</div>
+				</div>
+				<div class="download-content__wrap">
+					<div class="download-content__box">
+						<div class="download-content__progress-percent">25%</div>
+						<div class="download-content__progress-bar">
+							<div class="download-content__progress-line"></div>
+						</div>
+					</div>
+				</div>
+				<div class="download-content__next-file download-content__next-file_hovered">
+					<div class="download-content__img"></div>
+				</div>
+			</div>
+		</div>
+		<!-- *** audio player *** -->
+		<!--<div class="audio-player">
+                <button class="audio-player__button-play"></button>
+                <div class="audio-player__progress-wrap">
+                    <div class="audio-player__progress-play"></div>
+                    <input class="audio-player__progress-play" type="range" min="0" max="299" />
+                    <div class="audio-player__progress-play-ball"></div>
+                </div>
+                <div class="audio-player__block-volume">
+                    <button class="audio-player__dinamic-button audio-player__dinamic-button_clicked"></button>
+                    <input class="audio-player__progress-volume" type="range" />
+                </div>
+                <div class="audio-player__block-time">
+                    <span class="audio-player__time-progress">00:26</span>
+                    <span class="audio-player__separator">/</span>
+                    <span class="audio-player__time-over">2:31</span>
+                </div>
+            </div>-->
+		<!-- *** input *** -->
+		<div class="input">
+			<div class="input__title">Имя, фамилия</div>
+			<input class="input__input-field input__input-field_hovered input__input-field_focused" type="text"
+				placeholder="Введите имя и фамилию" />
+		</div>
+		<!-- *** search *** -->
+		<div class="search">
+			<div class="search__title">Поиск</div>
+			<div class="search__wrap-input search__wrap-input_hovered search__wrap-input_focused">
+				<button class="search__button-submit"></button>
+				<input class="search__input-field" type="search" placeholder="Введите название имя исполнителя" />
+				<button class="search__button-cross search__button-cross_hovered" type="button"></button>
+			</div>
+		</div>
+		<!-- *** search date *** -->
+		<div class="search-date search-date_little-size">
+			<div class="search-date__title">Дата публикации</div>
+			<div class="search-date__wrap-input search-date__wrap-input_hovered search-date__wrap-input_focused">
+				<input class="search-date__input-field" type="text" placeholder="Укажите дату публикации" />
+				<button class="search-date__button-calendar" type="button"></button>
+			</div>
+		</div>
+		<!--  *** card users *** -->
+		<div class="card-users card-users_hovered">
+			<div class="card-users__avatar-wrap">
+				<img class="card-users__avatar" src="./images/users/avatars/Inessa.png" alt="" />
+			</div>
+			<div class="card-users__name-user">Инесса Соловьева</div>
+			<span class="card-users__email">inessa90@gmail.com</span>
+			<span class="card-users__role">Контент-мейкер</span>
+			<button class="button-edit-little button-edit-little_hovered"></button>
+			<button class="button-recycle button-recycle_hovered"></button>
+		</div>
+		<!-- *** select custom *** -->
+		<div class="select">
+			<div class="select__header select__header_hovered select__header_focused">
+				<input class="select__current" placeholder="Выберите ответственного" disabled />
+				<div class="select__icon"></div>
+			</div>
+			<ul class="select__body">
+				<li class="select__item">Альбина Ткаченко</li>
+				<li class="select__item">София Соловьева</li>
+				<li class="select__item">Альбина Ткаченко</li>
+				<li class="select__item">София Соловьева</li>
+				<li class="select__item">Альбина Ткаченко</li>
+				<li class="select__item">София Соловьева</li>
+				<li class="select__item">София Соловьева</li>
+				<li class="select__item">Альбина Ткаченко</li>
+				<li class="select__item">София Соловьева</li>
+				<li class="select__item">София Соловьева</li>
+				<li class="select__item">Альбина Ткаченко</li>
+				<li class="select__item">София Соловьева</li>
+			</ul>
+		</div>
+		<!-- *** button download -->
+		<a class="button-download" download="">
+			<div class="button-download__img"></div>
+			<div class="button-download__text"></div>
+		</a>
+		<!-- *** download block *** -->
+		<div class="download-block">
+			<div class="download-block__box">
+				<div class="download-block__icon"></div>
+				<div class="download-block__text">Материалы.zip</div>
+				<div class="download-block__size">61 Мб</div>
+			</div>
+			<a class="button-download button-download_hovered button-download_actived" download="">
+				<div class="button-download__img"></div>
+				<div class="button-download__text">Скачать</div>
+			</a>
+		</div>
+		<!-- *** downloaded file *** -->
+		<div class="downloaded-file__wrapper downloaded-file__wrapper_hovered">
+			<button class="downloaded-file__delete-attachment"></button>
+			<div class="downloaded-file__box">
+				<img class="downloaded-file__box-img" src="./images/UI_Kit/picture/Rectangle1.png" alt="" />
+			</div>
+		</div>
+		<!-- *** download file *** -->
+		<div class="download-file__wrapper">
+			<div class="download-file__box">
+				<div class="download-file__progress-percent">25%</div>
+				<div class="download-file__progress-bar">
+					<div class="download-file__progress-line"></div>
+				</div>
+			</div>
+		</div>
+		<!-- *** block input *** -->
+		<div class="block-input">
+			<div class="block-input__title">Имя, фамилия</div>
+			<input class="block-input__input" type="text" placeholder="Введите имя и фамилию" />
+		</div>
+		<!-- *** button save *** -->
+		<button class="button-save" type="submit">
+			<div class="button-save__img"></div>
+			<span class="button-save__text">Сохранить</span>
+		</button>
+		<!-- *** calendar *** -->
+		<div class="calendar">
+			<div class="calendar__header calendar__header_hovered calendar__header_actived">
+				<input class="calendar__select-date" placeholder="Укажите дату публикации" />
+				<button class="calendar__icon"></button>
+			</div>
+			<div class="calendar__body">
+				<div class="calendar__body-header">
+					<div class="calendar__body-header-left">
+						<span class="calendar__body-header-month-year" id="month">Февраль</span>
+						<span class="calendar__body-header-month-year">&#044; &#8194;</span>
+						<span class="calendar__body-header-month-year" id="year">2021</span>
+					</div>
+					<div class="calendar__body-switch">
+						<button class="calendar__body-switch-prev calendar__body-switch-prev_actived"
+							type="button"></button>
+						<button class="calendar__body-switch-next calendar__body-switch-next_actived"
+							type="button"></button>
+					</div>
+				</div>
+				<div class="calendar__body-content">
+					<div class="calendar__body-week-days">
+						<div class="calendar__body-week-day-name">Пн</div>
+						<div class="calendar__body-week-day-name">Вт</div>
+						<div class="calendar__body-week-day-name">Ср</div>
+						<div class="calendar__body-week-day-name">Чт</div>
+						<div class="calendar__body-week-day-name">Пт</div>
+						<div class="calendar__body-week-day-name">Сб</div>
+						<div class="calendar__body-week-day-name">Вс</div>
+					</div>
+					<div class="calendar__body-days"></div>
+				</div>
+				<div class="month-list"></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
