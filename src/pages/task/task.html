@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="shortcut icon" href="../../assets/img/icons/logo.svg" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="hidden">Task Manager</h1>
+      <div class="container nav">
+        <a href="#" class="nav__logo">
+          <img src="../../assets/img/icons/logo.svg" alt="Логотип" />
+        </a>
+        <nav class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="btn btn__link ">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a href="task.html" class="btn btn__link btn_active">Задачи</a>
+            </li>
+            <li class="nav__item">
+              <a href="404.html" class="btn btn__link">Пользователи</a>
+            </li>
+          </ul>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="btn btn__notify btn__link nav__profile" aria-label="Уведомления">
+                <span class="nav__notify">
+                  <svg class="icon-notify" width="20" height="24">
+                    <use xlink:href="../../assets/img/icons/icons.svg#icon-notify"></use>
+                  </svg>
+                </span>
+                <span class="nav__notify-new">3</span>
+              </a>
+              <button class="btn btn__profile nav__profile" id="profile-toggle">
+                <span class="nav__profile_name">Семён Щеглов</span>
+                <img class="nav__profile_img" src="../../assets/img/profile/pic1.png" alt="Аватар профиля" />
+                <span class="nav__profile_arrow"></span>
+              </button>
+              <div class="dropdown">
+                <ul class="dropdown__list">
+                  <li class="dropdown__item">
+                    <a href="#" class="btn btn__profile">Профиль</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="btn btn__profile">Выход</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container task">
+        <ul class="control__list control__list-task grid">
+          <li class="control__item">
+            <p class="control__search-title">Поиск</p>
+            <input type="text" class="input input_search" placeholder="Введите название имя исполнителя" />
+            <span class="feed__input_close"></span>
+          </li>
+
+          <li class="control__item">
+            <p class="control__search-title">Статус</p>
+            <div class="select">
+              <!-- <button class="select__button">Заметки путешественника</button> -->
+              <button class="input input-sm input_arrow btn__select">Выберите статус</button>
+              <ul class="select__list">
+                <li class="select__list-item">
+                  <span class="task__progress task__progress">Любой</span>
+                </li>
+                <li class="select__list-item">
+                  <span class="task__progress task__progress_in-work">В работе</span>
+                </li>
+                <li class="select__list-item">
+                  <span class="task__progress task__progress_awaiting">Ожидает согласования</span>
+                </li>
+                <li class="select__list-item">
+                  <span class="task__progress task__progress_complete">Выполнено</span>
+                </li>
+              </ul>
+              <input type="text" name="select-category" value="" class="select__input_hidden" />
+            </div>
+          </li>
+
+          <li class="control__item">
+            <p class="control__search-title">Срок выполнения</p>
+            <input type="text" class="input input-sm input_date" placeholder="Укажите дату" />
+          </li>
+
+          <li class="control__item">
+            <p class="control__search-title">Тип контента</p>
+            <label class="btn btn__filter btn__filter-video btn_checkbox">
+              <input type="checkbox" class="btn__filter-checkbox hidden" checked />
+              <svg class="icon icon_video">
+                <use xlink:href="../../assets/img/icons/icons.svg#video-icon"></use>
+              </svg>
+              <span>Видео</span>
+            </label>
+
+            <label class="btn btn__filter btn__filter-photo btn_checkbox">
+              <input type="checkbox" class="btn__filter-checkbox hidden" />
+              <svg class="icon icon_photo">
+                <use xlink:href="../../assets/img/icons/icons.svg#photo-icon"></use>
+              </svg>
+              <span>Фото</span>
+            </label>
+
+            <label class="btn btn__filter btn__filter-audio btn_checkbox">
+              <input type="checkbox" class="btn__filter-checkbox hidden" />
+              <svg class="icon icon_audio">
+                <use xlink:href="../../assets/img/icons/icons.svg#video-icon"></use>
+              </svg>
+              <span>Аудио</span>
+            </label>
+          </li>
+        </ul>
+
+        <ul class="task__subject">
+          <li class="task__btn-new">
+            <button class="btn btn_primary">
+              <svg class="icon icon_primary icon_plus icon_edge">
+                <use xlink:href="../../assets/img/icons/icons.svg#plus-circle"></use>
+              </svg>
+              <span>Новая задача</span>
+            </button>
+          </li>
+
+          <li class="task__card">
+            <ul class="task__list">
+              <li class="task__item">
+                <section class="task__content">
+                  <div class="type type-video type__task">
+                    <svg class="icon icon_video">
+                      <use xlink:href="../../assets/img/icons/icons.svg#video-icon"></use>
+                    </svg>
+                    <span>Видео</span>
+                  </div>
+                  <h2 class="task__title">
+                    <a href="task-result.html" class="btn btn__task fade">Название повседневная практика показывает</a>
+                  </h2>
+                </section>
+
+                <section class="task__particle">
+                  <span class="task__subtitle">Аркадий Юрченко</span>
+                  <time datetime="2020-02-10" class="task__date">10.02.2020</time>
+                  <span class="task__progress task__progress_in-work">В работе</span>
+                </section>
+
+                <section class="task__btn-group">
+                  <button class="btn btn_primary-trans btn_edit-sm btn__task-sm" aria-label="Редактировать">
+                    <svg class="icon icon_md" width="20" height="20">
+                      <use xlink:href="../../assets/img/icons/icons.svg#edit-icon"></use>
+                    </svg>
+                  </button>
+
+                  <button class="btn btn_primary-trans btn_edit-sm btn__task-sm" aria-label="Удалить">
+                    <svg class="icon icon_md icon_md-delete" width="14" height="16">
+                      <use xlink:href="../../assets/img/icons/icons.svg#delete-icon"></use>
+                    </svg>
+                  </button>
+                </section>
+              </li>
+            </ul>
+          </li>
+
+          <li class="task__card">
+            <ul class="task__list">
+              <li class="task__item">
+                <section class="task__content">
+                  <div class="type type-photo type__task">
+                    <svg class="icon icon_photo">
+                      <use xlink:href="../../assets/img/icons/icons.svg#photo-icon"></use>
+                    </svg>
+                    <span>Фото</span>
+                  </div>
+                  <h2 class="task__title">
+                    <a href="#" class="btn btn__task fade">Название равным образом начало повседневной работы</a>
+                  </h2>
+                </section>
+
+                <section class="task__particle">
+                  <span class="task__subtitle">Эльза Калинина</span>
+                  <time datetime="2020-02-09" class="task__date">09.02.2020</time>
+                  <span class="task__progress task__progress_complete">Выполнено</span>
+                </section>
+
+                <section class="task__btn-group">
+                  <button class="btn btn_primary-trans btn_edit-sm btn__task-sm" aria-label="Редактировать">
+                    <svg class="icon icon_md" width="20" height="20">
+                      <use xlink:href="../../assets/img/icons/icons.svg#edit-icon"></use>
+                    </svg>
+                  </button>
+
+                  <button class="btn btn_primary-trans btn_edit-sm btn__task-sm" aria-label="Удалить">
+                    <svg class="icon icon_md icon_md-delete" width="14" height="16">
+                      <use xlink:href="../../assets/img/icons/icons.svg#delete-icon"></use>
+                    </svg>
+                  </button>
+                </section>
+              </li>
+            </ul>
+          </li>
+
+          <li class="task__card">
+            <ul class="task__list">
+              <li class="task__item">
+                <section class="task__content">
+                  <div class="type type-audio type__task">
+                    <svg class="icon icon_audio">
+                      <use xlink:href="../../assets/img/icons/icons.svg#audio-icon"></use>
+                    </svg>
+                    <span>Аудио</span>
+                  </div>
+                  <h2 class="task__title">
+                    <a href="#" class="btn btn__task fade"
+                      >Название с другой стороны начало повседневной работы по формиро</a
+                    >
+                  </h2>
+                </section>
+
+                <section class="task__particle">
+                  <span class="task__subtitle">Дмитрий Румянцев</span>
+                  <time datetime="2020-02-08" class="task__date">08.02.2020</time>
+                  <span class="task__progress task__progress_awaiting">Ожидает согласования</span>
+                </section>
+
+                <section class="task__btn-group">
+                  <button class="btn btn_primary-trans btn_edit-sm btn__task-sm" aria-label="Редактировать">
+                    <svg class="icon icon_md" width="20" height="20">
+                      <use xlink:href="../../assets/img/icons/icons.svg#edit-icon"></use>
+                    </svg>
+                  </button>
+
+                  <button class="btn btn_primary-trans btn_edit-sm btn__task-sm" aria-label="Удалить">
+                    <svg class="icon icon_md icon_md-delete" width="14" height="16">
+                      <use xlink:href="../../assets/img/icons/icons.svg#delete-icon"></use>
+                    </svg>
+                  </button>
+                </section>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </body>
+</html>

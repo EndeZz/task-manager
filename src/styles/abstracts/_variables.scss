@@ -20,12 +20,18 @@ $color-bg: #f3f8fb;
 $color-light: #fff;
 $color-divider: #c8d8ed;
 
+$color-in-work: #d663ff;
+$color-awaiting: #2cccff;
+$color-complete: #97dc26;
+
 $color-video-hover: rgba(16, 126, 255, 0.1);
 $color-photo-hover: rgba(67, 221, 156, 0.1);
 $color-audio-hover: rgba(255, 172, 47, 0.1);
 
 $color-shadow-item: rgba(0, 0, 0, 0.15);
 $color-shadow-content: rgba(0, 0, 0, 0.4);
-
+$color-shadow-task: rgba(0, 0, 0, 0.03);
+$color-shadow-bg: rgba(0, 0, 0, 0.85);
+$color-opacity-txt: rgba($color-txt, 0.6);
 $z-tooltip: 1;
 $z-fixed: 2;

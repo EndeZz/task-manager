@@ -3,22 +3,15 @@
   gap: 3rem;
   padding-top: 40px;
 
-  &__cards,
-  &__list {
-    grid-template-columns: auto auto auto;
+  &__cards {
+    grid-template-columns: repeat(3, 393px);
   }
 
   &__card {
-    width: 393px;
     cursor: pointer;
 
     &_container {
       padding-top: 15px;
-    }
-
-    &_link {
-      color: $color-txt;
-      text-decoration: none;
     }
   }
 
@@ -27,6 +20,7 @@
     overflow: hidden;
     border-radius: 6px;
     position: relative;
+    filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.15));
 
     &-audio {
       &_sound {
@@ -68,15 +62,19 @@
     }
   }
 
-  &__item {
-    width: 393px;
-    position: relative;
-  }
-
   &__title {
     @include font_config(normal, 400, 1.4rem, 1.6rem);
 
     padding-bottom: 6px;
+
+    &-shift {
+      padding-right: 10px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: baseline;
   }
 
   &__subtitle {
@@ -89,47 +87,8 @@
       padding-right: 15px;
     }
 
-    &-date {
-      &::before {
-        content: '';
-        position: absolute;
-        top: 44%;
-        left: -11px;
-        background-color: $color-primary;
-        width: 3px;
-        height: 3px;
-        display: flex;
-        border-radius: 50%;
-      }
-    }
-  }
-
-  &__search-title {
-    @include font_config(normal, 500, 1.2rem, 1.4rem);
-
-    margin-bottom: 9px;
-  }
-
-  &__type {
-    @include font_config(normal, 500, 1.4rem, 1.6rem);
-
-    margin-bottom: 10px;
-
-    &_time {
-      font-weight: 400;
-      opacity: 0.6;
-    }
-
-    &-video {
+    &-point {
       color: $color-primary;
-    }
-
-    &-photo {
-      color: $color-success;
-    }
-
-    &-audio {
-      color: $color-warning;
     }
   }
 }

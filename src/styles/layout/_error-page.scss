@@ -1,0 +1,17 @@
+.error-page {
+  text-align: center;
+  // transform: translateY(50%);
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  &__title {
+    margin: 40px 0 10px;
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+  }
+}

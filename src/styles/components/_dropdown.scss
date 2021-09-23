@@ -1,0 +1,42 @@
+.dropdown {
+  position: relative;
+  display: none;
+
+  &__list {
+    position: absolute;
+    z-index: $z-tooltip;
+    top: 40%;
+    right: 16px;
+    width: auto;
+    text-align: right;
+    margin-top: 28px;
+    box-shadow: 0 4px 15px $color-shadow-item;
+    border-radius: 4px;
+    background-color: $color-light;
+  }
+
+  &__item {
+    border: 1px solid $color-blue-outline;
+    border-bottom: 0;
+    cursor: pointer;
+    padding: 12px 15px;
+    color: inherit;
+
+    &:first-child {
+      border-radius: 4px 4px 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 0 4px 4px;
+      border-bottom: 1px solid $color-blue-outline;
+    }
+
+    &:hover {
+      background: $color-ltblue;
+    }
+  }
+
+  &_active {
+    display: block;
+  }
+}

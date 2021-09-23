@@ -1,0 +1,30 @@
+.type {
+  @include font_config(normal, 500, 1.4rem, 1.6rem);
+
+  margin-bottom: 10px;
+
+  &_time {
+    font-weight: 400;
+    opacity: 0.6;
+  }
+
+  &-video {
+    color: $color-primary;
+  }
+
+  &-photo {
+    color: $color-success;
+  }
+
+  &-audio {
+    color: $color-warning;
+  }
+
+  &__task {
+    margin-bottom: 0;
+  }
+
+  &-light {
+    color: $color-light;
+  }
+}

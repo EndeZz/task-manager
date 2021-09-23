@@ -16,6 +16,14 @@
     padding: 0;
   }
 
+  &__task {
+    padding: 0;
+
+    &-sm {
+      padding: 9px;
+    }
+  }
+
   &__link {
     padding: 9px 12px;
 
@@ -41,11 +49,26 @@
     }
   }
 
+  &__select {
+    position: relative;
+    text-align: left;
+    cursor: pointer;
+    color: $color-opacity-txt;
+
+    &:focus,
+    .btn__select_active {
+      border-color: $color-primary;
+    }
+  }
+
   &_active {
     background-color: $color-ltblue;
     color: $color-primary;
   }
-  ///////
+
+  &_inline {
+    display: inline-flex;
+  }
 
   &_edit {
     &_md {
@@ -127,8 +150,6 @@
   &:disabled {
     opacity: 0.5;
   }
-
-  //////
 
   &__filter {
     background: $color-light;

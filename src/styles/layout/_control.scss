@@ -1,0 +1,24 @@
+.control {
+  display: grid;
+  gap: 3rem;
+  padding-top: 40px;
+
+  &__list {
+    grid-template-columns: repeat(3, 393px);
+
+    &-task {
+      grid-template-columns: 393px 187px 187px 393px;
+    }
+  }
+
+  &__item {
+    width: 393px;
+    position: relative;
+  }
+
+  &__search-title {
+    @include font_config(normal, 500, 1.2rem, 1.4rem);
+
+    margin-bottom: 9px;
+  }
+}

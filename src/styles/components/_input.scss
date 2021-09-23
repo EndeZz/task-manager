@@ -10,6 +10,10 @@
   border: 1px solid $color-blue-outline;
   border-radius: 4px;
 
+  &-sm {
+    width: 187px;
+  }
+
   &_search {
     background-image: url('../assets/img/icons/search-icon.svg');
   }
@@ -18,11 +22,34 @@
     background-image: url('../assets/img/icons/calendar-icon.svg');
   }
 
+  &_arrow {
+    &::after {
+      content: '';
+      display: inline-block;
+      height: 4px;
+      width: 6px;
+      background-image: url('../assets/img/icons/arrow_down-icon.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 15px;
+      top: 18px;
+    }
+
+    &:focus::after {
+      transform: rotate(180deg);
+    }
+  }
+
   &:hover {
     border-color: $color-blue-icon;
   }
 
   &:focus {
     border-color: $color-primary;
+  }
+
+  &::placeholder {
+    color: $color-opacity-txt;
   }
 }

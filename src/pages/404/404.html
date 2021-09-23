@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="shortcut icon" href="../../assets/img/icons/logo.svg" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="hidden">Task Manager</h1>
+      <div class="container nav">
+        <a href="#" class="nav__logo">
+          <img src="../../assets/img/icons/logo.svg" alt="Логотип" />
+        </a>
+        <nav class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="btn btn__link">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a href="task.html" class="btn btn__link">Задачи</a>
+            </li>
+            <li class="nav__item">
+              <a href="404.html" class="btn btn__link">Пользователи</a>
+            </li>
+          </ul>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="btn btn__notify btn__link nav__profile" aria-label="Уведомления">
+                <span class="nav__notify">
+                  <svg class="icon-notify" width="20" height="24">
+                    <use xlink:href="../../assets/img/icons/icons.svg#icon-notify"></use>
+                  </svg>
+                </span>
+                <span class="nav__notify-new">3</span>
+              </a>
+              <button class="btn btn__profile nav__profile" id="profile-toggle">
+                <span class="nav__profile_name">Семён Щеглов</span>
+                <img class="nav__profile_img" src="../../assets/img/profile/pic1.png" alt="Аватар профиля" />
+                <span class="nav__profile_arrow"></span>
+              </button>
+              <div class="dropdown">
+                <ul class="dropdown__list">
+                  <li class="dropdown__item">
+                    <a href="#" class="btn btn__profile">Профиль</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="btn btn__profile">Выход</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container error-page">
+        <img src="../../assets/img/icons/404.svg" alt="Ошибка" />
+        <h2 class="error-page__title">Потерялись?</h2>
+        <p class="error-page__subtitle">Страница, которую вы ищите не существует, либо была удалена</p>
+        <a href="index.html" class="btn btn_primary btn_inline">
+          <svg class="icon icon_primary icon_tick icon_edge">
+            <use xlink:href="../../assets/img/icons/icons.svg#home-circle"></use>
+          </svg>
+          <span>На главную</span>
+        </a>
+      </div>
+    </main>
+  </body>
+</html>

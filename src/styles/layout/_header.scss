@@ -37,7 +37,7 @@
   }
 
   &__notify {
-    &_new {
+    &-new {
       padding: 0 4px;
       position: absolute;
       top: 0%;
@@ -53,49 +53,12 @@
     }
   }
 
-  &__tooltip {
-    position: relative;
-
-    &_content {
-      position: absolute;
-      z-index: $z-tooltip;
-      top: 100%;
-      right: 15px;
-      width: auto;
-      text-align: right;
-      margin-top: 28px;
-      box-shadow: 0 4px 15px $color-shadow-item;
-      border-radius: 4px;
-      background-color: $color-light;
-      border: 1px solid $color-blue-outline;
-    }
-
-    &_item {
-      padding: 12px 15px;
-      color: inherit;
-
-      &:not(:last-child) {
-        border-bottom: 1px solid $color-blue-outline;
-      }
-
-      &:hover:first-child {
-        background: $color-ltblue;
-        border-radius: 4px 4px 0 0;
-      }
-
-      &:hover:last-child {
-        background: $color-ltblue;
-        border-radius: 0 0 4px 4px;
-      }
-    }
-  }
-
   &__profile {
     display: flex;
     align-items: center;
     position: relative;
 
-    &:not(:last-child) {
+    &:first-child {
       margin-right: 30px;
     }
 
