@@ -1,5 +1,7 @@
 $color1: #107eff;
 $photo: #43dd9c;
+$photo-hover: #51efac;
+$photo-active: #33cd8c;
 $audio: #ffac2f;
 $color-text: #313131;
 $text-opacity: rgba(49, 49, 49, .6);
@@ -102,6 +104,12 @@ h3 {
   height: 14px;
 }
 
+.plas-gray {
+  width: 14px;
+  height: 14px;
+  fill: $color5;
+}
+
 .calendar-icon-gray {
   width: 15px;
   height: 14px;
@@ -130,6 +138,21 @@ h3 {
   height: 22px;
 }
 
+.avi-icon {
+  width: 30px;
+  height: 16px;
+}
+
+.flv-icon {
+  width: 30px;
+  height: 16px;
+}
+
+.mov-icon {
+  width: 37px;
+  height: 16px;
+}
+
 .edit-icon {
   padding: 7px;
   background: $color6;
@@ -138,6 +161,7 @@ h3 {
   height: 34px;
   transition: all .3s;
   fill: #107eff;
+  cursor: pointer;
 
   &:hover {
     background: $color11;
@@ -164,6 +188,7 @@ h3 {
   height: 34px;
   transition: all .3s;
   fill: #107eff;
+  cursor: pointer;
 
   &:hover {
     background: $color11;
@@ -180,6 +205,47 @@ h3 {
     fill: #fff;
     opacity: 0.3;
   }
+}
+
+.btn-publish {
+  background: $photo;
+  border: none;
+  padding: 12px 15px 12px 43px;
+  color: #fff;
+  @extend %roboto-500;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 4px;
+  position: relative;
+  transition: all .3s;
+  cursor: pointer;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 15px;
+    background-image: url(../images/check-yes.svg);
+  }
+
+  &:hover {
+    background: $photo-hover;
+  }
+
+  &:active {
+    background: $photo-active;
+  }
+
+  &:disabled {
+    background: $photo-hover;
+    opacity: 0.5;
+  }
+}
+
+.delete-icon {
+  width: 14px;
+  height: 14px;
 }
 
 .task__status {

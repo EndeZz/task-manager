@@ -127,13 +127,14 @@
 
   &-user__profile {
     position: absolute;
-    right: 15px;
+    right: 14px;
     bottom: -104px;
     border: 1px solid $color4;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     color: $color-text;
     display: none;
+    background: #fff;
 
     &.active {
       display: block;
@@ -149,6 +150,7 @@
     border-bottom: 1px solid $color4;
     color: $color-text;
     transition: all .3s;
+    background: #fff;
   }
 
   &-user__prof:hover {
@@ -507,6 +509,11 @@ main {
     justify-content: space-between;
     padding: 30px 0 20px;
 
+    .btn-edit {
+      display: flex;
+      align-items: center;
+    }
+
     .btn-back {
       display: flex;
       align-items: center;
@@ -519,12 +526,25 @@ main {
       width: 40px;
       height: 40px;
       padding: 12px;
-      background: $color11;
+      background: $color1;
       fill: #fff;
-    }
-
-    .bin-icon {
       margin-left: 20px;
+      cursor: pointer;
+
+      &:hover {
+        background: $color11;
+        fill: #fff;
+      }
+
+      &:active {
+        background: $color12;
+        fill: #fff;
+      }
+
+      &:disabled {
+        background: $color1;
+        opacity: 0.5;
+      }
     }
   }
 
@@ -532,7 +552,9 @@ main {
     display: flex;
     justify-content: space-between;
 
-    &-content {
+    &-content,
+    &-loading {
+      margin-bottom: 20px;
       max-width: 807px;
       width: 100%;
       background: #fff;
@@ -608,7 +630,12 @@ main {
 
         .download {
           margin-left: auto;
+          cursor: pointer;
         }
+      }
+
+      .file__materials-size {
+        opacity: 0.6;
       }
     }
 
@@ -649,6 +676,207 @@ main {
         z-index: 2;
         background: #fff;
         padding-left: 5px;
+      }
+    }
+
+    .result__title {
+      display: flex;
+      @extend %roboto-500;
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 20px;
+
+      span {
+        @extend %roboto-400;
+        font-size: 14px;
+        opacity: 0.6;
+        margin-left: 20px;
+        margin-right: 10px;
+      }
+
+      .avi-icon,
+      .flv-icon {
+        margin-right: 5px;
+      }
+    }
+
+    .result__img {
+      display: flex;
+      align-items: center;
+      margin-bottom: 64px;
+
+      .delete-icon {
+        display: none;
+        transition: all .3s;
+      }
+
+      &-file {
+        border: 1px solid $color4;
+        border-radius: 6px;
+        width: 116px;
+        height: 74px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s;
+        position: relative;
+
+        .result__data-file {
+          display: none;
+        }
+
+        &:hover {
+          border: 1px solid $color1;
+
+          .delete-icon {
+            display: block;
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            transition: all .3s;
+          }
+
+          .result__data-file {
+            position: absolute;
+            bottom: -40px;
+            min-width: 211px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            padding: 8px;
+            background: #313131;
+            border-radius: 4px;
+            color: fff;
+            z-index: 3;
+
+            &::before {
+              content: '';
+              position: absolute;
+              width: 9px;
+              height: 9px;
+              top: -4px;
+              right: 105px;
+              background-image: url(../images/rectangle-icon.svg);
+            }
+
+            span {
+              color: #fff;
+            }
+
+            .date-time {
+              color: #fff;
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+
+      &-file + .result__img-file {
+        margin-left: 10px;
+      }
+    }
+
+    .result__img-ready {
+      width: 110px;
+      height: 68px;
+      border: 2px dashed $color5;
+      border-radius: 4px;
+      transition: all .3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .plas-gray {
+        fill: $color5;
+        transition: all .3s;
+      }
+
+      &:hover {
+        border: 2px dashed $color1;
+
+        .plas-gray {
+          fill: $color1;
+        }
+      }
+    }
+
+    .result__form {
+      background: #fff;
+      border: 1px solid $color4;
+      border-radius: 4px;
+      padding: 10px;
+      margin-bottom: 30px;
+
+      form {
+        display: flex;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: -40px;
+          left: -40px;
+          width: 111%;
+          height: 1px;
+          border-top: 1px solid $color4;
+        }
+      }
+
+      input {
+        border: none;
+        min-height: 117px;
+        height: 100%;
+        width: 100%;
+        margin-right: 10px;
+        position: relative;
+        outline: none;
+      }
+
+      input::placeholder {
+        position: absolute;
+        opacity: 0.6;
+      }
+
+      button {
+        background-color: $color1;
+        border: none;
+        border-radius: 4px;
+        padding: 8px 10px;
+        color: #fff;
+        @extend %roboto-400;
+        font-size: 12px;
+        margin-top: auto;
+        cursor: pointer;
+      }
+    }
+
+    .task__item-comments {
+      .comment__item {
+        display: flex;
+      }
+
+      .comment__autor-name {
+        @extend %roboto-500;
+        margin-bottom: 10px;
+      }
+
+      .comment__box {
+        width: 100%;
+        border-bottom: 1px solid $color4;
+        margin-bottom: 15px;
+      }
+
+      .time-date {
+        @extend %roboto-400;
+        font-size: 12px;
+        opacity: 0.6;
+        margin-left: 10px;
+      }
+
+      .comment__text {
+        line-height: 21px;
+        margin-bottom: 15px;
       }
     }
   }

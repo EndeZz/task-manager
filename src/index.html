@@ -42,14 +42,14 @@
     <section class="task__result">
       <div class="container">
         <div class="task-head__btn">
-          <div class="btn-back">
+          <a class="btn-back" href="#">
             <svg class="arrow-left" viewBox="0 0 512 512" >
               <use xlink:href="./images/sprite.svg#arrow-left"></use>
             </svg>
             <p>К списку задач</p>
-          </div>
-
+          </a>
           <div class="btn-edit">
+            <button class="btn-publish">Утвердить и опубликовать</button>
             <svg class="edit-icon" viewBox="0 0 21 20" >
               <use xlink:href="./images/sprite.svg#edit-icon"></use>
             </svg>
@@ -59,48 +59,156 @@
           </div>
         </div>
         <div class="task__item">
-          <div class="task__item-content">
-            <div class="content-status">
-              <svg class="video-icon" viewBox="0 0 7 10">
-                <use xlink:href="./images/sprite.svg#video-icon"></use>
-              </svg>
-              Видео
-              <p class="task__status inwork">В работе</p>     
+          <div class="task__item-box">
+            <div class="task__item-content">
+              <div class="content-status">
+                <svg class="video-icon" viewBox="0 0 7 10">
+                  <use xlink:href="./images/sprite.svg#video-icon"></use>
+                </svg>
+                Видео
+                <p class="task__status inwork">В работе</p>     
+              </div>
+              <h2 class="content__title">
+                Заголовок задачи с другой стороны консультация с широким активом позволяет
+              </h2>
+              <p class="content__text">
+                Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности позволяет оценить значение форм развития. Значимость этих проблем настолько очевидна, что новая модель организационной деятельности требуют от нас анализа системы обучения кадров, соответствует насущным потребностям. Товарищи! постоянный количественный рост и сфера нашей активности требуют определения и уточнения позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.
+              </p>
+              <div class="content__file">
+                <p class="file__title">Файлы</p>
+                <div class="file__materials">
+                  <svg class="zip-icon" viewBox="0 0 22 22" >
+                    <use xlink:href="./images/sprite.svg#zip-icon"></use>
+                  </svg>
+                  <p class="file__materials-title">Материалы.zip</p>
+                  <span class="file__materials-size">61 Мб</span>
+                  <button class="download">
+                    <svg class="upload-icon" viewBox="0 0 12 13" >
+                      <use xlink:href="./images/sprite.svg#upload-icon"></use>
+                    </svg>
+                    Скачать
+                  </button>
+                </div>
+                <div class="file__documentation">
+                  <svg class="doc-icon" viewBox="0 0 22 22" >
+                    <use xlink:href="./images/sprite.svg#doc-icon"></use>
+                  </svg>
+                  <p class="file__materials-title">Техническое задание.doc</p>
+                  <span class="file__materials-size">215 Кб</span>
+                  <button class="download">
+                    <svg class="upload-icon" viewBox="0 0 12 13" >
+                      <use xlink:href="./images/sprite.svg#upload-icon"></use>
+                    </svg>
+                    Скачать
+                  </button>
+                </div>
+              </div>
             </div>
-            <h2 class="content__title">
-              Заголовок задачи с другой стороны консультация с широким активом позволяет
-            </h2>
-            <p class="content__text">
-              Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности позволяет оценить значение форм развития. Значимость этих проблем настолько очевидна, что новая модель организационной деятельности требуют от нас анализа системы обучения кадров, соответствует насущным потребностям. Товарищи! постоянный количественный рост и сфера нашей активности требуют определения и уточнения позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.
-            </p>
-            <div class="content__file">
-              <p class="file__title">Файлы</p>
-              <div class="file__materials">
-                <svg class="zip-icon" viewBox="0 0 22 22" >
-                  <use xlink:href="./images/sprite.svg#zip-icon"></use>
+            <div class="task__item-loading">
+              <div class="result__title">
+                <p>Результат <span>Допустимые форматы:</span></p>
+                <svg class="avi-icon" viewBox="0 0 30 16">
+                  <use xlink:href="./images/sprite.svg#avi-icon"></use>
                 </svg>
-                <p class="file__materials-title">Материалы.zip</p>
-                <span class="file__materials-size">61 Мб</span>
-                <button class="download">
-                  <svg class="upload-icon" viewBox="0 0 12 13" >
-                    <use xlink:href="./images/sprite.svg#upload-icon"></use>
-                  </svg>
-                  Скачать
-                </button>
-              </div>
-              <div class="file__documentation">
-                <svg class="doc-icon" viewBox="0 0 22 22" >
-                  <use xlink:href="./images/sprite.svg#doc-icon"></use>
+                <svg class="flv-icon" viewBox="0 0 30 16">
+                  <use xlink:href="./images/sprite.svg#flv-icon"></use>
                 </svg>
-                <p class="file__materials-title">Техническое задание.doc</p>
-                <span class="file__materials-size">215 Кб</span>
-                <button class="download">
-                  <svg class="upload-icon" viewBox="0 0 12 13" >
-                    <use xlink:href="./images/sprite.svg#upload-icon"></use>
-                  </svg>
-                  Скачать
-                </button>
+                <svg class="mov-icon" viewBox="0 0 37 16">
+                  <use xlink:href="./images/sprite.svg#mov-icon"></use>
+                </svg>
               </div>
+              <ul class="result__img">
+                <li class="result__img-file">
+                  <img src="./images/img1-small.png" alt="images">
+                  <svg class="delete-icon" viewBox="0 0 14 14">
+                    <use xlink:href="./images/sprite.svg#delete-icon"></use>
+                  </svg>
+                  <div class="result__data-file">
+                    <p class="date-time">10.02.2020, 09:41</p>
+                    <span class="title-file">video_594-20.avi</span>
+                  </div>
+                </li>
+                <li class="result__img-file">
+                  <img src="./images/img4-small.png" alt="images">
+                  <svg class="delete-icon" viewBox="0 0 14 14">
+                    <use xlink:href="./images/sprite.svg#delete-icon"></use>
+                  </svg>
+                  <div class="result__data-file">
+                    <p class="date-time">10.02.2020, 09:41</p>
+                    <span class="title-file">video_594-20.avi</span>
+                  </div>
+                </li>
+                <li class="result__img-file">
+                  <img src="./images/img5-small.png" alt="images">
+                  <svg class="delete-icon" viewBox="0 0 14 14">
+                    <use xlink:href="./images/sprite.svg#delete-icon"></use>
+                  </svg>
+                  <div class="result__data-file">
+                    <p class="date-time">10.02.2020, 09:41</p>
+                    <span class="title-file">video_594-20.avi</span>
+                  </div>
+                </li>
+                <li class="result__img-file">
+                  <img src="./images/img4-small.png" alt="images">
+                  <svg class="delete-icon" viewBox="0 0 14 14">
+                    <use xlink:href="./images/sprite.svg#delete-icon"></use>
+                  </svg>
+                  <div class="result__data-file">
+                    <p class="date-time">10.02.2020, 09:41</p>
+                    <span class="title-file">video_594-20.avi</span>
+                  </div>
+                </li>
+                <li class="result__img-file">
+                  <img src="./images/img1-small.png" alt="images">
+                  <svg class="delete-icon" viewBox="0 0 14 14">
+                    <use xlink:href="./images/sprite.svg#delete-icon"></use>
+                  </svg>   
+                  <div class="result__data-file">
+                    <p class="date-time">10.02.2020, 09:41</p>
+                    <span class="title-file">video_594-20.avi</span>
+                  </div>               
+                </li>
+                <li class="result__img-file result__img-ready">
+                  <svg class="plas-gray" viewBox="0 0 14 14">
+                    <use xlink:href="./images/sprite.svg#plas-gray"></use>
+                  </svg>
+                </li>
+              </ul>
+              <div class="result__form">
+                <form action="#">
+                  <input type="text" placeholder="Введите сообщение...">
+                  <button class="result__form-send">Отправить</button>
+                </form>
+              </div>
+              <ul class="task__item-comments">
+                <li class="comment__item">
+                  <a class="header-user__photo" href="#">
+                    <img class="header-user__img" src="./images/user-photo.png" alt="user-photo">
+                  </a>
+                  <div class="comment__box">
+                    <p class="comment__autor-name">Вы <span class="time-date">12:11 14.02.2020</span></p>
+                    <p class="comment__text">Задача организации, в особенности же новая модель организационной</p>
+                  </div>
+                </li>
+                <li class="comment__item">
+                  <a class="header-user__photo" href="#">
+                    <img class="header-user__img" src="./images/user-photo.png" alt="user-photo">
+                  </a>
+                  <div class="comment__box">
+                    <p class="comment__autor-name">Станислав Щукин <span class="time-date">09:51 14.02.2020</span></p>
+                    <p class="comment__text">Товарищи! укрепление и развитие структуры требуют определения и уточнения новых предложений. С другой стороны постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки направлений прогрессивного развития.</p>
+                  </div>
+                </li>
+                <li class="comment__item">
+                  <a class="header-user__photo" href="#">
+                    <img class="header-user__img" src="./images/user-photo.png" alt="user-photo">
+                  </a>
+                  <div class="comment__box">
+                    <p class="comment__autor-name">Вы <span class="time-date">09:51 13.02.2020</span></p>
+                    <p class="comment__text">Таким образом консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует</p>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="task__item-info">
