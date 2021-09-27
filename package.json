@@ -1,0 +1,12 @@
+{
+  "name": "fe-21-1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "http://gitlab.study.htc-cs.com/root/frontend/fe-21-1.git",
+  "author": "elizaveta <elizavetaBun@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
