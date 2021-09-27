@@ -5,9 +5,14 @@ const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: path.join(__dirname, 'src', 'index.js'),
+  entry: {
+    index: path.join(__dirname, 'src', 'index.js'),
+    task: path.join(__dirname, 'src', 'task.js'),
+    uiKit: path.join(__dirname, 'src', 'ui-kit.js'),
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
+    filename: '[name].[hash:8].js',
   },
   module: {
     rules: [
@@ -24,15 +29,24 @@ module.exports = {
           },
         },
       },
-        {
+      {
         test: /\.svg$/,
-        loader: 'svg-inline-loader'
-    },
+        loader: 'svg-inline-loader',
+      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'public', 'index.html'),
+      template: path.join(__dirname, 'public/pages', 'index.html'),
+      filename: 'index.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'public/pages', 'task.html'),
+      filename: 'task.html',
+    }),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, 'public', 'ui-kit.html'),
+      filename: 'ui-kit.html',
     }),
     new ESLintPlugin({
       context: path.join(__dirname, 'src'),
