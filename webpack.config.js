@@ -86,6 +86,11 @@ module.exports = (options) => {
           use: 'babel-loader',
         },
         {
+          test: /\.tsx?$/,
+          exclude: /node_modules/,
+          use: 'ts-loader',
+        },
+        {
           test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
           type: 'asset/resource',
           generator: {
