@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -8,9 +9,13 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
+const PATHS = {
+  client: path.join(__dirname, './client'),
+  dist: path.join(__dirname, './dist'),
+};
+
 module.exports = (options) => {
   const isDev = options.name === 'development';
-  // const pages = ['index', 'task', 'task-result', '404' ];
 
   const config = {
     mode: isDev ? 'development' : 'production',
@@ -21,11 +26,12 @@ module.exports = (options) => {
       compress: true,
       port: 8080,
     },
+    context: PATHS.client,
     entry: {
-      index: path.resolve(__dirname, './src/pages/index/index.js'),
-      task: path.resolve(__dirname, './src/pages/task/task.js'),
-      'task-result': path.resolve(__dirname, './src/pages/task/task-result.js'),
-      404: path.resolve(__dirname, './src/pages/404/404.js'),
+      index: `${PATHS.client}/pages/index/index.js`,
+      task: `${PATHS.client}/pages/task/task.js`,
+      tasks: `${PATHS.client}/pages/tasks/tasks.js`,
+      404: `${PATHS.client}/pages/404/404.js`,
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
@@ -33,36 +39,21 @@ module.exports = (options) => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, './src/pages/index/index.html'),
+        template: `${PATHS.client}/pages/index/index.html`,
         filename: 'index.html',
-        chunks: ['index'],
       }),
       new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, './src/pages/task/task.html'),
+        template: `${PATHS.client}/pages/task/task.html`,
         filename: 'task.html',
-        chunks: ['task'],
       }),
       new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, './src/pages/task/task-result.html'),
-        filename: 'task-result.html',
-        chunks: ['task-result'],
+        template: `${PATHS.client}/pages/tasks/tasks.html`,
+        filename: 'tasks.html',
       }),
       new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, './src/pages/404/404.html'),
+        template: `${PATHS.client}/pages/404/404.html`,
         filename: '404.html',
-        chunks: ['404'],
       }),
-      // TODO: переделать/ автоматизировать и для entry points
-      // ...pages.map(
-      //   (page) =>
-      //     new HtmlWebpackPlugin({
-      //       inject: true,
-      //       template: path.resolve(__dirname, `./src/pages/${page}/${page}.html`),
-      //       filename: `${page}.html`,
-      //       chunks: [page],
-      //     })
-      // ),
-
       new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
       new MiniCssExtractPlugin({
         filename: '[name].[contenthash].css',

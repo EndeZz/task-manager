@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="shortcut icon" href="../../../public/img/icons/logo.svg" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="hidden">Task Manager</h1>
+      <div class="container nav">
+        <a href="#" class="nav__logo">
+          <img src="../../../public/img/icons/logo.svg" alt="Логотип" />
+        </a>
+        <nav class="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="btn btn__link">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a href="tasks.html" class="btn btn__link">Задачи</a>
+            </li>
+            <li class="nav__item">
+              <a href="404.html" class="btn btn__link">Пользователи</a>
+            </li>
+          </ul>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="btn btn__notify btn__link nav__profile" aria-label="Уведомления">
+                <span class="nav__notify">
+                  <svg class="icon-notify" width="20" height="24">
+                    <use xlink:href="../../../public/img/icons/icons.svg#icon-notify"></use>
+                  </svg>
+                </span>
+                <span class="nav__notify-new">3</span>
+              </a>
+              <button class="btn btn__profile nav__profile" id="profile-toggle">
+                <span class="nav__profile_name">Семён Щеглов</span>
+                <img class="nav__profile_img" src="../../../public/img/profile/pic1.png" alt="Аватар профиля" />
+                <span class="nav__profile_arrow"></span>
+              </button>
+              <div class="dropdown">
+                <ul class="dropdown__list">
+                  <li class="dropdown__item">
+                    <a href="#" class="btn btn__profile">Профиль</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a href="#" class="btn btn__profile">Выход</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="container task">
+        <ul class="task__top-group">
+          <li class="task__btn">
+            <a href="tasks.html" class="btn btn_trans btn_inline">
+              <svg class="icon icon_back icon_primary icon_edge" width="25" height="11">
+                <use xlink:href="../../../public/img/icons/icons.svg#back"></use>
+              </svg>
+              <span>К списку задач</span>
+            </a>
+          </li>
+
+          <li class="task__btn task__btn-group">
+            <button class="btn btn_primary btn_edit-sm btn__task-sm" aria-label="Редактировать">
+              <svg class="icon icon_md" width="20" height="20">
+                <use xlink:href="../../../public/img/icons/icons.svg#edit-icon"></use>
+              </svg>
+            </button>
+
+            <button class="btn btn_primary btn_edit-sm btn__task-sm" aria-label="Удалить">
+              <svg class="icon icon_md icon_md-delete" width="14" height="16">
+                <use xlink:href="../../../public/img/icons/icons.svg#delete-icon"></use>
+              </svg>
+            </button>
+          </li>
+        </ul>
+
+        <div class="task__main-group">
+          <div class="task__main-content">
+            <section class="task__wrapper">
+              <div class="task__caption">
+                <span class="type type-video type_edge">
+                  <svg class="icon icon_video">
+                    <use xlink:href="../../../public/img/icons/icons.svg#video-icon"></use>
+                  </svg>
+                  <span>Видео</span>
+                </span>
+
+                <span class="task__progress task__progress_in-work">В работе</span>
+              </div>
+
+              <div class="task__info">
+                <h2 class="task__info-title">
+                  Заголовок задачи с другой стороны консультация с широким активом позволяет
+                </h2>
+                <p class="task__info-desc">
+                  Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности позволяет
+                  оценить значение форм развития. Значимость этих проблем настолько очевидна, что новая модель
+                  организационной деятельности требуют от нас анализа системы обучения кадров, соответствует насущным
+                  потребностям. Товарищи! постоянный количественный рост и сфера нашей активности требуют определения и
+                  уточнения позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика
+                  показывает, что постоянный количественный рост и сфера нашей активности в значительной степени
+                  обуславливает создание системы обучения кадров, соответствует насущным потребностям.
+                </p>
+              </div>
+
+              <div class="task__files">
+                <h3 class="task__files-title">Файлы</h3>
+                <ul class="task__files-list">
+                  <li class="task__files-item"></li>
+                  <li class="task__files-item"></li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="task__wrapper">
+              <div class="upload">
+                <h3 class="upload__title">Результат</h3>
+                <span class="upload__subtitle"></span>
+                <ul class="upload__list-format">
+                  <li class="upload__item-format"></li>
+                  <li class="upload__item-format"></li>
+                  <li class="upload__item-format"></li>
+                </ul>
+              </div>
+
+              <ul class="upload__files">
+                <li class="upload__file">
+                  <button class="btn upload_close"></button>
+                  <div class="upload__img"><img src="../../../public/img/card/img1.jpg" alt="" class="upload__pic" /></div>
+                </li>
+                <li class="upload__file">
+                  <button class="btn upload_close"></button>
+                  <div class="upload__img"><img src="../../../public/img/card/img1.jpg" alt="" class="upload__pic" /></div>
+                </li>
+                <li class="upload__file">
+                  <button class="btn upload_close"></button>
+                  <div class="upload__img"><img src="../../../public/img/card/img1.jpg" alt="" class="upload__pic" /></div>
+                </li>
+              </ul>
+
+              <form class="upload__form" action="">
+                <textarea class="upload__message" name="" id="" cols="30" rows="10" placeholder="Введите сообщение..."></textarea>
+                <button class="btn btn_primary btn__submit upload__message-btn">Отправить</button>
+            </form>
+            </section>
+          </div>
+
+          <aside class="task__wrapper task__sidebar">
+            <ul class="task__sidebar-list">
+              <li class="task__sidebar-item">
+                <p class="task__sidebar-title">Задача создана</p>
+                <span class="task_underline"></span>
+                <time class="task__sidebar-subtitle">05.02.2020</time>
+              </li>
+              <li class="task__sidebar-item">
+                <p class="task__sidebar-title">Срок выполнения</p>
+                <span class="task_underline"></span>
+                <time class="task__sidebar-subtitle">11.02.2020</time>
+              </li>
+              <li class="task__sidebar-item">
+                <p class="task__sidebar-title">Опубликовал</p>
+                <span class="task_underline"></span>
+                <p class="task__sidebar-subtitle">Семён Щеглов</p>
+              </li>
+              <li class="task__sidebar-item">
+                <p class="task__sidebar-title">Ответственный</p>
+                <span class="task_underline"></span>
+                <p class="task__sidebar-subtitle">Станислав Щукин</p>
+              </li>
+            </ul>
+            <p></p>
+            <time></time>
+          </aside>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

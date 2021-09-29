@@ -1,0 +1,53 @@
+.upload {
+  &__files {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__img {
+    border-radius: 4px;
+    height: 68px;
+    width: 110px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  &__pic {
+    height: 100%;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &_close {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__form {
+    padding-top: 30px;
+    position: relative;
+  }
+
+  &__message {
+    height: 124px;
+    width: 100%;
+    resize: none;
+    font-size: 1.4rem;
+
+    background: $color-light;
+    border: 1px solid $color-blue-outline;
+    border-radius: 4px;
+    padding: 10px;
+
+    &-btn {
+      position: absolute;
+      bottom: 15px;
+      right: 10px;
+    }
+  }
+}

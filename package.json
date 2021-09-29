@@ -4,8 +4,8 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack serve --mode development",
-    "lint": "eslint ./src",
-    "fix": "eslint ./src --fix"
+    "lint": "eslint ./client",
+    "fix": "eslint ./client --fix"
   },
   "keywords": [],
   "devDependencies": {

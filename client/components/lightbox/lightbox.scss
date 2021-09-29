@@ -1,0 +1,178 @@
+.lightbox {
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $color-shadow-bg;
+  pointer-events: none;
+  opacity: 0;
+
+  &__img {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 938px;
+    border-radius: 6px;
+    transform: translateY(15%);
+  }
+
+  &__overlay {
+    display: flex;
+    position: absolute;
+    top: 33px;
+    left: 30px;
+  }
+
+  &_show {
+    opacity: 1;
+    pointer-events: auto;
+    transition: all 0.3s ease;
+  }
+
+  &__caption {
+    color: $color-light;
+
+    &_trans {
+      opacity: 0.6;
+    }
+  }
+
+  &_close {
+    position: relative;
+    bottom: 18px;
+    left: 0;
+    padding: 0 20px 0 0;
+  }
+
+  &__input_range {
+    position: relative;
+    appearance: none;
+    display: block;
+    width: 80%;
+    height: 3px;
+    background-color: $color-light;
+    border-radius: 4px;
+    outline: none;
+
+    &::-webkit-slider-runnable-track {
+      appearance: none;
+      height: 8px;
+    }
+
+    &::-moz-track {
+      appearance: none;
+      height: 8px;
+    }
+
+    &::-ms-track {
+      appearance: none;
+      height: 8px;
+    }
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      height: 9px;
+      width: 9px;
+      background-color: $color-primary;
+      border-radius: 50%;
+      cursor: pointer;
+      margin-top: -1px;
+      border: 0;
+    }
+
+    &::-moz-range-thumb {
+      appearance: none;
+      height: 9px;
+      width: 9px;
+      background-color: $color-primary;
+      border-radius: 50%;
+      cursor: pointer;
+      margin-top: -6px;
+      border: 0;
+    }
+
+    &::-ms-thumb {
+      appearance: none;
+      height: 9px;
+      width: 9px;
+      background-color: $color-primary;
+      border-radius: 50%;
+      cursor: pointer;
+      margin-top: -6px;
+      border: 0;
+    }
+
+    &:active::-webkit-slider-thumb {
+      background-color: $color-primary-active;
+    }
+  }
+
+  &__audio {
+    display: flex;
+    justify-content: space-between;
+    background: $color-txt;
+    box-shadow: 0 10px 30px $color-shadow-bg;
+    padding: 30px;
+    width: 628px;
+    margin: auto;
+    border-radius: 4px;
+    transform: translateY(15%);
+
+    &-toggle {
+      padding: 0;
+
+      &.lightbox_play::after {
+        content: '';
+        height: 12px;
+        width: 9px;
+        background-image: url('../../../public/img/icons/play-icon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      &.lightbox_pause::after {
+        content: '';
+        height: 12px;
+        width: 9px;
+        background-image: url('../../../public/img/icons/pause-icon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      &.lightbox_volume::after {
+        content: '';
+        height: 17px;
+        width: 17px;
+        background-image: url('../../../public/img/icons/volume-icon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      &.lightbox_mute::after {
+        content: '';
+        height: 17px;
+        width: 17px;
+        background-image: url('../../../public/img/icons/volume_muted-icon.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+
+    &-duration {
+      width: 300px;
+    }
+
+    &-volume {
+      width: 81px;
+    }
+  }
+}
+
+.song-slider {
+  width: 100%;
+  position: relative;
+}
