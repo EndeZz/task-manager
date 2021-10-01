@@ -5,39 +5,25 @@ const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: path.join(__dirname, './client', 'index.js'),
+  entry: path.join(__dirname, './client', 'index.tsx'),
   output: {
     path: path.resolve(__dirname, 'dist'),
+    filename: 'index.bundle.js',
+  },
+  resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.(ts|tsx)$/,
-        enforce: 'pre',
-        use: [
-          {
-            options: {
-              eslintPath: require.resolve('eslint'),
-
-            },
-            loader: require.resolve('eslint-loader'),
-          },
-        ],
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.?jsx?$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
             presets: [
               '@babel/preset-env',
+              '@babel/preset-typescript',
               [
                 '@babel/preset-react',
                 {
@@ -49,7 +35,25 @@ module.exports = {
         },
       },
       {
-        test: /\.scss$/i,
+        test: /\.(ts|tsx)$/,
+        use: 'ts-loader',
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        enforce: 'pre',
+        use: [
+          {
+            options: {
+              eslintPath: require.resolve('eslint'),
+            },
+            loader: require.resolve('eslint-loader'),
+          },
+        ],
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.(css|scss)$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
@@ -65,19 +69,15 @@ module.exports = {
         test: /\.svg$/,
         loader: 'svg-inline-loader',
       },
-
     ],
-  },
-  resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'index.html'),
+      template: path.join(__dirname, 'client', 'index.html'),
     }),
     new ESLintPlugin({
       context: path.join(__dirname),
-      extensions: ['.js', '.jsx'],
+      extensions: ['.js', '.jsx', '.tsx', '.ts'],
     }),
     new StylelintPlugin(),
   ],
