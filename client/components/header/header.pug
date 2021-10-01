@@ -3,7 +3,7 @@ mixin header  (user_role, page, notification_count, user_name, user_img)
     .header__container
       .header__left-colm
         a.header__logo-link(href='index.html')
-          img.header__icon(src='../../../public/img/component/logo.svg' alt='Логотип сайта')
+          img.header__icon(src='../../../public/img/icons/logo.svg' alt='Логотип сайта')
         nav.header__nav
           ul.menu
             if user_role == 'contentMaker'
@@ -36,7 +36,7 @@ mixin header  (user_role, page, notification_count, user_name, user_img)
     
         a(class=classes href= '#')
           svg.notification__bell-icon
-            use(xlink:href='../../../public/img/component/header-sprite.svg#bell')
+            use(xlink:href='../../../public/img/icons/header-sprite.svg#bell')
           
           if notification_count < 1
             -var classes=['notification__new-area', 'label']
@@ -52,7 +52,7 @@ mixin header  (user_role, page, notification_count, user_name, user_img)
             .user__container-img
               img.user__img(src= user_img  alt='Фотография пользователя')
             svg.user__open-menu
-              use(xlink:href='../../../public/img/component/header-sprite.svg#menu')
+              use(xlink:href='../../../public/img/icons/header-sprite.svg#menu')
           .user-menu
             ul.user-menu__list
               li.user-menu__item

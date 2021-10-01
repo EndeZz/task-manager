@@ -146,6 +146,7 @@
   &__name {
     color: $txt;
     padding-right: 1.429em; //20px
+    cursor: default;
   }
 
   &__container-img {
@@ -198,7 +199,7 @@
   }
 
   &__open-menu {
-    width: 0.500empx;//7px
+    width: 0.500em;//7px
     height: 0.357em; //5px
     fill: $blue;
     padding-left: 0.571em;//8px; 
