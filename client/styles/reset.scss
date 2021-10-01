@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  font: 400 10px 'Roboto', sans-serif;
+  color: $txt;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font: 500 2.4rem "Roboto", sans-serif;
+}
+
+h2 {
+  font: 500 2rem "Roboto", sans-serif;
+}
+
+h3 {
+  font: 500 1.6rem "Roboto", sans-serif;
+}
+
+.button,
+.filter {
+  font: 500 1.4rem "Roboto", sans-serif;
+  user-select: none;
+}
+
+.header,
+.main {
+  font: 400 1.4em 'Roboto', sans-serif;
+}
+
+.label {
+  font: 500 1.2rem "Roboto", sans-serif;
+}
+
+.uploader,
+.date-time {
+  font: 400 1.2rem "Roboto", sans-serif;
+  opacity: 0.6;
+}
