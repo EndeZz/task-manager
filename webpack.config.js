@@ -7,11 +7,20 @@ const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 // const ESLintPlugin = require('eslint-webpack-plugin');
 // const StylelintPlugin = require('stylelint-webpack-plugin');
 
+const PATHS = {
+  client: path.join(__dirname, 'client'),
+  dist: path.join(__dirname, 'dist')
+};
+
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+    'index': PATHS.client + '/pages/index/index.js',
+    'tasks': PATHS.client + '/pages/tasks/tasks.js'
+  },
+
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'index.bundle.js'
+    filename: './js/[name].bundle.js'
   },
 
   module: {
@@ -40,23 +49,25 @@ module.exports = {
   },
   plugins: [
     new HTMLWebpackPlugin({
-      template: './src/index.html',
+      template: PATHS.client + '/pages/index/index.pug',
+      chunks: ['index'],
       filename: 'index.html'
     }),
     new HTMLWebpackPlugin({
-      template: './src/ui-kit.html',
-      filename: 'ui-kit.html'
+      template: PATHS.client + '/pages/tasks/tasks.pug',
+      chunks: ['tasks'],
+      filename: 'tasks.html'
     }),
     new HtmlWebpackPugPlugin(),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: 'style.css'
+      filename: './style/[name].css'
     }),
-    new CopyWebpackPlugin({
-      patterns: [
-        { from: path.resolve(__dirname, './src/file'), to: path.resolve(__dirname, './dist/file') }
-      ],
-    }),
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     { from: path.resolve(__dirname, './src/file'), to: path.resolve(__dirname, './dist/file') }
+    //   ],
+    // }),
     // new ESLintPlugin({
     //   extensions: ['ts', 'tsx', 'js', 'jsx']
     // }),
