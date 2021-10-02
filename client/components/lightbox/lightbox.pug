@@ -1,0 +1,44 @@
+include ../../components/select/select
+include ../button/button
+include ../input/input
+
+mixin lightbox(items, currentCard)
+  .lightbox
+    each item, index in items
+      if (index === currentCard)
+        .lightbox__overlay
+          +buttonConfiguration("back").btn.lightbox_close
+          .lightbox__caption
+            +typeContent(item).type-light
+            .feed__info
+              h2.feed__title.feed__title-shift= `${item.text}`
+              span.feed__subtitle.feed__subtitle-date= `${item.date}`
+
+        .lightbox__audio
+          button#audio-toggle.btn.lightbox__audio-toggle.lightbox_play
+          input#audio-time-duration.lightbox__input_range.lightbox__audio-duration(
+            type="range",
+            min="0",
+            max="100",
+            value="0"
+          )
+          audio#audio-player(
+            src="https://dl.topmyz.ru/files/track/2020/08/Rick_Astley_-_Never_Gonna_Give_You_Up.mp3"
+          )
+          button#audio-mute.btn.lightbox__audio-toggle.lightbox_volume
+          input#audio-volume.lightbox__audio-volume(
+            type="range",
+            min="0",
+            max="100",
+            step="1",
+            value="50"
+          )
+          .lightbox__caption
+            span#audio-caption-current.lightbox__caption_trans 00:00
+            span.lightbox__caption_trans /
+            span#audio-caption-duration.lightbox__caption_trans 00:00
+
+        img.lightbox__img(
+          src=`../../../public/img/card/${item.img}`,
+          alt=`${item.altText}`
+        )

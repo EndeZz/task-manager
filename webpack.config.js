@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -8,11 +9,15 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ESLintPlugin = require('eslint-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 
 const PATHS = {
   client: path.join(__dirname, './client'),
   dist: path.join(__dirname, './dist'),
 };
+
+const PAGES_DIR = `${PATHS.client}/pages`;
+// const PAGES = fs.readdirSync(PAGES_DIR).filter((fileName) => fileName.endsWith('.pug'));
 
 module.exports = (options) => {
   const isDev = options.name === 'development';
@@ -28,10 +33,11 @@ module.exports = (options) => {
     },
     context: PATHS.client,
     entry: {
-      index: `${PATHS.client}/pages/index/index.js`,
-      task: `${PATHS.client}/pages/task/task.js`,
-      tasks: `${PATHS.client}/pages/tasks/tasks.js`,
-      404: `${PATHS.client}/pages/404/404.js`,
+      // app: glob.sync(`${PATHS.client}/pages/**/*.*s`),
+      index: `${PAGES_DIR}/index/index.ts`,
+      task: `${PAGES_DIR}/task/task.ts`,
+      tasks: `${PAGES_DIR}/tasks/tasks.ts`,
+      404: `${PAGES_DIR}/404/404.ts`,
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
@@ -39,20 +45,24 @@ module.exports = (options) => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: `${PATHS.client}/pages/index/index.html`,
+        template: `${PATHS.client}/pages/index/index.pug`,
         filename: 'index.html',
+        chunks: ['index']
       }),
       new HtmlWebpackPlugin({
-        template: `${PATHS.client}/pages/task/task.html`,
-        filename: 'task.html',
-      }),
-      new HtmlWebpackPlugin({
-        template: `${PATHS.client}/pages/tasks/tasks.html`,
+        template: `${PATHS.client}/pages/tasks/tasks.pug`,
         filename: 'tasks.html',
+        chunks: ['tasks']
       }),
       new HtmlWebpackPlugin({
-        template: `${PATHS.client}/pages/404/404.html`,
+        template: `${PATHS.client}/pages/task/task.pug`,
+        filename: 'task.html',
+        chunks: ['task']
+      }),
+      new HtmlWebpackPlugin({
+        template: `${PATHS.client}/pages/404/404.pug`,
         filename: '404.html',
+        chunks: ['404']
       }),
       new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
       new MiniCssExtractPlugin({
@@ -64,12 +74,17 @@ module.exports = (options) => {
       }),
       new ESLintPlugin({ extensions: ['ts', 'tsx', 'js', 'jsx'] }),
       new StylelintPlugin({ extensions: ['css', 'scss', 'sass'] }),
+      new HtmlWebpackPugPlugin(),
     ],
     module: {
       rules: [
         {
           test: /\.html$/,
           loader: 'html-loader',
+        },
+        {
+          test: /\.pug$/,
+          use: ['html-loader', 'pug-html-loader?pretty=true'],
         },
         {
           test: /\.jsx?$/,

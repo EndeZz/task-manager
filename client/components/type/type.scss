@@ -1,3 +1,6 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
 .type {
   @include font_config(normal, 500, 1.4rem, 1.6rem);
 
@@ -6,6 +9,7 @@
   &_time {
     font-weight: 400;
     opacity: 0.6;
+    margin-left: 4px;
   }
 
   &-video {
@@ -26,6 +30,12 @@
 
   &-light {
     color: $color-light;
+
+    .icon_video,
+    .icon_photo,
+    .icon_audio {
+      fill: $color-light;
+    }
   }
 
   &_edge {

@@ -1,0 +1,24 @@
+mixin navigation(headerLinks, active)
+  nav.nav__menu
+    ul.nav__list
+      each link, index in headerLinks
+        li.nav__item
+          if (index === active)
+            a.btn.btn__link.btn_active= link.text
+          else
+            a.btn.btn__link(href=`${link.href}`)= link.text
+
+    ul.nav__list
+      li.nav__item
+        include ../../components/button/button.pug
+        +buttonNotification(3)
+
+        include ../../components/button/button.pug
+        +buttonProfile("pic1", "Семен Щеглов")
+
+        .dropdown
+          ul.dropdown__list
+            li.dropdown__item
+              a.btn.btn__profile(href="#") Профиль
+            li.dropdown__item
+              a.btn.btn__profile(href="#") Выход

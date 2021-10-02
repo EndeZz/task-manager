@@ -1,9 +1,9 @@
-// TODO: разобраться со вставкой svg и допилить до приемлемого вида вставку фото
+// TODO: допилить до приемлемого вида вставку фото
 
 const previewBox = document.querySelector('.lightbox');
 const cardBox = document.querySelectorAll('.feed__card');
 const closeIcon = document.querySelector('.lightbox_close');
-const previewImg = document.querySelector('.lightbox__img');
+// const previewImg = document.querySelector('.lightbox__img').src;
 const body = document.querySelector('body');
 
 const previewAudio = document.querySelector('audio');
@@ -26,30 +26,9 @@ const closeLightbox = () => {
   previewAudio.pause();
 };
 
-const activeLightbox = (e) => {
+const activeLightbox = () => {
   openLightbox();
-
-  const captionImg = e.currentTarget.querySelector('.feed__pic-photo');
-  const captionText = document.querySelector('.lightbox__caption');
-  const captionTitle = e.currentTarget.querySelector('.feed__title');
-  // const captionSvg = e.currentTarget.querySelector('.icon');
-  const captionSubTitleDate = e.currentTarget.querySelector('.feed__subtitle-date');
-
   body.style.overflow = 'hidden';
-  previewImg.src = captionImg.src;
-  captionText.innerHTML = `
-      <div class="type">
-        <svg class="icon icon_video">
-          <use xlink:href=></use>
-        </svg>
-        <span>Видео</span>
-        <span class="type_time">02:31</span>
-      </div>
-      <div class="feed__info">
-        <h2 class="feed__title feed__title-shift">${captionTitle.textContent}</h2>
-        <span class="feed__subtitle feed__subtitle-date">${captionSubTitleDate.textContent}</span>
-      </div>
-`;
 };
 
 cardBox.forEach((image) => image.addEventListener('click', activeLightbox));
@@ -61,9 +40,8 @@ closeIcon.addEventListener('click', closeLightbox);
 previewAudio.src = 'https://dl.topmyz.ru/files/track/2020/08/Rick_Astley_-_Never_Gonna_Give_You_Up.mp3';
 
 // TODO:
-// реализовать отключение аудио при выходе из lightbox
-// реализовать кастомную музыку
-// наконец связать карту с аудио с самим аудио
+// 1 - реализовать пользовательскую музыку
+// 2 - связать карту с аудио с самим аудио
 
 function playAudio() {
   previewAudio.play();
@@ -123,13 +101,11 @@ const updateDuration = () => {
   }
 };
 
-const loadAudio = () => {
+(function () {
   clearInterval(timer);
   previewAudio.load();
-  timer = setInterval(updateDuration, 1000);
-};
-
-loadAudio();
+  timer = setInterval(updateDuration, 100);
+}());
 
 const toggleAudio = () => {
   if (isPlaying) {

@@ -1,0 +1,16 @@
+mixin typeContent(items)
+  if (`${attributes.class}` !== 'undefined')
+    span(class!=`${attributes.class} type type-${items.type}`)
+      +iconHref(`${items.type}-icon`, 12, 10)(class=`icon icon_${items.type}`)
+      span= `${items.typeText}`
+
+      if (`${items.time}` !== 'undefined')
+        span.type_time= `${items.time}`
+
+  else
+    span(class=`type type-${items.type}`)
+      +iconHref(`${items.type}-icon`, 12, 10)(class=`icon icon_${items.type}`)
+      span= `${items.typeText}`
+
+      if (`${items.time}` !== 'undefined')
+        span.type_time= `${items.time}`

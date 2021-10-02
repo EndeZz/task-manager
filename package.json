@@ -5,12 +5,14 @@
     "build": "webpack --mode production",
     "start": "webpack serve --mode development",
     "lint": "eslint ./client",
-    "fix": "eslint ./client --fix"
+    "fix": "eslint ./client --fix",
+    "prettier:pug": "prettier --write \"**/*.pug\""
   },
   "keywords": [],
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",
+    "@prettier/plugin-pug": "^1.16.7",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^4.29.3",
     "@webpack-cli/generators": "^1.1.0",
@@ -27,12 +29,17 @@
     "eslint-webpack-plugin": "^3.0.1",
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.2",
+    "html-webpack-pug-plugin": "^3.0.0",
     "imagemin-webpack-plugin": "^2.1.5",
     "mini-css-extract-plugin": "^2.2.0",
     "node-sass": "^6.0.1",
     "postcss": "^8.3.6",
     "postcss-loader": "^6.1.1",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.4.1",
+    "pug": "^2.0.4",
+    "pug-html-loader": "^1.1.5",
+    "pug-loader": "^2.4.0",
     "sass": "^1.38.0",
     "sass-loader": "^12.1.0",
     "style-loader": "^3.2.1",
@@ -46,5 +53,8 @@
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.0.0",
     "workbox-webpack-plugin": "^6.2.4"
+  },
+  "dependencies": {
+    "flatpickr": "^4.6.9"
   }
 }

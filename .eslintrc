@@ -1,5 +1,5 @@
 {
-  "extends": ["eslint:recommended", "plugin:import/recommended", "airbnb-base"],
+  "extends": ["eslint:recommended", "plugin:import/recommended", "airbnb-base", "airbnb-typescript"],
   "env": {
     "browser": true,
     "es6": true,
@@ -13,13 +13,13 @@
     },
     "ecmaVersion": 12,
     "sourceType": "module",
-    //
     "allowImportExportEverywhere": true
   },
   "rules": {
     "func-names": 0,
     "no-console": "warn",
     "max-len": ["error", 120, 2, { "ignoreComments": true }],
-    "import/prefer-default-export": 0
+    "import/prefer-default-export": 0,
+    "react/jsx-filename-extension": [0]
   }
 }

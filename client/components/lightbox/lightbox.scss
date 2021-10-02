@@ -1,3 +1,6 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
 .lightbox {
   position: fixed;
   z-index: 1;
@@ -43,7 +46,7 @@
 
   &_close {
     position: relative;
-    bottom: 18px;
+    bottom: 10px;
     left: 0;
     padding: 0 20px 0 0;
   }
@@ -121,6 +124,7 @@
     margin: auto;
     border-radius: 4px;
     transform: translateY(15%);
+    align-items: center;
 
     &-toggle {
       padding: 0;
@@ -168,6 +172,7 @@
 
     &-volume {
       width: 81px;
+      height: 3px;
     }
   }
 }

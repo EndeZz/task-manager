@@ -4,8 +4,8 @@
   font-weight: 400;
   src:
     local(''),
-    url('../../../public/fonts/roboto-v27-latin_cyrillic-regular.woff2') format('woff2'),
-    url('../../../public/fonts/roboto-v27-latin_cyrillic-regular.woff') format('woff');
+    url('../../public/fonts/roboto-v27-latin_cyrillic-regular.woff') format('woff2'),
+    url('../../public/fonts/roboto-v27-latin_cyrillic-regular.woff') format('woff');
 }
 
 @font-face {
@@ -14,6 +14,6 @@
   font-weight: 500;
   src:
     local(''),
-    url('../../../public/fonts/roboto-v27-latin_cyrillic-500.woff2') format('woff2'),
-    url('../../../public/fonts/roboto-v27-latin_cyrillic-500.woff') format('woff');
+    url('../../public/fonts/roboto-v27-latin_cyrillic-500.woff2') format('woff2'),
+    url('../../public/fonts/roboto-v27-latin_cyrillic-500.woff') format('woff');
 }

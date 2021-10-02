@@ -1,0 +1,28 @@
+include ../../components/select/select
+include ../button/button
+include ../input/input
+
+mixin control(conf, items)
+  li.control__item
+    case conf
+      when "search"
+        p.control__search-title Поиск
+        +input("search")
+
+      when "calendar"
+        p.control__search-title Дата публикации
+        +input("calendar")
+
+      when "deadline"
+        p.control__search-title Срок выполнения
+        +input("deadline")
+
+      when "status"
+        p.control__search-title Статус
+        +selector(items)
+
+      when "type"
+        p.control__search-title Тип контента
+        +buttonFilter("video")
+        +buttonFilter("photo")
+        +buttonFilter("audio")

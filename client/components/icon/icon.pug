@@ -1,0 +1,9 @@
+mixin iconHref(name, width, height)
+  svg(width=width, height=height, aria-hidden="true")&attributes(attributes)
+    use(xlink:href='../../../public/img/icons/icons.svg#' + name)
+
+mixin iconDocType(name)
+  svg(width=22, height=22, aria-hidden="true")&attributes(attributes)
+    use(xlink:href='../../../public/img/icons/doctype.svg#' + name)
+
+//- +iconHref("icon", 15, 15).class

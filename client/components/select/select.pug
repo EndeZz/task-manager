@@ -1,0 +1,12 @@
+mixin selector(items)
+  .select
+    button.input.input-sm.input_arrow.btn__select Выберите статус
+    ul.select__list
+      li.select__list-item
+        span.task__progress.task__progress Любой
+      if (items !== 'undefined')
+        each item in items
+          li.select__list-item
+            span(class=`task__progress task__progress_${item.progress}`)= `${item.progressText}`
+
+    input.select__input_hidden(type="text", name="select-category", value="")

@@ -1,3 +1,6 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
 .btn {
   @include font_config(normal, 500, 1.4rem, 1.6rem);
 

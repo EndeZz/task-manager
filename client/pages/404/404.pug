@@ -1,0 +1,14 @@
+include ../base/base
+include ../../components/header/header
+include ../../components/icon/icon
+
++header(adminViews, 2)
+
+main.main
+  .container.error-page
+    img(src="../../../public/img/icons/404.svg", alt="Ошибка")
+    h2.error-page__title Потерялись?
+    p.error-page__subtitle Страница, которую вы ищите не существует, либо была удалена
+    a.btn.btn_primary.btn_inline(href="/")
+      +iconHref("home-circle", 15, 15).icon.icon_primary.icon_tick.icon_edge
+      span На главную

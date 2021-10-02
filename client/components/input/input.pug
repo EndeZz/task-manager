@@ -1,0 +1,20 @@
+include ../../components/button/button
+
+mixin input(conf)
+  case conf
+    when "search"
+      input.input.input_search(
+        type="text",
+        placeholder="Введите название имя исполнителя"
+      )
+      +buttonOnInput("search").btn.btn_reset.input_search-icon
+      +buttonOnInput("close").btn.btn_reset.input_close
+
+    when "calendar"
+      input.input.input_date(
+        type="text",
+        placeholder="Укажите дату публикации"
+      )
+
+    when "deadline"
+      input.input.input-sm.input_date(type="text", placeholder="Укажите дату")
