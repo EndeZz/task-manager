@@ -1,0 +1,1525 @@
+openapi: 3.0.0
+info:
+  title: Task Manager API
+  description: open api for task manager
+  contact: {}
+  version: 1.0.0
+servers:
+- url: /
+paths:
+  /api/auth/login:
+    post:
+      tags:
+      - Авторизация
+      summary: Вход в систему
+      operationId: AuthController_login
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuthLoginRequestDto'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthLoginResponseDto'
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestDto'
+        "401":
+          description: Not Authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotAuthorizedDto'
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorDto'
+      x-swagger-router-controller: ""
+  /api/auth/logout:
+    post:
+      tags:
+      - Авторизация
+      summary: Выход из системы
+      operationId: AuthController_logout
+      parameters: []
+      responses:
+        "204": {}
+        "401":
+          description: Not Authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotAuthorizedDto'
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorDto'
+      security:
+      - bearer: []
+      x-swagger-router-controller: ""
+  /api/auth/refresh-token:
+    post:
+      tags:
+      - Авторизация
+      summary: Обновление токена
+      operationId: AuthController_refreshToken
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AuthResfreshTokenRequestDto'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthLoginResponseDto'
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestDto'
+        "401":
+          description: Not Authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotAuthorizedDto'
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorDto'
+      x-swagger-router-controller: ""
+  /api/comments:
+    post:
+      tags:
+      - Комментарии
+      summary: Создать комментарий
+      operationId: CommentsController_create
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CommentCreateRequestDto'
+        required: true
+      responses:
+        "201": {}
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestDto'
+        "401":
+          description: Not Authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotAuthorizedDto'
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundDto'
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorDto'
+      security:
+      - bearer: []
+      x-swagger-router-controller: ""
+  /api/contents:
+    get:
+      tags:
+      - Контент
+      summary: Лента контента
+      operationId: ContentsController_getAll
+      parameters:
+      - name: page
+        in: query
+        description: Номер страницы
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: number
+      - name: count
+        in: query
+        description: Количество на страницу
+        required: true
+        style: form
+        explode: true
+        schema:
+          type: number
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ContentsResponseDto'
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestDto'
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorDto'
+      x-swagger-router-controller: ""
+    post:
+      tags:
+      - Контент
+      summary: Загрузить контент
+      operationId: ContentsController_create
+      parameters: []
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/ContentCreateRequestDto'
+        required: true
+      responses:
+        "201": {}
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestDto'
+        "401":
+          description: Not Authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotAuthorizedDto'
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundDto'
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorDto'
+      security:
+      - bearer: []
+      x-swagger-router-controller: ""
+  /api/contents/{id}:
+    delete:
+      tags:
+      - Контент
+      summary: Удалить контент
+      operationId: ContentsController_remove
+      parameters:
+      - name: id
+        in: path
+        description: ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204": {}
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestDto'
+        "401":
+          description: Not Authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotAuthorizedDto'
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundDto'
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorDto'
+      security:
+      - bearer: []
+      x-swagger-router-controller: ""
+  /api/files:
+    post:
+      tags:
+      - Файлы
+      summary: Загрузить файл
+      operationId: FilesController_create
+      parameters: []
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/FileCreateRequestDto'
+        required: true
+      responses:
+        "201": {}
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestDto'
+        "401":
+          description: Not Authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotAuthorizedDto'
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundDto'
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorDto'
+      security:
+      - bearer: []
+      x-swagger-router-controller: ""
+  /api/files/{id}:
+    delete:
+      tags:
+      - Файлы
+      summary: Удалить файл
+      operationId: FilesController_remove
+      parameters:
+      - name: id
+        in: path
+        description: ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204": {}
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestDto'
+        "401":
+          description: Not Authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotAuthorizedDto'
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundDto'
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorDto'
+      security:
+      - bearer: []
+      x-swagger-router-controller: ""
+  /api/notifications:
+    get:
+      tags:
+      - Уведомления
+      summary: Список уведомлений
+      operationId: NotificationsController_getAll
+      parameters: []
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/NotificationDto'
+                x-content-type: application/json
+        "401":
+          description: Not Authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotAuthorizedDto'
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorDto'
+      security:
+      - bearer: []
+      x-swagger-router-controller: ""
+  /api/tasks:
+    get:
+      tags:
+      - Задачи
+      summary: Список задач
+      operationId: TasksController_getAll
+      parameters: []
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TaskListResponseDto'
+                x-content-type: application/json
+        "401":
+          description: Not Authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotAuthorizedDto'
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorDto'
+      security:
+      - bearer: []
+      x-swagger-router-controller: ""
+    post:
+      tags:
+      - Задачи
+      summary: Создать задачу
+      operationId: TasksController_create
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TaskCreateUpdateRequestDto'
+        required: true
+      responses:
+        "201": {}
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestDto'
+        "401":
+          description: Not Authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotAuthorizedDto'
+        "409":
+          description: Conflict
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorDto'
+      security:
+      - bearer: []
+      x-swagger-router-controller: ""
+  /api/tasks/{id}:
+    get:
+      tags:
+      - Задачи
+      summary: Получить задачу
+      operationId: TasksController_get
+      parameters:
+      - name: id
+        in: path
+        description: ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TaskResponseDto'
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestDto'
+        "401":
+          description: Not Authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotAuthorizedDto'
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundDto'
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorDto'
+      security:
+      - bearer: []
+      x-swagger-router-controller: ""
+    put:
+      tags:
+      - Задачи
+      summary: Отредактировать задачу
+      operationId: TasksController_update
+      parameters:
+      - name: id
+        in: path
+        description: ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TaskCreateUpdateRequestDto'
+        required: true
+      responses:
+        "204": {}
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestDto'
+        "401":
+          description: Not Authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotAuthorizedDto'
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundDto'
+        "409":
+          description: Conflict
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorDto'
+      security:
+      - bearer: []
+      x-swagger-router-controller: ""
+    delete:
+      tags:
+      - Задачи
+      summary: Удалить задачу
+      operationId: TasksController_remove
+      parameters:
+      - name: id
+        in: path
+        description: ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204": {}
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestDto'
+        "401":
+          description: Not Authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotAuthorizedDto'
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundDto'
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorDto'
+      security:
+      - bearer: []
+      x-swagger-router-controller: ""
+  /api/users:
+    get:
+      tags:
+      - Пользователи
+      summary: Список пользователей
+      operationId: UsersController_getAll
+      parameters: []
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UserResponseDto'
+                x-content-type: application/json
+        "401":
+          description: Not Authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotAuthorizedDto'
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorDto'
+      security:
+      - bearer: []
+      x-swagger-router-controller: ""
+    post:
+      tags:
+      - Пользователи
+      summary: Создать пользователя
+      operationId: UsersController_create
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserCreateUpdateRequestDto'
+        required: true
+      responses:
+        "201": {}
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestDto'
+        "401":
+          description: Not Authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotAuthorizedDto'
+        "409":
+          description: Conflict
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorDto'
+      security:
+      - bearer: []
+      x-swagger-router-controller: ""
+  /api/users/{id}:
+    get:
+      tags:
+      - Пользователи
+      summary: Получить пользователя
+      operationId: UsersController_get
+      parameters:
+      - name: id
+        in: path
+        description: ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponseDto'
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestDto'
+        "401":
+          description: Not Authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotAuthorizedDto'
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundDto'
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorDto'
+      security:
+      - bearer: []
+      x-swagger-router-controller: ""
+    put:
+      tags:
+      - Пользователи
+      summary: Отредактировать пользователя
+      operationId: UsersController_update
+      parameters:
+      - name: id
+        in: path
+        description: ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserCreateUpdateRequestDto'
+        required: true
+      responses:
+        "204": {}
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestDto'
+        "401":
+          description: Not Authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotAuthorizedDto'
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundDto'
+        "409":
+          description: Conflict
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorDto'
+      security:
+      - bearer: []
+      x-swagger-router-controller: ""
+    delete:
+      tags:
+      - Пользователи
+      summary: Удалить пользователя
+      operationId: UsersController_remove
+      parameters:
+      - name: id
+        in: path
+        description: ID
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        "204": {}
+        "400":
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BadRequestDto'
+        "401":
+          description: Not Authorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotAuthorizedDto'
+        "404":
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotFoundDto'
+        "500":
+          description: Internal Server Error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerErrorDto'
+      security:
+      - bearer: []
+      x-swagger-router-controller: ""
+components:
+  schemas:
+    NotAuthorizedDto:
+      required:
+      - error
+      - statusCode
+      type: object
+      properties:
+        statusCode:
+          type: number
+          description: Код статуса
+        error:
+          type: string
+          description: Текст ошибки
+    InternalServerErrorDto:
+      required:
+      - error
+      - statusCode
+      type: object
+      properties:
+        statusCode:
+          type: number
+          description: Код статуса
+        error:
+          type: string
+          description: Текст ошибки
+    AuthLoginRequestDto:
+      required:
+      - email
+      - password
+      type: object
+      properties:
+        email:
+          maxLength: 255
+          type: string
+          description: Email
+          format: email
+        password:
+          maxLength: 255
+          type: string
+          description: Пароль
+    AuthLoginResponseDto:
+      required:
+      - accessToken
+      - refreshToken
+      type: object
+      properties:
+        accessToken:
+          type: string
+          description: Токен доступа
+        refreshToken:
+          type: string
+          description: Токен обновления
+      example:
+        accessToken: accessToken
+        refreshToken: refreshToken
+    FieldMessageDto:
+      required:
+      - field
+      - message
+      type: object
+      properties:
+        field:
+          type: string
+          description: Поле
+        message:
+          type: string
+          description: Сообщение
+    BadRequestDto:
+      required:
+      - error
+      - problems
+      - statusCode
+      type: object
+      properties:
+        statusCode:
+          type: number
+          description: Код статуса
+        error:
+          type: string
+          description: Текст ошибки
+        problems:
+          type: array
+          description: Проблемы запроса
+          items:
+            $ref: '#/components/schemas/FieldMessageDto'
+    AuthResfreshTokenRequestDto:
+      required:
+      - refreshToken
+      type: object
+      properties:
+        refreshToken:
+          type: string
+          description: Токен обновления
+    CommentCreateRequestDto:
+      required:
+      - message
+      - task
+      - user
+      type: object
+      properties:
+        user:
+          type: number
+          description: Автор
+        task:
+          type: number
+          description: ID задачи
+        message:
+          type: string
+          description: Текст
+    NotFoundDto:
+      required:
+      - error
+      - statusCode
+      type: object
+      properties:
+        statusCode:
+          type: number
+          description: Код статуса
+        error:
+          type: string
+          description: Текст ошибки
+    ContentTypeDto:
+      required:
+      - id
+      - name
+      type: object
+      properties:
+        id:
+          type: number
+          description: ID
+        name:
+          type: string
+          description: Название
+          enum:
+          - video
+          - audio
+          - photo
+      example:
+        name: video
+        id: 6.02745618307040320615897144307382404804229736328125
+    UserDto:
+      required:
+      - id
+      - name
+      type: object
+      properties:
+        id:
+          type: number
+          description: ID
+        name:
+          type: string
+          description: Имя
+      example:
+        name: name
+        id: 1.46581298050294517310021547018550336360931396484375
+    ContentDto:
+      required:
+      - author
+      - dateCreated
+      - format
+      - id
+      - name
+      - preview
+      - type
+      - url
+      type: object
+      properties:
+        id:
+          type: number
+          description: ID
+        type:
+          $ref: '#/components/schemas/ContentTypeDto'
+        name:
+          type: string
+          description: Название
+        dateCreated:
+          type: string
+          description: Дата создания
+          format: date-time
+        author:
+          $ref: '#/components/schemas/UserDto'
+        format:
+          type: string
+          description: Формат
+          enum:
+          - jpg
+          - png
+          - mp3
+          - m4a
+          - flac
+          - avi
+          - mp4
+        url:
+          type: string
+          description: Путь к файлу
+        preview:
+          type: string
+          description: Путь к превью
+      example:
+        preview: preview
+        dateCreated: 2000-01-23T04:56:07.000+00:00
+        author:
+          name: name
+          id: 1.46581298050294517310021547018550336360931396484375
+        name: name
+        format: jpg
+        id: 0.80082819046101150206595775671303272247314453125
+        type:
+          name: video
+          id: 6.02745618307040320615897144307382404804229736328125
+        url: url
+    ContentsResponseDto:
+      required:
+      - contents
+      - total
+      type: object
+      properties:
+        contents:
+          type: array
+          description: Список
+          items:
+            $ref: '#/components/schemas/ContentDto'
+        total:
+          type: number
+          description: Количество
+      example:
+        total: 5.962133916683182377482808078639209270477294921875
+        contents:
+        - preview: preview
+          dateCreated: 2000-01-23T04:56:07.000+00:00
+          author:
+            name: name
+            id: 1.46581298050294517310021547018550336360931396484375
+          name: name
+          format: jpg
+          id: 0.80082819046101150206595775671303272247314453125
+          type:
+            name: video
+            id: 6.02745618307040320615897144307382404804229736328125
+          url: url
+        - preview: preview
+          dateCreated: 2000-01-23T04:56:07.000+00:00
+          author:
+            name: name
+            id: 1.46581298050294517310021547018550336360931396484375
+          name: name
+          format: jpg
+          id: 0.80082819046101150206595775671303272247314453125
+          type:
+            name: video
+            id: 6.02745618307040320615897144307382404804229736328125
+          url: url
+    ContentCreateRequestDto:
+      required:
+      - file
+      - task
+      type: object
+      properties:
+        file:
+          type: string
+          description: Файл
+          format: binary
+        task:
+          type: number
+          description: ID задачи
+    FileCreateRequestDto:
+      required:
+      - file
+      - task
+      type: object
+      properties:
+        file:
+          type: string
+          description: Файл
+          format: binary
+        task:
+          type: number
+          description: ID задачи
+    TaskDto:
+      required:
+      - id
+      - name
+      type: object
+      properties:
+        id:
+          type: number
+          description: ID
+        name:
+          type: string
+          description: Название
+      example:
+        name: name
+        id: 6.02745618307040320615897144307382404804229736328125
+    NotificationDto:
+      required:
+      - date
+      - id
+      - message
+      - task
+      - type
+      - user
+      type: object
+      properties:
+        id:
+          type: number
+          description: ID
+        type:
+          type: string
+          description: Тип
+          enum:
+          - video
+          - audio
+          - photo
+          - comment
+          - content
+        date:
+          type: string
+          description: Дата
+          format: date-time
+        message:
+          type: string
+          description: Текст
+        user:
+          $ref: '#/components/schemas/UserDto'
+        task:
+          $ref: '#/components/schemas/TaskDto'
+      example:
+        date: 2000-01-23T04:56:07.000+00:00
+        task:
+          name: name
+          id: 6.02745618307040320615897144307382404804229736328125
+        id: 0.80082819046101150206595775671303272247314453125
+        type: video
+        message: message
+        user:
+          name: name
+          id: 1.46581298050294517310021547018550336360931396484375
+    TaskStatusDto:
+      required:
+      - id
+      - name
+      type: object
+      properties:
+        id:
+          type: number
+          description: ID
+        name:
+          type: string
+          description: Название
+          enum:
+          - inWork
+          - feedback
+          - approved
+      example:
+        name: inWork
+        id: 6.02745618307040320615897144307382404804229736328125
+    TaskListResponseDto:
+      required:
+      - dateExpired
+      - executor
+      - id
+      - name
+      - status
+      - type
+      type: object
+      properties:
+        id:
+          type: number
+          description: ID
+        name:
+          type: string
+          description: Название
+        type:
+          $ref: '#/components/schemas/ContentTypeDto'
+        executor:
+          $ref: '#/components/schemas/UserDto'
+        dateExpired:
+          type: string
+          description: Дата выполнения
+          format: date-time
+        status:
+          $ref: '#/components/schemas/TaskStatusDto'
+      example:
+        executor:
+          name: name
+          id: 1.46581298050294517310021547018550336360931396484375
+        dateExpired: 2000-01-23T04:56:07.000+00:00
+        name: name
+        id: 0.80082819046101150206595775671303272247314453125
+        type:
+          name: video
+          id: 6.02745618307040320615897144307382404804229736328125
+        status:
+          name: inWork
+          id: 6.02745618307040320615897144307382404804229736328125
+    FileDto:
+      required:
+      - dateCreated
+      - format
+      - id
+      - name
+      - url
+      type: object
+      properties:
+        id:
+          type: number
+          description: ID
+        name:
+          type: string
+          description: Название
+        dateCreated:
+          type: string
+          description: Дата создания
+          format: date-time
+        format:
+          type: string
+          description: Формат
+          enum:
+          - doc
+          - docx
+          - xls
+          - xlsx
+          - pdf
+        url:
+          type: string
+          description: Путь к файлу
+      example:
+        dateCreated: 2000-01-23T04:56:07.000+00:00
+        name: name
+        format: doc
+        id: 6.02745618307040320615897144307382404804229736328125
+        url: url
+    RoleDto:
+      required:
+      - id
+      - name
+      type: object
+      properties:
+        id:
+          type: number
+          description: ID
+        name:
+          type: string
+          description: Название
+          enum:
+          - admin
+          - manager
+          - contentMaker
+      example:
+        name: admin
+        id: 5.962133916683182377482808078639209270477294921875
+    UserResponseDto:
+      required:
+      - avatar
+      - email
+      - id
+      - name
+      - role
+      type: object
+      properties:
+        id:
+          type: number
+          description: ID
+        name:
+          type: string
+          description: Имя
+        email:
+          type: string
+          description: Email
+          format: email
+        avatar:
+          type: string
+          description: Аватар
+          format: byte
+        role:
+          $ref: '#/components/schemas/RoleDto'
+      example:
+        role:
+          name: admin
+          id: 5.962133916683182377482808078639209270477294921875
+        name: name
+        id: 1.46581298050294517310021547018550336360931396484375
+        avatar: ""
+        email: ""
+    CommentDto:
+      required:
+      - date
+      - id
+      - message
+      - user
+      type: object
+      properties:
+        id:
+          type: number
+          description: ID
+        date:
+          type: string
+          description: Дата создания
+          format: date-time
+        user:
+          $ref: '#/components/schemas/UserDto'
+        message:
+          type: string
+          description: Текст
+      example:
+        date: 2000-01-23T04:56:07.000+00:00
+        id: 5.63737665663332876420099637471139430999755859375
+        message: message
+        user:
+          name: name
+          id: 1.46581298050294517310021547018550336360931396484375
+    TaskResponseDto:
+      required:
+      - author
+      - comments
+      - contents
+      - dateCreated
+      - dateExpired
+      - description
+      - executor
+      - files
+      - id
+      - name
+      - status
+      - type
+      type: object
+      properties:
+        id:
+          type: number
+          description: ID
+        name:
+          type: string
+          description: Название
+        type:
+          $ref: '#/components/schemas/ContentTypeDto'
+        description:
+          type: string
+          description: Описание
+        files:
+          type: array
+          description: Приложенные файлы
+          items:
+            $ref: '#/components/schemas/FileDto'
+        author:
+          $ref: '#/components/schemas/UserResponseDto'
+        executor:
+          $ref: '#/components/schemas/UserResponseDto'
+        dateCreated:
+          type: string
+          description: Дата создания
+          format: date-time
+        dateExpired:
+          type: string
+          description: Дата выполнения
+          format: date-time
+        contents:
+          type: array
+          description: Приложенный контент
+          items:
+            $ref: '#/components/schemas/ContentDto'
+        comments:
+          type: array
+          description: Комментарии
+          items:
+            $ref: '#/components/schemas/CommentDto'
+        status:
+          $ref: '#/components/schemas/TaskStatusDto'
+      example:
+        dateCreated: 2000-01-23T04:56:07.000+00:00
+        comments:
+        - date: 2000-01-23T04:56:07.000+00:00
+          id: 5.63737665663332876420099637471139430999755859375
+          message: message
+          user:
+            name: name
+            id: 1.46581298050294517310021547018550336360931396484375
+        - date: 2000-01-23T04:56:07.000+00:00
+          id: 5.63737665663332876420099637471139430999755859375
+          message: message
+          user:
+            name: name
+            id: 1.46581298050294517310021547018550336360931396484375
+        contents:
+        - preview: preview
+          dateCreated: 2000-01-23T04:56:07.000+00:00
+          author:
+            name: name
+            id: 1.46581298050294517310021547018550336360931396484375
+          name: name
+          format: jpg
+          id: 0.80082819046101150206595775671303272247314453125
+          type:
+            name: video
+            id: 6.02745618307040320615897144307382404804229736328125
+          url: url
+        - preview: preview
+          dateCreated: 2000-01-23T04:56:07.000+00:00
+          author:
+            name: name
+            id: 1.46581298050294517310021547018550336360931396484375
+          name: name
+          format: jpg
+          id: 0.80082819046101150206595775671303272247314453125
+          type:
+            name: video
+            id: 6.02745618307040320615897144307382404804229736328125
+          url: url
+        author:
+          role:
+            name: admin
+            id: 5.962133916683182377482808078639209270477294921875
+          name: name
+          id: 1.46581298050294517310021547018550336360931396484375
+          avatar: ""
+          email: ""
+        executor: null
+        dateExpired: 2000-01-23T04:56:07.000+00:00
+        name: name
+        description: description
+        files:
+        - dateCreated: 2000-01-23T04:56:07.000+00:00
+          name: name
+          format: doc
+          id: 6.02745618307040320615897144307382404804229736328125
+          url: url
+        - dateCreated: 2000-01-23T04:56:07.000+00:00
+          name: name
+          format: doc
+          id: 6.02745618307040320615897144307382404804229736328125
+          url: url
+        id: 0.80082819046101150206595775671303272247314453125
+        type:
+          name: video
+          id: 6.02745618307040320615897144307382404804229736328125
+        status:
+          name: inWork
+          id: 6.02745618307040320615897144307382404804229736328125
+    TaskCreateUpdateRequestDto:
+      required:
+      - author
+      - dateExpired
+      - description
+      - executor
+      - name
+      - type
+      type: object
+      properties:
+        name:
+          maxLength: 255
+          type: string
+          description: Название
+        type:
+          type: string
+          description: Тип контента
+          enum:
+          - video
+          - audio
+          - photo
+        description:
+          type: string
+          description: Описание
+        author:
+          type: number
+          description: Автор задачи
+        executor:
+          type: number
+          description: Исполнитель задачи
+        dateExpired:
+          type: string
+          description: Дата выполнения
+          format: date-time
+    UserCreateUpdateRequestDto:
+      required:
+      - avatar
+      - email
+      - name
+      - password
+      - role
+      type: object
+      properties:
+        name:
+          maxLength: 255
+          type: string
+          description: Имя
+        email:
+          maxLength: 255
+          type: string
+          description: Email
+          format: email
+        password:
+          maxLength: 255
+          type: string
+          description: Пароль
+        avatar:
+          type: string
+          description: Аватар
+          format: byte
+        role:
+          type: string
+          description: Роль
+          enum:
+          - admin
+          - manager
+          - contentMaker
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
