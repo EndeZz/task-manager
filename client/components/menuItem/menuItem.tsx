@@ -3,7 +3,7 @@ import './menuItem.scss';
 
 type MenuItemStyle = 'menu-item-regular' ;
 
-const buttonStyleToButtonClass: Record<MenuItemStyle, string> = {
+const menuItemStyleToMenuItemClass: Record<MenuItemStyle, string> = {
   'menu-item-regular': 'menu-item-regular',
 };
 
@@ -15,7 +15,7 @@ interface Props {
 }
 
 const themeToMenuItemClass = (theme: MenuItemStyle) => {
-  return buttonStyleToButtonClass[theme];
+  return menuItemStyleToMenuItemClass[theme];
 };
 
 const MenuItem: React.FunctionComponent<Props> = ({
