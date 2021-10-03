@@ -1,0 +1,14 @@
+mixin taskText(className, items)
+  section(class=`${className}`)
+    div(class=`${className}__wrapper`)
+      for item in items
+        div(class=`${className}__meta`)
+          include ../contentType/contentType
+          +contentType("content__box", item)
+          span(class=`${className}-status__text ${item.status}`)=`${item.statusText}`
+        article(class=`${className}__info`)
+          h1(class=`${className}__title`)=`${item.title}`
+          p(class=`${className}__description`)=`${item.description}`
+        include ../filesType/filesType
+        +files(`${className}`, files, "files")
+

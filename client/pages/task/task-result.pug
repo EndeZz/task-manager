@@ -1,0 +1,50 @@
+block variables
+  -
+    const items = [
+                {status: "inwork", statusText: "В работе", title: "Заголовок задачи с другой стороны консультация с широким активом позволяет", author: "Аркадий Юрченко", dateStart: "05.02.2020", dateEnd: "11.02.2020", published: "Семён Щеглов", assignee: "Станислав Щукин", type: "video", typeText: "Видео", btnCount: true, description: "Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности позволяет оценить значение форм развития. Значимость этих проблем настолько очевидна, что новая модель организационной деятельности требуют от нас анализа системы обучения кадров, соответствует насущным потребностям. Товарищи! постоянный количественный рост и сфера нашей активности требуют определения и уточнения позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям."}
+              ]
+    const files = [
+      {format: "zip", filesName: "Материалы", url: "../../../public/img/icons/zip.svg", size: "61 Мб"},
+      {format: "doc", filesName: "Техническое задание", url: "../../../public/img/icons/doc.svg", size: "215 Кб"},
+    ]
+    const comments = [
+      {url: "../../../public/img/profile-photo.png", userName: "Вы", date: "12:11 14.02.2020", message: "Задача организации, в особенности же новая модель организационной"},
+      {url: "../../../public/img/profile-photo2.png", userName: "Станислав Щукин", date: "09:51 14.02.2020", message: "Товарищи! укрепление и развитие структуры требуют определения и уточнения новых предложений. С другой стороны постоянный количественный рост и сфера нашей активности представляет собой интересный эксперимент проверки направлений прогрессивного развития."},
+      {url: "../../../public/img/profile-photo.png", userName: "Вы", date: "09:51 13.02.2020", message: "Таким образом консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании системы обучения кадров, соответствует"}
+    ]
+    const loadFiles = [
+      {url: "../../../public/img/cards/1.jpg", fileName: "video_594-19.avi",time: "09:41", date: "08.02.2020", alt: "Скалистый берег моря"},
+      {url: "../../../public/img/cards/2.jpg", fileName: "video_594-20.avi",time: "09:41", date: "10.02.2020", alt: "Скалистый берег моря"},
+      {url: "../../../public/img/cards/3.jpg", fileName: "video_594-21.avi",time: "15:26", date: "08.02.2020", alt: "Скалистый берег моря"},
+      {url: "../../../public/img/cards/4.jpg", fileName: "video_594-22.avi",time: "09:15", date: "11.02.2020", alt: "Скалистый берег моря"},
+      {url: "../../../public/img/cards/5.jpg", fileName: "video_594-23.avi",time: "10:15", date: "13.02.2020", alt: "Скалистый берег моря"}
+    ]
+doctype
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title Менеджер задач
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+  body
+    include ../../components/header/header
+    .wrapper 
+      main(class="main") 
+        .container
+          .wrapper-task
+            article.article
+              div(class="btn__kit-wrapper")
+                include ../../components/buttons/buttons
+                +button("btn__kit", "trans", "К списку задач")
+                div(class="btn__kit-wrapper--add")
+                  +button("btn__kit", "green", "Утвердить и опубликовать")
+                  +button("btn__kit", "edit")
+                  +button("btn__kit", "delete")
+              include ../../components/taskText/taskText
+              +taskText("task", items)
+              include ../../components/taskResult/taskResult
+              +taskResult("load", loadFiles)
+              include ../../components/comments/comments
+              +comments("comments", comments)
+              include ../../components/sidebar/sidebar
+              +sidebar("sidebar", items)
+

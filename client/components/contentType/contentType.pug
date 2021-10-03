@@ -1,0 +1,15 @@
+mixin contentType(className, items, mod)
+  if `${mod}` === 'undefined'
+    div(class=`${className} ${className}--${items.type}`)
+        svg(class=`icon icon--${items.type}`)
+          use(xlink:href=`../../../public/img/icons/icon.svg#${items.type}-icon`)
+        span(class=`${className}-text`)=`${items.typeText}`
+        if (`${items.time}` !== 'undefined')
+          span(class=`${className}-time`)=`${items.time}`
+  else 
+    div(class=`${className} ${className}--${items.type}-${mod}`)
+        svg(class=`icon icon--${items.type}-${mod}`)
+          use(xlink:href=`../../../public/img/icons/icon.svg#${items.type}-icon`)
+        span(class=`${className}-text`)=`${items.typeText}`
+        if (`${items.time}` !== 'undefined')
+          span(class=`${className}-time`)=`${items.time}`

@@ -1,0 +1,130 @@
+.input__block {
+  display: flex;
+  align-items: center;
+
+  &-button {
+    border: none;
+    background: transparent;
+
+    &--close {
+      position: absolute;
+      top: 30%;
+      right: 2rem;
+    }
+  }
+
+  &-icon {
+    border: none;
+    background: transparent;
+  }
+
+  &-text {
+    width: 39.4rem;
+    padding: 1.05rem 1.5rem;
+    position: relative;
+    background: transparent;
+    background: $white;
+
+    @include outline(1px, $blue-outline, 4px);
+
+    &::after {
+      content: '';
+      width: 0.6rem;
+      height: 0.4rem;
+      background: url("../../../public/img/icons/arrow-down.svg");
+      position: absolute;
+      top: 45%;
+      right: 2rem;
+    }
+
+    &:focus.input__block-text::after {
+      transform: rotate(180deg);
+      transition: rotate 0.3s ease-in-out;
+    }
+
+    &:hover { border-color: $gray-blue-icon; }
+
+    &:focus {
+      border-color: $blue;
+      caret-color: transparent;
+    }
+
+    &--empty { border-color: $red; }
+
+    &--search {
+      &:focus {
+        caret-color: $txt;
+        padding-left: 4rem;
+        color: inherit;
+
+        &::placeholder {
+          color: transparent;
+          transition: color 0.3s ease-in-out;
+        }
+      }
+
+      &:focus.icon--close {
+        fill: $gray-blue-icon;
+      }
+    }
+
+    &--calendar-small {
+      width: 18.7rem;
+    }
+  }
+
+  &-label {
+    position: absolute;
+    top: -1.8rem;
+    left: 0;
+
+    @include font(1.2rem, 500, 1.4rem);
+  }
+
+  &-box {
+    position: relative;
+    margin-right: 2rem;
+    outline: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    &--search {
+      &::after {
+        width: 1.2rem;
+        height: 1.3rem;
+        background: url("../../../public/img/icons/search-icon.svg");
+        top: 30%;
+        transform: translate(-3rem);
+        transition: transform 0.2s ease-in-out;
+      }
+
+      &:focus-within.input__block-box--search::after {
+        transform: translate(-38rem);
+        transition: transform 0.2s ease-in-out;
+      }
+
+      &:focus-within.icon--close {
+        fill: $gray-blue-icon;
+        position: absolute;
+        cursor: pointer;
+      }
+
+      &:focus { @include outline(1px, $blue, 4px); }
+    }
+
+    &--calendar,
+    &--calendar-small {
+      &::after {
+        width: 1.5rem;
+        height: 1.4rem;
+        background: url("../../../public/img/icons/calendar.svg");
+        right: 2rem;
+      }
+    }
+  }
+}

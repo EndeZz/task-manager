@@ -1,0 +1,27 @@
+.nav {
+  &__list {
+    display: flex;
+  }
+
+  &__item + &__item {
+    margin-left: 4rem;
+  }
+
+  &__item-link {
+    @include font(1.4rem, 500, 1.6rem);
+
+    color: inherit;
+
+    &:hover,
+    &_active {
+      color: $blue;
+    }
+
+    &--active,
+    &:focus {
+      padding: 0.9rem 1.2rem;
+      background-color: $itblue;
+      border-radius: 0.4rem;
+    }
+  }
+}

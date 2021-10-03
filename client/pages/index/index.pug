@@ -1,0 +1,46 @@
+block variables
+  -
+    const items = [
+                  {img: "1.jpg", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Аркадий Юрченко", date: "09:21 14.02.2020", time: "2:31", type: "video", typeText: "Видео", url: "../../../public/content/beach.mp4"},
+                  {img: "2.jpg", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Аркадий Юрченко", date: "09:21 14.02.2020", type: "photo", typeText: "Фото", url: "../../../public/content/beach.jpg"},
+                  {img: "3.jpg", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Аркадий Юрченко", date: "09:21 14.02.2020", time: "2:31", type: "audio", typeText: "Аудио", url: "../../../public/content/beach.mp3"},
+                  {img: "4.jpg", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Аркадий Юрченко", date: "09:21 14.02.2020", type: "photo", typeText: "Фото", url: "../../../public/content/beach.jpg"},
+                  {img: "5.jpg", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Аркадий Юрченко", date: "09:21 14.02.2020", time: "2:31", type: "video", typeText: "Видео", url: "../../../public/content/beach.mp4"},
+                  {img: "6.jpg", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Аркадий Юрченко", date: "09:21 14.02.2020", type: "photo", typeText: "Фото", url: "../../../public/content/beach.jpg"},
+                  {img: "3.jpg", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Аркадий Юрченко", date: "09:21 14.02.2020", time: "2:31", type: "audio", typeText: "Аудио", url: "../../../public/content/beach.mp3"},
+                  {img: "2.jpg", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Аркадий Юрченко", date: "09:21 14.02.2020",  type: "photo", typeText: "Фото", url: "../../../public/content/beach.jpg"},
+                  {img: "1.jpg", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Аркадий Юрченко", date: "09:21 14.02.2020", time: "2:31", type: "video", typeText: "Видео", url: "../../../public/content/beach.mp4"}
+                ]
+    const btns = [
+        {type: "video", typeText: "Видео"},
+        {type: "photo", typeText: "Фото"},
+        {type: "audio", typeText: "Аудио"},
+      ]
+doctype
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title Менеджер задач
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  body
+    include ../../components/header/header
+    .page
+      main.main 
+        .container
+          section.search
+              h1(class="visually-hidden" aria-hidden="true") Заголовок сервиса
+              .search__wrapper 
+                include ../../components/input/input
+                +input("input__block", "search")
+                include ../../components/input/input
+                +input("input__block", "calendar")
+                include ../../components/filter/filter
+                +filter("filter", btns)
+          include ../../components/cards/cards
+          +cards("card", items)
+          include ../../components/modal/modal
+          +modal("modal")
+
+
+
+

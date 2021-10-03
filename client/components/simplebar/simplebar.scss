@@ -1,0 +1,10 @@
+.simplebar {
+  &-scrollbar::before {
+    height: 10.2rem;
+    background: $gray-blue-icon;
+    border-radius: 2.1rem;
+    width: 4px;
+    margin: 0 auto;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,159 @@
+.load {
+  position: relative;
+
+  &__wrapper {
+    background: $white;
+    padding: 3rem;
+    border-radius: 4px 4px 0 0;
+    border: 1px solid $blue-outline;
+  }
+
+  &__wrapper-descr {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    @include font(1.6rem, 500, 1.9rem);
+
+    margin-right: 2rem;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    color: rgba($txt, 0.6);
+  }
+
+  &__types {
+    display: flex;
+    align-items: center;
+    margin-left: 0.8rem;
+
+    &-icon + .load__types-icon {
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-progress {
+      width: 9.6rem;
+      height: 3rem;
+    }
+
+    &-border img {
+      border-radius: 4px;
+    }
+
+    &-img {
+      width: 11rem;
+      height: 6.8rem;
+      margin: 0.3rem;
+    }
+
+    &-border {
+      @include outline(1px, $blue-outline, 4px);
+
+      &--progress {
+        padding: 2.5rem 1rem;
+      }
+
+      &--add {
+        padding: 2.7rem 4.6rem;
+        border-style: dashed;
+        border-width: 2px;
+        height: 6.8rem;
+      }
+
+      &:hover.load__content-border--add {
+        border-color: $blue;
+      }
+
+      &:hover .icon--plus {
+        fill: $blue;
+      }
+    }
+
+    &-item {
+      position: relative;
+      outline: none;
+      transition: opacity 0.3s ease-in-out;
+
+      &::before {
+        content: '';
+        position: absolute;
+        right: -1rem;
+        top: -0.7rem;
+        background: url('../../../public/img/icons/delete-round.svg') no-repeat center;
+        width: 1.4rem;
+        height: 1.4rem;
+        opacity: 0;
+      }
+
+      &:hover { cursor: pointer; }
+
+      &:hover .icon--plus { fill: $blue; }
+
+      &:focus .load__content-border { border-color: $blue; }
+      &:focus.load__content-item::before { opacity: 1; }
+
+      &--hover {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: -4.8rem;
+        left: -45%;
+        background: #313131;
+        border-radius: 4px;
+        padding: 0.8rem 1rem;
+        width: 21.1rem;
+        z-index: 5;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+        &::before {
+          content: '';
+          width: 6px;
+          height: 6px;
+          position: absolute;
+          top: -1rem;
+          left: 48%;
+          border: 0.6rem solid transparent;
+          border-bottom: 0.6rem solid $txt;
+        }
+
+        &__date,
+        &__time {
+          color: rgba($white, 0.6);
+
+          @include font(1.2rem, 400, 1.4rem);
+        }
+
+        &__fileName {
+          color: $white;
+          margin-left: 0.5rem;
+
+          @include font(1.2rem, 400, 1.8rem);
+        }
+      }
+
+      &:focus .load__content-item--hover {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__content-value {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: $blue;
+    text-align: center;
+  }
+}

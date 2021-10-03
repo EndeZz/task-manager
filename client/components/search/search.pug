@@ -1,0 +1,10 @@
+.search__block-wrapper 
+  include ../input/input
+  +input("input__block", "search")
+  include ../input/input
+  +input("input__block", "calendar")
+  .search__block-tags
+    .search__block-tags-wrapper
+      include ../filter/filter
+      +filter("filter", btns)
+label(class="search__block-tags-label" for="search__block-tags") Тип контента

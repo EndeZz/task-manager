@@ -1,0 +1,82 @@
+.comments {
+  &__wrapper {
+    padding: 3rem;
+    border: 1px solid $blue-outline;
+    background: $white;
+    border-radius: 0 0 4px 4px;
+    border-top: none;
+  }
+
+  &__form {
+    position: relative;
+  }
+
+  &__textarea {
+    outline: none;
+    resize: none;
+    width: 100%;
+    height: 11.7rem;
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    padding: 0.8rem 1rem;
+    color: $white;
+    border-radius: 4px;
+    background: $blue;
+
+    @include font(1.2rem, 500, 1.4rem);
+  }
+
+  &__list { margin-top: 3rem; }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3.1rem;
+
+    &-avatar {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      margin-right: 2rem;
+    }
+
+    &-text {
+      @include font(1.4rem, 400, 2.1rem);
+
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -1.5rem;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: $blue-outline;
+      }
+    }
+
+    &-info__box { margin-bottom: 1rem; }
+  }
+
+  &__info {
+    width: 100%;
+
+    &-user {
+      @include font(1.4rem, 500, 1.8rem);
+
+      margin-right: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    &-date {
+      @include font(1.2rem, 400, 1.4rem);
+
+      color: rgba($txt, 0.6);
+    }
+  }
+}

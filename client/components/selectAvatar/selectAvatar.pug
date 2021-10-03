@@ -1,0 +1,6 @@
+mixin selectAvatar(className, items, mod)
+    div(class=`${className}`)
+      ul(class=`${className}__content ${mod ? `${className}__content--avatar` : ''}`)
+        for item in items
+          li(class=`${className}__content-item`)
+            a(href="#" class=`${className}__content-link`)=item

@@ -1,0 +1,16 @@
+mixin comments(className, items)
+  div(class=`${className}`)
+    div(class=`${className}__wrapper`)
+      form(class=`${className}__form`)
+        textarea(class=`${className}__textarea input__block-text` name="comments" placeholder="Введите сообщение...")
+        button(class=`${className}__btn` type="button") Отправить
+      if items !== undefined
+        ul(class=`${className}__list`)
+          each item in items
+            li(class=`${className}__item`)
+              img(class=`${className}__item-avatar` src=`${item.url}` alt="фото пользователя")
+              div(class=`${className}__item-info`)
+                p(class=`${className}__item-info__box`)
+                  span(class=`${className}__info-user`)=`${item.userName}`
+                  span(class=`${className}__info-date`)=`${item.date}`
+                p(class=`${className}__item-text`)=`${item.message}`

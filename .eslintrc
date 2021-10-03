@@ -1,0 +1,11 @@
+{
+  "extends": ["airbnb-typescript"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "no-unused-vars": "warn"
+  }
+}

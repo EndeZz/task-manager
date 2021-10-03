@@ -1,0 +1,12 @@
+mixin files(className, items, id)
+    label(class=`${className}__files-label` for=`${id}`) Файлы
+    form(class=`${className}__files` id=`${id}`)
+        ul(class=`${className}__files-list`)
+          each item in items 
+            li(class=`${className}__files-item`)
+              div(class=`${className}__files-item__text`)
+                img(class=`${className}__files-img` src=`${item.url}` alt=`иконка файла в формате ${item.format}`)
+                span(class=`${className}__files-name`)=`${item.filesName}.${item.format}`
+                span(class=`${className}__files-size`)=`${item.size}`
+              include ../buttons/buttons
+              +button("btn__kit", "upload", "Скачать")

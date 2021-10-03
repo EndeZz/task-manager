@@ -1,0 +1,50 @@
+.sidebar {
+  &__wrapper {
+    margin-left: 2rem;
+    padding: 3rem;
+    background: $white;
+
+    @include outline(1px, $blue-outline, 4px);
+  }
+
+  &__item {
+    @include font(1.4rem, 400, 2.1rem);
+
+    color: rgba($txt, 0.6);
+    display: flex;
+    width: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: $blue-outline;
+      width: auto;
+      height: 1px;
+    }
+
+    &:not(:first-child) { margin-top: 2rem; }
+
+    &-descr {
+      @include font(1.4rem, 400, 2.1rem);
+
+      color: rgba($txt, 0.6);
+    }
+
+    &-separator {
+      flex: 1;
+      height: 0.1rem;
+      background: $blue-outline;
+      margin-top: 1.4rem;
+      margin-left: 0.4rem;
+      margin-right: 0.4rem;
+    }
+
+    &-text {
+      @include font(1.4rem, 500, 2.1rem);
+
+      color: $txt;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+mixin modal(className, items)
+  div(class=`${className} close`)
+      div(class=`${className}__meta`)
+        div(class=`${className}__icon-wrapper`)
+          button(class=`${className}__btn` type="button")
+            svg(class=`icon icon--back`)
+              use(xlink:href=`../../../public/img/icons/icon.svg#back`)
+        //-     include ../contentType/contentType
+        //-     +contentType("content__box", item, "white")
+        //- div(class=`${className}__meta-text`)
+        //-   p(class=`${className}__text`)=`${item.text}`
+        //-   span(class=`${className}__date`)=`${item.date}`
+        div(class=`${className}__body`)
+        //-     include ../player/player
+        //-     +player('player', item)

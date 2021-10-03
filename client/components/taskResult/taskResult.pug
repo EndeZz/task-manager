@@ -1,0 +1,32 @@
+mixin taskResult(className, items)
+  div(class=`${className}`)
+    div(class=`${className}__wrapper`)
+      div(class=`${className}__wrapper-descr`)
+        h3(class=`${className}__title`) Результат
+        span(class=`${className}__text`) Допустимые форматы:
+          div(class=`${className}__types`)
+              img(class=`${className}__types-icon` src="../../../public/img/icons/avi.svg" alt="формат ави")
+              img(class=`${className}__types-icon` src="../../../public/img/icons/flv.svg" alt="формат flv")
+              img(class=`${className}__types-icon` src="../../../public/img/icons/mov.svg" alt="формат mov")
+      ul(class=`${className}__content`)
+        if items !== undefined
+          each item in items
+            li(class=`${className}__content-item` tabindex=0)
+              div(class=`${className}__content-border`)
+                img(class=`${className}__content-img` src=`${item.url}` alt=`${item.alt}`)
+              div(class=`${className}__content-item--hover`)
+                span(class=`${className}__content-item--hover__date`)=`${item.date}, `
+                span(class=`${className}__content-item--hover__time`)=`${item.time}`
+                span(class=`${className}__content-item--hover__fileName`)=`${item.fileName}`
+          li(class=`${className}__content-item--dotted`)
+            div(class=`${className}__content-border ${className}__content-border--add`)
+              <svg class="icon icon--plus">
+                <use xlink:href="../../../public/img/icons/icon.svg#plus"></use>
+              </svg>
+        else 
+          li(class=`${className}__content-item--dotted`)
+            div(class=`${className}__content-border ${className}__content-border--add`)
+              <svg class="icon icon--plus">
+                <use xlink:href="../../../public/img/icons/icon.svg#plus"></use>
+              </svg>
+      

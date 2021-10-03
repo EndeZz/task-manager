@@ -1,0 +1,132 @@
+.btn__kit {
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+
+  &:nth-child(2),
+  &:nth-child(3) { margin-left: 1.5rem; }
+
+  &-wrapper {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    &--one { justify-content: flex-end; }
+    &--add { display: flex; }
+  }
+
+  &--blue {
+    background: $blue;
+
+    &:hover { background: $blue-btn-hover; }
+
+    &--active,
+    &:focus { background: $blue-btn-active; }
+
+    &:disabled { background: rgba($blue, 0.5); }
+  }
+
+  &--green {
+    background: $green;
+
+    &:hover { background: $green-hover; }
+
+    &--active,
+    &:focus { background: $green-active; }
+
+    &:disabled { background: rgba($green, 0.5); }
+  }
+
+  &--trans {
+    &:hover { background: $itblue; }
+
+    &--active,
+    &:focus { background: $itblue-active; }
+
+    &:disabled { opacity: 0.3; }
+  }
+
+  &--red {
+    &:hover { background: $red-hover; }
+
+    &--active,
+    &:focus { background: $red-active; }
+
+    &:disabled { opacity: 0.3; }
+  }
+
+  &--edit,
+  &--delete {
+    padding: 1rem;
+    background: $blue;
+
+    &:hover { background: $blue-btn-hover; }
+
+    &--active,
+    &:focus { background: $blue-btn-active; }
+
+    &:disabled { background: rgba($blue, 0.5); }
+  }
+
+  &--delete-small {
+    &:focus .icon--delete-small {
+      stroke: $white;
+    }
+
+    &:hover .icon--delete-small {
+      stroke: $white;
+    }
+  }
+
+  &--upload {
+    &:focus .icon--upload {
+      fill: $white;
+    }
+
+    &:hover .icon--upload {
+      fill: $white;
+    }
+  }
+
+  &--edit-small {
+    &:hover .icon--edit-small { fill: $white; }
+
+    &:focus .icon--edit-small { fill: $white; }
+
+    &:disabled .icon--edit-small { fill: rgba($blue, 0.3); }
+  }
+
+  &--edit-small,
+  &--delete-small,
+  &--upload {
+    padding: 0.7rem;
+    background: $itblue;
+
+    &:hover { background: $blue-btn-hover; }
+
+    &--active,
+    &:focus { background: $blue-btn-active; }
+
+    &:disabled { background: rgba($itblue, 0.3); }
+  }
+
+  &-text {
+    color: $white;
+    padding-left: 1rem;
+
+    @include font(1.4rem, 500, 1.6rem);
+
+    &--trans,
+    &--upload {
+      color: $blue;
+    }
+
+    &--red {
+      color: $red;
+    }
+  }
+
+  &--upload:hover .btn__kit-text--upload { color: $white; }
+}

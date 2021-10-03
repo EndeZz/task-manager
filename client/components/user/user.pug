@@ -1,0 +1,6 @@
+.user
+  span.user__name Семён Щеглов
+  button(class="user__btn" type="button")
+    img(class="user__avatar" src="../../../public/img/profile-photo.png", alt="Аватар - фото пользователя")
+    include ../selectAvatar/selectAvatar  
+    +selectAvatar("dropdown", ["Профиль", "Выход"], true)
