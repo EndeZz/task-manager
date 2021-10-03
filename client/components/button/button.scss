@@ -1,0 +1,174 @@
+@import '/client/styles/common.scss';
+
+.btn {
+  font-family: Roboto-Medium, sans-serif;
+  color: $black;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 4px;
+  border: none;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  //justify-content: center;
+  //align-items: center;
+}
+
+.btn-new-task {
+  background-color: $blue;
+  color: $blue;
+  height: 40px;
+
+  span {
+    color: $white;
+    margin-left: 10px;
+  }
+
+  &:hover {
+    background-color: $blue_hover;
+    color: $blue_hover;
+  }
+
+  &:active {
+    background-color: $blue_active;
+    color: $blue_active;
+  }
+
+  &:disabled {
+    cursor: none;
+  }
+}
+
+.btn-approve-and-publish {
+  background-color: $green-photo;
+  color: $green-photo;
+  height: 40px;
+
+  span {
+    color: $white;
+    margin-left: 10px;
+  }
+
+  &:hover {
+    background-color: #51efac;
+    color: #51efac;
+  }
+
+  &:active {
+    background-color: #33cd8c;
+    color: #33cd8c;
+  }
+
+  &:disabled {
+    cursor: none;
+  }
+}
+
+.btn-edit-type1 {
+  background-color: $blue;
+  color: $white;
+  height: 40px;
+
+  &:hover {
+    background-color: $blue_hover;
+    color: $white;
+  }
+
+  &:active {
+    background-color: $blue_active;
+    color: $white;
+  }
+
+  &:disabled {
+    cursor: none;
+  }
+}
+
+.btn-edit-type2 {
+  background-color: $itblue;
+  color: $blue;
+  height: 34px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 7px;
+  padding-right: 7px;
+
+  &:hover {
+    background-color: $blue_hover;
+    color: $white;
+  }
+
+  &:active {
+    background-color: $blue_active;
+    color: $white;
+  }
+
+  &:disabled {
+    background-color: $itblue;
+    color: $blue;
+    cursor: none;
+  }
+}
+
+.btn-back {
+  background-color: $white;
+  color: $blue;
+  height: 40px;
+
+  span {
+    margin-left: 10px;
+  }
+
+  &:hover {
+    background-color: $itblue;
+    color: $blue;
+  }
+
+  &:active {
+    background-color: #c2dfff;
+    color: $blue;
+  }
+
+  &:disabled {
+    cursor: none;
+  }
+}
+
+.btn-delete {
+  background-color: $white;
+  color: $red;
+  height: 40px;
+
+  span {
+    margin-left: 10px;
+  }
+
+  &:hover {
+    background-color: #fff0ec;
+    color: $red;
+  }
+
+  &:active {
+    background-color: #ffd9cf;
+    color: $red;
+  }
+
+  &:disabled {
+    cursor: none;
+  }
+}
+
+.btn-cross {
+  background-color: $white;
+  color: $grey-blue-icon;
+  height: 40px;
+
+  &:hover {
+    color: $blue;
+  }
+}

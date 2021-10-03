@@ -57,7 +57,11 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(png|jp(e*)g|svg|gif|ico)$/,
+        test: /\.svg$/,
+        loader: 'svg-inline-loader',
+      },
+      {
+        test: /\.(png|jp(e*)g|svg|gif|ico|ttf)$/,
         use: {
           loader: 'file-loader',
           options: {
@@ -65,10 +69,7 @@ module.exports = {
           },
         },
       },
-      {
-        test: /\.svg$/,
-        loader: 'svg-inline-loader',
-      },
+ 
     ],
   },
   plugins: [
