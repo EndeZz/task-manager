@@ -6,6 +6,7 @@ import EditIcon from '../../components/iconComponents/editIcon';
 import BackArrowIcon from '../../components/iconComponents/backArrowIcon';
 import DeleteIcon from '../../components/iconComponents/deleteIcon';
 import CrossIcon from '../../components/iconComponents/crossIcon';
+import MenuItem from '../../components/menuItem/menuItem';
 
 function UiKit() {
   return (
@@ -56,6 +57,8 @@ function UiKit() {
         theme='cross'
         onClick={() => {}}
       />
+
+      <MenuItem theme='menu-item-regular' title='Задачи' onClick={() => {}} />
 
     </div>
   );
