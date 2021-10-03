@@ -1,0 +1,1 @@
+const volumeLevel=document.querySelector(".video__volume__level"),volumeLevelClick=()=>{console.log(1)};volumeLevel.addEventListener("mousedown",volumeLevelClick);

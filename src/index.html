@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="js/app.js"></script>
+    <title>HTC layout</title>
+    <svg xmlns="http://www.w3.org/2000/svg" display="none">
+      <symbol id="icon-logo" width="30" height="30" viewBox="0 0 30 30" fill="none">
+        <path d="M28.4991 20.0727C30.5002 18.8684 30.5002 15.9771 28.4991 14.7728L12.7529 5.29641C10.6815 4.04977 8.0376 5.53559 8.0376 7.94635V26.8992C8.0376 29.3099 10.6815 30.7957 12.7529 29.5491L28.4991 20.0727Z" fill="#43DD9C"/>
+        <path d="M20.4615 15.2272C22.4626 14.0229 22.4626 11.1316 20.4615 9.92731L4.71532 0.4509C2.64388 -0.79574 0 0.690083 0 3.10084V22.0537C0 24.4644 2.64388 25.9502 4.71532 24.7036L20.4615 15.2272Z" fill="#107EFF"/>
+        <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="22" height="26">
+          <path d="M20.4615 15.2272C22.4626 14.0229 22.4626 11.1316 20.4615 9.92731L4.71532 0.4509C2.64388 -0.79574 0 0.690083 0 3.10084V22.0537C0 24.4644 2.64388 25.9502 4.71532 24.7036L20.4615 15.2272Z" fill="#107EFF"/>
+        </mask>
+        <g mask="url(#mask0)">
+          <path d="M28.4991 20.0727C30.5002 18.8684 30.5002 15.9771 28.4991 14.7728L12.7529 5.29641C10.6815 4.04977 8.0376 5.53559 8.0376 7.94635V26.8992C8.0376 29.3099 10.6815 30.7957 12.7529 29.5491L28.4991 20.0727Z" fill="#3E008C"/>
+        </g>
+      </symbol>
+      <symbol id="icon-bell" width="40" height="40" viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="4" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.0001 31.9345C18.1318 31.9345 16.6001 30.4188 16.6001 28.5359H18.6001C18.6001 29.2933 19.2212 29.9241 20.0001 29.9241C20.7792 29.9241 21.4001 29.2934 21.4001 28.5359H23.4001C23.4001 30.4188 21.8687 31.9345 20.0001 31.9345Z" fill="#107EFF"/>
+        <path d="M28.2656 29.1342H11.7656C10.8006 29.1342 10.0156 28.3514 10.0156 27.3891C10.0156 26.8783 10.2386 26.3948 10.6276 26.0627C12.1486 24.7811 13.0156 22.9184 13.0156 20.9448V18.1643C13.0156 14.3151 16.1557 11.1836 20.0156 11.1836C23.8756 11.1836 27.0157 14.3151 27.0157 18.1643V20.9448C27.0157 22.9184 27.8827 24.7811 29.3937 26.0557C29.7927 26.3948 30.0157 26.8783 30.0157 27.3891C30.0157 28.3514 29.2307 29.1342 28.2656 29.1342Z" fill="#E8F3FF"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M29.3937 26.0557C27.8827 24.7811 27.0157 22.9184 27.0157 20.9448V18.1643C27.0157 14.3151 23.8756 11.1836 20.0156 11.1836C16.1557 11.1836 13.0156 14.3151 13.0156 18.1643V20.9448C13.0156 22.9184 12.1486 24.7811 10.6276 26.0627C10.2386 26.3948 10.0156 26.8783 10.0156 27.3891C10.0156 28.3514 10.8006 29.1342 11.7656 29.1342H28.2656C29.2307 29.1342 30.0157 28.3514 30.0157 27.3891C30.0157 26.8783 29.7927 26.3948 29.3937 26.0557ZM27.5918 27.1238C25.9498 25.4973 25.0157 23.2814 25.0157 20.9448V18.1643C25.0157 15.4405 22.7861 13.1941 20.0156 13.1941C17.2452 13.1941 15.0156 15.4405 15.0156 18.1643V20.9448C15.0156 23.2802 14.0827 25.4934 12.4372 27.1238H27.5918Z" fill="#107EFF"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M20 7.93452C20.5523 7.93452 21 8.38458 21 8.93976V11.9315C21 12.4867 20.5523 12.9368 20 12.9368C19.4477 12.9368 19 12.4867 19 11.9315V8.93976C19 8.38458 19.4477 7.93452 20 7.93452Z" fill="#107EFF"/>
+        <circle cx="29.5" cy="10.5" r="8.5" fill="#FF603E" stroke="white" stroke-width="2"/>
+        <path d="M28.4648 10.084H29.332C29.7695 10.0801 30.1152 9.9668 30.3691 9.74414C30.627 9.52148 30.7559 9.19922 30.7559 8.77734C30.7559 8.37109 30.6484 8.05664 30.4336 7.83398C30.2227 7.60742 29.8984 7.49414 29.4609 7.49414C29.0781 7.49414 28.7637 7.60547 28.5176 7.82812C28.2715 8.04688 28.1484 8.33398 28.1484 8.68945H26.7246C26.7246 8.25195 26.8398 7.85352 27.0703 7.49414C27.3047 7.13477 27.6289 6.85547 28.043 6.65625C28.4609 6.45312 28.9277 6.35156 29.4434 6.35156C30.2949 6.35156 30.9629 6.56641 31.4473 6.99609C31.9355 7.42188 32.1797 8.01562 32.1797 8.77734C32.1797 9.16016 32.0566 9.52148 31.8105 9.86133C31.5684 10.1973 31.2539 10.4512 30.8672 10.623C31.3359 10.7832 31.6914 11.0352 31.9336 11.3789C32.1797 11.7227 32.3027 12.1328 32.3027 12.6094C32.3027 13.375 32.0391 13.9844 31.5117 14.4375C30.9883 14.8906 30.2988 15.1172 29.4434 15.1172C28.623 15.1172 27.9512 14.8984 27.4277 14.4609C26.9043 14.0234 26.6426 13.4414 26.6426 12.7148H28.0664C28.0664 13.0898 28.1914 13.3945 28.4414 13.6289C28.6953 13.8633 29.0352 13.9805 29.4609 13.9805C29.9023 13.9805 30.25 13.8633 30.5039 13.6289C30.7578 13.3945 30.8848 13.0547 30.8848 12.6094C30.8848 12.1602 30.752 11.8145 30.4863 11.5723C30.2207 11.3301 29.8262 11.209 29.3027 11.209H28.4648V10.084Z" fill="white"/>
+      </symbol>
+      <symbol id="icon-video" width="7" height="10" viewBox="0 0 7 10" fill="none">
+        <path d="M5.86077 5.81373C6.41912 5.41491 6.41912 4.58508 5.86077 4.18626L1.58124 1.12945C0.91937 0.656688 0 1.12981 0 1.94318V8.05681C0 8.87018 0.91937 9.3433 1.58124 8.87054L5.86077 5.81373Z" fill="#107EFF"/>
+      </symbol>
+      <symbol id="icon-photo" width="10" height="9" viewBox="0 0 10 9" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.80952 7.11387C9.80952 7.9423 9.13795 8.61387 8.30952 8.61387H1.5C0.671573 8.61387 0 7.9423 0 7.11387V2.98574C0 2.15732 0.671573 1.48574 1.5 1.48574H2.22355C2.47152 1.48574 2.71064 1.39361 2.89451 1.22724L3.55191 0.632376C3.73577 0.466 3.9749 0.373871 4.22287 0.373871H5.93861C6.17086 0.373871 6.39586 0.454707 6.57501 0.602506L7.36844 1.25711C7.54759 1.40491 7.77259 1.48574 8.00483 1.48574H8.30952C9.13795 1.48574 9.80952 2.15732 9.80952 2.98574V7.11387ZM6.51333 4.69006C6.51333 5.53521 5.8282 6.22035 4.98304 6.22035C4.13789 6.22035 3.45276 5.53521 3.45276 4.69006C3.45276 3.84491 4.13789 3.15977 4.98304 3.15977C5.8282 3.15977 6.51333 3.84491 6.51333 4.69006Z" fill="#43DD9C"/>
+      </symbol>
+      <symbol id="icon-audio" width="7" height="10" viewBox="0 0 7 10" fill="none">
+        <path d="M1.64958 3C1.87665 3 2.09696 2.92272 2.27428 2.78087L5.37567 0.299759C6.03043 -0.224052 7.00036 0.242121 7.00036 1.08063V8.91938C7.00036 9.75788 6.03043 10.2241 5.37567 9.70025L2.27428 7.21913C2.09696 7.07728 1.87665 7 1.64958 7H1C0.447716 7 0 6.55229 0 6V4C0 3.44772 0.447715 3 1 3H1.64958Z" fill="#FFAC2F"/>
+      </symbol>
+      <symbol id="icon-date" width="15" height="14" viewBox="0 0 15 14" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.75 1.27273H1.25L1.25 12.7273H13.75V1.27273ZM1.25 0C0.559644 0 0 0.569819 0 1.27273V12.7273C0 13.4302 0.559644 14 1.25 14H13.75C14.4404 14 15 13.4302 15 12.7273V1.27273C15 0.569819 14.4404 0 13.75 0H1.25Z" fill="#107EFF"/>
+        <path d="M2.5 3.18182C1.75 3.18182 1.35417 4.0303 1.25 4.45455H0L0.625 0.636364H14.375L15 4.45455H13.75C13.75 3.69091 13.125 3.18182 12.5 3.18182H2.5Z" fill="#107EFF"/>
+        <path d="M5.625 6.36364C5.625 7.06654 5.06536 7.63636 4.375 7.63636C3.68464 7.63636 3.125 7.06654 3.125 6.36364C3.125 5.66073 3.68464 5.09091 4.375 5.09091C5.06536 5.09091 5.625 5.66073 5.625 6.36364Z" fill="#107EFF"/>
+        <path d="M8.125 6.36364C8.125 6.71509 7.84518 7 7.5 7C7.15482 7 6.875 6.71509 6.875 6.36364C6.875 6.01218 7.15482 5.72727 7.5 5.72727C7.84518 5.72727 8.125 6.01218 8.125 6.36364Z" fill="#107EFF"/>
+        <path d="M11.25 6.36364C11.25 6.71509 10.9702 7 10.625 7C10.2798 7 10 6.71509 10 6.36364C10 6.01218 10.2798 5.72727 10.625 5.72727C10.9702 5.72727 11.25 6.01218 11.25 6.36364Z" fill="#107EFF"/>
+        <path d="M8.125 9.54545C8.125 9.89691 7.84518 10.1818 7.5 10.1818C7.15482 10.1818 6.875 9.89691 6.875 9.54545C6.875 9.194 7.15482 8.90909 7.5 8.90909C7.84518 8.90909 8.125 9.194 8.125 9.54545Z" fill="#107EFF"/>
+        <path d="M5 9.54545C5 9.89691 4.72018 10.1818 4.375 10.1818C4.02982 10.1818 3.75 9.89691 3.75 9.54545C3.75 9.194 4.02982 8.90909 4.375 8.90909C4.72018 8.90909 5 9.194 5 9.54545Z" fill="#107EFF"/>
+        <path d="M11.25 9.54545C11.25 9.89691 10.9702 10.1818 10.625 10.1818C10.2798 10.1818 10 9.89691 10 9.54545C10 9.194 10.2798 8.90909 10.625 8.90909C10.9702 8.90909 11.25 9.194 11.25 9.54545Z" fill="#107EFF"/>
+      </symbol>
+      <symbol id="icon-search" width="13" height="14" viewBox="0 0 13 14" fill="none">
+        <circle cx="5.78561" cy="5.78561" r="4.78561" fill="#E8F3FF" stroke="#107EFF" stroke-width="2"/>
+        <path d="M9 10L12 13" stroke="#107EFF" stroke-width="2" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="icon-play" width="9" height="12" viewBox="0 0 9 12" fill="none">
+        <path id="play-path" d="M8.39982 7.20298C9.20006 6.61339 9.20006 5.38661 8.39982 4.79702L2.26627 0.277974C1.31767 -0.420937 0 0.278508 0 1.48096V10.519C0 11.7215 1.31767 12.4209 2.26627 11.722L8.39982 7.20298Z" fill="white">
+        <animate
+          attributeName="d"
+          begin="play.click"
+          dur="10s"
+          fill="freeze"
+          repeatCount="indefinite"
+          from="M8.39982 7.20298C9.20006 6.61339 9.20006 5.38661 8.39982 4.79702L2.26627 0.277974C1.31767 -0.420937 0 0.278508 0 1.48096V10.519C0 11.7215 1.31767 12.4209 2.26627 11.722L8.39982 7.20298Z"
+          to="M1 0C0.447693 0 0 0.447716 0 1V11C0 11.5523 0.447693 12 1 12C1.55231 12 2 11.5523 2 11V1C2 0.447716 1.55231 0 1 0ZM6 0C5.44769 0 5 0.447716 5 1V11C5 11.5523 5.44769 12 6 12C6.55231 12 7 11.5523 7 11V1C7 0.447716 6.55231 0 6 0Z"
+        />
+        </path>
+      </symbol>
+      <symbol id="icon-pause" width="7" height="12" viewBox="0 0 7 12" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1 0C0.447693 0 0 0.447716 0 1V11C0 11.5523 0.447693 12 1 12C1.55231 12 2 11.5523 2 11V1C2 0.447716 1.55231 0 1 0ZM6 0C5.44769 0 5 0.447716 5 1V11C5 11.5523 5.44769 12 6 12C6.55231 12 7 11.5523 7 11V1C7 0.447716 6.55231 0 6 0Z" fill="white"/>
+      </symbol>
+      <symbol id="icon-volume" width="18" height="18" viewBox="0 0 18 18" fill="none">
+        <path d="M2.65819 7.16667C3.09407 7.16667 3.51801 7.02427 3.86551 6.76115L9.47789 2.51152V15.4885L3.86551 11.2389C3.51801 10.9757 3.09407 10.8333 2.65819 10.8333H1L1 7.16667L2.65819 7.16667Z" stroke="white" stroke-width="2"/>
+        <path d="M14.9128 5.86841C16.1345 6.35728 16.9999 7.57507 16.9999 8.99999C16.9999 10.4249 16.1345 11.6427 14.9128 12.1316" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <path d="M12.2244 7.47241C12.9224 7.71088 13.417 8.30492 13.417 8.99999C13.417 9.69507 12.9224 10.2891 12.2244 10.5276" stroke="white" stroke-width="2" stroke-linecap="round"/>
+      </symbol>
+      <symbol id="icon-volume_muted" width="19" height="15" viewBox="0 0 19 15" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.47765 3.01334L4.46893 6.0487C3.94768 6.44338 3.31176 6.65698 2.65795 6.65698H1.99976V8.32364H2.65795C3.31176 8.32364 3.94768 8.53724 4.46893 8.93192L8.47765 11.9673V3.01334ZM3.26161 4.45422C3.08786 4.58578 2.87589 4.65698 2.65795 4.65698H0.999756C0.447471 4.65698 -0.000244141 5.10469 -0.000244141 5.65698V9.32364C-0.000244141 9.87593 0.447471 10.3236 0.999756 10.3236H2.65795C2.87589 10.3236 3.08786 10.3948 3.26161 10.5264L8.87399 14.776C9.53264 15.2748 10.4776 14.805 10.4776 13.9788V1.00182C10.4776 0.175666 9.53263 -0.294136 8.87399 0.204585L3.26161 4.45422Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7926 4.28325C17.1832 3.89273 17.8163 3.89273 18.2069 4.28325C18.5974 4.67377 18.5974 5.30694 18.2069 5.69746L16.664 7.24036L18.2069 8.78325C18.5974 9.17377 18.5974 9.80694 18.2069 10.1975C17.8163 10.588 17.1832 10.588 16.7926 10.1975L15.2498 8.65457L13.7069 10.1975C13.3163 10.588 12.6832 10.588 12.2926 10.1975C11.9021 9.80694 11.9021 9.17377 12.2926 8.78325L13.8355 7.24036L12.2926 5.69746C11.9021 5.30694 11.9021 4.67377 12.2926 4.28325C12.6832 3.89273 13.3163 3.89273 13.7069 4.28325L15.2498 5.82614L16.7926 4.28325Z" fill="white"/>
+      </symbol>
+      <symbol id="icon-fullscreen" width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 2C0 0.89543 0.895431 0 2 0H4.5C5.05228 0 5.5 0.447715 5.5 1C5.5 1.55228 5.05228 2 4.5 2H2V4.5C2 5.05228 1.55228 5.5 1 5.5C0.447715 5.5 0 5.05228 0 4.5V2Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 14C0 15.1046 0.895431 16 2 16H4.5C5.05228 16 5.5 15.5523 5.5 15C5.5 14.4477 5.05228 14 4.5 14H2V11.5C2 10.9477 1.55228 10.5 1 10.5C0.447715 10.5 0 10.9477 0 11.5V14Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M16 2C16 0.89543 15.1046 0 14 0H11.5C10.9477 0 10.5 0.447715 10.5 1C10.5 1.55228 10.9477 2 11.5 2H14V4.5C14 5.05228 14.4477 5.5 15 5.5C15.5523 5.5 16 5.05228 16 4.5V2Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M16 14C16 15.1046 15.1046 16 14 16H11.5C10.9477 16 10.5 15.5523 10.5 15C10.5 14.4477 10.9477 14 11.5 14H14V11.5C14 10.9477 14.4477 10.5 15 10.5C15.5523 10.5 16 10.9477 16 11.5V14Z" fill="white"/>
+      </symbol>
+    </svg>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrapper">
+        <div class="logo">
+          <svg width="30" height="30">
+            <use href="#icon-logo"></use>
+          </svg>
+        </div>
+        <nav class="menu">
+          <div class="menu__button">Главная</div>
+          <div class="menu__button">Задачи</div>
+          <div class="menu__button">Пользователи</div>
+        </nav>
+        <section class="user">
+          <div class="user__news">
+            <svg width="40" height="40">
+              <use href="#icon-bell"></use>
+            </svg>
+          </div>
+          <div class="user__card">
+            <span class="user__card__name">Семён Щеглов</span>
+            <img class="user__card__img" src="img/user-card.png">
+          </div>
+        </section>
+      </div>
+
+    </header>
+    <main class="main">
+      <section class="search">
+        <div class="search__item">
+          <p class="search__text">Поиск</p>
+          <div class="search__wrapper">
+            <input class="search__input" placeholder="Введите название имя исполнителя">
+            <svg width="13" height="14">
+              <use href="#icon-search"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="search__item">
+          <p class="search__text">Дата публикации</p>
+          <div class="search__wrapper">
+            <input class="search__input" placeholder="Укажите дату публикации">
+            <svg width="15" height="14">
+              <use href="#icon-date"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="search__item">
+          <p class="search__text">Тип контента</p>
+          <div class="search__content">
+            <div class="search__button search__video">
+              <svg width="7" height="10">
+                <use href="#icon-video"></use>
+              </svg>
+              Видео
+            </div>
+            <div class="search__button search__photo">
+              <svg width="10" height="9">
+                <use href="#icon-photo"></use>
+              </svg>
+              Фото
+            </div>
+            <div class="search__button search__audio">
+              <svg width="7" height="10">
+                <use href="#icon-audio"></use>
+              </svg>
+              Аудио
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="content">
+        <div class="content__item">
+          <img class="content__item__preview content__item__img" src="img/preview-video1.png">
+          <div class="content__item-type content__item-video">
+            <svg width="7" height="10">
+              <use href="#icon-video"></use>
+            </svg>
+            Видео
+          </div>
+          <div class="content__item__name">Название повседневная практика показывает</div>
+          <span class="content__item__author">Аркадий Юрченко</span>
+          <span class="content__item__date">09:21 14.02.2020</span>
+        </div>
+
+        <div class="content__item">
+          <img class="content__item__preview content__item__img" src="img/preview-video1.png">
+          <div class="content__item-type content__item-photo">
+            <svg width="10" height="9">
+              <use href="#icon-photo"></use>
+            </svg>
+            Фото
+          </div>
+          <div class="content__item__name">Название повседневная практика показывает</div>
+          <span class="content__item__author">Аркадий Юрченко</span>
+          <span class="content__item__date">09:21 14.02.2020</span>
+        </div>
+
+        <div class="content__item">
+          <img class="content__item__preview content__item__img" src="img/preview-video1.png">
+          <div class="content__item-type content__item-audio">
+            <svg width="7" height="10">
+              <use href="#icon-audio"></use>
+            </svg>
+            Аудио
+          </div>
+          <div class="content__item__name">Название с другой стороны начало повседневной работы по формированию позиции</div>
+          <span class="content__item__author">Аркадий Юрченко</span>
+          <span class="content__item__date">09:21 14.02.2020</span>
+        </div>
+
+        <div class="video__wrapper">
+          <div class="video__container">
+            <video class="video__content">
+              <source src="video/video-demo.mp4" type='video/mp4'>
+            </video>
+            <div class="video__controls">
+              <div class="video__progress">
+                <div class="video__progress__current"></div>
+                <div class="video__progress__thumb"></div>
+              </div>
+              <div id="play" class="video__state">
+                <svg width="9" height="12">
+                  <use href="#icon-play" class="video__state-play"></use>
+                  <use href="#icon-pause" class="video__state-pause video__state-hidden"></use>
+                </svg>
+              </div>
+              <div class="video__volume">
+                <svg width="18" height="18">
+                  <use href="#icon-volume"></use>
+                </svg>
+                <input class="video__volume__level styled-slider slider-progress" type="range" min="0" max="1" id="line" value="0.1" step="0.05">
+                  </div>
+              <div class="video__duration">
+                <span class="video__duration__current">00:00</span>
+                <span>/</span>
+                <span class="video__duration__total">00:00</span>
+              </div>
+              <div class="video__fullscreen">
+                <svg width="16" height="16">
+                  <use href="#icon-fullscreen"></use>
+                </svg>
+              </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </main>
+    <script defer src="js/player.js"></script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+.main {
+  margin: 0 auto;
+  max-width: 1220px;
+}
+body {
+  background: #F3F8FB;
+}
+.search {
+  display: flex;
+  justify-content: space-between;
+  &__text {
+    margin-bottom: 9px;
+    font-family: 'Roboto-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: black;
+  }
+  &__wrapper {
+    position: relative;
+    > svg {
+      position: absolute;
+      top: 13px;
+      right: 15px;
+    }
+  }
+  &__input {
+    padding: 0 15px;
+    width: 393px;
+    height: 40px;
+    border: 1px solid #D8E3EC;
+    border-radius: 4px;
+    font-family: 'Roboto-Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #313131;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    width: 266px;
+  }
+  &__button {
+    padding: 12px 15px;
+    border: 1px solid;
+    border-radius: 4px;
+    font-family: 'Roboto-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    transition: 0.2s linear;
+    cursor: pointer;
+    > svg {
+      margin-right: 2px;
+    }
+  }
+  &__video {
+    border-color: #107EFF;
+    color: #107EFF;
+    &:hover {
+      background: rgba(16, 126, 255, 0.1);
+    }
+  }
+  &__photo {
+    border-color: #43DD9C;
+    color: #43DD9C;
+    &:hover {
+      background: rgba(67, 221, 156, 0.1);
+    }
+  }
+  &__audio {
+    border-color: #FFAC2F;
+    color: #FFAC2F;
+    &:hover {
+      background: rgba(255, 172, 47, 0.1);
+    }
+  }
+
+}
