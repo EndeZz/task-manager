@@ -8,6 +8,8 @@ import DeleteIcon from '../../components/iconComponents/deleteIcon';
 import CrossIcon from '../../components/iconComponents/crossIcon';
 import MenuItem from '../../components/menuItem/menuItem';
 import BellNotification from '../../components/bellNotification/bellNotification';
+import NotificationIcon from '../../components/notificationIcon/notificationIcon';
+import CommentIcon from '../../components/iconComponents/commenticon';
 
 function UiKit() {
   return (
@@ -63,6 +65,8 @@ function UiKit() {
 
       <BellNotification numberOfNotifications='3' />
       <BellNotification numberOfNotifications='0' />
+
+      <NotificationIcon icon={<CommentIcon />} />
 
     </div>
   );

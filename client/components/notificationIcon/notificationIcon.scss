@@ -1,0 +1,28 @@
+@import '/client/styles/common.scss';
+
+.notification-icon-container {
+  height: 34px;
+  width: 34px;
+  //padding: auto;
+  font-family: Roboto-Medium, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 50%;
+  background-color: $itblue;
+  color: $blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.red-dot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5px;
+  height: 5px;
+  background-color: $red;
+  border: 2px solid $white;
+  border-radius: 50%;
+}
