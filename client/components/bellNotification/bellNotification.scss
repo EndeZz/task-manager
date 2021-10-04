@@ -1,0 +1,43 @@
+@import '/client/styles/common.scss';
+
+.bell-container {
+  height: 40px;
+  width: 40px;
+  //padding: auto;
+  position: relative;
+  font-family: Roboto-Medium, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  vertical-align: center;
+  text-align: center;
+  border-radius: 4px;
+  border: 2px solid $white;
+
+  &:hover {
+    border: 2px solid $itblue;
+  }
+
+  &:active {
+    background-color: $itblue;
+  }
+}
+
+.bell {
+  margin-top: 9px;
+}
+
+.number-of-notifications {
+  vertical-align: center;
+  text-align: center;
+  margin-top: 3px;
+  margin-right: 3px;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  right: 0;
+  background-color: $red;
+  color: $white;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid $white;
+}

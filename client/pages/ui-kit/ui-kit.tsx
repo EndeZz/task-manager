@@ -7,6 +7,7 @@ import BackArrowIcon from '../../components/iconComponents/backArrowIcon';
 import DeleteIcon from '../../components/iconComponents/deleteIcon';
 import CrossIcon from '../../components/iconComponents/crossIcon';
 import MenuItem from '../../components/menuItem/menuItem';
+import BellNotification from '../../components/bellNotification/bellNotification';
 
 function UiKit() {
   return (
@@ -59,6 +60,9 @@ function UiKit() {
       />
 
       <MenuItem theme='menu-item-regular' title='Задачи' onClick={() => {}} />
+
+      <BellNotification numberOfNotifications='3' />
+      <BellNotification numberOfNotifications='0' />
 
     </div>
   );
