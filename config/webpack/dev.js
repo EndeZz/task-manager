@@ -10,12 +10,11 @@ module.exports = merge(common, {
   devtool: 'source-map',
   devServer: {
     compress: true,
-    contentBase: path.build,
+    contentBase: __dirname + "/client/pages/",
     historyApiFallback: true,
     hot: true,
     open: true,
     port: 3000,
     clientLogLevel: 'silent',
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
 });

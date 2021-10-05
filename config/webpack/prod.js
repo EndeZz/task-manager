@@ -7,12 +7,6 @@ const common = require('./common');
 
 module.exports = merge(common, {
   mode: 'production',
-  entry: {
-    index: {
-      import: path.resolve(__dirname, '../src/js', 'index.js'),
-      dependOn: ['react', 'helpers'],
-    },
-  },
   devtool: false,
   output: {
     filename: 'js/[name].[contenthash].bundle.js',
