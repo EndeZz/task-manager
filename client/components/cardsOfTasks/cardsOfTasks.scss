@@ -35,6 +35,8 @@
   &-descr {
     &__text {
       margin-left: 2rem;
+      position: absolute;
+      left: 23rem;
 
       @include font(1.4rem, 500, 1.6rem);
     }
@@ -43,6 +45,8 @@
   &-status {
     display: grid;
     grid-template-columns: 13rem 15rem 19.5rem;
+
+    &__auth { z-index: 2; }
 
     &__text {
       margin-left: 4rem;
@@ -67,4 +71,16 @@
   &-button + .card__tasks-button {
     margin-left: 1.5rem;
   }
+}
+
+.gradientText {
+  display: block;
+  position: absolute;
+  text-align: right;
+  height: 1.5rem;
+  width: 40%;
+  left: 60%;
+  bottom: 0;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #fff 60%);
+  z-index: 1;
 }

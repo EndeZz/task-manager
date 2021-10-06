@@ -34,8 +34,7 @@
 
       &:hover { background: rgba($blue, 0.1); }
 
-      &:focus,
-      &--active { background: $blue; }
+      &:focus { background: $blue; }
 
       &:focus .content__box-text { color: $white; }
 
@@ -49,8 +48,7 @@
 
       &:hover { background: rgba($yellow-audio, 0.1); }
 
-      &:focus,
-      &--active { background: $yellow-audio; }
+      &:focus { background: $yellow-audio; }
 
       &:focus .content__box-text { color: $white; }
 
@@ -64,10 +62,39 @@
 
       &:hover { background: rgba($gray-line, 0.1); }
 
-      &:focus,
-      &--active { background: $green; }
+      &:focus { background: $green; }
 
       &:focus .icon--photo { fill: $white; }
     }
+
+    &--active.filter__btn--video {
+      background: $blue;
+    }
+
+    &--active.filter__btn--photo {
+      background: $green;
+    }
+
+    &--active.filter__btn--audio {
+      background: $yellow-audio;
+    }
+
+    &--active.filter__btn--video .content__box-text,
+    &--active.filter__btn--photo .content__box-text,
+    &--active.filter__btn--audio .content__box-text { color: $white; }
+
+    &--active.filter__btn--video .icon--video,
+    &--active.filter__btn--photo .icon--photo,
+    &--active.filter__btn--audio .icon--audio { fill: $white; }
+
+    &--active &--photo {
+      background: $green;
+    }
+
+    // &--active &--audio {
+    //   background: $yellow-audio;
+    // }
   }
 }
+
+.filter-hide { display: none; }

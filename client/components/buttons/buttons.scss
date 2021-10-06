@@ -49,6 +49,8 @@
   }
 
   &--red {
+    margin-left: 3rem;
+
     &:hover { background: $red-hover; }
 
     &--active,
@@ -80,12 +82,12 @@
     }
   }
 
-  &--upload {
-    &:focus .icon--upload {
+  &--download {
+    &:focus .icon--download {
       fill: $white;
     }
 
-    &:hover .icon--upload {
+    &:hover .icon--download {
       fill: $white;
     }
   }
@@ -98,9 +100,21 @@
     &:disabled .icon--edit-small { fill: rgba($blue, 0.3); }
   }
 
+  &--itblue {
+    width: 18.2rem;
+    background: $itblue;
+
+    &:hover { background: $blue-btn-hover; }
+
+    &--active,
+    &:focus { background: $blue-btn-active; }
+
+    &:disabled { background: rgba($itblue, 0.3); }
+  }
+
   &--edit-small,
   &--delete-small,
-  &--upload {
+  &--download {
     padding: 0.7rem;
     background: $itblue;
 
@@ -119,14 +133,17 @@
     @include font(1.4rem, 500, 1.6rem);
 
     &--trans,
-    &--upload {
+    &--download,
+    &--itblue {
       color: $blue;
     }
+
+    &--trans.icon #back { fill: $blue; }
 
     &--red {
       color: $red;
     }
   }
 
-  &--upload:hover .btn__kit-text--upload { color: $white; }
+  &--download:hover .btn__kit-text--download { color: $white; }
 }

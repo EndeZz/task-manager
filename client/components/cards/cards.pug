@@ -1,16 +1,4 @@
 mixin cards(className, items)
     div(class=`${className}`)
         ul(class=`${className}__list`)
-          //- each item in items ? items : [] 
-          //-   li(class=`${className}__item`)
-          //-     figure(class=`${className}__item-wrapper`)
-          //-       img(class=`${className}__item-img` src=`../../../public/img/cards/${item.img}` alt=`${item.altText}`)
-          //-       figcaption(class=`${className}-descr`)
-          //-         a(class=`${className}__item-title` href="#")
-          //-           include ../contentType/contentType
-          //-           +contentType("content__box", item)
-          //-         p(class=`${className}__item-descr`)=`${item.text}`
-          //-         div(class=`${className}__item-meta`)
-          //-           span(class=`${className}__item-author`)=`${item.author}`
-          //-           time(class=`${className}__item-date datetime=${item.date}`)=`${item.date}`
         img(class="card__loader" src="../../../public/img/loader.png" alt="иконка голубого круга")

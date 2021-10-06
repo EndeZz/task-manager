@@ -5,6 +5,17 @@
     background: $white;
 
     @include outline(1px, $blue-outline, 4px);
+
+    &--new .input__block,
+    &--new .select {
+      margin-top: 4rem;
+    }
+
+    &--new .input__block-box {
+      margin-right: 0;
+      width: 100%;
+    }
+    &--new .input__block-text { width: 100%; }
   }
 
   &__item {

@@ -1,1 +1,13 @@
-@import "../../styles/styles"
+@import "../../styles/styles";
+@import '../../components/select/select';
+@import '../../components/buttons/buttons';
+@import "../../components/header/header";
+@import "../../components/search/search";
+@import "../../components/input/input";
+@import '../../components/user/user';
+@import '../../components/nav/nav';
+@import '../../components/notification/notification';
+@import '../../components/contentType/contentType';
+@import '../../components/filter/filter';
+@import '../../components/calendar/calendar';
+@import '../../components/cardsOfTasks/cardsOfTasks.scss'

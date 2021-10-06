@@ -9,6 +9,7 @@
     modalBtn.addEventListener('click', (e: Event) => {
       modalOverlay.classList.add('close');
       e.stopPropagation();
+      document.querySelector('.modal__body').innerHTML = "";
     });
 
     // document.addEventListener('click', (e) => {

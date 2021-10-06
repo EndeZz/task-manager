@@ -2,10 +2,10 @@ mixin cardsTasks(className, items)
   div(class="wrapper__cards")
     each item in items
       div(class=`${className}`)
-        a(class=`${className}-wrapper` href="#")
+        div(class=`${className}-wrapper` href="#")
           div(class=`${className}-wrapper__content`)
             include ../contentType/contentType
-                +contentType("content__box", item)
+            +contentType("content__box", item)
             p(class=`${className}-descr__text`)=`${item.text}`
           div(class=`${className}-status`)
             span(class=`${className}-status__auth`)=`${item.author}`
@@ -14,7 +14,7 @@ mixin cardsTasks(className, items)
           div(class=`${className}-buttons`)
               include ../buttons/buttons
               if `${item.btnCount}` === 'true'
-                  +button("btn__kit","edit-small")
-                  +button("btn__kit","delete-small")
+                  +button("btn__kit", {name: "edit-small", icon: "edit", text: ''}, "task.html")
+                  +button("btn__kit", {name: "delete-small", icon: "delete", text: ''})
               else
-                  +button("btn__kit","delete-small")
+                  +button("btn__kit", {name: "delete-small", icon: "delete", text: ''})

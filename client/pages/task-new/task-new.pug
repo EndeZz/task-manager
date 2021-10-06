@@ -1,3 +1,11 @@
+include ../../components/header/header
+include ../../components/buttons/buttons
+include ../../components/sidebar/sidebar
+include ../../components/select/select
+include ../../components/input/input
+include ../../components/filesType/filesType
+include ../../components/input/input
+
 doctype
 html(lang="ru")
   head
@@ -5,3 +13,35 @@ html(lang="ru")
     title Менеджер задач
     meta(name="viewport", content="width=device-width, initial-scale=1")
   body
+    +header('administrator', 1)
+    .wrapper 
+      main(class="main") 
+        .container
+          form(class="btn__kit-wrapper")
+              +button("btn__kit", {name: "trans", icon: "back", text: "К списку задач"}, 'tasks.html')
+          .wrapper-task
+            article.article
+              section.task
+                div.task__wrapper
+                  .select--new-task
+                    +select("select", ["Видео", "Аудио", "Фото"], "content", "Тип контента")
+                  .input__block-title
+                    +input('input__block', '','Введите заголовок задачи', 'Заголовок')
+                  .input__block-textarea
+                    textarea(class="input__block-text" name="description", placeholder="Опишите требования", id="descr")
+                    label(for='descr' class="input__block-label") Описание
+                  .files
+                    ul.task__files-list
+                      li.task__files-item.task__files--new
+                        .task__files-item__text
+                          img(class="task__files-img" src="../../../public/img/icons/zip.svg" alt="иконка файла в формате zip")
+                          span(class="task__files-name") Материалы.zip
+                          span(class="task__files-size") 61 Мб
+                          +button("btn__kit", {name : "red", icon: "delete", text: "Удалить"})
+                  +button("btn__kit", {name: "itblue", icon: "clip", text: "Прикрепить файл"})
+            .sidebar
+              .sidebar__wrapper.sidebar__wrapper--new
+                +input("input__block", "calendar-small")
+                +select("select", ["Альбина Ткаченко", "София Мельник", "Альбина Ткаченко", "София Мельник", "Альбина Ткаченко", "София Мельник","Альбина Ткаченко", "София Мельник"], "init", "Инициатор")
+                +select("select", ["Альбина Ткаченко", "София Мельник", "Альбина Ткаченко", "София Мельник", "Альбина Ткаченко", "София Мельник","Альбина Ткаченко", "София Мельник"], "assignee", "Ответственный")
+          +button("btn__kit", {name: "blue", icon: "done", text: "Создать задачу"})

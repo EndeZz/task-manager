@@ -23,7 +23,7 @@ npm run clean
 # Используемые инструменты:
 
 - Webpack
-- Babel
+- Typescript
 - Sass
 
 # Зависимости:
@@ -34,11 +34,9 @@ npm run clean
 - webpack-dev-server - Сервер разработки для webpack
 - webpack-merge - Упрощение настройки конфигурации для разработки/продакшена
 
-## Babel
-- @babel/core - Преобразует ES6+ в обратно совместимый JavaScript
-- @babel/preset-env - Cоздание кода, подходящего для старых браузеров
+
 ## Loaders
-- babel-loader - Преобразует файлы с помощью Babel и Webpack
+- ts-loader - Преобразует файлы ts с в js и Webpack
 - sass-loader - Загружает SCSS и компилирует в CSS
 - node-sass - Библиотека, которая обеспечивает привязку Node
 - css-loader - Интерпритирует @import и url()
@@ -54,6 +52,7 @@ npm run clean
 - simplebar - Плагин для создания уникального скроллбара
 - air-datepicker - Плагин для создания календаря
 - jquery - Плагин-библиотека для правильной работы air-datepicker
+- resolve-url-loader - Преобразует пути до файлов
 
 ## Linters
 - eslint - Применяет руководства по стилю в приложении

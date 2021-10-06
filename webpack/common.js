@@ -19,16 +19,19 @@ const pugPages = folders
 const tsPages = folders
   .map((folder) => fs.readdirSync(folder)
     .filter((fileName) => fileName.endsWith('.ts'))
-    .map((item) => path.resolve(`${folder}`, `${item}`)));
+    .map((item) =>  path.resolve(`${folder}`, `${item}`)));
+
+const keys = fs.readdirSync(pagesDir).map((item) =>  item);
+const entryObj = keys.reduce((o, key, i) => ({...o, [key]: tsPages.flat()[i]}), {});
 
 module.exports = {
   context: paths.src,
-  entry: tsPages.flat(),
+  entry: entryObj,
   devtool: 'source-map',
   output: {
     clean: true,
     path: paths.build,
-    filename: 'bundle.[chunkhash].js',
+    filename: '[name].[chunkhash].js',
   },
   module: {
     rules: [
@@ -89,24 +92,13 @@ module.exports = {
   optimization: {
     splitChunks: {
       chunks: 'all',
-      minSize: 0,
-      maxAsyncRequests: 9,
-      maxInitialRequests: 9,
-      name: false,
-      cacheGroups: {
-        libText: {
-          test: /lib-concat/,
-          name: 'libText',
-          chunks: 'all',
-        },
-      },
     },
   },
   plugins: [
     ...pugPages.flat().map((page) => new HtmlWebpackPlugin({
       template: `${page}`,
       filename: `./${path.basename(page).replace(/\.pug/, '.html')}`,
-      inject: true,
+      chunks: [`${path.basename(page, '.pug')}`]
     })),
     new webpack.ProvidePlugin({
       $: 'jquery',
@@ -116,3 +108,4 @@ module.exports = {
     new ESLintPlugin(),
   ],
 };
+

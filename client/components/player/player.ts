@@ -1,30 +1,13 @@
-// interface Cards {
-//   url: string, 
-//   name: string,
-//   id: number,
-//   format: string,
-//   type: {
-//     name: string;
-//     id: number;
-//   }, 
-//   dateCreated: string, 
-//   author: {
-//     name: string;
-//     id: number
-//   }
-//   preview: string;
-// }
 
 export function playerGenerate(elem: HTMLElement, cards: any, contentTypePath: string) {
   const div = document.createElement('div') as HTMLElement;
-  // const contentTypePath = require('../../../public/img/icons/icon.svg');
   div.classList.add(`player__${cards.type.name}`);
   switch (`${cards.type.name}`) {
     case 'video': {
       div.innerHTML = `
           <div class="player__${cards.type.name}-view">
             <video class="player__${cards.type.name}-custom">
-              <source class="player-${cards.type.name}__url" src="${cards.url}" type="${cards.type.name}/mp4"></source>
+              <source class="player-${cards.type.name}__url" src="${cards.url}" type="${cards.type.name}/${cards.format}"></source>
             </video>
             <div class="player__controls">
               <div class="player__progress">
@@ -74,7 +57,7 @@ export function playerGenerate(elem: HTMLElement, cards: any, contentTypePath: s
       div.innerHTML = `
           <div class="player__${cards.type.name}-view">
             <audio class="player__${cards.type.name}-custom">
-              <source class="player-${cards.type.name}__url src=${cards.url} type="${cards.type.name}/${cards.format}"></source>
+              <source class=player-${cards.type.name}__url src=${cards.url} type=${cards.type.name}/${cards.format}></source>
             </audio>
             <div class="player__controls player__controls--${cards.type.name}">
               <div class="player__buttons-container">
@@ -116,9 +99,9 @@ export function playerGenerate(elem: HTMLElement, cards: any, contentTypePath: s
 
     case 'photo': {
       div.innerHTML = `
-          <div class=${cards.type.name}>
-            <div class=${cards.type.name}-view>
-                <img class=${cards.type.name}-custom src=${cards.url}  alt="Фотография"/>
+          <div class=${cards.type.name}__wrapper>
+            <div class=${cards.type.name}__wrapper-view>
+                <img class=${cards.type.name}__wrapper-custom src=${cards.url}  alt="Фотография"/>
             </div>
           </div>
       `;
@@ -181,7 +164,7 @@ export default function player(type: string) {
     };
     const skipAhead = (event: Event) => {
       const skipTo = event !== null && event.target instanceof HTMLElement ? event.target.dataset.track : (<HTMLInputElement>event.target).value;
-      elem.currentTime = +skipTo;
+      (<HTMLMediaElement>elem).currentTime = +skipTo;
       progressBar.value = +skipTo;
       track.value = +skipTo;
     };
@@ -225,7 +208,7 @@ export default function player(type: string) {
       }
     };
     const skipAheadVolume = (event: Event) => {
-      const skipTo = event !== null && event.target instanceof HTMLElement ? event.target.dataset.volume : (<HTMLInputElement>event.target).value;
+      const skipTo = (event !== null && event.target instanceof HTMLElement) && event.target.dataset.track ? event.target.dataset.volume : (<HTMLInputElement>event.target).value;
       volumeProgress.value = +skipTo;
       volume.value = +skipTo;
     };
@@ -260,8 +243,21 @@ export default function player(type: string) {
     fullscreenBtn.addEventListener('click', toggleFullScreen);
   };
 
-  play();
-  timeElem();
-  volumeFunc();
-  fullScreeen();
+  switch(type) {
+    case 'video': {
+      play();
+      timeElem();
+      volumeFunc();
+      fullScreeen();
+      break;
+    }
+    case 'audio': {
+      play();
+      timeElem();
+      volumeFunc();
+      break;
+    }
+  }
+
+  
 }

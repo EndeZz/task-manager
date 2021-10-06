@@ -36,6 +36,11 @@ button { cursor: pointer; }
   padding: 0 1.5rem;
 }
 
+.wrapper {
+  background: $background;
+  padding-bottom: 27.6rem;
+}
+
 .wrapper-task {
   display: grid;
   grid-template-columns: 68% 32%;
@@ -100,7 +105,7 @@ button { cursor: pointer; }
     fill: $blue;
   }
 
-  &--upload {
+  &--download {
     width: 1.5rem;
     height: 1.5rem;
     fill: $blue;
@@ -137,6 +142,18 @@ button { cursor: pointer; }
     height: 1.1rem;
   }
 
+  &--trans {
+    width: 2.5rem;
+    height: 1.1rem;
+    fill: $blue;
+  }
+
+  &--trans-red {
+    width: 1.3rem;
+    height: 1.6rem;
+    fill: $red;
+  }
+
   &--fullscreen {
     width: 1.6rem;
     height: 1.6rem;
@@ -152,6 +169,11 @@ button { cursor: pointer; }
     height: 1.2rem;
   }
 
+  &--itblue {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
   &--back,
   &--fullscreen,
   &--volume,
@@ -164,6 +186,13 @@ button { cursor: pointer; }
     &:hover {
       fill: rgba($white, 0.8);
     }
+  }
+
+  &--red {
+    width: 1.3rem;
+    height: 1.6rem;
+    fill: transparent;
+    stroke: $red;
   }
 }
 

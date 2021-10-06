@@ -1,6 +1,7 @@
 .input__block {
   display: flex;
   align-items: center;
+  position: relative;
 
   &-button {
     border: none;
@@ -70,6 +71,26 @@
 
     &--calendar-small {
       width: 18.7rem;
+    }
+  }
+
+  &-title {
+    margin: 3rem 0;
+
+    & .input__block-text {
+      width: 100%;
+    }
+  }
+
+  &-textarea {
+    margin-bottom: 3rem;
+    position: relative;
+
+    & .input__block-text {
+      width: 100%;
+      min-height: 11rem;
+      resize: none;
+      outline: none;
     }
   }
 

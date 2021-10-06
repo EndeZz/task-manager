@@ -1,17 +1,17 @@
-doctype
-html
-  head
-    meta
-  body
-    header.header 
-      .container
-        .header__wrapper
-          .header__wrapper-left__side 
-            img.header__logo(src="../../../public/img/logo.svg", alt="Две стрелки как проекция голубая над зеленой")
-            include ../nav/nav
-            +navigation("nav", ['Главная', 'Задачи', 'Пользователи'], 0)
-          .header__wrapper-right__side
-            button(class="notification__button" type="button")
-                img(class="notification__button-icon bell-icon" src="../../../public/img/icons/bell-icon.svg", alt="иконка колокольчика с уведомлениями")
-                span.notification__button-text 3
-            include ../user/user
+include ../nav/nav
+
+mixin header(role, location)
+  header.header 
+    .container
+      .header__wrapper
+        .header__wrapper-left__side 
+          img.header__logo(src="../../../public/img/logo.svg", alt="Две стрелки как проекция голубая над зеленой")
+          if 'administrator'
+            +navigation("nav", [{text:'Главная', href: 'index.html'}, {text: 'Задачи', href: 'tasks.html'}, {text: 'Пользователи', href: 'users.html'}], location)
+          else 
+            +navigation("nav", [{text:'Главная', href: 'index.html'}, {text: 'Задачи', href: 'tasks.html'}], location)
+        .header__wrapper-right__side
+          button(class="notification__button" type="button")
+              img(class="notification__button-icon bell-icon" src="../../../public/img/icons/bell-icon.svg", alt="иконка колокольчика с уведомлениями")
+              span.notification__button-text 3
+          include ../user/user

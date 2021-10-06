@@ -27,24 +27,25 @@ html(lang="ru")
     meta(name="viewport", content="width=device-width, initial-scale=1")
   body
     include ../../components/header/header
+    +header('administrator', 1)
     .wrapper 
       main(class="main") 
         .container
+          div(class="btn__kit-wrapper")
+                  include ../../components/buttons/buttons
+                  +button("btn__kit", {name: "trans", icon: "back", text: "К списку задач"}, 'tasks.html')
+                  div(class="btn__kit-wrapper--add")
+                    +button("btn__kit", {name: "green", icon: "green", text: "Утвердить и опубликовать"})
+                    +button("btn__kit", {name: "edit", icon: "edit"})
+                    +button("btn__kit", {name: "delete", icon: "delete"})
           .wrapper-task
             article.article
-              div(class="btn__kit-wrapper")
-                include ../../components/buttons/buttons
-                +button("btn__kit", "trans", "К списку задач")
-                div(class="btn__kit-wrapper--add")
-                  +button("btn__kit", "green", "Утвердить и опубликовать")
-                  +button("btn__kit", "edit")
-                  +button("btn__kit", "delete")
               include ../../components/taskText/taskText
               +taskText("task", items)
               include ../../components/taskResult/taskResult
               +taskResult("load", loadFiles)
               include ../../components/comments/comments
               +comments("comments", comments)
-              include ../../components/sidebar/sidebar
-              +sidebar("sidebar", items)
+            include ../../components/sidebar/sidebar
+            +sidebar("sidebar", items)
 

@@ -1,14 +1,13 @@
 export default function selectList() {
   const selects = document.querySelectorAll('.select__text');
-  const dropdownContent = document.querySelectorAll('.select__dropdown-content__item');
-  selects.forEach((select) => select.addEventListener('click', (e) => {
+  const dropdownContent = document.querySelectorAll('.select__dropdown-content__item') as NodeListOf<HTMLElement>;
+  selects.forEach((select) => select.addEventListener('click', (e: Event) => {
     const target = e.currentTarget;
     if (select === target) {
       select.nextElementSibling.querySelector('.select__dropdown-content').classList.toggle('show');
-      (<HTMLInputElement>select).blur();
     }
   }));
-  dropdownContent.forEach((item) => item.addEventListener('click', (e) => {
+  dropdownContent.forEach((item) => item.addEventListener('click', (e: Event) => {
     const target = e.currentTarget as Element;
     for (let i = 0; i < target.closest('.select').children.length; i += 1) {
       target.closest('.select').querySelector('div.select__text').textContent = target.textContent;

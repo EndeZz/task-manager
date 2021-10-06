@@ -1,7 +1,13 @@
-mixin button(className, mod, text)
-      button(class=`${className} ${className}--${mod}`)
-        svg(class=`icon icon--${mod}`)
-          use(xlink:href=`../../../public/img/icons/icon.svg#${mod}-icon`)
-        if text !== undefined
-          span(class=`${className}-text ${className}-text--${mod}`)=(text ? text : "")
-
+mixin button(className, mod, href)
+    if href !== undefined 
+      a(class=`${className} ${className}--${mod.name}` href=`${href}`)
+        svg(class=`icon icon--${mod.name}`)
+            use(xlink:href=`../../../public/img/icons/icon.svg#${mod.icon}-icon`)
+            if mod.text !== ''
+              span(class=`${className}-text ${className}-text--${mod.name}`)=(mod.text ? mod.text : "")
+    else
+      button(class=`${className} ${className}--${mod.name}`)
+        svg(class=`icon icon--${mod.name}`)
+          use(xlink:href=`../../../public/img/icons/icon.svg#${mod.icon}-icon`)
+            if mod.text !== '' && mod.text !== undefined
+              span(class=`${className}-text ${className}-text--${mod.name}`)=(mod.text ? mod.text : "")

@@ -2,7 +2,7 @@ mixin filter(className, items)
   div(class=`${className}`)
     div(class=`${className}__wrapper`)
       each item in items
-        button(class=`${className}__btn ${className}__btn--${item.type}`)
+        button(class=`${className}__btn ${className}__btn--${item.type}` data-filter=`${item.type}`)
           include ../contentType/contentType
           +contentType("content__box", item)
     label(class=`${className}__label` for="filter") Тип контента

@@ -48,6 +48,13 @@
       @include font(1.4rem, 400, 2.1rem);
 
       position: relative;
+    }
+
+    &-info__box { margin-bottom: 1rem; }
+
+    &-info {
+      position: relative;
+      width: 100%;
 
       &::after {
         content: '';
@@ -59,8 +66,6 @@
         background: $blue-outline;
       }
     }
-
-    &-info__box { margin-bottom: 1rem; }
   }
 
   &__info {

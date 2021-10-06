@@ -3,4 +3,4 @@ mixin navigation(className, items, activeItem)
         ul(class=`${className}__list`)
           each nav, ndx in items
               li(class=`${className}__item`)
-                  a(href="#" class=`${className}__item-link ${(ndx === activeItem) ? `${className}__item-link--active` : ''}`)=nav
+                  a(href=`${nav.href}` class=`${className}__item-link ${(ndx === activeItem) ? `${className}__item-link--active` : ''}`)=nav.text

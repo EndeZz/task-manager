@@ -9,4 +9,4 @@ mixin files(className, items, id)
                 span(class=`${className}__files-name`)=`${item.filesName}.${item.format}`
                 span(class=`${className}__files-size`)=`${item.size}`
               include ../buttons/buttons
-              +button("btn__kit", "upload", "Скачать")
+              +button("btn__kit", {name: "download", icon: "download", text: "Скачать"})

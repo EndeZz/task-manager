@@ -5,10 +5,15 @@ import {
 } from '../../components/modal/modal';
 import { playerGenerate } from '../../components/player/player';
 import userMenu from '../../components/user/user';
-import "./index.scss";
+import searchInput from '../../components/search/search';
 import  generateCards from '../../components/cards/cards';
+import filter from '../../components/filter/filter';
+
+
+import "./index.scss";
 
 userMenu();
+searchInput();
 
 const api = {
   get (url: string) {
@@ -24,7 +29,7 @@ const api = {
                     "id": 1.4658129805029452
                   },
                   "dateCreated": "1978-01-02T14:13:20.570Z",
-                  "format": "png",
+                  "format": "mp4",
                   "id": 84189242.5196236,
                   "name": "dolor sit ipsum do",
                   "preview": "https://via.placeholder.com/393",
@@ -32,7 +37,7 @@ const api = {
                     "name": "video",
                     "id": 6.027456183070403
                   },
-                  "url": "https://www.youtube.com/watch?v=ScMzIvxBSi4"
+                  "url": "../../../public/content/video.mp4"
                   },
                   {
                   "author": {
@@ -40,7 +45,7 @@ const api = {
                     "id": 1.4658129805029452
                   },
                   "dateCreated": "1944-03-15T01:05:43.592Z",
-                  "format": "m4a",
+                  "format": "mp4",
                   "id": 64128220.52860066,
                   "name": "sint Du",
                   "preview": "https://via.placeholder.com/393",
@@ -151,14 +156,12 @@ interface Content {
 }
 
 api.get('/contents')
-  .then((contents: Content) => console.log(contents.contents));
-
-api.get('/contents')
   .then((contents: Content) => {
     const content = (contents.contents);
     for (let i:number = 0; i < content.length; i +=1 ) {
       generateCards(document.querySelector(".card__list"), content[i], contentTypePath);
     }
+    filter();
   });
 
   interface Cards {
@@ -181,30 +184,29 @@ api.get('/contents')
 cards.addEventListener('click', (e: Event) => {
   if ((<HTMLElement>e.target).className.includes('card__item')) {
     const id = (<HTMLElement>e.target).closest('li').getAttribute('data-id');
-    // console.log((((<Element>e.target).parentElement)).parentElement);
     modalOpen();
     api.get('/contents')
       .then((contents: Content) => {
         const content = (contents.contents);
         for (let i:number = 0; i < content.length; i +=1) {
           const obj: Cards = content[i];
-          console.log(id == obj.id)
-            console.log((<HTMLElement>e.target).closest('li').getAttribute('data-id'))
             if (id == obj.id) {
               playerGenerate(document.querySelector('.modal__body'), obj, contentTypePath);
             }
         }
-        // playerGenerate(document.querySelector('.modal__body'), `${content.type}`, url: string, format: string);
         modalClose();
       });
   }
 });
 
-// (async () => {
-//   const contents = await fetch('http://localhost:8080/api/contents');
-//   if (!contents.ok) {
-// 		throw 'Ошибка '+ contents.status
-// 	}
-//   console.log(contents.json());
-// 	return await contents.json();
-// })();
+// const cardsItems = document.querySelectorAll('.card__item') as NodeListOf<HTMLElement>;
+// filter(cardsItems);
+
+(async () => {
+  const contents = await fetch('http://localhost:8080/api/contents');
+  if (!contents.ok) {
+		throw 'Ошибка '+ contents.status
+	}
+  console.log(contents.json());
+	return await contents.json();
+})();

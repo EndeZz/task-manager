@@ -12,9 +12,9 @@ mixin input(className, mod, placeholder, name)
               input(class=`${className}-text input__block-text--${mod}` type="text" id="date" placeholder="Укажите дату публикации" name="date")
               label(for="date" class=`${className}-label`) Дата публикации
           when "calendar-small"
-            div(class=`${className}-box ${className}-box--${mod}` tabindex="0")
+            div(class=`${className}-box ${className}-box--calendar ${className}-box--${mod}` tabindex="0")
                 input(class=`${className}-text input__block-text--${mod}` type="text" id="date" placeholder="Укажите дату" name="date")
                 label(for="date" class=`${className}-label`) Срок выполнения
           default 
             input(class=`${className}-text` type="text" placeholder=`${placeholder}` id=`${name}`)
-            label(for=`${name}` class=`${className}-label`) 
+            label(for=`${name}` class=`${className}-label`)=name

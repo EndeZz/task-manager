@@ -11,11 +11,12 @@
 
   &__meta {
     display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
   }
 
   &-status__text {
     margin-left: 2rem;
-    margin-bottom: 1.5rem;
 
     @include font(1.4rem, 500, 1.6rem);
   }
