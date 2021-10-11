@@ -15,7 +15,8 @@ const PATHS = {
 module.exports = {
   entry: {
     'index': PATHS.client + '/pages/index/index.js',
-    'tasks': PATHS.client + '/pages/tasks/tasks.js'
+    'tasks': PATHS.client + '/pages/tasks/tasks.js',
+    'users': PATHS.client + '/pages/users/users.js',
   },
 
   output: {
@@ -58,6 +59,12 @@ module.exports = {
       chunks: ['tasks'],
       filename: 'tasks.html'
     }),
+    new HTMLWebpackPlugin({
+      template: PATHS.client + '/pages/users/users.pug',
+      chunks: ['users'],
+      filename: 'users.html'
+    }),
+
     new HtmlWebpackPugPlugin(),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
