@@ -17,6 +17,7 @@ module.exports = {
     'index': PATHS.client + '/pages/index/index.js',
     'tasks': PATHS.client + '/pages/tasks/tasks.js',
     'users': PATHS.client + '/pages/users/users.js',
+    'auth': PATHS.client + '/pages/auth/auth.js',
     '404': PATHS.client + '/pages/404/404.js',
   },
 
@@ -66,11 +67,15 @@ module.exports = {
       filename: 'users.html'
     }),
     new HTMLWebpackPlugin({
+      template: PATHS.client + '/pages/auth/auth.pug',
+      chunks: ['auth'],
+      filename: 'auth.html'
+    }),
+    new HTMLWebpackPlugin({
       template: PATHS.client + '/pages/404/404.pug',
       chunks: ['404'],
       filename: '404.html'
     }),
-
     new HtmlWebpackPugPlugin(),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({

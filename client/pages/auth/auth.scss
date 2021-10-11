@@ -1,0 +1,49 @@
+@import '../../styles/reset.scss';
+
+.main {
+  .container {
+    min-height: 100vh;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 394px;
+
+  margin: auto;
+  position: relative;
+  transform: translateY(20%);
+
+  &__icon {
+    width: 5em;
+    height: 5em;
+    margin-bottom: 51px;
+  }
+}
+
+.login-box {
+  width: 100%; 
+  height: 24.571em; //344px;
+
+  background: white;
+  border: 1px solid #D8E3EC;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 2.143em;
+
+  &__text {
+    margin-top: 20px;
+    margin-bottom: 9px;
+  }
+  
+  &__input {
+    padding: 0.857em 1.071em;
+  }
+}
+
+.button-login {
+  margin-top: 30px;
+}
+
