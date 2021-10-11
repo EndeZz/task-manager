@@ -7,6 +7,8 @@ import '../../components/search/search';
 import '../../components/checkbox/checkbox';
 import '../../components/loader/loader';
 import durationTime from '../../utils/time'
+import modal from '../../components/modal/modal';
+import '../../components/media-button/media-button';
 
 const cards = document.getElementsByClassName('card');
 
@@ -154,3 +156,17 @@ data.forEach((item) => {
   }
   content.append(clone);
 })
+
+
+Array.from(cards).forEach(function (card) {
+  card.addEventListener('click', function (e) {
+    let id = card.id;
+    const obj = data.filter(obj => obj.id == id)
+
+    const container = document.querySelector('.main');
+    const template = document.getElementById('modal');
+    let clone = template.content.cloneNode(true)
+    container.append(clone);
+    modal(obj);
+  })
+});
