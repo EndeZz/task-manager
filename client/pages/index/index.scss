@@ -2,6 +2,22 @@
 @import '../../styles/colors.scss';
 @import '../../styles/reset.scss';
 
-body {
-  background: rgb(255, 201, 201);
+.search {
+  padding-top: 2.857em;//40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 1.429em;//20px;
+
+  @media (max-width: 762px) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 1.429em;
+  }
+
+  &__box_type {
+    display: inline-flex;
+    column-gap: 0.714em;//10px;
+  }
+
 }
+
+
