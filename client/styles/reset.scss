@@ -1,3 +1,6 @@
+@import './fonts.scss';
+@import './colors.scss';
+
 * {
   margin: 0;
   padding: 0;
@@ -31,7 +34,9 @@ h3 {
 }
 
 .button,
-.filter {
+.filter,
+.type__text,
+.content__title {
   font: 500 1.4rem "Roboto", sans-serif;
   user-select: none;
 }
@@ -49,4 +54,62 @@ h3 {
 .date-time {
   font: 400 1.2rem "Roboto", sans-serif;
   opacity: 0.6;
+}
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  padding: 0 3rem;
+  box-sizing: border-box;
+}
+
+.main {
+  background: $background;
+
+  .container {
+    min-height: calc(100vh - 81px);
+  }
+}
+
+.button {
+  border: none;
+  border-radius: 0.4rem; 
+  box-sizing: border-box;
+  padding: 1.2rem 1.5rem;
+  cursor: pointer;
+  transition: 0.5s linear;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: auto;
+  }
+
+  &__text {
+    color: white;
+  }
+}
+
+input {
+  font: 400 1.4rem "Roboto", sans-serif;
+  width: 100%;
+  padding: 1.2rem 1.5rem; //0.857em 1.071em;
+  background: white;
+  border: 1px solid $outline;
+  box-sizing: border-box;
+  border-radius: 0.4rem; //0.286em; //4px; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  outline: none;
+  
+  &:hover {
+    border: 1px solid $gray-blue-icon;
+  }
+
+  &:focus {
+    border: 01px solid $blue;
+  }
+
+  &:invalid {
+    border: 1px solid $red;
+  }
 }
