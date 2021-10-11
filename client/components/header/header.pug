@@ -1,6 +1,6 @@
-mixin header  (user_role, page, notification_count, user_name, user_img)
+mixin header  (user_role, notification_count, user_name, user_img)
   header.header
-    .header__container
+    .container
       .header__left-colm
         a.header__logo-link(href='index.html')
           img.header__icon(src='../../../public/img/icons/logo.svg' alt='Логотип сайта')
@@ -21,18 +21,14 @@ mixin header  (user_role, page, notification_count, user_name, user_img)
                 }
 
             each value, key in menu 
-              if page==key
-                li.menu__item.menu__item_active
-                  a.menu__link(href= key +'.html')= value
-              else
-                li.menu__item
-                  a.menu__link(href= key +'.html')= value
+              li.menu__item
+                a.menu__link(href= key +'.html')= value
 
       .header__right-colm
-        -var classes=['button','notification']
+        -var classes=['notification']
       
         if page=='Уведомления'
-          -var classes=['button','notification','notification_active']
+          -var classes=['notification','notification_active']
     
         a(class=classes href= '#')
           svg.notification__bell-icon
