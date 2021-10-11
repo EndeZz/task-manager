@@ -1,0 +1,8 @@
+mixin media-button(prop)
+  button.media-button(class= "media-button-"+prop)
+    svg(class="media-button-"+prop+"__img")
+      use(xlink:href="../../../public/img/icons/button-sprite.svg#"+prop)
+    //- if prop2 
+    //-   svg(class="media-button-"+prop+"__img")
+    //-     use(xlink:href="../../../public/img/icons/button-sprite.svg#"+prop)
+  

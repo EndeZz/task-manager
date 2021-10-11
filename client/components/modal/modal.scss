@@ -1,0 +1,93 @@
+@import '../../styles/colors.scss';
+
+.modal {
+  height: 100%;
+  width: 100%;
+  background: rgb(0, 0, 0, 0.85);
+  color: white;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  &__content {
+    max-width: 1280px;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 30px;
+    margin: auto;
+
+    &_video {
+      video {
+        display: block;
+      }
+    }
+
+    &_photo {
+      img {
+        display: block;
+      }
+      .modal__type-time {
+        display: none;
+      }
+    }
+
+    &_audio {
+      audio {
+        display: block;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    column-gap: 20px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  &__type {
+    display: flex;
+    align-items: center;
+
+    .type{
+      &__img {
+        fill: white;
+      }
+      &__text {
+        color: white;
+      }
+    }    
+  }
+
+  &__type-time {
+    padding-left: 5px;
+    opacity: 0.6;
+  }
+
+  &__date {
+    padding-left: 10px;
+  }
+
+  &__component {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 938px;
+    width: 100%;
+    filter: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.7));
+    border-radius: 6px;
+  }
+
+  img.modal__component,
+  video.modal__component {
+    max-height: calc(100% - 170px);
+    object-fit: contain;
+  }
+}

@@ -1,0 +1,25 @@
+include ../media-button/media-button
+
+block modal
+  template#modal 
+    .modal 
+      .modal__content
+        .modal__menu
+          .modal__back
+            +media-button("back")
+          .modal__info
+            .modal__type 
+              +types()
+              span.modal__type-time 
+            .modal__name 
+              span.modal__title 
+              time.modal__date.date-time 
+
+          video.modal__component(controls preload)
+          img.modal__component(src="" alt="")
+          audio.modal__component(controls)
+    
+
+
+        
+
