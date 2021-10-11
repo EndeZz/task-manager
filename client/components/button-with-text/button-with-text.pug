@@ -1,0 +1,22 @@
+mixin button(prop)
+  button.button(class="button-"+prop)
+    svg(class="button-"+prop+"__img")
+      use(xlink:href="../public/img/icons/button-sprite.svg#"+prop)
+    -var text= ""
+    if prop=='new-task'
+      - text= "Новая задача"
+    if prop=="confirm"
+      - text= "Утвердить и опубликовать"
+    if prop=="login"
+      - text= "Войти"
+    if prop=="home"
+      - text= "На главную"
+    if prop=="download"
+      - text= "Загрузить аватар"
+    if prop== "save"
+      - text= "Сохранить"
+    if prop== "delete"
+      - text= "Удалить профиль"
+    
+
+    span.button__text= text
