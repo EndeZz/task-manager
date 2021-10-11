@@ -1,0 +1,37 @@
+@import '../../styles/colors.scss';
+
+.type__img {
+  padding-right: 0.429em;
+
+  &_video {
+    width: 0.5em;
+    height:  0.643em;
+    fill: $blue;
+  }
+
+  &_audio {
+    width: 0.571em;
+    height:  0.714em;
+    fill: $yellow;
+  }
+
+  &_photo {
+    width: 0.786em;
+    height:  0.643em;
+    fill: $green;
+  }
+}
+
+.type__text {
+  &_video {
+    color: $blue;
+  }
+
+  &_audio {
+    color: $yellow;
+  }
+
+  &_photo {
+    color: $green;
+  }
+}
