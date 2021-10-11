@@ -5,6 +5,8 @@ import '../../components/type/type';
 import '../../components/card/card';
 import '../../components/search/search';
 import '../../components/checkbox/checkbox';
+import '../../components/loader/loader';
+import durationTime from '../../utils/time'
 
 const cards = document.getElementsByClassName('card');
 
@@ -115,3 +117,40 @@ let data = [
   }
 
 ];
+
+
+
+const content = document.querySelector('.content__list');
+const templateCard = document.getElementById('card')
+
+data.forEach((item) => {
+  const clone = templateCard.content.cloneNode(true);
+
+  clone.querySelector('.card').classList.add('card_' + item.type.name);
+  clone.querySelector('.card').id = item.id;
+  clone.querySelector('.card__img').src = item.preview;
+
+  clone.querySelector('.type__img').classList.add('type__img_' + item.type.name);
+  clone.querySelector('.type__img > use').href.baseVal += item.type.name;
+  clone.querySelector('.type__text').classList.add('type__text_' + item.type.name);
+  clone.querySelector('.type__text').innerText = types[item.type.name];
+
+  clone.querySelector('.card__title').innerText = item.name;
+
+  clone.querySelector('.card__author-name').innerText = item.author.name;
+
+  clone.querySelector('.card__date').innerText = item.dataCreated;
+
+  if (item.type.name == 'audio' || item.type.name == 'video') {
+    let element = document.createElement(item.type.name);
+    element.setAttribute('src', item.url);
+    let id = clone.querySelector('.card').id;
+
+    element.onloadedmetadata = function () {
+      let time = durationTime(Math.floor(element.duration));
+      document.getElementById(id).querySelector('.card__type-time').innerText = time
+
+    }
+  }
+  content.append(clone);
+})
