@@ -1,0 +1,21 @@
+mixin select-status
+  -
+    const status = {
+      'in-work': 'В работе',
+      feedback: 'Ожидает согласования',
+      approved: 'Выполнено'
+    }
+
+  .search__container.search__container_status
+    p.select-text.label Статус
+    div.select-box
+      input.select.select-status(name="" placeholder="Выберите статус" readonly)
+      svg.select__btn
+        use(xlink:href='../../../public/img/icons/header-sprite.svg#menu')
+      div.select__option
+        ul.select__list
+          li.select__item Любой
+          each value, key in status
+            li.select__item.select-status__item(class="select-status__item_"+key)= value
+
+
