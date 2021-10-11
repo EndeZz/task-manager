@@ -1,0 +1,33 @@
+include ../../components/header/header
+include ../../components/button-with-text/button-with-text
+include ../../components/media-button/media-button
+
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon" href="../../../public/img/icons/logo.svg" type="image/svg")
+    title Выпускная работа
+  body 
+    +header('admin', 3, 'Семён Щеглов', '../../../public/img/users/1.jpg')
+    main.main
+      .container
+        .nav
+          +media-button("back")
+          h1 Профиль
+        .profile 
+          .profile__image-box 
+            .profile__container     
+              img.profile__img(src="../../../public/img/users/1.jpg", alt="")
+            +button('download')
+          .profile__info
+            p.label.profile__tag Имя, фамилия
+            input.profile__input.profile__input_name(placeholder="Введите имя и фамилию")
+            p.label.profile__tag E-mail
+            input.profile__input.profile__input_email(placeholder="Введите e-mail")
+            .profile__button-box
+              +button('save')
+              +button('delete')
