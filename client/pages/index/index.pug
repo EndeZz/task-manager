@@ -1,6 +1,7 @@
 include ../../components/header/header
 include ../../components/search/search
 
+include ../../components/card/card
 doctype html
 html(lang="ru")
   head
@@ -17,4 +18,6 @@ html(lang="ru")
           +input('search')
           +input('calendar')
           include ../../components/checkbox/checkbox
-
+        .content
+          ol.content__list 
+            +template_card
