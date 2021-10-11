@@ -1,0 +1,12 @@
+include ../type/type
+block checkbox
+  -var type = ['video', 'photo', 'audio']
+
+  .search__container.search__container_type
+    p.search__text.label Тип контента
+    .search__box.search__box_type
+      each key in type
+        .filter
+          input(type='checkbox' class='filter__input' id='filter-'+key name="type" value= key)
+          label(for='filter-'+key class='filter__button filter__button_'+key)
+            +types(key)
