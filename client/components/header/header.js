@@ -27,3 +27,10 @@ if (page.hasOwnProperty(location)) {
   page[location][0].classList.add(page[location][1] + '_active');
 }
 
+document.getElementsByClassName("user-menu__link")[0].onclick = () => {
+  window.location.href = "profile.html";
+}
+
+document.getElementsByClassName("user-menu__link")[1].onclick = () => {
+  window.location.href = "auth.html";
+}
