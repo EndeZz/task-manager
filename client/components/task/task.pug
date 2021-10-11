@@ -1,0 +1,21 @@
+include ../button-task/button-task
+include ../type/type
+          
+block task
+  template#task
+    li.content__item.task
+      .task__box.task__box_first
+        +types()
+        a.task__link(href="task.html?id=")
+          p.task__title.content__title
+      .task__box.task__box_second
+        span.task__author
+        .task__date
+          svg.task__date-img
+            use(xlink:href='../../../public/img/icons/input-sprite.svg#calendar')
+          time.task__date-text.date-time
+      .task__box.task__box_three
+        span.task__status
+        .task__button
+          +button('small', 'edit')
+          +button('small', 'delete')

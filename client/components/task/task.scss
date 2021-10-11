@@ -1,0 +1,110 @@
+@import '../../styles/colors.scss';
+
+.task {
+  display: flex;
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #D8E3EC;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+  padding: 1.286em 1.429em;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+
+    &_first {
+      flex-basis: 543px;
+      flex-shrink: 10;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &_second {
+      flex-basis: 281px;
+      justify-content: space-between;
+      margin: 0 40px 0 33px;
+    }
+
+    &_three {
+      flex-basis: 284px;
+      justify-content: space-between;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  @media (max-width: 762px) {
+    flex-direction: column;
+    row-gap: 0.714em;
+  
+    &__box {
+      &_first,
+      &_second,
+      &_three {
+        width: 100%;
+        flex-basis:auto;
+      }
+
+      &_second {
+        margin: 0;
+      }
+    }
+
+    &__title {
+      max-width: calc(100vw - 54px);
+    }
+  }
+
+
+  &__title {
+    white-space: nowrap;
+    max-width: 469px;
+    margin-left: 20px;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__author {
+  }
+
+  &__date {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  &__date-img {
+    width: 1.071em; //15px;
+    height: 1em; //14px;
+    fill: $gray-blue-icon;
+    margin-right: 0.714em;
+  }
+
+  &__status {
+    font-weight: 500;
+    &_inWork {
+      color: $in-work;
+    }
+    &_feedback {
+      color: $feedback;
+    }
+    &_approved{
+      color:$approved;
+    }
+  }
+
+  &__button {
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 1.071em;
+  }
+}
+
