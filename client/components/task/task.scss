@@ -3,16 +3,16 @@
 .task {
   display: flex;
   width: 100%;
-  background: #FFFFFF;
+  background: white;
   border: 1px solid #D8E3EC;
   box-sizing: border-box;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
   border-radius: 4px;
   padding: 1.286em 1.429em;
   overflow: hidden;
 
   &:hover {
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   }
 
   &__box {
@@ -50,7 +50,7 @@
       &_second,
       &_three {
         width: 100%;
-        flex-basis:auto;
+        flex-basis: auto;
       }
 
       &_second {
@@ -63,7 +63,6 @@
     }
   }
 
-
   &__title {
     white-space: nowrap;
     max-width: 469px;
@@ -72,8 +71,8 @@
     text-overflow: ellipsis;
   }
 
-  &__author {
-  }
+  // &__author {
+  // }
 
   &__date {
     display: flex;
@@ -90,14 +89,17 @@
 
   &__status {
     font-weight: 500;
+
     &_inWork {
       color: $in-work;
     }
+
     &_feedback {
       color: $feedback;
     }
-    &_approved{
-      color:$approved;
+
+    &_approved {
+      color: $approved;
     }
   }
 
@@ -107,4 +109,3 @@
     column-gap: 1.071em;
   }
 }
-

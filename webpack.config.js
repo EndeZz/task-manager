@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
 // const ESLintPlugin = require('eslint-webpack-plugin');
-// const StylelintPlugin = require('stylelint-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const PATHS = {
   client: path.join(__dirname, 'client'),
@@ -95,8 +95,8 @@ module.exports = {
     // new ESLintPlugin({
     //   extensions: ['ts', 'tsx', 'js', 'jsx']
     // }),
-    // new StylelintPlugin({
-    //   extensions: ['css', 'scss', 'sass']
-    // })
+    new StylelintPlugin({
+      extensions: ['css', 'scss', 'sass']
+    })
   ]
 }

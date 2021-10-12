@@ -50,7 +50,7 @@
 }
 
 .notification {
-  border-radius: 0.4rem; 
+  border-radius: 0.4rem;
   box-sizing: border-box;
   cursor: pointer;
   transition: 0.5s linear;
@@ -159,6 +159,14 @@
     border: 1px solid white;
   }
 
+  &__open-menu {
+    width: 0.5em;//7px
+    height: 0.357em; //5px
+    fill: $blue;
+    padding-left: 0.571em;//8px;
+    transition: transform 0.3s linear;
+  }
+
   &__button {
     background: none;
     border: none;
@@ -176,7 +184,6 @@
       .user__open-menu {
         transform: scaleY(-1);
       }
-
 
       & + .user-menu {
         display: block;
@@ -198,13 +205,5 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-
-  &__open-menu {
-    width: 0.500em;//7px
-    height: 0.357em; //5px
-    fill: $blue;
-    padding-left: 0.571em;//8px; 
-    transition: transform 0.3s linear;
   }
 }

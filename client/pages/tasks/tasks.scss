@@ -8,23 +8,22 @@
 
   @media (max-width: 762px) {
     grid-template-columns: auto;
-    grid-template-areas: 
-                          "a a"
-                          "b c"
-                          "d d";
+    grid-template-areas: "a a" "b c" "d d";
     grid-row-gap: 1.429em;
 
     &__container {
-      &_search{
+      &_search {
         grid-area: a;
       }
+
       &_calendar {
         grid-area: b;
       }
+
       &_status {
         grid-area: c;
-        
       }
+
       &_type {
         grid-area: d;
       }
@@ -56,4 +55,3 @@
   justify-content: flex-end;
   margin-top: 30px;
 }
-

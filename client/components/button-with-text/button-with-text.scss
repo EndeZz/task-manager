@@ -18,7 +18,7 @@
   }
 
   &__img {
-    padding-right:  0.714em
+    padding-right: 0.714em;
   }
 
   .button-new-task__img {
@@ -32,13 +32,11 @@
     width: 1.8rem; //1.286em;
     height: 1.8rem; //1.286em;
   }
-
 }
 
 .button-confirm {
   display: flex;
   align-items: center;
-  
   background: $green;
 
   &:hover {
@@ -52,16 +50,14 @@
   &__img {
     width: 1.286em;
     height: 1.286em;
-    padding-right:  0.714em
+    padding-right: 0.714em;
   }
 }
 
 .button-download {
   display: flex;
   align-items: center;
-
   padding: 0.9rem 1.2rem;
-  
   background: white;
 
   .button__text {
@@ -79,16 +75,14 @@
   &__img {
     width: 1.4rem; //1.286em;
     height: 1.4rem; //1.286em;
-    padding-right:  1rem; //0.714em
+    padding-right: 1rem; //0.714em
   }
 }
 
 .button-delete {
   display: flex;
   align-items: center;
-
   padding: 0.9rem 1.2rem;
-  
   background: white;
 
   .button__text {
@@ -106,7 +100,7 @@
   &__img {
     width: 1.3rem; //1.286em;
     height: 1.6rem; //1.286em;
-    padding-right:  1.1rem; //0.714em
+    padding-right: 1.1rem; //0.714em
     fill: $red;
     stroke: $red;
   }

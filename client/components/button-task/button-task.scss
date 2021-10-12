@@ -10,8 +10,17 @@
     background: $blue-hover;
   }
 
-  &:active{
+  &:active {
     background: $blue-active;
+  }
+
+  &_big {
+    background: $blue;
+    padding: 0.688em 0.625em 0.625em 0.688em;
+
+    .button-task__img {
+      stroke: white;
+    }
   }
 
   &_small {
@@ -42,15 +51,6 @@
         stroke: $blue;
         fill: $blue;
       }
-    }
-  }
-
-  &_big {
-    background: $blue;
-    padding: 0.688em 0.625em 0.625em 0.688em;
-
-    .button-task__img {
-      stroke: white;
     }
   }
 }
