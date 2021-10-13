@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin');
-// const ESLintPlugin = require('eslint-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const PATHS = {
@@ -92,9 +92,9 @@ module.exports = {
     //     { from: path.resolve(__dirname, './src/file'), to: path.resolve(__dirname, './dist/file') }
     //   ],
     // }),
-    // new ESLintPlugin({
-    //   extensions: ['ts', 'tsx', 'js', 'jsx']
-    // }),
+    new ESLintPlugin({
+      extensions: ['ts', 'tsx', 'js', 'jsx']
+    }),
     new StylelintPlugin({
       extensions: ['css', 'scss', 'sass']
     })

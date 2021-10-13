@@ -1,0 +1,28 @@
+{
+    "extends": "airbnb-base",
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "rules": {
+        "no-console": "off",
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": true
+            }
+        ],
+        "object-curly-newline": [
+            "warn",
+            {
+                "multiline": true
+            }
+        ],
+        "func-names": [
+            "warn",
+            "as-needed"
+        ],
+        "no-param-reassign": 0,
+        "linebreak-style": 0
+    }
+}
