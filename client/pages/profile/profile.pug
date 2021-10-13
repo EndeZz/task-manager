@@ -22,12 +22,12 @@ html(lang="ru")
           .profile__image-box 
             .profile__container     
               img.profile__img(src="../../../public/img/users/1.jpg", alt="")
-            +button('download')
+            +button-with-text('download')
           .profile__info
             p.label.profile__tag Имя, фамилия
             input.profile__input.profile__input_name(placeholder="Введите имя и фамилию")
             p.label.profile__tag E-mail
             input.profile__input.profile__input_email(placeholder="Введите e-mail")
             .profile__button-box
-              +button('save')
-              +button('delete')
+              +button-with-text('save')
+              +button-with-text('delete')

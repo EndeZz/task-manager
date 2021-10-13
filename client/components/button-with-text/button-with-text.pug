@@ -1,4 +1,4 @@
-mixin button(prop)
+mixin button-with-text(prop)
   button.button(class="button-"+prop)
     svg(class="button-"+prop+"__img")
       use(xlink:href="../public/img/icons/button-sprite.svg#"+prop)
@@ -13,6 +13,8 @@ mixin button(prop)
       - text= "На главную"
     if prop=="download"
       - text= "Загрузить аватар"
+    if prop=="download-file"
+      - text= "Скачать"
     if prop== "save"
       - text= "Сохранить"
     if prop== "delete"
