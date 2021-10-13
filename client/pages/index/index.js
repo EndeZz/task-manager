@@ -156,8 +156,7 @@ data.forEach((item) => {
 Array.from(cards).forEach((card) => {
   card.addEventListener('click', () => {
     const { id: ids } = card;
-    const obj = data.filter((item) => item.id === ids);
-
+    const obj = data.filter((item) => item.id === +ids);
     const container = document.querySelector('.main');
     const template = document.getElementById('modal');
     const clone = template.content.cloneNode(true);

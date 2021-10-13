@@ -21,9 +21,9 @@ export default (data) => {
 
   modal.style.display = 'block';
 
-  modal.querySelector('.modal__content').classList.add(`modal__content_ ${data[0].type.name}`);
+  modal.querySelector('.modal__content').classList.add(`modal__content_${data[0].type.name}`);
 
-  modal.querySelector('.type__img').classList.add(`type__img_ ${data[0].type.name}`);
+  modal.querySelector('.type__img').classList.add(`type__img_${data[0].type.name}`);
   modal.querySelector('.type__img > use').href.baseVal += data[0].type.name;
   modal.querySelector('.type__text').innerText = types[data[0].type.name];
 
