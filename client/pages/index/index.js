@@ -9,6 +9,7 @@ import '../../components/loader/loader';
 import durationTime from '../../utils/time';
 import modal from '../../components/modal/modal';
 import '../../components/media-button/media-button';
+import '../../components/user-avatar/user-avatar';
 
 const cards = document.getElementsByClassName('card');
 

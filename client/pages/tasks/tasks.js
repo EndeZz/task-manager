@@ -8,6 +8,7 @@ import '../../components/task/task';
 import '../../components/type/type';
 import '../../components/button-task/button-task';
 import '../../components/button-with-text/button-with-text';
+import '../../components/user-avatar/user-avatar';
 
 const taskList = [
   {

@@ -1,5 +1,11 @@
 @import '../../styles/colors.scss';
 
+.user-avatar {
+  &__container {
+    border: 1px solid white;
+  }
+}
+
 .header {
   background: white;
   border-bottom: 1px solid $border;
@@ -27,14 +33,14 @@
   list-style-type: none;
 
   &__item {
+    background: white;
     padding: 9px 12px;
     border-radius: 4px;
-    background: none;
-    color: black;
+    color: $txt;
     cursor: pointer;
 
     &:hover:not(&_active) {
-      background: none;
+      background: white;
       color: $blue;
     }
   
@@ -129,7 +135,6 @@
   }
 
   &__link {
-    background: none;
     padding: 0.929em 1em 0.786em 0;
     box-sizing: border-box;
     width: 6.286em;
@@ -150,15 +155,6 @@
     cursor: default;
   }
 
-  &__container-img {
-    width: 2.857em; //40x40 px
-    height: 2.857em;
-    overflow: hidden;
-    position: relative;
-    border-radius: 50%;
-    border: 1px solid white;
-  }
-
   &__open-menu {
     width: 0.5em;//7px
     height: 0.357em; //5px
@@ -177,7 +173,7 @@
     height: 3em; //42px
 
     &_active {
-      .user__container-img {
+      .user-avatar__container {
         border: 1px solid $blue;
       }
 
@@ -191,19 +187,9 @@
     }
 
     &:hover {
-      .user__container-img {
+      .user-avatar__container {
         border: 1px solid $blue;
       }
     }
-  }
-
-  &__img {
-    width: 2.857em; //40x40
-    height: 2.857em;
-    object-fit: cover;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 }

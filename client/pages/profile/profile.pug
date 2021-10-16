@@ -1,6 +1,7 @@
 include ../../components/header/header
 include ../../components/button-with-text/button-with-text
 include ../../components/media-button/media-button
+include ../../components/user-avatar/user-avatar
 
 
 doctype html
@@ -20,8 +21,7 @@ html(lang="ru")
           h1 Профиль
         .profile 
           .profile__image-box 
-            .profile__container     
-              img.profile__img(src="../../../public/img/users/1.jpg", alt="")
+            +avatar('big')
             +button-with-text('download')
           .profile__info
             p.label.profile__tag Имя, фамилия

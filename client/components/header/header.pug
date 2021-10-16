@@ -1,10 +1,12 @@
+include ../user-avatar/user-avatar
+
 mixin header  (user_role, notification_count, user_name, user_img)
   header.header
     .container
       .header__left-colm
         a.header__logo-link(href='index.html')
           img.header__icon(src='../../../public/img/icons/logo.svg' alt='Логотип сайта')
-        nav.header__nav
+        nav.header__nav     
           ul.menu
             if user_role == 'contentMaker'
               -
@@ -45,8 +47,7 @@ mixin header  (user_role, notification_count, user_name, user_img)
         .user
           span.user__name= user_name
           button.user__button
-            .user__container-img
-              img.user__img(src= user_img  alt='Фотография пользователя')
+            +avatar('small')
             svg.user__open-menu
               use(xlink:href='../../../public/img/icons/header-sprite.svg#menu')
           .user-menu
