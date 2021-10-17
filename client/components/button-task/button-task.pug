@@ -1,4 +1,4 @@
 mixin button-task(size, img)
   button.button.button-task(class="button-task_"+size class="button-task_"+img)
-    svg.button-task__img
+    svg.button-task__img(class="button-task__img_"+img)
       use(xlink:href="../../../public/img/icons/button-sprite.svg#"+img)

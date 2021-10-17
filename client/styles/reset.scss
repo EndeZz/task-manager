@@ -42,8 +42,9 @@ h3 {
 }
 
 .header,
-.main {
-  font: 400 1.4em 'Roboto', sans-serif;
+.main,
+textarea {
+  font: 400 1.4rem 'Roboto', sans-serif;
 }
 
 .label {
@@ -106,7 +107,7 @@ input {
   }
 
   &:focus {
-    border: 01px solid $blue;
+    border: 1px solid $blue;
   }
 
   &:invalid {

@@ -24,16 +24,16 @@
     &_big {
       &,
       .user-avatar__img {
-        width: 12rem;
-        height: 12rem;
+        width: calc(12rem - 2px);
+        height: calc(12rem - 2px);
       }
     }
 
     &_small {
       &,
       .user-avatar__img {
-        width: 4rem;
-        height: 4rem;
+        width: calc(4rem - 2px);
+        height: calc(4rem - 2px);
       }
     }
   }
