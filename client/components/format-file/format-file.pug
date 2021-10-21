@@ -1,0 +1,13 @@
+mixin format(type)
+  - var format = []
+  if (type=='video')
+    -format= ['M4A', 'AVI', 'MP4']
+  if (type=='photo')
+    -format= ['PNG', 'JPG']
+  if (type=='audio')
+    -format= ['MP3',  'FLAC']
+  each value in format
+    .format__box 
+      p.format__type= value
+  
+  

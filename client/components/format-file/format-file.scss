@@ -1,0 +1,17 @@
+@import '../../styles/colors.scss';
+
+.format {
+  &__box {
+    background: $gray-blue-icon;
+    border-radius: 2.30769px;
+    padding: 0.1rem 0.5rem;
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+
+  &__type {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: white;
+  }
+}

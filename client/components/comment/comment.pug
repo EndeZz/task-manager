@@ -1,0 +1,13 @@
+include ../user-avatar/user-avatar
+
+block comment 
+  template#temptate-comment 
+    .comment 
+      .comment__avatar 
+        +avatar('small')
+      .comment__main-box 
+        .comment__info
+          p.content__title.comment__author
+          p.date-time.comment__date
+        p.comment__text 
+        
