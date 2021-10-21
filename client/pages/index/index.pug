@@ -1,5 +1,6 @@
 include ../../components/header/header
 include ../../components/search/search
+include ../../components/checkbox/checkbox
 
 include ../../components/card/card
 doctype html
@@ -17,7 +18,7 @@ html(lang="ru")
         .search
           +input('search')
           +input('calendar')
-          include ../../components/checkbox/checkbox
+          +checkbox-type
         .content
           ol.content__list 
             +template_card

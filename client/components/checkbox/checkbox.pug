@@ -1,12 +1,35 @@
 include ../type/type
-block checkbox
+mixin checkbox-type
   -var type = ['video', 'photo', 'audio']
 
   .search__container.search__container_type
     p.search__text.label Тип контента
-    .search__box.search__box_type
+    .search__box.search__box-filter
       each key in type
         .filter
           input(type='checkbox' class='filter__input' id='filter-'+key name="type" value= key)
           label(for='filter-'+key class='filter__button filter__button_'+key)
             +types(key)
+
+mixin checkbox-role
+  -
+    var role = {
+      all: 'Все', 
+      'content-maker': 'Контент-мейкер', 
+      manager: 'Менеджер', 
+      admin: 'Администратор'
+    }
+
+  .search__container 
+    p.search__text.label Роль
+    .search__box.search__box-filter.search__box-filter-role
+      each value, key in role 
+        .filter
+          if (key=='all')
+            input(type='checkbox' class='filter__input' id='filter-role_all' name="role" checked)
+          else
+            input(type='checkbox' class='filter__input filter-role__checkbox' id='filter-role_'+key name="role")
+          
+          label(for='filter-role_'+key class='filter__button filter-role__button')= value
+
+  

@@ -2,6 +2,7 @@ include ../../components/header/header
 include ../../components/search/search
 include ../../components/select/select
 include ../../components/button-with-text/button-with-text
+include ../../components/checkbox/checkbox
 
 
 doctype html
@@ -13,14 +14,14 @@ html(lang="ru")
     link(rel="shortcut icon" href="../../../public/img/icons/logo.svg" type="image/svg")
     title Выпускная работа
   body 
-    +header('admin', 3, 'Семён Щеглов', '../../../public/img/users/1.jpg')
+    +header('admin', 3)
     main.main
       .container
         .search
           +input('search')
           +input('calendar')
           +select-status
-          include ../../components/checkbox/checkbox
+          +checkbox-type
         .control
           +button-with-text('new-task')
         section.content
