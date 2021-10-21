@@ -1,25 +1,31 @@
 include ../user-avatar/user-avatar
 
 mixin header  (user_role, notification_count, user_name, user_img)
+  script.
+    if (!Object.prototype.hasOwnProperty.call(localStorage, 'id')) {
+    window.location.href = 'auth.html';
+    }
   header.header
     .container
       .header__left-colm
         a.header__logo-link(href='index.html')
           img.header__icon(src='../../../public/img/icons/logo.svg' alt='Логотип сайта')
-        nav.header__nav     
+        nav.header__nav
+          .menu-burger 
+            span.menu-burger__button        
           ul.menu
-            if user_role == 'contentMaker'
-              -
-                var menu = {
-                  index: 'Главная',
-                  tasks: 'Задача'
-                }
-            else 
+            if user_role == 'admin'
               -
                 var menu = {
                   index: 'Главная',
                   tasks: 'Задача',
                   users: 'Пользователи'
+                }
+            else 
+              -
+                var menu = {
+                  index: 'Главная',
+                  tasks: 'Задача'
                 }
 
             each value, key in menu 
@@ -27,12 +33,8 @@ mixin header  (user_role, notification_count, user_name, user_img)
                 a.menu__link(href= key +'.html')= value
 
       .header__right-colm
-        -var classes=['notification']
-      
-        if page=='Уведомления'
-          -var classes=['notification','notification_active']
     
-        a(class=classes href= '#')
+        a(class='notification' href= 'notifications.html')
           svg.notification__bell-icon
             use(xlink:href='../../../public/img/icons/header-sprite.svg#bell')
           
@@ -45,7 +47,7 @@ mixin header  (user_role, notification_count, user_name, user_img)
             span.notification__new-message= notification_count
         
         .user
-          span.user__name= user_name
+          span.user__name
           button.user__button
             +avatar('small')
             svg.user__open-menu
