@@ -1,5 +1,5 @@
 include ../../components/header/header
-include ../../components/search/search
+include ../../components/input/input
 include ../../components/select/select
 include ../../components/button-with-text/button-with-text
 include ../../components/checkbox/checkbox
@@ -18,9 +18,9 @@ html(lang="ru")
     main.main
       .container
         .search
-          +input('search')
-          +input('calendar')
+          +input('search', 'Поиск', 'Введите название задачи или имя ответственного')
           +select-status
+          +input('calendar', 'Срок выполнения', 'Укажите дату')
           +checkbox-type
         .control
           +button-with-text('new-task')

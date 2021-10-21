@@ -1,0 +1,67 @@
+@import '../../styles/reset.scss';
+
+.nav {
+  padding-top: 4rem;
+  display: flex;
+  width: 100%;
+  max-width: 80.6rem; //57.571em;
+  margin: auto;
+
+  .media-button-back__img {
+    stroke: $blue;
+    margin-right: 2rem;
+  }
+}
+
+.profile {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 80.6rem; //57.571em;
+  padding: 5rem 5rem 5rem 4.2rem;
+  background: white;
+  border: 1px solid $outline;
+  border-radius: 0.4rem;
+  margin: auto;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__image-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 16.6rem;
+  }
+
+  &__info {
+    width: 100%;
+    max-width: 52.9rem;
+  }
+
+  &__tag {
+    margin-bottom: 0.9rem;
+  }
+
+  &__input {
+    margin-bottom: 2rem;
+    overflow: hidden;
+  }
+
+  &__button-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (max-width: 762px) {
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 2rem;
+
+    .profile__image-box {
+      max-width: 100%;
+      align-items: center;
+    }
+  }
+}

@@ -3,7 +3,7 @@ import './index.scss';
 import '../../components/header/header';
 import '../../components/type/type';
 import '../../components/card/card';
-import '../../components/search/search';
+import '../../components/input/input';
 import '../../components/checkbox/checkbox';
 import '../../components/loader/loader';
 import durationTime from '../../utils/time';

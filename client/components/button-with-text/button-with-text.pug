@@ -1,24 +1,53 @@
 mixin button-with-text(prop)
-  button.button(class="button-"+prop)
-    svg(class="button-"+prop+"__img")
-      use(xlink:href="../public/img/icons/button-sprite.svg#"+prop)
-    -var text= ""
-    if prop=='new-task'
-      - text= "Новая задача"
-    if prop=="confirm"
-      - text= "Утвердить и опубликовать"
-    if prop=="login"
-      - text= "Войти"
-    if prop=="home"
-      - text= "На главную"
-    if prop=="download"
-      - text= "Загрузить аватар"
-    if prop=="download-file"
-      - text= "Скачать"
-    if prop== "save"
-      - text= "Сохранить"
-    if prop== "delete"
-      - text= "Удалить профиль"
-    
+  -var text= ""
+  -var img= ""
 
-    span.button__text= text
+  if prop=='new-task'
+    - text= "Новая задача"
+  if prop=="confirm"
+    - text= "Утвердить и опубликовать"
+  if prop=="login"
+    - text= "Войти"
+  if prop=="home"
+    - text= "На главную"  
+  if prop=="download-file"
+    - text= "Скачать"
+    - img= "download"
+  if prop== "save"
+    - text= "Сохранить"
+  if prop=="save-task"
+    -text="Создать задачу"
+    -img= "save"
+  if prop== "delete"
+    - text= "Удалить профиль"
+  if prop=="delete-file"
+    - text= "Удалить"
+    - img= "delete"
+  if prop== "new-user"
+    - text= "Добавить пользователя"
+    - img="new-task"
+  if prop=="attach"
+    - text= "Прикрепить файл"
+  if prop == "download"
+    - text= "Загрузить аватар"
+
+  if prop == "download" || prop=="attach"
+    input(id= prop type="file", name="avatar", class="button-"+prop+"__input")
+    label.button(for= prop class="button-"+prop) 
+      +svg(img, prop, text)
+
+  else
+    button.button(class="button-"+prop)
+      +svg(img, prop, text)
+
+mixin svg(img, prop, text)
+  svg(class="button-"+prop+"__img")
+    if img==""
+      use(xlink:href="../public/img/icons/button-sprite.svg#"+prop)
+    else 
+      use(xlink:href="../public/img/icons/button-sprite.svg#"+img)
+  span.button__text= text
+
+
+
+  

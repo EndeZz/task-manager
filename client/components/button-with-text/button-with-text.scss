@@ -1,9 +1,36 @@
 @import '../../styles/colors.scss';
 
+.button-attach {
+  display: inline-flex;
+  align-items: center;
+  background: $ltblue;
+
+  &__input {
+    display: none;
+  }
+
+  .button__text {
+    color: $blue;
+  }
+
+  &__img {
+    width: 1.8rem;
+    height: 1.8rem;
+    padding-right: 0.8rem;
+  }
+
+  &:hover,
+  &:active {
+    background: $mdblue;
+  }
+}
+
 .button-new-task,
+.button-new-user,
 .button-login,
 .button-home,
-.button-save {
+.button-save,
+.button-save-task {
   display: flex;
   align-items: center;
   
@@ -21,14 +48,16 @@
     padding-right: 0.714em;
   }
 
-  .button-new-task__img {
+  .button-new-task__img,
+  .button-new-user__img {
     width: 1em;
     height: 1em;
   }
 
   .button-login__img,
   .button-home__img,
-  .button-save__img {
+  .button-save__img,
+  .button-save-task__img {
     width: 1.8rem; //1.286em;
     height: 1.8rem; //1.286em;
   }
@@ -61,6 +90,10 @@
   padding: 0.9rem 1.2rem;
   background: white;
 
+  &__input {
+    display: none;
+  }
+
   .button__text {
     color: $blue;
   }
@@ -80,7 +113,8 @@
   }
 }
 
-.button-delete {
+.button-delete,
+.button-delete-file {
   display: flex;
   align-items: center;
   padding: 0.9rem 1.2rem;

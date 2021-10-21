@@ -1,0 +1,23 @@
+mixin input(item, text, placeholder, names= item, types= 'text')
+  -var classes= ''
+  if types=='password'
+    - classes = 'password'
+  .search__container(class="search__container_"+item)
+    p.search__text.label= text
+    .search__box
+      input(type= types class="search__input "+classes placeholder= placeholder name= names)
+      if (types=='password')
+        button.password-button
+          svg(class="search__img search__img_" + item+'-no-visible')
+            use(xlink:href="../../../public/img/icons/input-sprite.svg#password-no-visible")
+          svg(class="search__img search__img_" + item+'-visible')
+            use(xlink:href="../../../public/img/icons/input-sprite.svg#password-visible")
+
+      else
+        svg(class="search__img search__img_" + item)
+          use(xlink:href="../../../public/img/icons/input-sprite.svg#"+item)
+        if item=="search"
+          svg(class="search__img search__img_cross")
+            use(xlink:href="../../../public/img/icons/input-sprite.svg#cross")
+
+

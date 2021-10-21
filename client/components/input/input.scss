@@ -1,0 +1,100 @@
+@import '../../styles/colors.scss';
+
+.search {
+  &__text {
+    margin-bottom: 0.75em;
+  }
+
+  &__box {
+    position: relative;
+  }
+
+  &__img {
+    position: absolute;
+    top: 0.929em;
+    cursor: pointer;
+    fill: $blue;
+
+    &_search {
+      width: 1.2rem; //12px;
+      height: 1.3rem; //13px;
+      stroke: $blue;
+      right: 1.5rem;
+    }
+
+    &_cross {
+      width: 1rem; //10px;
+      height: 1rem; ///10px;
+      top: 1.5rem; //15px;
+      right: 1.5rem;
+      fill: $gray-blue-icon;
+      display: none;
+
+      &:hover {
+        fill: $blue;
+      }
+    }
+    
+    &_calendar {
+      width: 1.071em; //15px;
+      height: 1em; //14px;
+      fill: $blue;
+      right: 1.5rem;
+    }
+  }
+
+  &__input {
+    padding: 1.2rem 3rem 1.2rem 1.5rem;
+
+    &.password {
+      margin-bottom: 3rem;
+      
+      & ~ .password-button {
+        border: none;
+        background: none;
+        position: absolute;
+        right: 1.5rem;
+        top: 1.3rem;
+
+        .search__img {
+          position: static;
+        }
+
+        .search__img_password-no-visible {
+          width: 2.2rem;
+          height: 1.5rem;
+        }
+
+        .search__img_password-visible {
+          width: 2.2rem;
+          height: 1.3rem;
+          display: none;
+        }
+
+        &_active {
+          top: 1.5rem;
+
+          .search__img_password-no-visible {
+            display: none;
+          }
+  
+          .search__img_password-visible {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &_full {
+      padding-left: 3rem;
+
+      & ~ .search__img_search {
+        left: 1.5rem;
+      }
+      
+      & ~ .search__img_cross {
+        display: block;
+      }
+    }
+  }
+}

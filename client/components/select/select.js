@@ -12,9 +12,12 @@ Array.from(selectBox).forEach((select) => {
 
   Array.from(items).forEach((item) => {
     item.addEventListener('click', () => {
-      input.style.color = getComputedStyle(item).color;
-      input.style.fontWeight = +getComputedStyle(item).fontWeight;
+      if (input.classList.contains('select-status')) {
+        input.style.color = getComputedStyle(item).color;
+        input.style.fontWeight = +getComputedStyle(item).fontWeight;
+      }
       input.value = item.innerText;
+      input.dataset.value = item.dataset.value;
       select.classList.toggle('select-box_active');
     });
   });

@@ -1,15 +1,15 @@
 @import '../../styles/reset.scss';
 
 .search {
-  padding-top: 2.857em;//40px;
+  padding-top: 4rem;//40px;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 2fr;
-  grid-column-gap: 1.429em;//20px;
+  grid-column-gap: 2rem;//20px;
 
   @media (max-width: 762px) {
     grid-template-columns: auto;
     grid-template-areas: "a a" "b c" "d d";
-    grid-row-gap: 1.429em;
+    grid-row-gap: 2rem;
 
     &__container {
       &_search {
@@ -29,29 +29,24 @@
       }
     }
   }
-
-  &__box_type {
-    display: inline-flex;
-    column-gap: 0.714em;//10px;
-  }
 }
 
 .content {
-  padding-top: 20px;
+  padding-top: 2rem;
   display: grid;
   grid-template-columns: 1fr;
-  grid-row-gap: 15px;
+  grid-row-gap: 1.5rem;
 
   &__list {
     list-style: none;
     display: flex;
     flex-direction: column;
-    row-gap: 15px;
+    row-gap: 1.5rem;
   }
 }
 
 .control {
   display: flex;
   justify-content: flex-end;
-  margin-top: 30px;
+  margin-top: 3rem;
 }

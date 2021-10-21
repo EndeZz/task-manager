@@ -1,5 +1,5 @@
 include ../../components/header/header
-include ../../components/search/search
+include ../../components/input/input
 include ../../components/checkbox/checkbox
 
 include ../../components/card/card
@@ -16,8 +16,8 @@ html(lang="ru")
     main.main
       .container
         .search
-          +input('search')
-          +input('calendar')
+          +input('search', 'Поиск', 'Введите название имя исполнителя')
+          +input('calendar', 'Дата публикации', 'Укажите дату публикации')
           +checkbox-type
         .content
           ol.content__list 

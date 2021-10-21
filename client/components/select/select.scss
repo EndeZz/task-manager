@@ -15,8 +15,8 @@
     cursor: pointer;
   
     &__btn {
-      width: 0.5em;//7px
-      height: 0.357em;//5px
+      width: 0.7rem;//7px
+      height: 0.5rem;//5px
       fill: $blue;
       position: absolute;
       top: 18px;
@@ -46,17 +46,19 @@
       display: none;
       position: absolute;
       top: 4.571em;
+      max-height: 27.4rem;
+      overflow-y: auto;
       width: 100%;
       z-index: 1;
       border: 1px solid $outline;
       box-sizing: border-box;
-      border-radius: 0.286em;//4px
+      border-radius: 0.4;//4px
       filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.15));
     }
 
     &__list {
       list-style: none;
-      border-radius: 0.286em;
+      border-radius: 0.4rem;
     }
 
     &__item {
@@ -80,27 +82,35 @@
         opacity: 0.6;
       }
     }
+  }
 
-    &_active {
-      .select {
-        opacity: 0.6;
-      }
-  
-      .select__option {
+  &_active {
+    .select {
+      opacity: 0.6;
+
+      &__option {
         display: block;
       }
-  
-      .select__btn {
+
+      &__btn {
         transform: scaleY(-1);
       }
     }
-
-    &:hover {
-      border: 1px solid $gray-blue-icon;
-    }
-
-    &:focus {
-      border: 1px solid $blue;
-    }
   }
+
+  .select:hover {
+    border: 1px solid $gray-blue-icon;
+  }
+  
+  .select:focus {
+    border: 1px solid $blue;
+  }
+}
+
+.search__container_role {
+  margin-bottom: 2rem;
+}
+
+.search__container_type {
+  max-width: 38.3rem;
 }
