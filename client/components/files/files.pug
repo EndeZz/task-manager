@@ -1,0 +1,23 @@
+include ../button-with-text/button-with-text
+
+mixin file-list(type, name, size)
+  .file 
+    .file__info 
+      svg(class="file__type")
+        use(xlink:href="../public/img/icons/doctype-sprite.svg#"+type)
+      span.file__name= name
+      span.file__size= size
+    .file__button 
+      +button-with-text("download-file")
+
+mixin file-select(type, name, size, id)
+  .file-select(id= id)
+    .file__info 
+      svg(class="file__type")
+        use(xlink:href="../public/img/icons/doctype-sprite.svg#"+type)
+      span.file__name= name
+      span.file__size= size
+    .file__button 
+      +button-with-text("delete-file")
+
+

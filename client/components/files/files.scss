@@ -1,0 +1,31 @@
+@import '../../styles/colors.scss';
+
+.file {
+  justify-content: space-between;
+  border-bottom: 1px solid $outline;
+}
+
+.file,
+.file-select {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  column-gap: 1.8rem;
+  
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+
+  &__type {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-right: 1.2rem;
+  }
+
+  &__size {
+    opacity: 0.6;
+    margin-left: 1.2rem;
+  }
+}
