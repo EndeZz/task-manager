@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "Семён Щеглов",
+    "email": "user1@example.com",
+    "avatar": "../../../public/img/users/1.jpg",
+    "role": {
+      "id": 1,
+      "name": "admin"
+    }
+  },
+  {
+    "id": 2,
+    "name": "София Мельник",
+    "email": "user2@example.com",
+    "avatar": "../../../public/img/users/2.jpg",
+    "role": {
+      "id": 2,
+      "name": "manager"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Инесса Соловьёвa",
+    "email": "user3@example.com",
+    "avatar": "../../../public/img/users/3.jpg",
+    "role": {
+      "id": 3,
+      "name": "contentMaker"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Станислав Щукин",
+    "email": "user4@example.com",
+    "avatar": "../../../public/img/users/4.jpeg",
+    "role": {
+      "id": 3,
+      "name": "contentMaker"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Альбина Ткаченко",
+    "email": "user6@example.com",
+    "avatar": "../../../public/img/users/5.jpg",
+    "role": {
+      "id": 2,
+      "name": "manager"
+    }
+  }
+]

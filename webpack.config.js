@@ -16,10 +16,14 @@ module.exports = {
   entry: {
     'index': PATHS.client + '/pages/index/index.js',
     'tasks': PATHS.client + '/pages/tasks/tasks.js',
+    'task': PATHS.client + '/pages/task/task.js',
     'users': PATHS.client + '/pages/users/users.js',
     'auth': PATHS.client + '/pages/auth/auth.js',
     '404': PATHS.client + '/pages/404/404.js',
     'profile': PATHS.client + '/pages/profile/profile.js',
+    'notifications': PATHS.client + '/pages/notifications/notifications.js',
+    'user': PATHS.client + '/pages/user/user.js',
+    'task-new': PATHS.client + '/pages/task-new/task-new.js',
   },
 
   output: {
@@ -63,6 +67,11 @@ module.exports = {
       filename: 'tasks.html'
     }),
     new HTMLWebpackPlugin({
+      template: PATHS.client + '/pages/task/task.pug',
+      chunks: ['task'],
+      filename: 'task.html'
+    }),
+    new HTMLWebpackPlugin({
       template: PATHS.client + '/pages/users/users.pug',
       chunks: ['users'],
       filename: 'users.html'
@@ -81,6 +90,21 @@ module.exports = {
       template: PATHS.client + '/pages/profile/profile.pug',
       chunks: ['profile'],
       filename: 'profile.html'
+    }),
+    new HTMLWebpackPlugin({
+      template: PATHS.client + '/pages/notifications/notifications.pug',
+      chunks: ['notifications'],
+      filename: 'notifications.html'
+    }),
+    new HTMLWebpackPlugin({
+      template: PATHS.client + '/pages/user/user.pug',
+      chunks: ['user'],
+      filename: 'user.html'
+    }),
+    new HTMLWebpackPlugin({
+      template: PATHS.client + '/pages/task-new/task-new.pug',
+      chunks: ['task-new'],
+      filename: 'task-new.html'
     }),
     new HtmlWebpackPugPlugin(),
     new CleanWebpackPlugin(),
