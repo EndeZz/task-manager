@@ -9,12 +9,13 @@ module.exports = merge(common, {
   mode: 'development',
   devtool: 'source-map',
   devServer: {
-    compress: true,
-    contentBase: __dirname + "/client/pages/",
-    historyApiFallback: true,
+    static: {
+      directory: path.join(__dirname, '/../../public'),
+      publicPath: '/public'
+    },
+    port: 8080,
     hot: true,
     open: true,
-    port: 3000,
-    clientLogLevel: 'silent',
   },
 });
+
