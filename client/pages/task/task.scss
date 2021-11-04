@@ -1,0 +1,208 @@
+@import '../../components/error/error.scss';
+@import '../../components/file/file.scss';
+@import '../../components/header/header.scss';
+@import '../../components/input/input.scss';
+@import '../../components/label/label.scss';
+@import '../../components/modal/modal.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/text.scss';
+
+.task {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 1.4em;
+  margin: 2.1em 0;
+
+  &__buttons {
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    &__edit {
+      display: flex;
+
+      button:first-of-type {
+        margin-right: 1.4em;
+      }
+    }
+  }
+
+  &__body {
+    &__content {
+      background: $white;
+      border: 1px solid $blue_outline;
+      border-radius: 4px;
+      padding: 2.1em;
+      margin-bottom: 1.25em;
+
+      &__labels {
+        display: flex;
+        justify-content: flex-start;
+
+        .content_label {
+          margin-right: 1.4em;
+        }
+      }
+
+      .h1 {
+        margin: 1.1em 0;
+      }
+
+      &__text p {
+        line-height: 1.5em;
+      }
+
+      &__files {
+        margin-top: 1.4em;
+
+        &__text {
+          @include label__text;
+
+          margin-bottom: 0.7em;
+        }
+
+        .file:first-of-type {
+          border-top: 1px solid $blue_outline;
+        }
+      }
+    }
+
+    &__result {
+      background: $white;
+      border: 1px solid $blue_outline;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
+      padding: 2.1em;
+
+      &__heading {
+        display: flex;
+        align-items: center;
+
+        &__text {
+          opacity: 0.6;
+          margin-left: 1.4em;
+        }
+      }
+
+      &__load {
+        border: 2px dashed $grey-blue-icon;
+        border-radius: 4px;
+        max-height: 4.8em;
+        width: 100%;
+        max-width: 7.8em;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.6em;
+        cursor: pointer;
+      }
+    }
+
+    &__comment {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: $white;
+      border: 1px solid $blue_outline;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+      border-top: none;
+      padding: 2.1em;
+
+      #comment {
+        height: 8.3em;
+      }
+
+      .button {
+        align-self: end;
+        position: absolute;
+        margin-bottom: 2.1em;
+        margin-right: 0.7em;
+
+        &__icon {
+          display: none;
+        }
+
+        &__text {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  &__info {
+    background: $white;
+    border: 1px solid $blue_outline;
+    border-radius: 4px;
+    padding: 2.1em;
+    max-height: 14.5em;
+    height: 100%;
+
+    &__list {
+      &__label {
+        opacity: 0.6;
+      }
+
+      &__text {
+        @include button__text;
+
+        color: $black;
+      }
+    }
+
+    ul.task__info__list li { clear: both; }
+
+    ul.task__info__list li span + span {
+      float: right;
+      padding-left: 0.4em;
+      margin: 0;
+    }
+
+    ul.task__info__list li span:first-child {
+      float: left;
+      padding-right: 0.4em;
+      padding-bottom: 1.4em;
+      margin: 0;
+    }
+
+    ul.task__info__list li:last-child span {
+      padding-bottom: 0;
+    }
+
+    ul.task__info__list li::after {
+      content: "";
+      display: block;
+      overflow: hidden;
+      height: 1em;
+      border-bottom: 1px solid $blue_outline;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .task {
+    padding-left: calc(50% - 640px);
+    padding-right: calc(50% - 640px);
+
+    &__buttons {
+      padding-left: calc(50% - 640px);
+      padding-right: calc(50% - 640px);
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .task {
+    padding-left: 2.1em;
+    padding-right: 2.1em;
+
+    &__buttons {
+      padding-left: 2.1em;
+      padding-right: 2.1em;
+    }
+  }
+}

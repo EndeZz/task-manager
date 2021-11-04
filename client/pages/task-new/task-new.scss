@@ -1,0 +1,55 @@
+@import '../../components/error/error.scss';
+@import '../../components/header/header.scss';
+@import '../../components/input/input.scss';
+@import '../../styles/variables.scss';
+
+.new_task {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  &__main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 1.4em;
+    margin: 2.1em 0;
+
+    &__content {
+      background: $white;
+      border: 1px solid $blue_outline;
+      border-radius: 4px;
+      padding: 2.1em;
+
+      #description {
+        height: 7.8em;
+      }
+    }
+
+    &__info {
+      background: $white;
+      border: 1px solid $blue_outline;
+      border-radius: 4px;
+      padding: 2.1em;
+      max-height: 20.6em;
+      height: 100%;
+    }
+  }
+
+  .button {
+    align-self: start;
+  }
+}
+
+@media (min-width: 1280px) {
+  .new_task {
+    padding-left: calc(50% - 640px);
+    padding-right: calc(50% - 640px);
+  }
+}
+
+@media (max-width: 1280px) {
+  .new_task {
+    padding-left: 2.1em;
+    padding-right: 2.1em;
+  }
+}

@@ -1,0 +1,30 @@
+include ../../components/buttons/buttons
+include ../../components/error/error
+include ../../components/filter/filter
+include ../../components/header/header
+include ../../components/input/input
+include ../../components/select/select
+include ../../components/task_card/task_card
+
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", href="/public/icons/logo.svg", type="image/x-icon")
+    title Новая задача
+  body 
+    +header 
+    .new_task 
+      +button_big('back', 'blue', 'К списку задач')
+      .new_task__main
+        .new_task__main__content 
+          +select_content
+          +input({type: 'text', label: 'Заголовок', placeholder: 'Введите заголовок задачи', id: 'heading'})
+          +input({type: 'text', label: 'Описание', placeholder: 'Опишите требования', id: 'description'})
+          +button_main('attach', 'lightblue', 'Прикрепить файл')
+        .new_task__main__info
+          +input_icon({type: 'date', label: 'Срок выполнения', placeholder: 'Укажите дату', id: 'calendar'})
+          +select(['Инесса Соловьева', 'Оскар Калинин', 'Альбина Ткаченко', 'Адам Галкин', 'София Мельник'], {type: 'text', label: 'Инициатор', placeholder: 'Выберите инициатора', id: 'arrow'})
+          +select(['Инесса Соловьева', 'Оскар Калинин', 'Альбина Ткаченко', 'Адам Галкин', 'София Мельник'], {type: 'text', label: 'Ответсвенный', placeholder: 'Выберите ответственного', id: 'arrow'})
+      +button_main('save', 'blue', 'Создать задачу')

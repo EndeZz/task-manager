@@ -1,0 +1,33 @@
+include ../../components/header/header
+include ../../components/heading/heading
+include ../../components/message/message
+
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", href="/public/icons/logo.svg", type="image/x-icon")
+    title Уведомления
+  body 
+    +header 
+    section.notifications
+      +heading('Уведомления')
+      
+      ul.notifications__list 
+        li.notifications__item 
+          +message('attach', 'Аркадий Юрченко')
+        li.notifications__item 
+          +message('comment')
+        li.notifications__item 
+          +message('task_video')
+        li.notifications__item 
+          +message('task_audio')
+        li.notifications__item 
+          +message('task_photo')
+        li.notifications__item 
+          +message('comment')
+        li.notifications__item 
+          +message('attach', 'Аркадий Юрченко')
+        li.notifications__item 
+          +message('comment')

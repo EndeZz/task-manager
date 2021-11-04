@@ -1,0 +1,43 @@
+include ../../components/buttons/buttons
+include ../../components/card/card
+include ../../components/input/input
+include ../../components/filter/filter
+include ../../components/header/header
+include ../../components/message/message
+
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", href="/public/icons/logo.svg", type="image/x-icon")
+    title Главная страница
+  body
+    +header('admin')
+    section.filters
+      +input_icon({type: 'text', label: 'Поиск', placeholder: 'Введите название или имя исполнителя', id: 'search'})
+      +input_icon({type: 'date', label: 'Срок выполнения', placeholder: 'Укажите дату публикации', id: 'search'})
+      +filter
+    section.cards
+      ul.cards__list
+        li.cards__item
+          +card({type: 'video', duration: '02:31', name: 'Название повседневная практика показывает', author: 'Аркадий Юрченко', date: '09:21 14.02.2020'})
+        li.cards__item
+          +card({type: 'photo', duration: '', name: 'Название равным образом начало повседневной работы', author: 'Оскар Калинин', date: '15:41 14.02.2020'})
+        li.cards__item
+          +card({type: 'audio', duration: '02:31', name: 'Название с другой стороны начало повседневной работы по формированию позиции', author: 'Валерий Яковлев', date: '20:18 13.02.2020'})
+        li.cards__item
+          +card({type: 'photo', duration: '', name: 'Название равным образом начало повседневной работы', author: 'София Лебедевa', date: '10:41 12.02.2020'})
+        li.cards__item
+          +card({type: 'video', duration: '02:31', name: 'Название повседневная практика показывает', author: 'Альбина Ткаченко', date: '14:56 11.02.2020'})
+        li.cards__item
+          +card({type: 'photo', duration: '', name: 'Название повседневная практика показывает', author: 'Данил Плотников', date: '08:47 11.02.2020'})
+        li.cards__item
+          +card({type: 'audio', duration: '02:31', name: 'Название с другой стороны начало повседневной работы по формированию позиции', author: 'Валерий Яковлев', date: '10:04 10.02.2020'})
+        li.cards__item
+          +card({type: 'photo', duration: '', name: 'Название повседневная практика показывает', author: 'Оскар Калинин', date: '08:47 10.02.2020'})
+        li.cards__item
+          +card({type: 'video', duration: '02:31', name: 'Название повседневная практика показывает', author: 'Аркадий Юрченко', date: '08:47 10.02.2020'})
+
+    
+

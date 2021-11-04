@@ -1,0 +1,18 @@
+include ../../components/buttons/buttons
+include ../../components/input/input
+
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", href="/public/icons/logo.svg", type="image/x-icon")
+    title Авторизация
+  body
+    section.auth
+      img.auth__logo(src="/public/icons/logo.svg", alt="логотип")
+      .auth__form
+        h1.auth__form__h1= 'Вход'
+        +input({type: 'text', label: 'E-mail', placeholder: 'Введите e-mail', id: 'email'})
+        +input({type: 'text', label: 'Пароль', placeholder: 'Введите пароль', id: 'password'})
+        +button_main('login', 'blue', 'Войти')

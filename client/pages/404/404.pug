@@ -1,0 +1,19 @@
+include ../../components/buttons/buttons
+include ../../components/header/header
+
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", href="/public/icons/logo.svg", type="image/x-icon")
+    title 404
+  body 
+    +header 
+    section.error404
+      img.error404__img(src="/public/icons/404.svg", alt="ошибка 404")
+      .error404__message 
+        h1.error404__message__h1= 'Потерялись?'
+        span.error404__message__text= 'Страница, которую вы ищите не существует, либо была удалена'
+        +button_main('home', 'blue', 'На главную')
+

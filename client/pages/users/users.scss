@@ -1,0 +1,35 @@
+@import '../../components/buttons/buttons.scss';
+@import '../../components/filter/filter.scss';
+@import '../../components/header/header.scss';
+@import '../../components/input/input.scss';
+@import '../../components/select/select.scss';
+@import '../../components/user_card/user_card.scss';
+@import '../../styles/style.scss';
+
+.users {
+  &__filter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1.4em;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1.4em;
+  }
+}
+
+@media (min-width: 1280px) {
+  .users {
+    padding-left: calc(50% - 640px);
+    padding-right: calc(50% - 640px);
+  }
+}
+
+@media (max-width: 1280px) {
+  .users {
+    padding-left: 2.1em;
+    padding-right: 2.1em;
+  }
+}

@@ -1,0 +1,31 @@
+include ../../components/buttons/buttons
+include ../../components/input/input
+include ../../components/header/header
+include ../../components/heading/heading
+include ../../components/photo/photo
+include ../../components/select/select
+
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", href="/public/icons/logo.svg", type="image/x-icon")
+    title Пользователь
+  body 
+    +header 
+  
+    section.user
+      +heading('Пользователь')
+
+      .user__information
+        +photo
+        
+        .user__information__inputs
+          +input({type: 'text', label: 'Имя, фамилия', placeholder: 'Введите имя и фамилию', id: 'user'})
+          +input({type: 'text', label: 'E-mail', placeholder: 'Введите e-mail', id: 'email'})
+          +select(['Администратор', 'Контент-мейкер', 'Менеджер'], 'role')
+          +input({type: 'text', label: 'Пароль', placeholder: 'Введите пароль', id: 'password'})
+
+          .user__information__inputs__buttons
+            +button_main('save', 'blue', 'Сохранить')

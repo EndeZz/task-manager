@@ -1,0 +1,28 @@
+include ../../components/buttons/buttons
+include ../../components/input/input
+include ../../components/filter/filter
+include ../../components/header/header
+include ../../components/user_card/user_card
+
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", href="/public/icons/logo.svg", type="image/x-icon")
+    title Список пользователей
+  body 
+    +header('admin')
+    .users
+      .users__filter
+        +input_icon({type: 'text', label: 'Поиск', placeholder: 'Введите имя пользователя', id: 'search'})
+        +filter_role
+      .users__button
+        +button_main('add', 'blue', 'Добавить пользователя')
+    
+      ul.users_list
+        +user_card({ photo: 'inessa_soloveva', name: 'Инесса Соловьёва', email: 'inessa90@gmail.com', role: 'Контент-мейкер' })
+        +user_card({ photo: 'oskar_kalinin', name: 'Оскар Калинин', email: 'oscar@gmail.com', role: 'Контент-мейкер' })
+        +user_card({ photo: 'sofiya_melnik', name: 'Альбина Ткаченко', email: 'albina_t@gmail.com', role: 'Менеджер' })
+        +user_card({ photo: 'adam_galkin', name: 'Адам Галкин', email: 'galkin@gmail.com', role: 'Администратор' })
+        +user_card({ photo: 'albina_tkachenko', name: 'София Мельник', email: 'melnik_s@gmail.com', role: 'Менеджер' })

@@ -1,0 +1,32 @@
+include ../../components/buttons/buttons
+include ../../components/filter/filter
+include ../../components/header/header
+include ../../components/input/input
+include ../../components/select/select
+include ../../components/task_card/task_card
+
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="shortcut icon", href="/public/icons/logo.svg", type="image/x-icon")
+    title Список задач
+  body 
+    +header 
+    .tasks 
+      .tasks__filter
+        +input_icon({type: 'text', label: 'Поиск', placeholder: 'Введите название задачи или имя ответственного', id: 'search'})
+        +select_status 
+        +input_icon({type: 'date', label: 'Срок выполнения', placeholder: 'Укажите дату', id: 'search'})
+        +filter
+      .tasks__button
+        +button_main('add', 'blue', 'Новая задача')
+
+      ul.tasks__list 
+        +task_card({ type: 'video', name: 'Название повседневная практика показывает', author: 'Аркадий Юрченко', date: '10.02.2020', status: 'work' }) 
+        +task_card({ type: 'photo', name: 'Название равным образом начало повседневной работы', author: 'Эльза Калинина', date: '09.02.2020', status: 'done' }) 
+        +task_card({ type: 'audio', name: 'Название с другой стороны начало повседневной работы по формиро', author: 'Дмитрий Румянцев', date: '08.02.2020', status: 'approve' }) 
+        +task_card({ type: 'photo', name: 'Название равным образом начало повседневной работы', author: 'Гена Черемнов', date: '06.02.2020', status: 'approve' }) 
+        +task_card({ type: 'video', name: 'Название повседневная практика показывает', author: 'Инесса Соловьёва', date: '01.02.2020', status: 'done' }) 
+
