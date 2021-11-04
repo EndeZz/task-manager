@@ -1,0 +1,344 @@
+@import '../../styles/variables.scss';
+@import '../../styles/text.scss';
+
+.button {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 0.28em;
+  cursor: pointer;
+
+  &__icon {
+    margin-right: 0.71em;
+  }
+
+  &__text {
+    @include button__text;
+
+    color: $white;
+  }
+
+  &__main {
+    padding: 0.85em 1.1em;
+
+    .button__icon {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      max-width: 1.28em;
+      width: 100%;
+      max-height: 1.28em;
+      height: 100%;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      box-sizing: border-box;
+      background: $white;
+      z-index: 0;
+    }
+
+    .button__img {
+      align-self: center;
+    }
+
+    .button__text {
+      align-self: center;
+      margin-left: 2em;
+    }
+
+    &_blue {
+      background: $blue;
+
+      &:hover {
+        background: $blue_hover;
+      }
+
+      &:active {
+        background: $blue_active;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
+
+    &_green {
+      background: $green_photo;
+
+      &:hover {
+        background: $green_hover;
+      }
+
+      &:active {
+        background: $green_active;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
+
+    &_lightblue {
+      background: $ltblue;
+
+      .button__icon {
+        color: $blue;
+      }
+
+      .button__text {
+        color: $blue;
+      }
+
+      &:hover {
+        background: $blue_hover;
+
+        .button__text {
+          color: $white;
+        }
+      }
+
+      &:active {
+        background: $ltblue_active;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__transperent {
+    background: transparent;
+    padding: 0.64em 0.85em;
+
+    &_blue {
+      .button__text {
+        color: $blue;
+      }
+
+      &:hover {
+        background: $ltblue;
+      }
+
+      &:active {
+        background: $ltblue_active;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
+
+    &_red {
+      .button__text {
+        color: $red;
+      }
+
+      &:hover {
+        background: $red_hover;
+      }
+
+      &:active {
+        background: $red_active;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__mini {
+    padding: 0;
+    justify-content: center;
+
+    .button__icon {
+      vertical-align: middle;
+      margin: 0;
+      width: 1.4em;
+      height: 1.4em;
+    }
+
+    &_blue {
+      background: $blue;
+      width: 2.8em;
+      height: 2.8em;
+
+      &:hover {
+        background: $blue_hover;
+      }
+
+      &:active {
+        background: $blue_active;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        fill: $white;
+      }
+
+      .button__icon {
+        fill: $white;
+      }
+    }
+
+    &_lightblue {
+      background: $ltblue;
+      width: 2.4em;
+      height: 2.4em;
+
+            .button__icon {
+        fill: $blue;
+      }
+
+      &:hover {
+        background: $blue_hover;
+
+        .button__icon {
+          fill: $white;
+        }
+      }
+
+      &:active {
+        background: $blue_active;
+
+        .button__icon {
+          fill: $white;
+        }
+      }
+
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
+
+    &_clear {
+      background: transparent;
+      padding: 0;
+
+      .button__icon {
+        fill: $grey-blue-icon;
+        margin: 0;
+
+        &:hover {
+          fill: $blue;
+        }
+      }
+    }
+  }
+
+  &__content {
+    background: $white;
+    padding: 0.85em 1.1em;
+    margin-right: 0.7em;
+
+    &:active {
+      .button__icon {
+        fill: $white;
+      }
+
+      .button__text {
+        color: $white;
+      }
+    }
+
+    &_video {
+      border: 1px solid $blue;
+
+      .button__icon {
+        fill: $blue;
+        width: 6.28px;
+        height: 8.12px;
+        margin-right: 6px;
+        vertical-align: middle;
+      }
+
+      .button__text {
+        color: $blue;
+      }
+
+      &:hover {
+        background: $ltblue;
+      }
+
+      &:active {
+        background: $blue;
+      }
+    }
+
+    &_photo {
+      outline: 1px solid $green_photo;
+
+      .button__icon {
+        fill: $green_photo;
+        width: 9.81px;
+        height: 8.24px;
+        margin-right: 6px;
+      }
+
+      .button__text {
+        color: $green_photo;
+      }
+
+      &:hover {
+        background: $green_photo_hover;
+      }
+
+      &:active {
+        background: $green_photo;
+      }
+    }
+
+    &_audio {
+      outline: 1px solid $yellow_audio;
+
+      .button__icon {
+        fill: $yellow_audio;
+        width: 9.81px;
+        height: 8.24px;
+        margin-right: 6px;
+      }
+
+      .button__text {
+        color: $yellow_audio;
+      }
+
+      &:hover {
+        background: $yellow_audio_hover;
+      }
+
+      &:active {
+        background: $yellow_audio;
+      }
+    }
+  }
+
+  &__filter {
+    background: $white;
+    border: 1px solid $blue_outline;
+    padding: 0.85em 1.1em;
+    margin-right: 1.1em;
+
+    .button__text {
+      @include body__text;
+    }
+
+    &:hover {
+      background: $ltblue;
+    }
+
+    &:active {
+      background: $blue;
+
+      .button__text {
+        color: $white;
+      }
+    }
+  }
+
+  &__dropdown {
+    background: none;
+    padding: 10px;
+  }
+}

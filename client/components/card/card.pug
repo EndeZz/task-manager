@@ -1,0 +1,13 @@
+include ../../components/label/label
+
+mixin card({type, duration, name, author, date})
+  .card 
+    img.card__img(src="/public/img/beach.jfif", alt="пляж")
+    .card__type
+      +content(type)
+      span(class=`duration__${type}`)= `${duration}`
+    span=`${name}`
+    .card__text 
+      span.card__date=`${author}`
+      img.card__separator(src="/public/icons/separator.svg", alt="разделитель")
+      time.card__date=`${date}`

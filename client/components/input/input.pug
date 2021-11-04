@@ -1,0 +1,84 @@
+include ../buttons/buttons
+
+mixin labelPattern(label, id)
+  label(class="form__label" for=`${id}`)= label
+
+mixin inputPattern(placeholder, type, id)
+  input(class="form__wrapper__input" type=`${type}` placeholder=`${placeholder}` id=`${id}`)
+
+
+mixin input({ type, label, placeholder, id })
+  case type
+    when 'text'
+      .form
+        +labelPattern(label, id)
+        .form__wrapper
+          +inputPattern(placeholder, type, id)
+
+mixin input_icon({ type, label, placeholder, id })
+  case type
+    when 'text'
+      .form
+        +labelPattern(label, id)
+        .form__wrapper
+          +inputPattern(placeholder, type, id)
+          img(src=`/public/icons/${id}.svg`, alt=`${id}`)
+          
+    when 'date'
+      .form
+        +labelPattern(label, id)
+        .form__wrapper
+          +inputPattern(placeholder, type, id)
+          img(src="/public/icons/calendar.svg", alt="календарь")
+
+
+
+//- +input({type: 'text', label: 'Имя, фамилия', placeholder: 'Введите имя и фамилию', id: 'user'})
+//- +input({type: 'text', label: 'E-mail', placeholder: 'Введите e-mail', id: 'email'})
+//- +input({type: 'text', label: 'Пароль', placeholder: 'Введите пароль', id: 'password'})
+
+
+    //- when 'calendar'
+    //-   .input_calendar
+    //-     +labelPattern('Дата публикации', 'calendar')
+    //-     .form__wrapper
+    //-       +inputPattern('Укажите дату публикации', 'date', 'calendar')
+    //-       img(src="/public/icons/calendar.svg", alt="календарь")
+
+
+
+  //- case type 
+  //-   when 'user'
+  //-     .input_user
+  //-       +labelPattern('Имя, фамилия', 'user')
+  //-       .form__wrapper
+  //-         +inputPattern('Введите имя и фамилию', 'text', 'user')
+    
+  //-   when 'email'
+  //-     .input_email
+  //-       +labelPattern('E-mail', 'email')
+  //-       .form__wrapper
+  //-         +inputPattern('Введите e-mail', 'text', 'email')
+
+  //-   when 'password'
+  //-     +labelPattern('Пароль', 'password')
+  //-       .form__wrapper
+  //-         +inputPattern('Введите пароль', 'text', 'password')
+    
+  //-   when 'search'
+  //-     .input_search
+  //-       +labelPattern('Поиск', 'search')
+  //-       .form__wrapper
+  //-         +inputPattern('Введите название имя исполнителя', 'text', 'search')
+  //-         +button_mini('clear', 'clear')
+    
+  //-   when 'calendar'
+  //-     .input_calendar
+  //-       +labelPattern('Дата публикации', 'calendar')
+  //-       .form__wrapper
+  //-         +inputPattern('Укажите дату публикации', 'date', 'calendar')
+  //-         img(src="/public/icons/calendar.svg", alt="календарь")
+
+
+
+

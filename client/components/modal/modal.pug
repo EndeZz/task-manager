@@ -1,0 +1,11 @@
+include ../buttons/buttons
+
+mixin modal() 
+  .modal
+    .modal__content
+      //- +button_mini('clear')
+      h1.modal__content__title= 'Вы действительно хотите удалить задачу?'
+      .modal__content__buttons 
+        +button_main('save', 'blue', 'Да')
+        +button_main('save', 'lightblue', 'Нет')
+  .overlay

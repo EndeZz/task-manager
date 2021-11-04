@@ -1,0 +1,21 @@
+include ../buttons/buttons
+include ../label/label
+
+mixin task_card({ type, name, author, date, status }) 
+  .task_card
+    .task_card__info
+      +content(type)
+      span.task_card__info__name= `${name}`
+      span.task_card__info__author= `${author}`
+      .task_card__info__date
+        img(src="/public/icons/date.svg", alt="Дата")
+        span.task_card__info__date__text= `${date}`
+      +status(status)
+
+    .task_card__buttons   
+      case status 
+        when 'done'
+            +button_mini('delete', 'lightblue')
+        default
+            +button_mini('edit', 'lightblue')
+            +button_mini('delete', 'lightblue')

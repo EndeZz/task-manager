@@ -1,0 +1,9 @@
+include ../../components/buttons/buttons
+
+mixin heading(text)
+  if (text !== '')
+    .heading 
+      +button_big('back', 'blue')
+      h1.heading__text= `${text}`
+  else 
+    +button_big('back', 'blue')

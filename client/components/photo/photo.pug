@@ -1,0 +1,8 @@
+include ../buttons/buttons
+
+mixin photo()
+  .photo
+    .photo__img
+      img(src="/public/icons/profile.svg", alt="Изображение профиля")
+    .photo__button
+      +button_big('upload', 'blue', 'Загрузить аватар')

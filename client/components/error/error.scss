@@ -1,0 +1,17 @@
+@import '../../styles/text.scss';
+
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  .__img {
+    margin-right: 0.7em;
+  }
+
+  .__text {
+    @include button__text;
+
+    color: $red;
+  }
+}

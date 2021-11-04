@@ -1,0 +1,30 @@
+mixin button_main(type, color, text)
+  button(class=`button button__main button__main_${color}`)
+    .button__icon
+      img.button__img(src=`/public/icons/${type}.svg`, alt=`${text}`)
+    span.button__text=(text)
+
+mixin button_big(type, color, text)
+  button(class=`button button__transperent button__transperent_${color}`)
+    img.button__icon(src=`/public/icons/${type}.svg`, alt=`${text}`)
+    span.button__text=(text)
+
+mixin button_mini(type, color)
+  button(class=`button button__mini button__mini_${color}`)
+    img.button__icon(src=`/public/icons/${type}.svg`, alt=`${type}`)
+    //- svg.button__icon
+    //-   use(xlink:href=`/public/icons/icons.svg#${type}`)
+
+mixin button_content(type, text)
+  button(class=`button button__content button__content_${type}`)
+    svg(class=`button__icon`)
+      use(xlink:href=`/public/icons/icons.svg#${type}`)
+    span(class=`button__text`)=(text)
+
+mixin button_filter(text)
+  button(class=`button button__filter button__content_${type}`)
+    span(class=`button__text`)=(text)
+
+mixin button_dropdown() 
+  button.button.button__dropdown
+    img(src="/public/icons/arrow.svg", alt="")

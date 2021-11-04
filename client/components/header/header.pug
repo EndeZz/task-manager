@@ -1,0 +1,16 @@
+include ../nav/nav
+include ./notification/notification
+include ./user/user
+
+mixin header(role)
+  header.header 
+    .header__nav
+      a.logo(href="/")
+        img(src="/public/icons/logo.svg", alt="логотип")
+      if (role === 'admin')
+        +nav([{text: "Главная", href: "index.html"}, {text: "Задачи", href: "tasks.html"}, {text: "Пользователи", href: "users.html"}])
+      else 
+        +nav([{text: "Главная", href: "index.html"}, {text: "Задачи", href: "tasks.html"}])
+    .header__user
+      +notification
+      +user 

@@ -1,0 +1,12 @@
+mixin nav(pages, active)
+  ul.nav__list
+    each page, index in pages
+      if (index === active)
+        li(class='button nav__btn active')
+          a(class='button__text' href=`${page.href}`)= page.text
+      else
+        li(class='button nav__btn')
+          a(class='button__text' href=`${page.href}`)= page.text
+
+
+

@@ -1,0 +1,28 @@
+@import '../../../styles/style.scss';
+
+.notification {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  width: 2.8em;
+  height: 2.8em;
+  padding: 0;
+  cursor: pointer;
+
+  &__icon {
+    align-self: center;
+    width: 1.4em;
+    height: 1.5em;
+  }
+
+  &:hover {
+    border: 1px solid $ltblue;
+  }
+
+  &:active {
+    background: $ltblue;
+  }
+}

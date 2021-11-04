@@ -1,0 +1,9 @@
+include ../buttons/buttons
+
+mixin file(type, name, size)
+  .file 
+    .file__info
+      img(class='file__info__img' src=`/public/icons/${type}.svg`, alt=`${type}`)
+      span.file__info__name= `${name}`
+      span.file__info__size= `${size}`
+    +button_main('download', 'lightblue', 'Скачать')

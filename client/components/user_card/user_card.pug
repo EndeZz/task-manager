@@ -1,0 +1,12 @@
+include ../buttons/buttons
+
+mixin user_card({ photo, name, email, role }) 
+  .user_card 
+    .user_card__info
+      img.user_card__info__img(src=`/public/profile/${photo}.png`, alt="Фото профиля")
+      span.user_card__info__name= `${name}`
+      span.user_card__info__email= `${email}`
+      span.user_card__info__role= `${role}`
+    .user_card__buttons 
+      +button_mini('edit', 'lightblue')
+      +button_mini('delete', 'lightblue')

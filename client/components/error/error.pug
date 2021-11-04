@@ -1,0 +1,4 @@
+mixin error(type, text)
+  div(class='error' hidden)
+    img.error__img(src="/public/icons/error.svg", alt="Ошибка")
+    span.error__text=`${text}`

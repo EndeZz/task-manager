@@ -1,0 +1,45 @@
+include ../input/input
+include ../label/label
+
+mixin select(items, {type, label, placeholder, id})
+  div(class="select" id=`${id}`)
+    +input_icon({type, label, placeholder, id})
+    div(class='select__dropdown' hidden)
+      ul.select__dropdown__list
+        for item in items
+          li
+            .select__dropdown__list__item
+              span.select__dropdown__list__item__text= `${item}`
+
+mixin select_status(id)
+  div(class="select" id=`${id}`)
+    +input_icon({type: 'text', label: 'Статус', placeholder: 'Выберите статус', id: 'arrow'})
+    div(class='select__dropdown' hidden)
+      ul.select__dropdown__list
+        li
+          .select__dropdown__list__item
+            span.select__dropdown__list__item__text= 'Любой'
+        li
+          .select__dropdown__list__item
+            +status('work')
+        li
+          .select__dropdown__list__item
+            +status('approve')
+        li
+          .select__dropdown__list__item
+            +status('done')
+
+mixin select_content()
+  div(class="select")
+    +input({type: 'text', label: 'Тип контента', placeholder: 'Выберите тип контента', id: 'arrow'})
+    div(class='select__dropdown' hidden)
+      ul.select__dropdown__list
+        li
+          .select__dropdown__list__item
+            +content('video')
+        li
+          .select__dropdown__list__item
+            +content('audio')
+        li
+          .select__dropdown__list__item
+            +content('photo')

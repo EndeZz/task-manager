@@ -1,0 +1,43 @@
+mixin content(type)
+  .content_label
+    case type 
+      when 'video'
+        img.content_label__img(src="/public/icons/video.svg", alt="Видео")
+        span(class=`content_label__${type}`)= 'Видео'
+      when 'photo'
+        img.content_label__img(src="/public/icons/photo.svg", alt="Фото")
+        span(class=`content_label__${type}`)= 'Фото'
+      when 'audio'
+        img.content_label__img(src="/public/icons/audio.svg", alt="Аудио")
+        span(class=`content_label__${type}`)= 'Аудио'
+  
+mixin status(type)
+  .status_label
+    case type 
+      when 'work'
+        span(class=`text__${type}`)= 'В работе'
+      when 'approve'
+        span(class=`text__${type}`)= 'Ожидает согласования'
+      when 'done'
+        span(class=`text__${type}`)= 'Выполнено'
+
+mixin file_type(type)
+  .file_label
+    case type 
+      when 'video'
+        .file_label__text
+          span= 'avi'
+        .file_label__text
+          span= 'flv'
+        .file_label__text
+          span= 'mov'
+      when 'audio'
+        .file_label__text
+          span= 'mp3'
+      when 'photo'
+        .file_label__text
+          span= 'gif'
+        .file_label__text
+          span= 'jpg'
+        .file_label__text
+          span= 'png'

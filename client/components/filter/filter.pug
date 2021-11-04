@@ -1,0 +1,19 @@
+include ../buttons/buttons
+include ../nav/nav
+
+mixin filter()
+  .filter 
+    +labelPattern('Тип контента', 'filter')
+    .filter__buttons 
+      +button_content('video', 'Видео')
+      +button_content('photo', 'Фото')
+      +button_content('audio', 'Аудио')
+
+mixin filter_role()
+  .filter_role 
+    +labelPattern('Роль', 'filter_role')
+    .filter_role__buttons 
+      +button_filter('Все')
+      +button_filter('Контент-мейкер')
+      +button_filter('Менеджер')
+      +button_filter('Администратор')

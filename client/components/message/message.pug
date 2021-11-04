@@ -1,0 +1,49 @@
+mixin message(type, author='Семён Щеглов', task='Название задачи', date='09:51 14.02.2020')
+  case type 
+    when 'comment'
+      .message 
+        img.message__icon(src="/public/icons/comment.svg", alt="Новый комментарий")
+        .message__text
+          p Новый комментарий в задаче 
+            span.message__text-bold= `${task}`
+          span.message__date= `${date}`
+    
+    when 'attach'
+      .message 
+        img.message__icon(src="/public/icons/attach.svg", alt="Новый контент")
+        .message__text
+          p
+            span.message__text-bold= `${author}`
+            span=`  контент в задаче `
+            span.message__text-bold= `${task}`
+          span.message__date= `${date}`
+    
+    when 'task_video'
+      .message 
+        img.message__icon(src="/public/icons/video-notification.svg", alt="Новая задача")
+        .message__text
+          p
+            span.message__text-bold= `${author}`
+            span= ` загрузил контент в задаче `
+          span.message__date= `${date}`
+
+    when 'task_photo'
+      .message 
+        img.message__icon(src="/public/icons/photo-notification.svg", alt="Новая задача")
+        .message__text
+          p
+            span.message__text-bold= `${author}`
+            span= ` загрузил контент в задаче `
+          span.message__date= `${date}`
+
+    when 'task_audio'
+      .message 
+        img.message__icon(src="/public/icons/audio-notification.svg", alt="Новая задача")
+        .message__text
+          p
+            span.message__text-bold= `${author}`
+            span= ` загрузил контент в задаче `
+          span.message__date= `${date}`
+
+
+

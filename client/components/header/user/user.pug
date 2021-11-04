@@ -1,0 +1,16 @@
+include ../../buttons/buttons
+
+mixin user() 
+  .profile 
+    .profile__info
+      span.profile__info__name= 'Семён Щеглов'
+      img.profile__info__img(src="/public/profile/avatar.png", alt="фото пользователя")
+      +button_dropdown
+    div(class="profile__dropdown" hidden)
+      ul.profile__dropdown__list
+        li
+          .profile__dropdown__list__item
+            a.profile__dropdown__list__item__text(href="profile.html") Профиль
+        li
+          .profile__dropdown__list__item
+            a.profile__dropdown__list__item__text(href="auth.html") Выйти
