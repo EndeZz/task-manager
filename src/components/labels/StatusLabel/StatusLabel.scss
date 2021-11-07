@@ -1,0 +1,17 @@
+@import '../../../styles/style.scss';
+
+.status_label {
+  @include button__text;
+
+  .text__work {
+    color: $violet;
+  }
+
+  .text__approve {
+    color: $azure;
+  }
+
+  .text__done {
+    color: $lime;
+  }
+}

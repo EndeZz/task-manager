@@ -1,0 +1,24 @@
+@import '../../../styles/style.scss';
+
+.content_label {
+  @include button__text;
+
+  display: flex;
+  align-self: center;
+
+  &__img {
+    margin-right: 0.4em;
+  }
+
+  &__video {
+    color: $blue;
+  }
+
+  &__photo {
+    color: $green_photo;
+  }
+
+  &__audio {
+    color: $yellow_audio;
+  }
+}
