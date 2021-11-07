@@ -8,16 +8,30 @@
 
   & input[type=date] {
     &::-webkit-calendar-picker-indicator {
-      opacity: 0;
-    }
-
-    &::-webkit-datetime-edit-fields-wrapper span {
-      opacity: 0;
-    }
-
-    &::after {
       display: none;
     }
+
+    // &::before {
+    //   color: rgba($txt, 0.6);
+    //   content: attr(placeholder);
+    //   margin-right: 0.5rem;
+    // }
+
+    &:focus::before {
+      content: '';
+    }
+
+    // &::-webkit-datetime-edit-fields-wrapper {
+    //   opacity: 0;
+    // }
+
+    &:focus::-webkit-datetime-edit-fields-wrapper {
+      opacity: 1;
+    }
+
+    // &::after {
+    //   display: none;
+    // }
   }
 
   & .icon--calendar {
@@ -28,6 +42,10 @@
 
   & .icon--arrow-down {
     margin-left: -2rem;
+  }
+
+  & .icon--not-visible {
+    margin-left: -3rem;
   }
 
   &--calendar-small {
@@ -85,7 +103,7 @@
       border-color: $blue;
     }
 
-    &--empty { border-color: $red; }
+    &--error { border-color: $red; }
 
     &--search-normal {
       width: 39.4rem;

@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from '../../store/hooks/redux';
 import fetchUsers from '../../store/actions/ActionCreatorsUsers';
 import FilterUsers from '../../components/Filter/FilterUsers';
 import Header from '../../components/Header/Header';
+import { ButtonLink } from '../../components/Button/ButtonLink';
 import UsersCards from './components/UsersCards';
 
 function Tasks() {
@@ -20,6 +21,14 @@ function Tasks() {
         <div className='container'>
           <FilterUsers />
           <div className='users'>
+            <div className='users__btn'>
+              <ButtonLink
+                color='blue'
+                path='new-user'
+                icon={{ id: 'new-task' }}
+                context='Добавить пользователя'
+              />
+            </div>
             <ul className='users__list'>
               {isLoading && <h2> Идет загрузка </h2>}
               {error && (

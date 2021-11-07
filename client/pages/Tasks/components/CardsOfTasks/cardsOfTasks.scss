@@ -76,6 +76,10 @@
       }
     }
 
+    &-buttons {
+      & .btn--primary + .btn--primary { margin-left: 1rem; }
+    }
+
     &-button + .card__tasks-button {
       margin-left: 1.5rem;
     }

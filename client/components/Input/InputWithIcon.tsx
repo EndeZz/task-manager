@@ -11,6 +11,8 @@ export type InputTypeWithIcon = {
   type?: 'text' | 'password' | 'textarea' | 'checkbox' | 'email' | 'search' | 'tel' | 'date';
   value?: string,
   onChange?: (e: React.ChangeEvent<HTMLInputElement> | string) => void,
+  onClick?: VoidFunction,
+  error: any,
 };
 
 export const InputIcon: React.ComponentType<InputTypeWithIcon> = ({
@@ -22,12 +24,14 @@ export const InputIcon: React.ComponentType<InputTypeWithIcon> = ({
   type = 'text',
   value,
   onChange,
+  onClick,
+  error = '',
 }) => {
   return (
     <>
-      <div className={`input input--${id}${`-${size}` ?? ''}`}>
+      <div className={`input input--${id}${`-${size}` ?? ''} `} onClick={onClick}>
         <input
-          className={`input__text input__text--${id}${`-${size}` ?? ''}`}
+          className={`input__text input__text--${id}${`-${size}` ?? ''} ${error && 'input__text-error'}`}
           type={type}
           placeholder={placeholder}
           id={id}

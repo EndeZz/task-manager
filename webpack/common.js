@@ -82,7 +82,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: `${paths.src}\\index.html`,
+      template: `${paths.src}/index.html`,
     }),
     new webpack.ProvidePlugin({
       $: 'jquery',

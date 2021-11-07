@@ -1,1 +1,11 @@
-@import '../../styles/styles.scss';
+.users {
+  & .users__btn {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+  }
+
+  &__item-buttons {
+    & .btn--primary + .btn--primary { margin-left: 1rem; }
+  }
+}

@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+// import AirDatepicker from 'air-datepicker';
 import { useAppDispatch, useAppSelector } from '../../store/hooks/redux';
 import fetchUsers from '../../store/actions/ActionCreatorsUsers';
 import { Input } from '../../components/Input/InputDefault';
@@ -20,25 +21,10 @@ function NewTask() {
     dispatch(fetchUsers());
   }, []);
 
-  // const initialItems = { type: '', author: '', executor: '' };
-
-  // const [selected, setSelected] = useState({ type: '', author: '', executor: '' });
-
-  // const handleChangeValues = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   const { name, value } = e.target;
-  //   setSelected((prevState) => ({
-  //     ...prevState,
-  //     [name]: value,
-  //   }));
-  // };
-
-  // useEffect(() => {
-  //   setSelected(selected);
-  // }, []);
-
-  const history = useHistory();
+  // const history = useHistory();
+  // const datepicker = new AirDatepicker('#calendar', { dateFormat: 'yyyy-MM-dd' });
   const {
-    handleSubmit, handleChange, values, touched, errors,
+    handleSubmit, handleChange, values, errors, setFieldValue,
   } = useFormik({
     initialValues: {
       type: '',
@@ -49,20 +35,22 @@ function NewTask() {
       dateExpired: '',
     },
     validationSchema: Yup.object({
-      type: Yup.string().min(6, 'Password should be longer than 6 characters').required(),
-      name: Yup.string().min(6, 'Password should be longer than 6 characters').required(),
-      description: Yup.string().min(6, 'Password should be longer than 6 characters').required(),
-      author: Yup.string().min(6, 'Password should be longer than 6 characters').required(),
-      executor: Yup.string().min(6, 'Password should be longer than 6 characters').required(),
-      dateExpired: Yup.string().min(6, 'Password should be longer than 6 characters').required(),
+      type: Yup.string().min(2, 'Поле видео не может быть пустым').required(),
+      name: Yup.string().min(2, 'Заголовок не может быть пустым').required(),
+      description: Yup.string().min(2, 'Описание не может быть пустым').required(),
+      author: Yup.string().min(6, 'Поле инициатора не может быть пустым').required(),
+      executor: Yup.string().min(6, 'Поле ответственный не может быть пустым').required(),
+      dateExpired: Yup.string().min(6, 'Поле даты не может быть пустым').required(),
     }),
-    onSubmit: ({
-      type, name, description, author, executor, dateExpired,
-    }) => {
-      console.log(`Type: ${type}, name: ${name}, author: ${author}, descr: ${description}, executor: ${executor}, date: ${dateExpired}`);
-      history.push('/tasks');
+    onSubmit: (data) => {
+      console.log(data);
+      // history.push('/tasks');
     },
   });
+
+  const selectChooseHandler = (value: string) => {
+    setFieldValue(`${value}`, value);
+  };
   return (
     <>
       <Header />
@@ -81,11 +69,16 @@ function NewTask() {
               <div className='new-task__wrapper'>
                 <Select
                   field={{
-                    id: 'type', placeholder: 'Выберите тип контента', content: 'Тип контента', value: `${values.type}`, icon: { id: 'arrow-down', width: 6, height: 4 },
+                    id: 'type',
+                    placeholder: 'Выберите тип контента',
+                    content: 'Тип контента',
+                    value: `${values.type}`,
+                    icon: { id: 'arrow-down', width: 6, height: 4 },
+                    error: errors.type,
                   }}
                   options={...['Видео', 'Аудио', 'Фото']}
                   selected={values.type}
-                  setSelected={handleChange}
+                  onChange={() => selectChooseHandler(values.type)}
                 />
                 <Input
                   id='name'
@@ -93,6 +86,7 @@ function NewTask() {
                   placeholder='Введите заголовок задачи'
                   value={values.name}
                   onChange={handleChange}
+                  error={errors.name}
                 />
                 <Input
                   id='description'
@@ -101,6 +95,7 @@ function NewTask() {
                   type='textarea'
                   value={values.description}
                   onChange={handleChange}
+                  error={errors.description}
                 />
                 <InputFile
                   icon={{ id: 'clip' }}
@@ -118,27 +113,29 @@ function NewTask() {
                     type='date'
                     value={values.dateExpired}
                     onChange={handleChange}
+                    // onClick={() => datepicker}
+                    error={errors.dateExpired}
                   />
                   <Select
                     field={{
-                      id: 'author', placeholder: 'Выберите инициатора', content: 'Инициатор', value: `${values.author}`, icon: { id: 'arrow-down', width: 6, height: 4 },
+                      id: 'author', placeholder: 'Выберите инициатора', content: 'Инициатор', value: `${values.author}`, icon: { id: 'arrow-down', width: 6, height: 4 }, error: errors.author,
                     }}
-                    options={users}
+                    options={users.map((user) => user.name)}
                     selected={values.author}
-                    setSelected={handleChange}
+                    onChange={() => selectChooseHandler(values.author)}
                   />
                   <Select
                     field={{
-                      id: 'executor', placeholder: 'Выберите ответственного', content: 'Ответственный', value: `${values.executor}`, icon: { id: 'arrow-down', width: 6, height: 4 },
+                      id: 'executor', placeholder: 'Выберите ответственного', content: 'Ответственный', value: `${values.executor}`, icon: { id: 'arrow-down', width: 6, height: 4 }, error: errors.executor,
                     }}
-                    options={users}
+                    options={users.map((user) => user.name)}
                     selected={values.executor}
-                    setSelected={handleChange}
+                    onChange={() => selectChooseHandler(values.executor)}
                   />
-                  {touched.type && errors.name && errors.author && errors.description
+                  {/* {touched.type && errors.name && errors.author && errors.description
                 && errors.dateExpired ? (
-                  <div>{errors}</div>
-                    ) : null}
+                  <div>{errors.author}</div>
+                    ) : null} */}
                 </div>
               </div>
               <div className='btn-wrapper'>
