@@ -142,33 +142,33 @@
         flex-direction: column;
         width: 6.42rem;
         height: 5.85rem;
-        top: 6.42rem;
-        right: 15.71rem;
+        top: 5.42rem;
+        right: 12.71rem;
         box-shadow: 0px 0.28rem 1.07rem rgba(0, 0, 0, 0.15);
-        opacity: 0;
+        opacity: 1;
     }
     .photo-active {
         opacity: 1;
     }
 
-    &__user-log {
+    &__user-item {
         padding: 0.90rem 1rem;
         border: 1px solid $blue-outline;
         transition: all .3s;
         cursor: default;
     } 
-    &__user-log:hover {
+    &__user-item:hover {
         background-color: $brightblue;
     }
 
-    &__user-goout {
-        padding: 0.85rem 1rem 0.64rem 2.21rem;
-        border: 1px solid $blue-outline;
-        transition: all .3s;
-        cursor: default;
-    }
-    &__user-goout:hover {
-        background-color: $brightblue;
-    }
+    // &__user-goout {
+    //     padding: 0.85rem 1rem 0.64rem 2.21rem;
+    //     border: 1px solid $blue-outline;
+    //     transition: all .3s;
+    //     cursor: default;
+    // }
+    // &__user-goout:hover {
+    //     background-color: $brightblue;
+    // }
 
 }
