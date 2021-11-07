@@ -12,6 +12,12 @@ npm run start
 
 Вы можете просмотреть сервер разработки по адресу localhost: 3000.
 
+## Для запуска сервера с данными:
+
+npm run server
+
+Вы можете просмотреть сервер по адресу localhost: 5000.
+
 ## Сборка для продакшена:
 
 npm run build
@@ -25,6 +31,8 @@ npm run clean
 - Webpack
 - Typescript
 - Sass
+- React
+- Redux
 
 # Зависимости:
 
@@ -42,8 +50,6 @@ npm run clean
 - css-loader - Интерпритирует @import и url()
 - style-loader - Помещает CSS в DOM
 - html-loader - Экспортирует HTML как строку и минимизирует, когда этого требует компилятор.
-- pug - шаблонизатор Html
-- pug-html-loader - преобразует pug файлы в html
 ## Plugins
 - html-webpack-plugin - Создает HTML файлы из шаблона
 - mini-css-extract-plugin - Извлекает CSS в отдельные файлы
