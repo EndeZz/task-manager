@@ -60,6 +60,14 @@ input {
   grid-row-gap: 3rem;
 }
 
+.back {
+  display: flex;
+
+  &__heading {
+    margin-bottom: 30px;
+  }
+}
+
 h1 {
   @include font_config(normal, 500, 2.4rem, 2.8rem);
 }

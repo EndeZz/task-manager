@@ -1,0 +1,41 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.tooltip {
+  @include font_config(normal, 400, 1.2rem, 1.8rem);
+
+  display: inline-block;
+  border-radius: 4px;
+  background-color: $color-txt;
+  position: absolute;
+  left: -45%;
+  top: 118%;
+  padding: 10px;
+  width: 211px;
+  z-index: $z-tooltip;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.2s ease;
+  color: $color-light;
+
+  visibility: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    width: 6px;
+    height: 6px;
+    border: 5px solid transparent;
+    border-bottom: 0.6rem solid #313131;
+  }
+
+  &__date,
+  &__time {
+    @include font_config(normal, 400, 1.2rem, 1.4rem);
+
+    opacity: 0.6;
+  }
+}

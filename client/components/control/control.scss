@@ -12,14 +12,18 @@
     &-task {
       grid-template-columns: 393px 187px 187px 393px;
     }
+
+    &-users {
+      grid-template-columns: 393px auto;
+    }
   }
 
   &__item {
-    width: 393px;
+    width: auto;
     position: relative;
   }
 
-  &__search-title {
+  &__title {
     @include font_config(normal, 500, 1.2rem, 1.4rem);
 
     margin-bottom: 9px;

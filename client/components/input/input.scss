@@ -5,27 +5,27 @@
   @include font_config(normal, 400, 1.4rem, 1.6rem);
 
   outline: none;
-  width: 393px;
+  width: 100%;
   padding: 12px 15px;
   background: $color-light;
   background-repeat: no-repeat;
   background-position: center right 15px;
   border: 1px solid $color-blue-outline;
   border-radius: 4px;
-
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 
   &-sm {
     width: 187px;
+    padding-right: 20px;
   }
 
   &_date {
     background-image: url('../../../public/img/icons/calendar-icon.svg');
   }
 
-  &_arrow {
+  &_arrow_hidden {
     padding-right: 25px;
 
     &::after {
@@ -40,8 +40,22 @@
       right: 15px;
       top: 18px;
     }
+  }
 
-    &:focus::after {
+  &_arrow_visible {
+    padding-right: 25px;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      height: 4px;
+      width: 6px;
+      background-image: url('../../../public/img/icons/arrow_down-icon.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      right: 15px;
+      top: 18px;
       transform: rotate(180deg);
     }
   }
@@ -63,6 +77,11 @@
       top: 38px;
       right: 0;
       padding-right: 15px;
+    }
+
+    &::-webkit-search-cancel-button {
+      opacity: 0;
+      pointer-events: none;
     }
 
     &:focus {

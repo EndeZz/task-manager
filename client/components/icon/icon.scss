@@ -1,8 +1,6 @@
 @import '../../styles/variables';
 
 .icon {
-  // width: 10px;
-  // height: 10px;
   fill: currentColor;
 
   &_edge {
@@ -54,6 +52,10 @@
 
   &_primary {
     fill: $color-primary;
+
+    &-str {
+      stroke: $color-primary;
+    }
   }
 
   &_success {

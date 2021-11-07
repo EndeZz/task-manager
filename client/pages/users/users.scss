@@ -1,0 +1,54 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.users {
+  display: grid;
+  gap: 3rem;
+  padding-top: 40px;
+
+  &__subject {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  &__card {
+    background-color: $color-light;
+    border: 1px solid $color-blue-outline;
+    box-shadow: 0 4px 10px $color-shadow-task;
+    border-radius: 4px;
+    padding: 14px 20px;
+
+    &:hover {
+      box-shadow: 0 4px 15px $color-shadow-item;
+    }
+  }
+
+  &__item {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 28.6rem 50rem auto;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 6rem auto;
+    align-items: center;
+  }
+
+  &__particle {
+    display: grid;
+    grid-template-columns: 20rem 11rem;
+  }
+
+  &__title {
+    @include font_config(normal, 500, 1.4rem, 1.6rem);
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__subtitle {
+    @include font_config(normal, 400, 1.4rem, 1.6rem);
+  }
+}

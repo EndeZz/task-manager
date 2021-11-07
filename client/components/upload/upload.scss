@@ -95,6 +95,11 @@
       .upload__img_caption {
         fill: $color-primary;
       }
+
+      .tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
     }
 
     &:not(:last-child):hover {

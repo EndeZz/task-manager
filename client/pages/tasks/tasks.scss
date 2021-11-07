@@ -17,6 +17,9 @@
     box-shadow: 0 4px 10px $color-shadow-task;
     border-radius: 4px;
     padding: 18px 20px;
+    min-height: 76px;
+    display: flex;
+    align-items: center;
 
     &:hover {
       box-shadow: 0 4px 15px $color-shadow-item;
