@@ -1,0 +1,24 @@
+@import '../../components/buttons/buttons.scss';
+@import '../../components/header/header.scss';
+@import '../../components/message/message.scss';
+@import '../../styles/style.scss';
+@import '../../styles/text.scss';
+
+.heading {
+  display: flex;
+  justify-content: start;
+  align-self: center;
+  max-width: 57.5em;
+  width: 100%;
+  margin-bottom: 2.1em;
+
+  .button__icon {
+    margin: 0;
+  }
+
+  &__text {
+    @include h1__text;
+
+    margin-left: 0.7em;
+  }
+}
