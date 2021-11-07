@@ -1,5 +1,5 @@
 {
-  "extends": ["eslint:recommended", "plugin:import/recommended", "airbnb-base", "airbnb-typescript"],
+  "extends": ["airbnb-base", "airbnb-typescript"],
   "env": {
     "browser": true,
     "es6": true,
@@ -20,6 +20,18 @@
     "no-console": "warn",
     "max-len": ["error", 120, 2, { "ignoreComments": true }],
     "import/prefer-default-export": 0,
-    "react/jsx-filename-extension": [0]
+    "react/jsx-filename-extension": [0],
+    "object-curly-newline": ["error", { "multiline": true }],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
   }
 }

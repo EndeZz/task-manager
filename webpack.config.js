@@ -1,6 +1,4 @@
 const path = require('path');
-const fs = require('fs');
-const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
@@ -16,9 +14,6 @@ const PATHS = {
   dist: path.join(__dirname, './dist'),
 };
 
-const PAGES_DIR = `${PATHS.client}/pages`;
-// const PAGES = fs.readdirSync(PAGES_DIR).filter((fileName) => fileName.endsWith('.pug'));
-
 module.exports = (options) => {
   const isDev = options.name === 'development';
 
@@ -30,39 +25,17 @@ module.exports = (options) => {
       open: true,
       compress: true,
       port: 8080,
+      historyApiFallback: true,
     },
     context: PATHS.client,
-    entry: {
-      // app: glob.sync(`${PATHS.client}/pages/**/*.*s`),
-      index: `${PAGES_DIR}/index/index.ts`,
-      task: `${PAGES_DIR}/task/task.ts`,
-      tasks: `${PAGES_DIR}/tasks/tasks.ts`,
-      404: `${PAGES_DIR}/404/404.ts`,
-    },
+    entry: path.join(__dirname, './client', 'index.tsx'),
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: '[name].[contenthash].js',
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: `${PATHS.client}/pages/index/index.pug`,
-        filename: 'index.html',
-        chunks: ['index']
-      }),
-      new HtmlWebpackPlugin({
-        template: `${PATHS.client}/pages/tasks/tasks.pug`,
-        filename: 'tasks.html',
-        chunks: ['tasks']
-      }),
-      new HtmlWebpackPlugin({
-        template: `${PATHS.client}/pages/task/task.pug`,
-        filename: 'task.html',
-        chunks: ['task']
-      }),
-      new HtmlWebpackPlugin({
-        template: `${PATHS.client}/pages/404/404.pug`,
-        filename: '404.html',
-        chunks: ['404']
+        template: path.join(__dirname, 'client', 'index.html'),
       }),
       new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
       new MiniCssExtractPlugin({

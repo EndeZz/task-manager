@@ -1,12 +1,21 @@
 {
   "compilerOptions": {
     "outDir": "./dist/",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "sourceMap": true,
-    "noImplicitAny": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
     "module": "es6",
     "target": "es5",
     "jsx": "react",
     "allowJs": true,
-    "moduleResolution": "node"
-  }
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "isolatedModules": true
+  },
+  "include": ["client/"]
 }
