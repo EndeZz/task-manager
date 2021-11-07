@@ -1,0 +1,35 @@
+@import '../../styles/color.scss';
+@import '../../styles/common.scss';
+
+.loader {
+    display: block;
+    margin-top: 250px;
+    width: 3.57rem;
+    height: 3.57rem;
+    margin: 0 auto;
+    border: 5px solid rgba(25, 113, 247, 0.6);
+    border-radius: 50%;
+    border-left-color: $blue;
+    animation: loader 1.3s linear infinite;
+ }
+
+@keyframes loader {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.info {
+
+    &__search-title {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+}
+
+
+.hide {
+    display: none;
+}

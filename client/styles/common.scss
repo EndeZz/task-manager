@@ -1,0 +1,86 @@
+@import './color.scss';
+
+html{
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
+  *,
+  *::after,
+  *::before{
+    box-sizing: inherit;
+  }
+  
+body {
+  font-family: 'Roboto-Regular', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $night;
+  margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 87rem;
+    margin: 0 auto;
+    padding: 0 1.07rem;
+}
+
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  li {
+    margin: 0;
+  }
+  
+  ul[class] {
+    list-style: none;
+  }
+
+  ul {
+    padding: 0;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  
+  a {
+    // font-size: 14px;
+    // line-height: 16px;
+    color: $night;
+    text-decoration: none;
+  }
+  
+  figure {
+    margin: 0;
+    padding: 0;
+  }
+
+  figcaption {
+    margin: 0;
+    padding: 0;
+  }
+
+  .hide {
+    display: none;
+}
+
+.typeHide {
+    display: block;
+}

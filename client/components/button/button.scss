@@ -1,0 +1,335 @@
+@import '../../../client/styles/color.scss';
+
+.btn-reset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all .4s;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.28rem;
+    background-color: #fff;
+}
+
+.btn-reset {
+    
+}
+
+
+.btn-video {
+    &__title {
+        padding-left: 7px;
+        color: $blue;
+    }
+}
+.btn-video:hover {
+    background-color: rgb(226, 241, 255);
+}
+.btn-video:active {
+    box-shadow: 0 9px rgb(172, 192, 252);
+}
+.btn-photo {
+    &__title {
+        padding-left: 7px;
+        color: #43DD9C;
+    }
+}
+.btn-photo:hover {
+    background-color: rgb(227, 255, 242);
+}
+.btn-photo:active {
+    box-shadow: 0 8px rgb(186, 253, 193);
+}
+.btn-audio {
+    &__title {
+        padding-left: 7px;
+        color: #FFAC2F;
+    }
+}
+.btn-audio:hover {
+    background-color: rgb(246, 255, 227);
+}
+.btn-audio:active {
+    box-shadow: 0 8px rgb(225, 253, 186);
+}
+.btn-video--blue {
+    color: $blue;
+    padding: 0.85rem 1.07rem 0.85rem 1.42rem;
+    border: 2px solid $blue;
+    margin-right: 0.71rem;
+}
+.btn-photo--green {
+    color: $blue;
+    padding: 0.85rem 1.07rem 0.85rem 1.42rem;
+    border: 2px solid #43DD9C;
+    margin-right: 0.71rem;
+}
+.btn-audio--yellow {
+    color: $blue;
+    padding: 0.85rem 1.07rem 0.85rem 1.42rem;
+    border: 2px solid #FFAC2F;
+    margin-right: 0.71rem;
+}
+
+
+.new-task_btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 0;
+    padding: 12px 15px 12px 15px;
+    color: #fff;
+    background-color: $blue;
+
+    &__img {
+        padding-right: 10px;
+    }
+}
+
+.new-task_btn:active {
+    box-shadow: inset 5px 5px 10px -1px
+}
+
+.edit-btn {
+    width: 34px;
+    height: 34px;
+    background-color: $brightblue;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-btn {
+    width: 34px;
+    height: 34px;
+    background-color: $brightblue;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-btn:hover {
+    background-color: rgb(179, 218, 255);
+}
+.edit-btn:active {
+    box-shadow: inset 15px 15px 10px -1px;
+}
+
+.delete-btn:hover {
+    background-color: rgb(179, 218, 255);
+}
+.delete-btn:active {
+    box-shadow: inset 15px 15px 10px -1px;
+}
+
+
+.list-task {
+    color: $blue;
+    &__img {
+        margin-right: 10px;
+    }
+}
+
+.descr-tasks_btn {
+    color: $blue;
+    &__img {
+        margin-right: 10px;
+    }
+}
+
+
+.attach-file {
+    background-color: $brightblue;
+    color: $blue;
+    display: flex;
+    align-items: center;
+    padding: 12px 13px;
+    &__img {
+        margin-right: 10px;
+    }
+    &__title {}
+}
+.attach-file:active {
+    box-shadow: inset 15px 15px 10px -1px;
+}
+
+.delete-file {
+    display: flex;
+    align-items: center;
+    color: red;
+    &__img {
+        margin-right: 10px;
+    }
+    &__title {
+
+    }
+}
+
+.create-task {
+    color: #fff;
+    background-color: $blue;
+    padding: 12px 15px;
+    display: flex;
+    align-items: center;
+    &__img {
+        margin-right: 10px;
+    }
+    &__title {
+
+    }
+}
+.create-task:active {
+    box-shadow: inset 15px 15px 10px -1px;
+}
+
+
+
+.all-role_btn {
+    color: #fff;
+    background-color: $blue;
+    padding: 12px 15px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.all-role_btn:active {
+    border-bottom: 2px solid #fff;
+    box-shadow: 0 8px rgb(25, 128, 253);
+}
+
+.content-maker_btn {
+    padding: 12px 15px;
+    background-color: #fff;
+    border: 2px solid $brightblue;
+    margin-left: 15px;
+}
+.content-maker_btn:active {
+    box-shadow: inset 15px 15px 10px -1px;
+}
+.manager_btn {
+    padding: 12px 15px;
+    background-color: #fff;
+    border: 2px solid $brightblue;
+    margin-left: 15px;
+}
+.manager_btn:active {
+    box-shadow: inset 15px 15px 10px -1px;
+}
+
+.admin_btn {
+    padding: 12px 15px;
+    background-color: #fff;
+    border: 2px solid $brightblue;
+    margin-left: 15px;
+}
+.admin_btn:active {
+    box-shadow: inset 15px 15px 10px -1px;
+}
+
+.add-user {
+    position: absolute;
+    right: 0;
+    padding: 12px 14px;
+    background-color: $blue;
+    color: #fff;
+    transition: background-color .3s;
+
+    &__img {
+        margin-right: 10px;
+    }
+}
+
+.add-user:active {
+    background-color: rgb(179, 218, 255);
+}
+
+.publish-btn {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.new-user_upload {
+    display: flex;
+    align-items: center;
+    color: $blue;
+
+    &__img {
+        margin-right: 10px;
+    }
+}
+
+
+.save-btn {
+    background-color: $blue;
+    color: #fff;
+    padding: 12px 15px;
+
+    &__img {
+        margin-right: 10px;
+    }
+}
+.save-btn:active {
+    opacity: 0.7;
+    color: $blue;
+    background-color: rgb(220, 218, 218);
+}
+
+
+.delete-profile_btn {
+    color: #FF603E;
+    padding: 12px 15px;
+    transition: all .4s;
+
+    &__img {
+        margin-right: 11px;
+    }
+}
+
+.delete-profile_btn:hover {
+    border: 1px solid #fa7254;
+}
+.delete-profile_btn:active {
+    background-color: #fc4117;
+    color: #fff;
+}
+
+
+
+.entry-btn {
+    padding: 12px 15px 12px 13px;
+    background-color: $blue;
+    color: #fff;
+
+    &__img {
+        margin-right: 8px;
+    }
+}
+
+
+.notice-btn {
+
+    &__img {
+        margin-right: 20px;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+
+
+
+.home-page_btn {
+    padding: 12px 15px;
+    background-color: $blue;
+    color: #fff;
+    &__img {
+        margin-right: 8px;
+    }
+}

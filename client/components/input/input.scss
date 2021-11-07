@@ -1,0 +1,588 @@
+@import '../../styles/color.scss';
+
+
+.search {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.search-block {
+    position: relative;
+    margin-right: 1.42rem;
+    margin-bottom: 1.42rem;
+    width: 28.07rem;
+    height: 100%;
+
+    &__title {
+        font-weight: 600;
+        display: block;
+        font-size: 0.85rem;
+        line-height: 1rem;
+        // color: $night;
+        margin-bottom: 10px;
+    }
+    &__input {
+        position: relative;
+        padding: 0.85rem 6.42rem 0.85rem 1.07rem;
+        width: 28.07rem;
+        border-radius: 4px;
+        border: 1px solid $blue-outline;
+        outline: none;
+    }
+    &__input:hover {
+        border: 1px solid $grayblue;
+    }
+    &__img {
+        position: absolute;
+        bottom: 0.90rem;
+        right: 1.42rem;
+    }
+}
+
+.info {
+padding-top: 5.71rem;
+margin-bottom: 1.78rem;
+
+&__search {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+&__search-block {
+    position: relative;
+    margin-right: 1.42rem;
+    margin-bottom: 1.42rem;
+}
+
+&__search-title {
+    // font-weight: 500;
+    font-size: 0.85rem;
+    line-height: 1rem;
+    // color: $night;
+    margin-bottom: 10px;
+}
+
+
+.search-info {
+    position: relative;
+    padding: 0.85rem 6.42rem 0.85rem 1.07rem;
+    width: 28.07rem;
+    border-radius: 4px;
+    border: 1px solid $blue-outline;
+    outline: none;
+}
+
+.search-info:hover {
+    border: 1px solid $grayblue;
+}
+
+&__search-search {
+    position: absolute;
+    bottom: 0.90rem;
+    right: 1.42rem;
+}
+
+
+
+&__data-block {
+    position: relative;
+    margin-right: 1.42rem;
+
+    .calendar {
+        display: none;
+    }
+    .calendar-view {
+        display: block;
+    }
+    .auto-jsCalendar {
+        position: absolute;
+        display: inline-block;
+        right: 0;
+        top: 5rem;
+        // opacity: 0;
+    }
+    .date-publication__input--active {
+        border: 1px solid $blue;
+    }
+    
+    .auto-jsCalendar td:hover {
+        color: $blue;
+        background-color: #fff;
+    }
+    .jsCalendar tbody td.jsCalendar-current {
+        background-color: $brightblue;
+        border-radius: inherit;
+        color: #000;
+    }
+    .jsCalendar thead .jsCalendar-week-days th, .jsCalendar tbody td {
+        width: 2.85rem;
+        height: 2.14rem;
+        align-items: center;
+        // display: flex;
+    }
+    .jsCalendar thead .jsCalendar-nav-left, 
+    .jsCalendar thead .jsCalendar-nav-right {
+        color: $blue;
+    }
+}
+
+&__search-calendar {
+    position: absolute;
+    top: 2.85rem;
+    right: 1.42rem;
+    cursor: pointer;
+}
+
+&__content-block {
+    display: flex;
+}
+
+&__content-btn {
+    position: relative;
+    transition: all .4s;
+}
+
+.btn-content {
+    outline: none;
+    cursor: pointer;
+    border-radius: 0.28rem;
+    background-color: #fff;
+}
+
+&__btn-video {
+    color: $blue;
+    padding: 0.85rem 1.07rem 0.85rem 1.92rem;
+    border: 1px solid $blue;
+    margin-right: 0.71rem;
+
+    &:hover {
+        background-color: rgba(16, 126, 255, 0.1);;
+    }
+}
+
+&__img-video {
+    position: absolute;
+    top: 1.14rem;
+    left: 1.07rem;
+    margin-right: 10px;
+}
+
+&__btn-photo {
+    color: $green;
+    padding: 0.85rem 1.07rem 0.85rem 2.21rem;
+    border: 1px solid $green;
+    margin-right: 10px;
+
+    &:hover {
+        background-color: rgba(67, 221, 156, 0.1);
+    }
+}
+
+&__btn-audio {
+    color: $yellow;
+    padding: 0.85rem 1.07rem 0.85rem 1.92rem;
+    border: 1px solid $yellow;
+
+    &:hover {
+        background-color: rgba(255, 172, 47, 0.1);
+    }
+}
+}
+
+
+.calendar-deadline {
+    position: relative;
+    margin-right: 1.42rem;
+    margin-bottom: 1.42rem;
+    max-width: 13.35rem;
+
+    &__title {
+        font-weight: 600;
+        display: block;
+        font-size: 0.85rem;
+        line-height: 1rem;
+        // color: $night;
+        margin-bottom: 10px;
+    }
+    &__input {
+        position: relative;
+        padding: 0.85rem 3.78rem 0.85rem 1.07rem;
+        // width: 28.07rem;
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid $blue-outline;
+        outline: none;
+    }
+    &__input:hover {
+        border: 1px solid $grayblue;
+    }
+    &__img {
+        position: absolute;
+        bottom: 0.90rem;
+        right: 1.42rem;
+    }
+}
+
+
+
+.status-block {
+    position: relative;
+    width: 187px;
+    // width: 100%;
+    margin-right: 20px;
+
+    &__title {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 600;
+        padding-bottom: 9px;
+    }
+    &__input {
+        position: relative;
+        display: block;
+        padding: 12px 0 12px 15px;
+        outline: none;
+        border-radius: 4px;
+        border: 1px solid $blue-outline;
+        width: 100%;
+    }
+    &__input:hover {
+        border: 1px solid $grayblue;
+    }
+    &__img {
+        position: absolute;
+        top: 41px;
+        right: 13px;
+        width: 10px;
+        cursor: pointer;
+    }   
+    &__users {
+        position: relative; 
+        width: 100%;
+        top: 11px;
+        right: 0;
+    }
+    &__user {
+        border: 1px solid $blue-outline;
+        padding: 12px 0px 12px 15px;
+        cursor: pointer;
+        transition: all .3s;
+    }
+    &__user--black {
+        color: $night;
+    }
+    &__user--purple {
+        color: #D663FF;
+    }
+    &__user--blue {
+        color: $blue;
+    }
+    &__user--green {
+        color: $green;
+    }
+    &__user:hover {
+        background-color: $brightblue;
+    }
+}
+
+
+.deadline-block {
+    position: relative;
+    width: 187px;
+    margin-right: 20px;
+
+    &__title {
+        display: block;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 14px;
+        padding-bottom: 9px;
+
+    }
+    &__input {
+        position: relative;
+        width: 100%;
+        padding: 12px 0 12px 15px;
+        outline: none;
+        border-radius: 4px;
+        border: 1px solid $blue-outline;
+    }
+    &__input:hover {
+        border: 1px solid $grayblue;
+    }
+    &__img {
+        position: absolute;
+        top: 38px;
+        right: 13px;
+
+    }
+
+}
+
+.new-user_password {
+    position: relative;
+
+    &__input {
+        width: 529px;
+        padding: 12px 150px 12px 15px;
+        border-radius: 4px;
+        border: 1px solid $blue-outline;
+        margin-bottom: 20px;
+        outline: none;
+    }
+    &__img {
+        position: absolute;
+        top: 13px;
+        right: 20px;
+        cursor: pointer;
+    }
+}
+
+
+
+.choose-type {
+    position: relative;
+    max-width: 383px;
+    width: 100%;
+    margin-bottom: 20px;
+    &__title {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 12px;
+        padding-bottom: 10px;
+    }
+    &__input {
+        position: relative;
+        padding: 12px 0 12px 15px;
+        border-radius: 4px;
+        max-width: 383px;
+        opacity: 0.6;
+        width: 100%;
+        height: 40px;
+        outline: none;
+        border: 3px solid $brightblue;
+    }
+    &__img {
+        position: absolute;
+        top: 42px;
+        right: 15px;
+        width: 12px;
+        height: 8px;
+        cursor: pointer;
+    }
+
+    &__user {
+        border: 2px solid $brightblue;
+        padding: 12px 25px;
+        cursor: pointer;
+        transition: all .3s;
+    }
+    &__user:hover {
+        box-shadow: 14px 9px 50px rgba(2, 6, 8, 0.93);
+    }
+
+    &__user--black {
+        color: $night;
+    }
+    &__user--green {
+        color: $green;
+    }
+    &__user--yellow {
+        color: $yellow;
+    }
+}
+
+
+
+.initiator-task {
+    position: relative;
+    margin-bottom: 170px;
+
+    &__title {
+        font-weight: 600;
+        display: inline-block;
+        font-size: 12px;
+        padding-bottom: 10px;
+    }
+    &__input {
+        max-width: 334px;
+        width: 100%;
+        padding: 12px 100px 12px 15px;
+        border: 1px solid $blue-outline;
+        border-radius: 4px;
+        outline: none;
+    }
+    &__img {
+        position: absolute;
+        width: 12px;
+        height: 8px;
+        top: 48px;
+        right: 15px;
+        cursor: pointer;
+    }
+
+    &__users {
+        position: absolute;
+        top: 80px;
+        display: flex;
+        flex-direction: column;
+        height: 130px;
+        width: 100%;
+        // width: 250px;
+        z-index: 10;
+    }
+
+    &__user {
+        display: block;
+        border: 2px solid $blue-outline;
+        background-color: #fff;
+        padding: 12px 0 12px 14px;
+        text-align: left;
+        outline: none;
+        cursor: pointer;
+        transition: box-shadow .3s;
+    }
+    &__user:hover {
+        box-shadow: 24px 3px 20px rgba(2, 6, 8, 0.93);
+    }
+}
+
+
+
+.respons-block {
+
+    &__title {
+
+    }
+    &__input {
+
+    }
+    &__img {
+
+    }
+}
+
+
+
+
+.user-fio {
+    max-width: 529px;
+    width: 100%;
+    &__title {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 12px 150px 12px 15px;
+        border-radius: 4px;
+        border: 1px solid $blue-outline;
+        margin-bottom: 20px;
+        outline: none;
+    }
+}
+
+
+.user-email {
+    max-width: 529px;
+    width: 100%;
+
+    &__title {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 12px 150px 12px 15px;
+        border-radius: 4px;
+        border: 1px solid $blue-outline;
+        margin-bottom: 20px;
+        outline: none;
+    }
+}
+
+
+
+.role-block {
+    position: relative;
+    max-width: 529px;
+    width: 100%;
+
+    &__title {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    &__input {
+        position: relative;
+        width: 100%;
+        padding: 12px 150px 12px 15px;
+        border-radius: 4px;
+        border: 1px solid $blue-outline;
+        margin-bottom: 10px;
+        outline: none;
+    }
+    &__img {
+        position: absolute;
+        width: 12px;
+        height: 8px;
+        top: 45px;
+        right: 30px;
+        cursor: pointer;
+    }
+
+    &__users {
+        margin-bottom: 20px;
+    }
+
+    &__user {
+        display: block;
+        border: 2px solid $blue-outline;
+        border-left: 2px solid $night;
+        background-color: #fff;
+        color: $night;
+        padding: 12px 0 12px 14px;
+        text-align: left;
+        outline: none;
+        cursor: pointer;
+        transition: all .4s;
+    }
+    &__user:hover {
+        box-shadow: 24px 3px 20px rgba(2, 6, 8, 0.93);
+        text-transform: uppercase;
+    }
+}
+
+
+.password-block {
+    position: relative;
+    max-width: 529px;
+    width: 100%;
+
+    &__title {
+        display: inline-block;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    &__input {
+        position: relative;
+        width: 100%;
+        padding: 12px 150px 12px 15px;
+        border-radius: 4px;
+        border: 1px solid $blue-outline;
+        margin-bottom: 10px;
+        outline: none;
+    }
+    &__img {
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        cursor: pointer;
+    }
+}

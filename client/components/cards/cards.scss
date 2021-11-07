@@ -1,0 +1,84 @@
+@import '../../styles/color.scss';
+
+.card {
+    margin-bottom: 4.28rem;
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 20px;
+    }
+
+    &__column {
+        max-width: 27.14rem;
+        width: 100%;
+        margin: 0 0 1.42rem;
+
+    }
+
+    // &__column:nth-child(3n-1) {
+    //     margin-right: 1.42rem;
+    //     margin-left: 1.42rem;
+    // }
+
+    &__column-img {
+        // flex: 0 1 393px;
+        transition: all .4s;
+        margin-bottom: 0.71rem;
+        cursor: pointer;
+        width: 100%;
+        max-height: 17.85rem;
+        height: 100%;
+    }
+
+    &__column-img:hover {
+        box-shadow: 0px 0.67rem 1.79rem rgba(0, 0, 0, 0.9);
+        transform: scale(1.1);
+        border-radius: 6.92rem;
+    }
+
+    &__column-name_image {
+        display: inline-block;
+    }
+    &__column-link {
+        display: flex;
+        column-gap: 10px;
+        cursor: pointer;
+    }
+
+    &__column-name--blue {
+        color: $blue;
+    }
+    &__column-name--yellow {
+        color: $yellow;
+    }
+    &__column-name--green {
+        color: $green;
+    }
+
+    &__column-text {
+        margin-top: 10px;
+        margin-bottom: 6px;
+    }
+
+    &__column-author {
+        position: relative;
+        opacity: 0.6;
+        margin-right: 1.07rem;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 0.28rem;
+            height: 0.28rem;
+            top: 0.5rem;
+            right: -0.85rem;
+            border-radius: 100%;
+            background-color: $blue;
+        }
+    }
+
+    &__column-data {
+        opacity: 0.6;
+    }
+}

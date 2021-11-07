@@ -1,0 +1,305 @@
+@import '../../styles/color.scss';
+
+.users {
+
+    &__info {
+        display: flex;
+        padding-top: 40px;
+        padding-bottom: 30px;
+    }
+    &__search-block {
+        position: relative;
+        margin-right: 20px;
+    }
+
+
+    &__search-title {
+        display: block;
+        font-weight: 600;
+        padding-bottom: 10px;
+    }
+    &__search-input {
+        position: relative;
+        width: 393px;
+        padding: 12px 100px 12px 15px;
+        border-radius: 4px;
+        outline: none;
+        border: 1px solid $brightblue;
+    }
+    &__search-search {
+        position: absolute;
+        top: 40px;
+        right: 15px;
+    }
+
+    &__role-title {
+        display: block;
+        font-weight: 600;
+        font-size: 12px;
+        padding-bottom: 6px;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+    }
+    &__all-btn {
+        color: #fff;
+        background-color: $blue;
+        margin-right: 15px;
+    }
+    &__content-maker_btn {
+        margin-right: 15px;
+    }
+    &__manager_btn {
+        margin-right: 15px;
+    }
+
+    &__add-person {
+        position: relative;
+        text-align: end;
+        margin-bottom: 60px;
+    }
+    &__add-img {
+        position: absolute;
+        top: 13px;  
+        right: 185px;
+    }
+    &__add-btn {
+        // position: relative;
+        padding: 12px 14px 12px 43px;
+        border-radius: 4px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: #fff;
+        background-color: $blue;
+    }
+
+    &__person-items {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+    &__person-picture {
+        max-width: 40px;
+        width: 40px;
+        max-height: 40px;
+        height: 40px;
+        margin-right: 20px;
+    }
+
+    &__person-item {
+        row-gap: 15px;
+        position: relative;
+        padding: 0 20px;
+        transition: transform .4s;
+    }
+    &__person-item:hover {
+        transform: scale(1);
+        box-shadow: 0px 23px 33px rgba(0, 0, 0, 0.408);
+        border-radius: 14px;
+    }
+
+    &__person-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+    }
+    &__person-name {
+        display: inline-block;
+        max-width: 150px;
+        width: 100%;
+        white-space: nowrap;
+        margin-right: 50px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;          
+        overflow: hidden;
+    }
+    &__person-email {
+        display: inline-block;
+        max-width: 150px;
+        width: 100%;
+        margin-right: 50px;
+        white-space: nowrap;
+        overflow: hidden;
+
+    }
+    &__person-role {
+        max-width: 115px;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    &__person-insert {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 83px;
+        width: 100%;
+        right: 20px;
+    }
+
+    &__person-note {
+        margin-right: 15px;
+    }
+}
+
+.role-button {
+    padding: 12px 15px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.white {
+    background-color: #fff;
+    border: 2px solid $brightblue;
+}
+
+.user-card {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    max-width: 1222px;
+    width: 100%;
+    border: 1px solid $blue-outline;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+
+    &__photo {
+        padding-left: 20px;
+        cursor: pointer;
+    }
+
+    &__title {
+        position: relative;
+        padding-left: 5px;
+        margin-right: 20px;
+
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     background-image: url("../img/videoicon.svg");
+        //     width: 7px;
+        //     height: 10px;
+        //     left: 5px;
+        //     top: 4px;
+        //     margin-left: 20px;
+        // }
+    }
+    &__title--blue {
+        color: $blue;
+    }
+    &__title--photo {
+        color: #43DD9C;
+    }
+    &__title--audio {
+        color: #FFAC2F;
+    }
+
+    &__text {
+        position: relative;
+        font-weight: 600;
+        margin-right: 15px;
+        line-height: 16px;
+        max-width: 482px;
+        width: 100%;
+        // text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    &__text-gradient {
+        position: absolute;
+        right: 0;
+        width: 183px;
+        // width: 100%;
+        height: 100%;
+        background: linear-gradient(270deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &__author {
+        margin-right: 46px;
+        width: 155px;
+        // width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    &__data {
+        position: relative;
+        max-width: 75px;
+        width: 100%;
+        margin-right: 40px;
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url("../../../public/img/calendar-ui.svg");
+            width: 15px;
+            height: 14px;
+            left: -25px;
+        }
+    }
+
+    &__process {
+        white-space: nowrap;
+        width: 155px;
+    }
+    &__process--pink {
+        color: #D663FF;
+    }
+    &__process--green {
+        color: #97DC26;
+    }
+    &__process--blue {
+        color: #2CCCFF;
+    }
+
+    &__buttons {
+        display: flex;
+        align-items: center;
+    }
+
+    &__inner-note {
+        width: 34px;
+        height: 34px;
+        margin-left: 26px;
+        margin-right: 15px;
+    }
+    &__note-btn {
+        width: 34px;
+        height: 34px;
+        background-color: $brightblue;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    &__inner-del {
+        width: 34px;
+        height: 34px;
+    }
+    &__delete-btn {
+        width: 34px;
+        height: 34px;
+        background-color: $brightblue;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        // margin-right: 20px;
+        cursor: pointer;
+    }
+}
+
+.user-card:last-child {
+    margin-bottom: 200px;
+}
+
+.user-card--hover {
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}

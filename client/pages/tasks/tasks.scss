@@ -1,0 +1,22 @@
+@import '../../styles/color.scss';
+@import '../../styles/common.scss';
+
+// .main {
+//     background-color: #F3F8FB;;
+//   }
+
+.select-status {
+
+    &__title {
+        display: block;
+        font-weight: 600;
+        font-size: 12px;
+        margin-bottom: 7px;
+    }
+}
+
+
+.btn-end {
+    position: relative;
+    margin-bottom: 60px;
+}

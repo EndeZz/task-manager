@@ -1,0 +1,202 @@
+@import '../../styles/color.scss';
+
+
+.data-size {
+    width: 529px;
+    padding: 12px 150px 12px 15px;
+    border-radius: 4px;
+    border: 1px solid $blue-outline;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.new-user {
+
+    &__content {
+        max-width: 890px;
+        width: 100%;
+        // min-height: 316px;
+        height: 100%;
+        margin: 0 auto;
+    }
+    &__back {
+        margin-top: 40px;
+    }
+
+    &__border-info {
+        display: flex;
+        // align-items: center;
+        justify-content: space-between;
+        width: 930px;
+        width: 100%;
+        height: 650px;
+        // height: 100%;
+        border: 2px solid $blue-outline;
+        background-color: #fff;
+        padding: 40px 50px 50px 40px;
+    }
+
+    &__circle-img {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+        border: 1px solid $blue-outline;
+        margin-bottom: 20px;
+    }
+    &__photo-img {
+        height: 100%;
+        width: 100%;
+    }
+    &__upload-img {
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: auto;
+    }
+    &__upload-photo {
+        display: flex;
+        align-items: center;
+    }
+
+    &__custom-file {
+        border: none;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        color: $blue;
+    }
+    &__upload {
+        margin-right: 10px;
+    }
+    input[type="file"] {
+        display: none;
+    }
+
+    &__upload-title {
+        font-weight: 600;
+        margin-left: 10px;
+        color: $blue;
+        white-space: nowrap;
+    }
+
+    &__data-profile {
+        max-width: 529px;
+        width: 100%;
+    }
+
+    &__data-fio {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    &__fio-input {
+        // margin-bottom: 20px;
+    }
+
+    &__data-email {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    &__data-role {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    &__role-block {
+        position: relative;
+    }
+    &__role-img {
+        position: absolute;
+        width: 12px;
+        height: 8px;
+        top: 19px;
+        right: 30px;
+        cursor: pointer;
+    }
+
+    &__role-persons {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        max-width: 350px;
+        width: 100%;
+        z-index: 4;
+    }
+    &__role-person {
+        cursor: pointer;
+    }
+    &__role-name {
+        display: inline-block;
+        max-width: 350px;
+        width: 100%;
+        padding: 12px 0 12px 25px;
+        border: 2px solid $night;
+        background-color: $blue;
+        color: #fff;
+        border-radius: 6px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.408);
+        transition: transform .3s;
+    }
+    &__role-name:hover {
+        transform: scale(1.2);
+        color: $blue;
+        background-color: $grayblue;
+        border: 2px solid $blue;
+    }
+
+
+    &__password-data {
+        display: inline-block;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    &__password-block {
+        position: relative;
+    }
+    &__password-img {
+        position: absolute;
+        top: 13px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    &__fill-field {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        opacity: 1;
+    }
+    &__fill-circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        width: 18px;
+        height: 18px;
+        background-color: #FF603E;
+        margin-right: 10px;
+    }
+    &__fill-title {
+        // display: none;
+        color: #FF603E;
+    }
+
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}   
+
+
+.transform {
+    transform: rotate(180deg);
+}

@@ -1,0 +1,18 @@
+
+.profile {
+
+    &__content {}
+
+    &__border {
+        display: flex;
+        justify-content: space-between;
+        max-width: 930px;
+        width: 100%;
+        max-height: 320px;
+        height: 100%;
+        border: 2px solid #D8E3EC;
+        background-color: #fff;
+        padding: 40px 50px 50px 40px;
+    }
+
+}

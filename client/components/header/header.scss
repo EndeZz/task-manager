@@ -1,0 +1,174 @@
+@import '../../styles/color.scss';
+
+.header-block {
+    display: flex;
+    align-items: center;
+    height: 5.7rem;
+}
+
+.header {
+    border-bottom: 1px solid #c8d8ed;
+    // margin-bottom: 40px;
+
+    &__logo-img {
+        margin-right: 2.14rem;
+    }
+
+    &__menu {
+        margin-right: 41.42rem;
+    }
+
+    &__menu-list {
+        display: flex;
+    }
+
+    &__menu-item {
+        list-style: none;
+    }
+
+    &__menu-item a {
+        transition: all .4s;
+        cursor: pointer;
+    }
+    &__menu-item a:hover {
+        color: $blue;
+    }
+
+    &__menu-item:not(:last-child) {
+        margin-right: 2.85rem;
+    }
+
+    // &__menu-list_link:not(:last-child) {
+    //     margin-right: 2.85rem;
+    // }
+
+    .active {
+        color: $blue;
+        background-color: $brightblue;
+        padding: 0.64rem 0.85rem;
+    }
+
+    &__menu-list_link {
+        transition: all .4s;
+        cursor: pointer;
+    }
+
+    &__menu-list_link:hover {
+        color: $blue;
+    }
+
+    &__notif-block {
+        width: 1.78rem;
+        height: 1.78rem;
+        margin-right: 33px;
+    }
+    &__notif-block:hover {
+        border: 1px solid $brightblue;
+    }
+
+    &__notif-link {
+        position: relative;
+        width: 1.78rem;
+        height: 1.78rem;
+        margin-right: 2.14rem;
+        display: flex;
+        justify-content: center;
+        // align-items: center;
+        border-radius: 0.28rem;
+        margin-right: 1.42rem;
+        transition: all .3s;
+    }
+
+    &__notif-link_border {
+        background-color: $brightblue;
+    }
+
+    &__notif-link_active {
+        background-color: $brightblue;
+    }
+
+    &__notif-count {
+        position: absolute;
+        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.14rem;
+        width: 20px;
+        height: 20px;
+        top: -8px;
+        right: -8px;
+        color: #fff;
+        background-color: $red;
+        text-align: center;
+        border-radius: 100%;
+        border: 2px solid #fff;
+    }
+
+
+    &__user-block {
+        margin-right: 1.42rem;
+        min-width: 7.14rem;
+    }
+
+    &__user-photo {
+        // position: relative;
+        cursor: pointer;
+        display: flex;
+        transition: all .3s;
+
+
+        &::after {
+            content: "";
+            width: 0.42rem;
+            height: 0.28rem;
+            margin-left: 0.71rem;
+            margin-top: 1.07rem;
+            cursor: pointer;
+            background-image: url("../../../public/img/arrow-down.svg");
+        }
+    }
+
+    &__user-img:hover {
+        width: 2.85rem;
+        height: 2.85rem;
+        border-radius: 100%;
+        border: 2px solid $blue;
+    }
+
+    &__user-profile {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        width: 6.42rem;
+        height: 5.85rem;
+        top: 6.42rem;
+        right: 15.71rem;
+        box-shadow: 0px 0.28rem 1.07rem rgba(0, 0, 0, 0.15);
+        opacity: 0;
+    }
+    .photo-active {
+        opacity: 1;
+    }
+
+    &__user-log {
+        padding: 0.90rem 1rem;
+        border: 1px solid $blue-outline;
+        transition: all .3s;
+        cursor: default;
+    } 
+    &__user-log:hover {
+        background-color: $brightblue;
+    }
+
+    &__user-goout {
+        padding: 0.85rem 1rem 0.64rem 2.21rem;
+        border: 1px solid $blue-outline;
+        transition: all .3s;
+        cursor: default;
+    }
+    &__user-goout:hover {
+        background-color: $brightblue;
+    }
+
+}

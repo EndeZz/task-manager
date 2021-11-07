@@ -1,0 +1,8 @@
+@import '../../styles/color.scss';
+
+
+.active {
+    color: $blue;
+    background-color: $brightblue;
+    padding: 0.64rem 0.85rem;
+}
