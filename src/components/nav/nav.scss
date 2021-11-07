@@ -1,0 +1,32 @@
+@import '../buttons/buttons.scss';
+@import '../../styles/style.scss';
+
+.nav__list {
+  display: flex;
+  justify-content: start;
+  list-style: none;
+
+  .nav__btn {
+    background: transparent;
+    padding: 0.64em 0.85em;
+    border: none;
+
+    .button__text {
+      color: $black;
+    }
+
+    &:hover {
+      .button__text {
+        color: $blue;
+      }
+    }
+
+    &:active {
+      background: $ltblue;
+
+      .button__text {
+        color: $blue;
+      }
+    }
+  }
+}
