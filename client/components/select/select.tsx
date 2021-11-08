@@ -99,7 +99,7 @@ export default function Select(props: { type: string, placeholder: string, name:
       <div className='select__option'>
         <ul className='select__list'>
           {option.map((item) => {
-            if (item.id !== 'all') {
+            if (item.id !== 'all' || props.type === 'status') {
               return (
                 <li
                   key={item.id}
