@@ -1,0 +1,32 @@
+@import '../../styles/colors.scss';
+
+.search-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 2rem;
+
+  @media (max-width: 762px) {
+    grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
+  }
+}
+
+.content-main {
+  padding-top: 3rem;
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-column-gap: 2rem;
+    grid-row-gap: 3rem;
+
+    @media (max-width: 762px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    list-style-type: none;
+  }
+}

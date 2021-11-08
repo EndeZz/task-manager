@@ -1,17 +1,4 @@
-@import '../../styles/reset.scss';
-
-.nav {
-  padding-top: 4rem;
-  display: flex;
-  width: 100%;
-  max-width: 80.6rem; //57.571em;
-  margin: auto;
-
-  .media-button-back__img {
-    stroke: $blue;
-    margin-right: 2rem;
-  }
-}
+@import '../../styles/colors.scss';
 
 .profile {
   box-sizing: border-box;
@@ -37,6 +24,9 @@
   &__info {
     width: 100%;
     max-width: 52.9rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
   }
 
   &__tag {
@@ -52,6 +42,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-top: 1rem;
   }
 
   @media (max-width: 762px) {

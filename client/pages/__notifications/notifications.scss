@@ -1,0 +1,15 @@
+@import '../../styles/colors.scss';
+
+.container_mini {
+  max-width: 80.4rem;
+  
+  .content-notifications {
+    border-radius: 4px;
+    border: 1px solid $outline;
+    margin: auto;
+  
+    &__list {
+      list-style: none;
+    }
+  }
+}

@@ -1,37 +1,10 @@
-@import '../../styles/reset.scss';
+@import '../../styles/colors.scss';
 
 .main {
   padding-bottom: 15.2rem;
 }
 
-.nav {
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
-  &__back {
-    display: flex;
-    column-gap: 1rem;
-    align-items: center;
-
-    svg {
-      stroke: $blue;
-    }
-  }
-
-  &__title {
-    color: $blue;
-  }
-
-  &__button {
-    display: flex;
-    column-gap: 2rem;
-  }
-}
-
-.content {
+.content-tn {
   display: grid;
   grid-column-gap: 2rem;
   grid-template-columns: 67% 33%;
@@ -55,7 +28,11 @@
       }
 
       &__select-file {
-        padding: 3rem 0;
+        padding: 2rem 0 0 0;
+
+        .button-attach {
+          margin-top: 3rem;
+        }
       }
 
       textarea {

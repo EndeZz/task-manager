@@ -1,7 +1,6 @@
-@import '../../styles/reset.scss';
+@import '../../styles/colors.scss';
 
-.search {
-  padding-top: 4rem;//40px;
+.search-tasks {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 2fr;
   grid-column-gap: 2rem;//20px;
@@ -11,27 +10,23 @@
     grid-template-areas: "a a" "b c" "d d";
     grid-row-gap: 2rem;
 
-    &__container {
-      &_search {
-        grid-area: a;
-      }
+    .search__container_search {
+      grid-area: a;
+    }
 
-      &_calendar {
-        grid-area: b;
-      }
-
-      &_status {
-        grid-area: c;
-      }
-
-      &_type {
-        grid-area: d;
-      }
+    .search__container_date {
+      grid-area: c;
+    }
+    .search__container_status {
+      grid-area: b;
+    }
+    .search__container_type {
+      grid-area: d;
     }
   }
 }
 
-.content {
+.content-tasks {
   padding-top: 2rem;
   display: grid;
   grid-template-columns: 1fr;
@@ -43,10 +38,4 @@
     flex-direction: column;
     row-gap: 1.5rem;
   }
-}
-
-.control {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 3rem;
 }

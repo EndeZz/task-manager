@@ -1,11 +1,6 @@
-@import '../../styles/reset.scss';
+@import '../../styles/colors.scss';
 
-.main {
-  padding-bottom: 15.2rem;
-}
-
-.search {
-  padding-top: 4rem;
+.search-users {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-column-gap: 2rem;//20px;
@@ -16,13 +11,7 @@
   }
 }
 
-.control {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 3rem;
-}
-
-.content {
+.content-users {
   padding-top: 2rem;
 
   &__list {
@@ -30,6 +19,8 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-row-gap: 1.5rem;
+    max-width: 1220px;
+    width: 100%;
   }
 
   &__item {
@@ -45,55 +36,5 @@
     &:hover {
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     }
-  }
-}
-
-.user-box {
-  &__info,
-  &__btn {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-  }
-
-  &__info {
-    column-gap: 2rem;
-    width: calc(100% - 10.3rem);
-  }
-
-  &__btn {
-    column-gap: 1.5rem;
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  @media (max-width: 762px) {
-    flex-direction: column;
-    row-gap: 2rem;
-
-    &__info {
-      width: 100%;
-      flex-wrap: wrap;
-      row-gap: 2rem;
-    }
-  }
-
-  &__box-name {
-    max-width: 20.6rem;
-    flex-basis: 20.6rem;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-
-  &__box-email {
-    flex-basis: 22.1rem;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-
-  &__box-role {
-    min-width: 10.6rem;
-    white-space: nowrap;
-    overflow: hidden;
   }
 }
