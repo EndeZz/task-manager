@@ -1,0 +1,33 @@
+@import '../../components/buttons/buttons.scss';
+@import '../../components/input/input.scss';
+@import '../../styles/style.scss';
+
+.auth {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 13em;
+
+  &__logo {
+    max-width: 5em;
+    height: 5em;
+    width: 100%;
+    margin-bottom: 3.6em;
+  }
+
+  &__form {
+    &__h1 {
+      @include h1__text;
+
+      margin-bottom: 1.4em;
+    }
+
+    background: $white;
+    width: 28em;
+    border: 1px solid $blue_outline;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 2.1em 2.1em 3.5em 2.1em;
+  }
+}
