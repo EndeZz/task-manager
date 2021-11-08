@@ -1,6 +1,6 @@
 import InputIconComponent from '../../input/InputIconComponent/InputIconComponent';
 import StatusLabel from '../../labels/StatusLabel/StatusLabel';
-import './photo.scss';
+import '../select.scss';
 
 function SelectStatus() {
   return (

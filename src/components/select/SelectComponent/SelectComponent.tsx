@@ -1,7 +1,7 @@
 import InputIconComponent from '../../input/InputIconComponent/InputIconComponent';
-import './photo.scss';
+import '../select.scss';
 
-function SelectComponent(props: { items: [], type: 'text' | 'date', label: string, placeholder: string, id: string }) {
+function SelectComponent(props: { items: Array<string>, type: 'text' | 'date', label: string, placeholder: string, id: string }) {
   return (
     <div className="select" id={props.id}>
       <InputIconComponent label={props.label} placeholder={props.placeholder} type={props.type} id={props.id}></InputIconComponent>
