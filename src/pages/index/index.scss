@@ -1,0 +1,46 @@
+@import '../../components/header/header.scss';
+@import '../../components/input/input';
+@import '../../components/filter/ContentFilter/ContentFilter.scss';
+@import '../../components/card/card.scss';
+@import '../../styles/style.scss';
+
+.filters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1.5em;
+  padding-left: 18%;
+  padding-right: 18%;
+}
+
+.cards {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.5em;
+    grid-row-gap: 2.1em;
+  }
+}
+
+@media (min-width: 1280px) {
+  .filters {
+    padding-left: calc(50% - 640px);
+    padding-right: calc(50% - 640px);
+  }
+
+  .cards {
+    padding-left: calc(50% - 640px);
+    padding-right: calc(50% - 640px);
+  }
+}
+
+@media (max-width: 1280px) {
+  .filters {
+    padding-left: 2.1em;
+    padding-right: 2.1em;
+  }
+
+  .cards {
+    padding-left: 2.1em;
+    padding-right: 2.1em;
+  }
+}
