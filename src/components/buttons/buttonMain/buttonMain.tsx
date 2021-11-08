@@ -1,4 +1,4 @@
-import '../button.scss';
+import '../buttons.scss';
 
 function ButtonMain(props: { type: string, color: 'blue' | 'green' | 'lightblue', text: string }) {
   return (

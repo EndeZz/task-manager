@@ -1,4 +1,4 @@
-import '../button.scss';
+import '../buttons.scss';
 
 function ButtonBig(props: { type: string, color: 'blue' | 'red', text: string }) {
   return (
