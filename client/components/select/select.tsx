@@ -74,7 +74,7 @@ export default function Select(props: { type: string, placeholder: string, name:
       props.onChange(props.name, text, (createId?.i) ? createId.i : createId.id)
     }
     else {
-      (id !== 'all') ? props.onChange(props.type, id, (createId?.i) ? createId.i : createId.id) : props.onChange('');
+      (id !== 'all' || props.type === 'status') ? props.onChange(props.type, id, (createId?.i) ? createId.i : createId.id) : props.onChange('');
     }
 
     setSelect({ id: id, text: text });
