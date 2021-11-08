@@ -9,9 +9,6 @@ import { BtnAudioCard } from '../../components/button/button';
 import { BtnPhotoCard } from '../../components/button/button';
 import { BtnVideoCard } from '../../components/button/button';
 
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-
 import Navigation from '../../components/navigation/navigation';
 import Header from '../../components/header/header';
 import Input from '../../components/input/input';
@@ -49,17 +46,6 @@ import fullscreenIcon from '../../../public/img/video/fullscreen-icon.svg'
 import arrowLeft from '../../../public/img/video/arrow-left.svg'
 import photoImg from '../../../public/img/cards/2.jpg'
 import Tasks from '../tasks/tasks';
-
-
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  NavLink,
-  useParams,
-  useRouteMatch
-} from "react-router-dom";
 
 
 export const searchInput = [
@@ -180,95 +166,3 @@ const Index = ( {isLoggedIn, setIsLoggedIn} ) => {
 }
 
 export default Index;
-
-// class Index extends Component {
-//     render() {
-//       return pug`
-//         div
-//           Header head=${headerData} nav=${nav}
-//           .main 
-//             .info
-//               .container 
-//                 .search
-//                   Input items=${searchInput}
-//                   Input items=${calendarInput}
-//                   .info__content 
-//                     label(className="info__search-title") Тип контента
-//                     .info__content-block
-//                       Button btn=${videoBtn}
-//                       Button btn=${photoBtn}
-//                       Button btn=${audioBtn}
-//                 .card
-//                   ul(className="card__row")
-//                     Cards cards=${cards}
-//                 .loader
-//                 VideoModal modals=${videoModal}
-//                 PhotoModal modals=${photoModal}
-
-//       `
-//     }
-//   }
-
-// export default Index;
-
-// ReactDOM.render(React.createElement(Index), document.getElementById("root"));
-
-// BtnAudioCard();
-// BtnPhotoCard()
-// BtnVideoCard()
-
-// const searchFilter = document.querySelector('.search-filter');
-// if (searchFilter) {
-//       searchFilter.oninput = function () {
-//         let str = searchFilter.value.trim().toLowerCase();
-//         let names = document.querySelectorAll<HTMLElement>('.card__column-author');
-//         if (str !== '') {
-//             names.forEach(name => {
-//                 let i = String(name.textContent).replace(/ +/g, '');
-//                 i = i.toLowerCase()
-//                 if (i.search(str) === -1) {
-//                     name.closest('.card__column').classList.add('hide');
-//                 } else {
-//                     name.closest('.card__column').classList.remove('hide');
-//                 }
-//             })
-//         } else {
-//             names.forEach(elem => {
-//                 elem.closest('.card__column').classList.remove('hide');
-//               });
-//         }
-//     }
-// }
-
-
-
-
-// const calendarFilter = document.querySelector('.calendar-filter');
-// if (calendarFilter) {
-//       calendarFilter.oninput = function () {
-//         let str = calendarFilter.value.trim().toLowerCase();
-//         let names = document.querySelectorAll<HTMLElement>('.card__column-public_data');
-//         if (str !== '') {
-//             names.forEach(elem => {
-//               let i = String(elem.textContent).replace(/ +/g, '');
-//               i = String(i.replace(/[:*?$^(.)]/g, ''));
-//               if (i.toLowerCase().search(str) === -1) {
-//                 elem.closest('.card__column').classList.add('hide');
-//               } else {
-//                 elem.closest('.card__column').classList.remove('hide');
-//               }
-//             });
-//         } else {
-//           names.forEach(elem => {
-//             elem.closest('.card__column').classList.remove('hide');
-//         });
-//       }
-//   }
-// }
-
-
-
-
-
-
-
