@@ -43,6 +43,7 @@ export default function Tasks() {
   }
 
   function selected(name: string, value: string) {
+    if (value === 'all') { value = ''; }
     setSearchTask({ ...searchTask, [name]: value })
   }
 
