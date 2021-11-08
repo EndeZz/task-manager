@@ -1,28 +1,15 @@
-interface AuthResponce {
-  accessToken: string
-  refreshToken: string
-}
-
-class Auth {
-  email: string
-  password: string
-
-  constructor(email: string, password: string) {
-    this.email = email
-    this.password = password
-  }
-
-  async api() {
-    const responce = await fetch('/api/auth/login', {
-      method: 'POST',
-      body: JSON.stringify({
-        email: this.email,
-        password: this.password
-      })
-    }) as unknown as AuthResponce;
-
-    for (let key in responce) {
-      document.cookie = `${key}=${responce[key]}`
+export default function apiUsers() {
+  const api = 'http://localhost:3000/users'; //Нет пароля в данном объекте!!!
+  return {
+    async login(email: string, password: string) {
+      try {
+        const response = await fetch(`api?email=${email}&password=${password}`)
+          .then(response => response.json())
+        return response
+      }
+      catch (error) {
+        console.error(error);
+      }
     }
   }
 }
