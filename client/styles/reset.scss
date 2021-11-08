@@ -1,4 +1,4 @@
-@import './fonts.scss';
+// @import './fonts.scss';
 @import './colors.scss';
 
 * {
@@ -62,13 +62,18 @@ textarea {
   margin: auto;
   padding: 0 3rem;
   box-sizing: border-box;
+
+  &_small {
+    max-width: 80.6rem;
+  }
 }
 
 .main {
   background: $background;
+  padding-top: 4rem;
 
   .container {
-    min-height: calc(100vh - 81px);
+    min-height: calc(100vh - 121px);
   }
 }
 
@@ -113,4 +118,10 @@ input {
   &:invalid {
     border: 1px solid $red;
   }
+}
+
+.control {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 3rem;
 }

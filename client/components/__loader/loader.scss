@@ -1,0 +1,43 @@
+@import '../../styles/colors.scss';
+
+.loader {
+  width: 100%;
+  height: 11.071em;
+  box-sizing: border-box;
+  padding-top: 3.143em;
+  display: none;
+
+  &__component {
+    margin: auto;
+    width: 2.571em;
+    height: 2.571em;
+    background:
+      linear-gradient(260deg, $blue 20%, transparent 60%),
+      linear-gradient(180deg, white 50%, transparent 50%),
+      linear-gradient(0deg, $blue 50%, white 50%);
+    border-radius: 50%;
+    position: relative;
+    animation: loader 1.5s infinite linear;
+
+    &::before {
+      width: 2.143em;
+      height: 2.143em;
+      content: "";
+      position: absolute;
+      top: 0.214em;
+      left: 0.214em;
+      background: white;
+      border-radius: 50%;
+    }
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

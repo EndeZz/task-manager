@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development --open",
-    "dev": "webpack --mode development --watch",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "server": "json-server --watch server/server.json"
   },
   "repository": {
     "type": "git",
@@ -16,16 +16,24 @@
   "author": "Уракова Анна Александровна <gram_anna@mail.ru>",
   "license": "ISC",
   "devDependencies": {
+    "@types/debounce": "^1.2.1",
+    "@types/react": "^17.0.31",
+    "@types/react-datepicker": "^4.1.7",
+    "@types/react-dom": "^17.0.10",
+    "@types/react-router-dom": "^5.3.2",
+    "babel-eslint": "^10.1.0",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^6.2.0",
-    "eslint": "^8.0.0",
+    "eslint": "^8.0.1",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.25.1",
+    "eslint-plugin-react": "^7.26.1",
     "eslint-webpack-plugin": "^3.0.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
     "html-webpack-pug-plugin": "^3.0.0",
+    "json-loader": "^0.5.7",
     "mini-css-extract-plugin": "^2.2.1",
     "pug": "^3.0.2",
     "pug-loader": "^2.4.0",
@@ -35,8 +43,24 @@
     "stylelint-config-standard": "^22.0.0",
     "stylelint-scss": "^3.21.0",
     "stylelint-webpack-plugin": "^3.0.1",
+    "svg-inline-loader": "^0.8.2",
+    "svg-sprite-loader": "^6.0.11",
+    "svg-transform-loader": "^2.0.13",
+    "svgo-loader": "^3.0.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.4",
     "webpack": "^5.51.1",
     "webpack-cli": "^4.8.0",
     "webpack-dev-server": "^4.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "debounce": "^1.2.1",
+    "json-server": "^0.17.0",
+    "react": "^17.0.2",
+    "react-datepicker": "^4.3.0",
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^5.3.0"
   }
 }
