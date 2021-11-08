@@ -69,3 +69,11 @@
     height: 1.143em;
   }
 }
+
+.media-button-cross {
+  &__img {
+    stroke: $gray-blue-icon;
+    width: 1rem;
+    height: 1rem;
+  }
+}

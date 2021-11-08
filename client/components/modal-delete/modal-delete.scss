@@ -1,0 +1,61 @@
+@import '../../styles/colors.scss';
+
+.modal-delete {
+  &__content {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 39.4rem;
+    background: white;
+    padding: 3rem;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid $border;
+    border-radius: 4px;
+  }
+
+  &__message {
+    color: $txt;
+    margin-bottom: 2rem;
+  }
+
+  &__button-box {
+    display: flex;
+    column-gap: 2rem;
+  }
+
+  &__button {
+    &_yes {
+      background: $blue;
+      color: white;
+
+      &:hover {
+        background: $blue-hover;
+      }
+
+      &:active {
+        background: $blue-active;
+      }
+    }
+
+    &_no {
+      background: $ltblue;
+      color: $blue;
+
+      &:hover {
+        background: darken($ltblue, 3%);;
+      }
+
+      &:active {
+        background: darken($ltblue, 6%);
+      }
+    }
+  }
+
+  &__cross {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+}

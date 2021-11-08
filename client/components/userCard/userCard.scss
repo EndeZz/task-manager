@@ -1,0 +1,51 @@
+@import '../../styles/colors.scss';
+
+.user-box {
+  &__info,
+  &__btn {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  &__info {
+    column-gap: 2rem;
+    width: calc(100% - 10.3rem);
+  }
+
+  &__btn {
+    column-gap: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  @media (max-width: 762px) {
+    flex-direction: column;
+    row-gap: 2rem;
+
+    &__info {
+      width: 100%;
+      flex-wrap: wrap;
+      row-gap: 2rem;
+    }
+  }
+
+  &__name {
+    max-width: 20.6rem;
+    flex-basis: 20.6rem;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__email {
+    flex-basis: 22.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__role {
+    min-width: 10.6rem;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}

@@ -1,25 +1,5 @@
 @import '../../styles/colors.scss';
 
-.content {
-  padding-top: 30px;
-
-  &__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-column-gap: 20px;
-    grid-row-gap: 30px;
-
-    @media (max-width: 762px) {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  &__item {
-    list-style-type: none;
-  }
-}
-
 .card {
   width: 100%;
   cursor: pointer;

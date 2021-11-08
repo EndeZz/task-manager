@@ -28,7 +28,7 @@
       &__item {
         font-weight: 500;
         
-        &_in-work {
+        &_inWork {
           color: $in-work;
         }
 
@@ -52,7 +52,7 @@
       z-index: 1;
       border: 1px solid $outline;
       box-sizing: border-box;
-      border-radius: 0.4;//4px
+      border-radius: 4px;//4px
       filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.15));
     }
 
@@ -85,16 +85,17 @@
   }
 
   &_active {
-    .select {
+
+    .select__option {
+      display: block;
+    }
+
+    input {
       opacity: 0.6;
+    }
 
-      &__option {
-        display: block;
-      }
-
-      &__btn {
-        transform: scaleY(-1);
-      }
+    .select__btn {
+      transform: scaleY(-1);
     }
   }
 
@@ -105,10 +106,6 @@
   .select:focus {
     border: 1px solid $blue;
   }
-}
-
-.search__container_role {
-  margin-bottom: 2rem;
 }
 
 .search__container_type {

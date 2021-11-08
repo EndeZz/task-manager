@@ -69,6 +69,22 @@
   &_active {
     border: 1px solid $ltblue;
     background: $ltblue;
+
+    .menu-burger__button {
+      background: transparent;
+
+      &::before {
+        top: 0;
+        transform-origin: center center;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        top: 0;
+        transform-origin: center center;
+        transform: rotate(-45deg);
+      }
+    }
   }
 }
 
