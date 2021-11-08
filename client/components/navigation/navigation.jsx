@@ -15,7 +15,6 @@ import Index from '../../pages/index';
 import Users from '../../pages/users/users';
 import Tasks from '../../pages/tasks/tasks';
 
-
 // const nav = [
 //     {"active" : "active", "link" : "/index.html", "text" : "Главная"},
 //     {"active" : "", "link" : "/tasks.html", "text" : "Задачи"},
@@ -23,14 +22,13 @@ import Tasks from '../../pages/tasks/tasks';
 //   ]
 
 const Navigation = (props) => {
+    console.log("propsNav", props)
 
-    // console.log("propsNav", props)
-    
         return (
             // this.props.children[1].map((item, ind) =>
                 <ul className="header__menu-list">
                     <li className="header__menu-item">
-                        <a href="/">Главная</a>
+                        <a className="active" href="/">Главная</a>
                     </li>
                     <li className="header__menu-item">
                         <a href="/tasks">Задачи</a>
@@ -45,8 +43,6 @@ const Navigation = (props) => {
 
 
 export default Navigation;
-
-
 
 {/* <Router>
 <ul className="header__menu-list">

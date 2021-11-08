@@ -23,13 +23,7 @@ const Header = (  props  ) => {
                                     a 
                                         img(src=${item.logoImg})
                                 nav.header__menu        
-                                    ul.header__menu-list
-                                        li.header__menu-item
-                                            a(href="/") Главная
-                                        li.header__menu-item
-                                            a(href="/tasks") Задачи
-                                        li.header__menu-item
-                                            a(href="/users") Пользователи
+                                    Navigation
                                 .header__notif-block                
                                     a(class="header__notif-link header__notif-link_border", href="#")
                                         img(src=${item.notifImg})
