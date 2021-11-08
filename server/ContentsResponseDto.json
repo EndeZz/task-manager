@@ -6,14 +6,14 @@
       "name": "video"
     },
     "name": "Название повседневная практика показывает",
-    "dataCreated": "09:21 14.02.2020",
+    "dateCreated": "09:21 14.02.2020",
     "author": {
       "id": 1,
       "name": "Аркадий Юрченко"
     },
     "format": "mp4",
-    "url": "../public/img/content/1.mp4",
-    "preview": "../../../public/img/content/preview-1.jpg"
+    "url": "/img/content/1.mp4",
+    "preview": "/img/content/preview-1.jpg"
   },
   {
     "id": 2,
@@ -22,14 +22,14 @@
       "name": "photo"
     },
     "name": "Название равным образом начало повседневной работы",
-    "dataCreated": "15:41 14.02.2020",
+    "dateCreated": "15:41 14.02.2020",
     "author": {
       "id": 2,
       "name": "Оскар Калинин"
     },
     "format": "png",
-    "url": "../../../public/img/content/2.png",
-    "preview": "../../../public/img/content/preview-2.png"
+    "url": "/img/content/2.png",
+    "preview": "/img/content/preview-2.png"
   },
   {
     "id": 3,
@@ -38,14 +38,14 @@
       "name": "audio"
     },
     "name": "Название с другой стороны начало повседневной работы по формированию позиции",
-    "dataCreated": "20: 18 13.02.2020",
+    "dateCreated": "20: 18 13.02.2020",
     "author": {
       "id": 3,
       "name": "Валерий Яковлев"
     },
     "format": "mp3",
-    "url": "../../../public/img/content/3.mp3",
-    "preview": "../../../public/img/content/preview-3.jpg"
+    "url": "/img/content/3.mp3",
+    "preview": "/img/content/preview-3.jpg"
   },
   {
     "id": 4,
@@ -54,14 +54,14 @@
       "name": "photo"
     },
     "name": "Название равным образом начало повседневной работы",
-    "dataCreated": "10:41 12.02.2020",
+    "dateCreated": "10:41 12.02.2020",
     "author": {
       "id": 4,
       "name": "София Лебедевa"
     },
     "format": "jpg",
-    "url": "../../../public/img/content/4.jpg",
-    "preview": "../../../public/img/content/preview-4.jpg"
+    "url": "/img/content/4.jpg",
+    "preview": "/img/content/preview-4.jpg"
   },
   {
     "id": 5,
@@ -70,14 +70,14 @@
       "name": "video"
     },
     "name": "Название повседневная практика показывает",
-    "dataCreated": "09:21 14.02.2020",
+    "dateCreated": "09:21 14.02.2020",
     "author": {
       "id": 1,
       "name": "Аркадий Юрченко"
     },
     "format": "mp4",
-    "url": "../../../public/img/content/5.mp4",
-    "preview": "../../../public/img/content/preview-5.jpg"
+    "url": "/img/content/5.mp4",
+    "preview": "/img/content/preview-5.jpg"
   },
   {
     "id": 6,
@@ -86,14 +86,14 @@
       "name": "photo"
     },
     "name": "Название повседневная практика показывает",
-    "dataCreated": "08:47 11.02.2020",
+    "dateCreated": "08:47 11.02.2020",
     "author": {
       "id": 6,
       "name": "Данил Плотников"
     },
     "format": "png",
-    "url": "../../../public/img/content/6.png",
-    "preview": "../../../public/img/content/6.png"
+    "url": "/img/content/6.png",
+    "preview": "/img/content/6.png"
   },
   {
     "id": 7,
@@ -102,14 +102,14 @@
       "name": "audio"
     },
     "name": "Название повседневная практика показывает",
-    "dataCreated": "20:18 10.02.2020",
+    "dateCreated": "20:18 10.02.2020",
     "author": {
       "id": 3,
       "name": "Валерий Яковлев"
     },
     "format": "mp3",
-    "url": "../../../public/img/content/7.mp3",
-    "preview": "../../../public/img/content/preview-7.jpg"
+    "url": "/img/content/7.mp3",
+    "preview": "/img/content/preview-7.jpg"
   },
   {
     "id": 8,
@@ -118,14 +118,14 @@
       "name": "audio"
     },
     "name": "Название с другой стороны начало повседневной работы по формированию позиции",
-    "dataCreated": "15:30 10.02.2020",
+    "dateCreated": "15:30 10.02.2020",
     "author": {
       "id": 6,
       "name": "Данил Плотников"
     },
     "format": "mp3",
-    "url": "../../../public/img/content/8.mp3",
-    "preview": "../../../public/img/content/preview-8.jpg"
+    "url": "/img/content/8.mp3",
+    "preview": "/img/content/preview-8.jpg"
   },
   {
     "id": 9,
@@ -134,13 +134,13 @@
       "name": "photo"
     },
     "name": "Название повседневная практика показывает",
-    "dataCreated": "08:47 11.02.2020",
+    "dateCreated": "08:47 11.02.2020",
     "author": {
       "id": 6,
       "name": "Данил Плотников"
     },
     "format": "png",
-    "url": "../../../public/img/content/9.jpg",
-    "preview": "../../../public/img/content/9.jpg"
+    "url": "/img/content/9.jpg",
+    "preview": "/img/content/9.jpg"
   }
 ]

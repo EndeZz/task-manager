@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "type": "video",
+    "date": "2021-11-05T15:56:02.754Z",
+    "read": true,
+    "message": "string",
+    "user": {
+      "id": 1,
+      "name": "string"
+    },
+    "task": {
+      "id": 1,
+      "name": "string"
+    }
+  },
+  {
+    "id": 2,
+    "type": "audio",
+    "date": "2021-11-05T16:01:06.308Z",
+    "read": true,
+    "message": "string",
+    "user": {
+      "id": 0,
+      "name": "string"
+    },
+    "task": {
+      "id": 0,
+      "name": "string"
+    }
+  },
+  {
+    "id": 3,
+    "type": "content",
+    "date": "2021-11-06T15:56:02.754Z",
+    "read": true,
+    "message": "string",
+    "user": {
+      "id": 0,
+      "name": "string"
+    },
+    "task": {
+      "id": 0,
+      "name": "string"
+    }
+  },
+  {
+    "id": 4,
+    "type": "comment",
+    "date": "2021-11-06T17:06:02.754Z",
+    "read": true,
+    "message": "string",
+    "user": {
+      "id": 0,
+      "name": "string"
+    },
+    "task": {
+      "id": 0,
+      "name": "string"
+    }
+  },
+  {
+    "id": 5,
+    "type": "photo",
+    "date": "2021-11-07T10:56:02.754Z",
+    "read": false,
+    "message": "string",
+    "user": {
+      "id": 0,
+      "name": "string"
+    },
+    "task": {
+      "id": 0,
+      "name": "string"
+    }
+  },
+  {
+    "id": 6,
+    "type": "audio",
+    "date": "2021-11-08T00:04:02.754Z",
+    "read": false,
+    "message": "string",
+    "user": {
+      "id": 0,
+      "name": "string"
+    },
+    "task": {
+      "id": 0,
+      "name": "string"
+    }
+  }
+]
