@@ -1,0 +1,47 @@
+@import '../../common';
+
+.commentBlock {
+    display: flex;
+    padding-bottom: 17px;
+
+    &Avatar {
+        border-radius: 50%;
+        height: 40px;
+        margin-right: 20px;
+        width: 40px;
+    }
+
+    &TextBox {
+        border-bottom: 1px solid $color-blue-outline;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 15px;
+        width: 100%;
+    }
+
+    &BoxInfo {
+        align-items: center;
+        display: flex;
+        margin-bottom: 10px;
+    }
+
+    &BoxInfoName {
+        color: $color-black;
+        font-family: 'RM';
+        font-size: $font-size14;
+        margin-right: 10px;
+    }
+
+    &BoxInfoTimeDate {
+        color: $text-black-opacity;
+        font-family: 'RR';
+        font-size: $font-size12;
+    }
+
+    &BoxDescription {
+        color: $color-black;
+        font-family: 'RR';
+        font-size: $font-size14;
+        line-height: 21px;
+    }
+}

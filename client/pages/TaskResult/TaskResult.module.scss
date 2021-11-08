@@ -1,0 +1,235 @@
+@import '../../common';
+
+.mainPage {
+    height: 100vh;
+    width: 100%;
+
+    &Content {
+        align-items: flex-start;
+        background: $color-background-main;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 1280px;
+        min-height: 100vh;
+        padding: 0 30px 30px;
+    }
+
+    &WrapButtonBack {
+        align-items: center;
+        display: flex;
+        height: 92px;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &WrapBoxButtons {
+        align-items: center;
+        display: flex;
+        flex-wrap: nowrap;
+        height: 92px;
+        justify-content: flex-end;
+
+        &Padding {
+            height: 92px;
+            width: 20px;
+        }
+    }
+
+    &EditBlockWrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &LeftCollumn {
+        background: $color-background-main;
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+    }
+
+    &EditDescription {
+        background: $color-white;
+        border: 1px solid $color-border-bottom-header;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        justify-content: flex-start;
+        margin-bottom: 20px;
+        padding: 30px;
+        width: 807px;
+    }
+
+    &Info {
+        align-items: center;
+        display: flex;
+        font-family: 'RM';
+        font-size: $font-size14;
+        margin-bottom: 15px;
+    }
+
+    &Status {
+        color: $color-status-pink;
+        padding-left: 20px;
+    }
+
+    &Title {
+        color: $color-black;
+        font-family: 'RM';
+        font-size: $font-size20;
+        margin-bottom: 15px;
+    }
+
+    &Text {
+        color: $color-black;
+        font-family: 'RR';
+        font-size: $font-size14;
+        line-height: 21px;
+        margin-bottom: 20px;
+    }
+
+    &Caption {
+        border-bottom: 1px solid $color-blue-outline;
+        color: $color-black;
+        font-family: 'RM';
+        font-size: $font-size14;
+        padding-bottom: 10px;
+    }
+
+    &DownloadWrapBlock {
+        align-items: center;
+        border-bottom: 1px solid $color-blue-outline;
+        color: $color-black;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 50px;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &DownloadContent {
+        background: $color-white;
+        border: 1px solid $color-border-bottom-header;
+        border-radius: 4px;
+        overflow: hidden;
+        width: 807px;
+
+        &Wrap {
+            align-items: center;
+            display: flex;
+        }
+
+        &Box {
+            padding: 30px;
+        }
+
+        &Formats {
+            align-items: center;
+            display: flex;
+            flex-wrap: nowrap;
+            margin-bottom: 23px;
+        }
+
+        &Title {
+            color: $color-black;
+            font-family: 'RM';
+            font-size: $font-size16;
+            margin-right: 20px;
+        }
+
+        &Text {
+            color: $text-black-opacity;
+            font-family: 'RR';
+            font-size: $font-size14;
+            margin-right: 9px;
+        }
+
+        &Format {
+            margin-right: 5px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &Avi {
+                background: url(/public/images/UI_Kit/icons/avi.svg) center no-repeat;
+                border-radius: 2px;
+                height: 16px;
+                width: 30px;
+            }
+
+            &Flv {
+                background: url(/public/images/UI_Kit/icons/flv.svg) center no-repeat;
+                border-radius: 2px;
+                height: 16px;
+                width: 30px;
+            }
+
+            &Mov {
+                background: url(/public/images/UI_Kit/icons/mov.svg) center no-repeat;
+                border-radius: 2px;
+                height: 16px;
+                width: 37px;
+            }
+        }
+
+        &DownloadedBlockFiles {
+            align-items: center;
+            display: flex;
+        }
+    }
+
+    &DownloadFiles {
+        &WrapMessage {
+            border-top: 1px solid $color-blue-outline;
+            padding: 30px;
+        }
+
+        &Form {
+            position: relative;
+        }
+
+        &Button {
+            background: $color-blue;
+            border-radius: 4px;
+            bottom: 10px;
+            color: $color-white;
+            font-family: 'RM';
+            font-size: $font-size12;
+            height: 30px;
+            line-height: 14px;
+            max-width: 100%;
+            padding: 8px 10px;
+            position: absolute;
+            right: 10px;
+
+            &Hovered:hover {
+                background: $color-hovered;
+            }
+
+            &Actived:active {
+                background: $color-blue-actived;
+            }
+        }
+    }
+
+    &DownloadCommentWrap {
+        background: $color-white;
+        display: flex;
+        flex-direction: column;
+        padding: 0 30px;
+    }
+
+    &RightCollumn {
+        background: $color-white;
+        border: 1px solid $color-border-bottom-header;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        height: 204px;
+        min-width: 394px;
+        padding: 30px;
+    }
+}

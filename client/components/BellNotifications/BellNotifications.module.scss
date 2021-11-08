@@ -1,0 +1,52 @@
+@import '../../common';
+
+.bellNotifications {
+    border-radius: 4px;
+    height: 40px;
+    margin-right: 30px;
+    position: relative;
+    width: 40px;
+
+    &.empty {
+        background: $color-lite-blue;
+    }
+
+    &Hovered:hover {
+        box-shadow: inset 0 0 0 1px $color-lite-blue;
+        transition: $delay-time;
+    }
+
+    &Link {
+        height: 40px;
+        width: 40px;
+    }
+
+    &Img {
+        height: 25px;
+        left: 8px;
+        position: absolute;
+        top: 7px;
+        width: 25px;
+    }
+
+    &Count {
+        align-items: center;
+        background: $color-red;
+        border: 2px solid $color-white;
+        border-radius: 50%;
+        color: $color-white;
+        display: flex;
+        font-family: 'RM';
+        font-size: $font-size11;
+        height: 19px;
+        justify-content: center;
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        width: 19px;
+
+        &Hidden {
+            display: none;
+        }
+    }
+}

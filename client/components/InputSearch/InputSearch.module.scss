@@ -1,0 +1,97 @@
+@import '../../common';
+
+.search {
+    &Title {
+        color: $color-black;
+        font-family: 'RM';
+        font-size: $font-size12;
+        margin-bottom: 9px;
+    }
+
+    &Wrap {
+        display: inline-block;
+        position: relative;
+
+        &:focus-within {
+            .searchWrapButtonCross {
+                background: url(/public/images/UI_Kit/buttons/cross.svg) center/10px 10px no-repeat;
+                bottom: 14px;
+                height: 13px;
+                position: absolute;
+                right: 15px;
+                width: 10px;
+
+                &Hovered:hover {
+                    background: url(/public/images/UI_Kit/buttons/cross-blue.svg) center/10px 10px no-repeat;
+                }
+            }
+
+            .searchWrapButtonSubmit {
+                right: 363px;
+                transition: $delay-time;
+            }
+
+            .searchWrapInput {
+                border: 1px solid $color-blue;
+                padding: 0 40px;
+                transition: $delay-time;
+            }
+        }
+
+        &Input {
+            background: $color-white;
+            border: 1px solid $color-blue-outline;
+            border-radius: 4px;
+            color: $color-black;
+            font-family: 'RR';
+            font-size: $font-size14;
+            height: 40px;
+            padding: 0 40px 0 15px;
+            transition: $delay-time;
+            width: 393px;
+
+            &::-webkit-search-decoration,
+            &::-webkit-search-cancel-button,
+            &::-webkit-search-results-button,
+            &::-webkit-search-results-decoration {
+                display: none;
+            }
+
+            &Hovered:hover {
+                border: 1px solid $color-grey-blue;
+                transition: $delay-time;
+            }
+
+            //&Focused:focus {
+            //    border: 1px solid $color-blue;
+            //    padding-left: 40px;
+            //    transition: $delay-time;
+            //}
+        }
+
+        &ButtonSubmit {
+            background: url(/public/images/UI_Kit/buttons/search.svg) center/12px 13px no-repeat;
+            bottom: 14px;
+            height: 13px;
+            position: absolute;
+            right: 15px;
+            transition: $delay-time;
+            width: 12px;
+        }
+
+        //&ButtonCross {
+        //    background: url(/public/images/UI_Kit/buttons/cross.svg) center/10px 10px no-repeat;
+        //    bottom: 14px;
+        //    display: none;
+        //    height: 13px;
+        //    position: absolute;
+        //    right: 15px;
+        //    width: 10px;
+
+        //    //&Hovered:hover {
+        //display: none;
+        //    //    background: url(/public/images/UI_Kit/buttons/cross-blue.svg) center/10px 10px no-repeat;
+        //    //}
+        //}
+    }
+}

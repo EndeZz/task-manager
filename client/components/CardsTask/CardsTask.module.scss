@@ -1,0 +1,99 @@
+@import '../../common';
+
+.cardTask {
+    align-items: center;
+    background: $color-white;
+    border: 1px solid $color-blue-outline;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px $color-shadow-opacity003;
+    cursor: pointer;
+    display: flex;
+    height: 70px;
+    padding-left: 20px;
+    position: relative;
+    width: 1220px;
+
+    &Hovered:hover {
+        box-shadow: 0 4px 15px $color-shadow-opacity015;
+        transition: $delay-time;
+    }
+
+    &Description {
+        color: $color-black;
+        font-family: 'RR';
+        font-size: $font-size14;
+        overflow: hidden;
+        padding-left: 20px;
+        position: relative;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 480px;
+
+        &Shadow {
+            background: linear-gradient(270deg, $color-white 0%, rgba(255, 255, 255, 0) 100%);
+            height: 16px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 183px;
+            z-index: 100;
+        }
+    }
+
+    &AuthorCardText {
+        color: $color-black;
+        font-family: 'RR';
+        font-size: $font-size14;
+        left: 596px;
+        position: absolute;
+    }
+
+    &WrapDate {
+        align-items: center;
+        display: flex;
+        left: 781px;
+        position: absolute;
+    }
+
+    &ButtonDate {
+        background: url(/public/images/UI_Kit/buttons/calendar-grblule-icon.svg) center/15px 14px no-repeat;
+        height: 14px;
+        margin-right: 10px;
+        width: 15px;
+    }
+
+    &Date {
+        color: $color-black;
+        font-family: 'RR';
+        font-size: $font-size14;
+    }
+
+    &Status {
+        font-family: 'RM';
+        font-size: $font-size14;
+        left: 917px;
+        position: absolute;
+
+        &Work {
+            color: $color-status-pink;
+        }
+
+        &Done {
+            color: $color-status-green;
+        }
+
+        &Waiting {
+            color: $color-status-blue;
+        }
+    }
+
+    &WrapButtonEdit {
+        position: absolute;
+        right: 69px;
+    }
+
+    &WrapButtonRecycle {
+        position: absolute;
+        right: 20px;
+    }
+}

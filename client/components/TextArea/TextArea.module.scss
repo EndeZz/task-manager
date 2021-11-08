@@ -1,0 +1,40 @@
+@import '../../common';
+
+.textAreaBox {
+    &Title {
+        color: $color-black;
+        font-family: 'RM';
+        font-size: $font-size12;
+        margin-bottom: 9px;
+    }
+
+    &TextArea {
+        appearance: none;
+        background: $color-white;
+        border: 0;
+        border: 1px solid $color-blue-outline;
+        border-radius: 4px;
+        box-shadow: none;
+        color: $color-black;
+        font-family: 'RR';
+        font-size: $font-size14;
+        outline: 0;
+        overflow: auto;
+        padding: 12px 15px;
+        resize: none;
+
+        &Hovered:hover {
+            border: 1px solid $color-grey-blue;
+            transition: $delay-time;
+        }
+
+        &Focused:focus {
+            border: 1px solid $color-blue;
+            transition: $delay-time;
+        }
+    }
+}
+
+.error {
+    border: 1px solid $color-red;
+}

@@ -1,0 +1,40 @@
+@import '../../common';
+
+.button {
+    align-items: center;
+    align-self: start;
+    background: $color-blue;
+    border-radius: 4px;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    height: 40px;
+    padding: 12px 15px;
+
+    &Hovered:hover {
+        background: $color-hovered;
+        transition: $delay-time;
+    }
+
+    &Actived:active {
+        background: $color-blue-actived;
+        transition: $delay-time;
+    }
+
+    &Disabled:disabled {
+        background: $color-hovered;
+        cursor: auto;
+    }
+
+    &Img {
+        border-radius: 50%;
+        height: 18px;
+        margin-right: 10px;
+        width: 18px;
+    }
+
+    &Text {
+        color: $color-white;
+        font-family: 'RM';
+        font-size: $font-size14;
+    }
+}

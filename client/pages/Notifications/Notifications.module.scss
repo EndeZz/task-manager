@@ -1,0 +1,40 @@
+@import '../../common';
+
+.notifications {
+    height: 100vh;
+    width: 100%;
+
+    &Content {
+        align-items: flex-start;
+        background: $color-background-main;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 1280px;
+        min-height: 100vh;
+        padding: 0 30px;
+    }
+
+    &WrapperButtonBack {
+        align-items: center;
+        display: flex;
+        height: 100px;
+        justify-content: flex-start;
+        margin: 0 auto;
+        width: 806px;
+    }
+
+    &ContentNotifications {
+        align-items: center;
+    }
+
+    &WrapBlockComment {
+        border: 1px solid $color-blue-outline;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    &WrapBlockComment > * {
+        margin-bottom: 1px;
+    }
+}

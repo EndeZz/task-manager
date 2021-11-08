@@ -1,0 +1,38 @@
+@import '../../common';
+
+.nextFile {
+    align-items: center;
+    border: 2px dashed $color-grey-blue;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    height: 68px;
+    justify-content: center;
+    transition: $delay-time;
+    width: 110px;
+
+    &Hovered:hover {
+        border: 2px dashed $color-blue;
+        transition: $delay-time;
+
+        .nextFileImg {
+            background: url(/public/images/UI_Kit/buttons/plus-blue.svg) center/13px 13px no-repeat;
+            transition: $delay-time;
+        }
+    }
+
+    &Img {
+        background: url(/public/images/UI_Kit/buttons/plus.svg) center/13px 13px no-repeat;
+        height: 14px;
+        transition: $delay-time;
+        width: 14px;
+    }
+
+    &Input {
+        height: 0.1px;
+        opacity: 0;
+        position: absolute;
+        width: 0.1px;
+        z-index: -10;
+    }
+}

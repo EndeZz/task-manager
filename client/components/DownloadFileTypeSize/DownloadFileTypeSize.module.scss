@@ -1,0 +1,28 @@
+@import '../../common';
+
+.box {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+
+    &Icon {
+        background: url(/public/images/UI_Kit/icons/zip.svg) center/22px 22px no-repeat;
+        height: 22px;
+        margin-right: 12px;
+        width: 22px;
+    }
+
+    &Title {
+        color: $color-black;
+        font-family: 'RR';
+        font-size: $font-size14;
+        margin-right: 10px;
+    }
+
+    &Size {
+        color: $color-black;
+        font-family: 'RR';
+        font-size: $font-size14;
+        margin-right: 18px;
+    }
+}

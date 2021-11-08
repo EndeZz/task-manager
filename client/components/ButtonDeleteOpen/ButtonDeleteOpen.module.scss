@@ -1,0 +1,43 @@
+@import '../../common';
+
+.button {
+    align-items: center;
+    background: inherit;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: $font-size14;
+    height: 34px;
+    justify-content: center;
+    max-width: auto;
+    padding: 8px 12px;
+    transition: $delay-time;
+
+    &Hovered:hover {
+        background: $color-delete-hovered;
+        transition: $delay-time;
+    }
+
+    &Actived:active {
+        background: $color-red-actived;
+        transition: $delay-time;
+    }
+
+    &Disabled:disabled {
+        background: $color-background;
+    }
+
+    &Text {
+        align-items: center;
+        color: $color-red;
+        display: flex;
+        font-family: 'RM';
+
+        &::before {
+            content: url(/public/images/UI_Kit/buttons/delete-icon.svg);
+            height: 16px;
+            margin-right: 10px;
+            width: 13px;
+        }
+    }
+}

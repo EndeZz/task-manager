@@ -1,0 +1,40 @@
+@import '../../common';
+
+.menuItem {
+    align-items: center;
+    background: $color-white;
+    border-radius: 4px;
+    color: $color-black;
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 16px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &Link {
+        align-items: center;
+        border-radius: 4px;
+        display: flex;
+        height: 34px;
+        padding: 9px 12px;
+
+        &Hovered:hover {
+            color: $color-blue;
+            transition: $delay-time;
+        }
+
+        &Actived {
+            background: $color-lite-blue;
+            color: $color-blue;
+            transition: $delay-time;
+        }
+
+        &Name {
+            color: inherit;
+            font-family: 'RM';
+            font-size: $font-size14;
+        }
+    }
+}

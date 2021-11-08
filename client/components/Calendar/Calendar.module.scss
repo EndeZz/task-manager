@@ -1,0 +1,152 @@
+@import '../../common';
+
+.calendar {
+    //position: relative;
+
+    &Body {
+        background: $color-white;
+        border: 1px solid #d8e3ec;
+        border-radius: 4px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        left: 0;
+        min-height: 237px;
+        overflow: hidden;
+        padding: 20px 0;
+        position: absolute;
+        right: 0;
+        top: 121%;
+        width: 330px;
+        z-index: 100;
+    }
+
+    &BodyHeader {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding-bottom: 12px;
+        width: 290px;
+    }
+
+    &BodyHeaderLeft {
+        align-items: center;
+        display: flex;
+    }
+
+    &BodyHeaderMonthYear {
+        color: $color-black;
+        cursor: pointer;
+        font-family: 'RM';
+        font-size: $font-size14;
+
+        &:first-child::after {
+            content: ',';
+        }
+
+        &:last-child {
+            padding-left: 5px;
+        }
+    }
+
+    &BodySwitch {
+        align-items: center;
+        display: flex;
+
+        &Prev {
+            align-items: center;
+            background: url(/public/images/UI_Kit/buttons/calendar/arrow-left.svg) center no-repeat;
+            display: flex;
+            height: 11px;
+            justify-content: center;
+            margin-right: 30px;
+            place-items: center;
+            width: 6px;
+
+            &Actived:active {
+                transform: matrix(-1, 0, 0, 1, 0, 0);
+            }
+        }
+
+        &Next {
+            align-items: center;
+            background: url(/public/images/UI_Kit/buttons/calendar/arrow-right.svg) center no-repeat;
+            display: flex;
+            height: 11px;
+            justify-content: center;
+            place-items: center;
+            width: 6px;
+
+            &Actived:active {
+                transform: matrix(-1, 0, 0, 1, 0, 0);
+            }
+        }
+    }
+
+    &BodyContent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &BodyWeekDays {
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        height: auto;
+        justify-items: stretch;
+        margin: 0 auto;
+        place-items: center;
+        width: 322px;
+    }
+
+    &BodyWeekDayName {
+        align-items: center;
+        color: $color-black;
+        display: grid;
+        font-family: 'RR';
+        font-size: $font-size12;
+        grid-auto-columns: 26px;
+        grid-auto-rows: 26px;
+        padding-bottom: 5px;
+        place-items: center;
+    }
+
+    &BodyDays {
+        align-items: center;
+        display: grid;
+        font-size: $font-size12;
+        grid-auto-columns: 26px;
+        grid-auto-rows: 26px;
+        grid-row-gap: 2px;
+        grid-template-columns: repeat(7, 1fr);
+        justify-items: stretch;
+        margin: 0 auto;
+        place-items: center;
+        width: 322px;
+    }
+
+    &BodyDay {
+        align-items: center;
+        border-radius: 4px;
+        color: $color-black;
+        cursor: pointer;
+        display: flex;
+        font-family: 'RR';
+        font-size: $font-size12;
+        height: 26px;
+        justify-content: center;
+        width: 26px;
+
+        &:hover {
+            color: $color-blue;
+        }
+
+        &:active {
+            background: $color-blue;
+            color: $color-white;
+        }
+    }
+
+    &BodyCurrentDate {
+        background-color: $color-lite-blue;
+    }
+}

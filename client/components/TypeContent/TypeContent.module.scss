@@ -1,0 +1,72 @@
+@import '../../common';
+
+.typeContent {
+    font-family: 'RM';
+    font-size: $font-size14;
+
+    &.video {
+        color: $color-blue;
+
+        &::before {
+            content: url(/public/images/cards/videoicon.svg);
+            height: 10px;
+            margin-right: 5px;
+            width: 7px;
+        }
+    }
+
+    &.photo {
+        color: $color-green;
+
+        &::before {
+            content: url(/public/images/cards/photo-icon.svg);
+            height: 8px;
+            margin-right: 5px;
+            width: 11px;
+        }
+    }
+
+    &.audio {
+        color: $color-yellow;
+
+        &::before {
+            content: url(/public/images/cards/audio-icon.svg);
+            height: 12px;
+            margin-right: 5px;
+            width: 7px;
+        }
+    }
+
+    &.videoWhite {
+        color: $color-white;
+
+        &::before {
+            content: url(/public/images/UI_Kit/buttons/videoicon-white.svg);
+            height: 9px;
+            margin-right: 5px;
+            width: 10px;
+        }
+    }
+
+    &.photoWhite {
+        color: $color-white;
+
+        &::before {
+            content: url(/public/images/UI_Kit/buttons/photo-icon-white.svg);
+            height: 9px;
+            margin-right: 5px;
+            width: 10px;
+        }
+    }
+
+    &.audioWhite {
+        color: $color-white;
+
+        &::before {
+            content: url(/public/images/UI_Kit/buttons/audio-icon-white.svg);
+            height: 9px;
+            margin-right: 5px;
+            width: 10px;
+        }
+    }
+}

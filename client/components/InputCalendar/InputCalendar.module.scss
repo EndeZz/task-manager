@@ -1,0 +1,49 @@
+@import '../../common';
+
+.inputCalendar {
+    &Title {
+        color: $color-black;
+        font-family: 'RM';
+        font-size: $font-size12;
+        margin-bottom: 9px;
+    }
+
+    &Wrap {
+        display: inline-block;
+        position: relative;
+
+        &Input {
+            background: $color-white;
+            border: 1px solid $color-blue-outline;
+            border-radius: 4px;
+            font-family: 'RR';
+            font-size: $font-size14;
+            height: 40px;
+            padding: 0 42px 0 15px;
+
+            &Hovered:hover {
+                border: 1px solid $color-grey-blue;
+                transition: $delay-time;
+            }
+
+            &Focused:focus {
+                border: 1px solid $color-blue;
+                transition: $delay-time;
+            }
+        }
+
+        &Icon {
+            background: url(/public/images/UI_Kit/buttons/calendar-icon-blue.svg) center/15px 14px no-repeat;
+            bottom: 13px;
+            height: 14px;
+            position: absolute;
+            right: 15px;
+            transition: $delay-time;
+            width: 15px;
+        }
+    }
+}
+
+.error {
+    border: 1px solid $color-red;
+}

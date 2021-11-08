@@ -1,0 +1,302 @@
+@import '../../common';
+
+.videoPlayer {
+    border-radius: 6px;
+    max-height: 597px;
+    object-fit: contain;
+    width: 938px;
+
+    &:fullscreen {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        max-height: 100%;
+        max-width: 100%;
+
+        .videoPlayerButtonsWrap {
+            background: inherit;
+            bottom: 0;
+            height: 0;
+            width: 0;
+        }
+
+        .videoPlayerFullScreen {
+            height: 0;
+            width: 0;
+        }
+    }
+
+    &Wrap {
+        &:hover {
+            .videoPlayerWrapControlPanel {
+                background: inherit;
+                bottom: 0;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                transition: $delay-time;
+                width: 100%;
+            }
+
+            .videoPlayerProgressWrap {
+                align-items: center;
+                display: flex;
+                height: 3px;
+                transition: $delay-time;
+            }
+
+            .videoPlayerProgressBar {
+                border: 0;
+                cursor: pointer;
+                height: 3px;
+                transition: $delay-time;
+                width: 100%;
+
+                &::-webkit-progress-bar {
+                    background: $white-opacity06;
+                }
+
+                &::-webkit-progress-value {
+                    background: $color-blue;
+                }
+            }
+
+            .videoPlayerButtonsWrap {
+                align-items: center;
+                display: flex;
+                flex-wrap: nowrap;
+                height: 40px;
+                padding: 0 20px;
+                transition: $delay-time;
+            }
+
+            .videoPlayerPlay {
+                background: inherit;
+                background: url(/public/images/UI_Kit/buttons/video-audio-photo-player/play-icon.svg) center/9px 12px no-repeat;
+                height: 12px;
+                margin-right: 30px;
+                transition: $delay-time;
+                width: 9px;
+
+                &Pause {
+                    background: inherit;
+                    background: url(/public/images/UI_Kit/buttons/video-audio-photo-player/pause.svg) center/9px 12px no-repeat;
+                    height: 12px;
+                    margin-right: 30px;
+                    transition: $delay-time;
+                    width: 9px;
+                }
+            }
+
+            .videoPlayerVolume {
+                background: inherit;
+                background: url(/public/images/UI_Kit/buttons/video-audio-photo-player/volume-icon.svg) center/17px 17px no-repeat;
+                height: 17px;
+                margin-right: 12px;
+                transition: $delay-time;
+                width: 17px;
+
+                &Muted {
+                    background: inherit;
+                    background: url(/public/images/UI_Kit/buttons/video-audio-photo-player/volume_muted-icon.svg) center/17px 17px no-repeat;
+                    height: 17px;
+                    margin-right: 12px;
+                    transition: $delay-time;
+                    width: 17px;
+                }
+            }
+
+            .videoPlayerVolumeRange {
+                cursor: pointer;
+                margin-right: 632px;
+                width: 81px;
+
+                &::-webkit-slider-thumb {
+                    visibility: hidden;
+                }
+
+                &::-webkit-slider-runnable-track {
+                    appearance: none;
+                    height: 3px;
+                    transition: $delay-time;
+                }
+            }
+
+            .videoPlayerTimeBox {
+                color: $white-opacity06;
+                display: flex;
+                flex-wrap: nowrap;
+                font-family: 'RR';
+                font-size: $font-size14;
+                height: $font-size14;
+                margin-right: 27px;
+                opacity: 1;
+                transition: $delay-time;
+            }
+
+            .videoPlayerTimeCurrent {
+                height: $font-size14;
+                opacity: 1;
+                transition: $delay-time;
+
+                &::after {
+                    content: '/';
+                    height: $font-size14;
+                    opacity: 1;
+                    padding: 0 4px;
+                    transition: $delay-time;
+                }
+            }
+
+            .videoPlayerTimeTotal {
+                height: $font-size14;
+                opacity: 1;
+                transition: $delay-time;
+            }
+
+            .videoPlayerFullScreen {
+                background: inherit;
+                background: url(/public/images/UI_Kit/buttons/video-audio-photo-player/fullscreen-icon.svg) center/16px 16px no-repeat;
+                height: 16px;
+                opacity: 1;
+                transition: $delay-time;
+            }
+        }
+    }
+
+    &WrapControlPanel {
+        background: inherit;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        transition: $delay-time;
+        width: 100%;
+    }
+
+    &ProgressWrap {
+        align-items: center;
+        display: flex;
+        height: 0;
+        transition: $delay-time;
+    }
+
+    &ProgressBar {
+        border: 0;
+        cursor: pointer;
+        height: 0;
+        transition: $delay-time;
+        width: 100%;
+
+        &::-webkit-progress-bar {
+            background: $white-opacity06;
+        }
+
+        &::-webkit-progress-value {
+            background: $color-blue;
+        }
+    }
+
+    &ButtonsWrap {
+        align-items: center;
+        display: flex;
+        flex-wrap: nowrap;
+        height: 0;
+        padding: 0 20px;
+        transition: $delay-time;
+    }
+
+    &Play {
+        background: inherit;
+        background: url(/public/images/UI_Kit/buttons/video-audio-photo-player/play-icon.svg) center/9px 12px no-repeat;
+        height: 0;
+        margin-right: 30px;
+        transition: $delay-time;
+        width: 9px;
+
+        &Pause {
+            background: inherit;
+            background: url(/public/images/UI_Kit/buttons/video-audio-photo-player/pause.svg) center/9px 12px no-repeat;
+            height: 0;
+            margin-right: 30px;
+            transition: $delay-time;
+            width: 9px;
+        }
+    }
+
+    &Volume {
+        background: inherit;
+        background: url(/public/images/UI_Kit/buttons/video-audio-photo-player/volume-icon.svg) center/17px 17px no-repeat;
+        height: 0;
+        margin-right: 12px;
+        transition: $delay-time;
+        width: 17px;
+
+        &Muted {
+            background: inherit;
+            background: url(/public/images/UI_Kit/buttons/video-audio-photo-player/volume_muted-icon.svg) center/17px 17px no-repeat;
+            height: 0;
+            margin-right: 12px;
+            transition: $delay-time;
+            width: 17px;
+        }
+    }
+
+    &VolumeRange {
+        cursor: pointer;
+        margin-right: 632px;
+        width: 81px;
+
+        &::-webkit-slider-thumb {
+            visibility: hidden;
+        }
+
+        &::-webkit-slider-runnable-track {
+            appearance: none;
+            height: 0;
+            transition: $delay-time;
+        }
+    }
+
+    &TimeBox {
+        align-items: center;
+        color: $white-opacity06;
+        display: flex;
+        flex-wrap: nowrap;
+        font-family: 'RR';
+        font-size: $font-size14;
+        height: 0;
+        margin-right: 27px;
+        opacity: 0;
+        transition: $delay-time;
+    }
+
+    &TimeCurrent {
+        height: 0;
+        opacity: 0;
+        transition: $delay-time;
+
+        &::after {
+            content: '/';
+            height: 0;
+            opacity: 0;
+            padding: 0 4px;
+            transition: $delay-time;
+        }
+    }
+
+    &TimeTotal {
+        height: 0;
+        opacity: 0;
+        transition: $delay-time;
+    }
+
+    &FullScreen {
+        background: inherit;
+        background: url(/public/images/UI_Kit/buttons/video-audio-photo-player/fullscreen-icon.svg) center/16px 16px no-repeat;
+        height: 0;
+        opacity: 0;
+        transition: $delay-time;
+        width: 16px;
+    }
+}

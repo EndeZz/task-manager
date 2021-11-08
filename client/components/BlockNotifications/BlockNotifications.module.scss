@@ -1,0 +1,100 @@
+@import '../../common';
+
+.blockNotifications {
+    align-items: center;
+    background: $color-white;
+    display: flex;
+    height: 66px;
+    padding-left: 20px;
+    width: 804px;
+
+    &Hovered:hover {
+        box-shadow: 0 4px 15px $color-shadow-opacity015;
+        cursor: pointer;
+        position: relative;
+        transition: $delay-time;
+        z-index: 200;
+    }
+
+    &BoxImg {
+        border-radius: 50%;
+        height: 34px;
+        margin-right: 10px;
+        position: relative;
+        width: 34px;
+
+        &.video {
+            background: url(/public/images/notifications/video-big-icon.svg) center/6px 8px no-repeat $color-blue;
+        }
+
+        &.audio {
+            background: url(/public/images/notifications/audio-big-icon.svg) center/7px 10px no-repeat $color-yellow;
+        }
+
+        &.photo {
+            background: url(/public/images/notifications/photo-big-icon.svg) center/10px 9px no-repeat $color-green;
+        }
+
+        &.comment {
+            background: url(/public/images/notifications/comment-icon.svg) center/12px 10px no-repeat $color-lite-blue;
+        }
+
+        &.attachments {
+            background: url(/public/images/notifications/paper-clip.svg) center/11px 12px no-repeat $color-lite-blue;
+        }
+    }
+
+    &Cyrcle {
+        background: url(/public/images/notifications/marker.svg) center/10px 10px no-repeat;
+        border-radius: 50%;
+        height: 10px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 10px;
+    }
+
+    &Cyrcle.markerRead {
+        display: none;
+    }
+
+    &Wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &Text {
+        color: $color-black;
+        display: flex;
+        flex-direction: row;
+        font-size: $font-size14;
+        margin-bottom: 4px;
+    }
+
+    &Text_1 {
+        font-family: 'RM';
+        margin-right: 5px;
+    }
+
+    &Text_1:empty {
+        margin-right: 0;
+    }
+
+    &Text_2 {
+        font-family: 'RR';
+        margin-right: 5px;
+    }
+
+    &Text_2:empty {
+        margin-right: 0;
+    }
+
+    &Text_3 {
+        font-family: 'RM';
+    }
+
+    &DateTime {
+        color: $text-black-opacity;
+        font-size: $font-size12;
+    }
+}

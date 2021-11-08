@@ -1,0 +1,84 @@
+@import '../../common';
+
+.cards {
+    font-family: 'RR';
+    width: 393px;
+
+    &Picture {
+        align-items: center;
+        border-radius: 6px;
+        display: flex;
+        filter: drop-shadow(0 8px 15px $color-shadow-opacity015);
+        height: 250px;
+        justify-content: center;
+        margin-bottom: 15px;
+        overflow: hidden;
+        width: 393px;
+
+        &.pictureVideo {
+            flex-shrink: 0;
+            height: 250px;
+            object-fit: cover;
+            width: 393px;
+        }
+
+        &Hovered:hover {
+            filter: drop-shadow(0 8px 20px $color-shadow-opacity04);
+            transition: $delay-time;
+        }
+
+        &Img {
+            flex-shrink: 0;
+            height: 250px;
+            object-fit: cover;
+            width: 393px;
+        }
+    }
+
+    &TypeBox {
+        align-items: center;
+        background: inherit;
+        color: $color-yellow;
+        display: flex;
+        font-size: $font-size14;
+        margin-bottom: 10px;
+
+        &Duration {
+            padding-left: 5px;
+
+            &.durationVideo {
+                color: $color-blue;
+            }
+        }
+    }
+
+    &Title {
+        font-size: $font-size14;
+        line-clamp: 2;
+        margin-bottom: 6px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 393px;
+    }
+
+    &Info {
+        align-items: center;
+        color: $text-black-opacity;
+        display: flex;
+        flex-direction: row;
+
+        &Author {
+            font-size: $font-size12;
+            margin-right: 6px;
+        }
+
+        &Point {
+            background: $color-point;
+            border-radius: 50%;
+            height: 3px;
+            margin-right: 6px;
+            width: 3px;
+        }
+    }
+}

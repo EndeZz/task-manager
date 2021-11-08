@@ -1,0 +1,49 @@
+@import '../../common';
+
+.buttonEdit {
+    align-items: center;
+    background: url(/public/images/UI_Kit/buttons/edit-icon.svg) center/23px 23px no-repeat, $color-blue;
+    border-radius: 4px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    width: 40px;
+
+    &Hovered:hover {
+        background: url(/public/images/UI_Kit/buttons/edit-icon.svg) center/23px 23px no-repeat, $color-hovered;
+        transition: $delay-time;
+    }
+
+    &Actived:active {
+        background: url(/public/images/UI_Kit/buttons/edit-icon.svg) center/23px 23px no-repeat, $color-blue-actived;
+        transition: $delay-time;
+    }
+
+    &Disabled:disabled {
+        background: url(/public/images/UI_Kit/buttons/edit-icon.svg) center/23px 23px no-repeat, $color-blue;
+    }
+}
+
+.buttonEditSmall {
+    align-items: center;
+    background: url(/public/images/UI_Kit/buttons/edit-icon-blue.svg) center/23px 23px no-repeat, $color-lite-blue;
+    border-radius: 4px;
+    display: flex;
+    height: 34px;
+    justify-content: center;
+    width: 34px;
+
+    &Hovered:hover {
+        background: url(/public/images/UI_Kit/buttons/edit-icon.svg) center/23px 23px no-repeat, $color-hovered;
+        transition: $delay-time;
+    }
+
+    &Actived:active {
+        background: url(/public/images/UI_Kit/buttons/edit-icon.svg) center/23px 23px no-repeat, $color-blue-actived;
+        transition: $delay-time;
+    }
+
+    &Disable:disabled {
+        background: url(/public/images/UI_Kit/buttons/edit-icon-blue.svg) center/23px 23px no-repeat, $color-lite-blue;
+    }
+}

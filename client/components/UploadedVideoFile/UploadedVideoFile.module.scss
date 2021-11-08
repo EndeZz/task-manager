@@ -1,0 +1,105 @@
+@import '../../common';
+
+.downloadedFile {
+    &Wrapper {
+        align-items: center;
+        border: 1px solid $color-blue-outline;
+        border-radius: 6px;
+        display: flex;
+        height: 74px;
+        justify-content: center;
+        margin-right: 10px;
+        padding: 2px;
+        position: relative;
+        width: 116px;
+
+        &Hovered:hover {
+            border: 1px solid $color-blue;
+            transition: $delay-time;
+
+            .downloadedFileDeleteAttachment {
+                opacity: 1;
+                transition: $delay-time;
+                visibility: visible;
+            }
+        }
+    }
+
+    &DeleteAttachment {
+        background: url(/public/images/UI_Kit/buttons/delete_attachment.svg);
+        height: 14px;
+        opacity: 0;
+        position: absolute;
+        right: -7px;
+        top: -7px;
+        visibility: hidden;
+        width: 14px;
+    }
+
+    &Box {
+        align-items: center;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        height: 68px;
+        justify-content: center;
+        overflow: hidden;
+        width: 110px;
+    }
+
+    &BoxImg {
+        flex-shrink: 0;
+        object-fit: cover;
+        width: 121%;
+    }
+}
+
+.tooltip {
+    display: inline-block;
+    position: relative;
+
+    &Text {
+        background-color: $color-black;
+        border-radius: 4px;
+        display: flex;
+        flex-wrap: nowrap;
+        font-family: 'RR';
+        left: 6%;
+        margin-left: -60px;
+        opacity: 0;
+        padding: 8px 10px;
+        pointer-events: none;
+        position: absolute;
+        text-align: center;
+        top: 110%;
+        transition: $delay-time;
+        white-space: nowrap;
+        z-index: 300;
+
+        &Date {
+            color: $white-opacity06;
+            font-size: $font-size12;
+            margin-right: 5px;
+        }
+
+        &Info {
+            color: $color-white;
+        }
+    }
+
+    &:hover .tooltipText {
+        opacity: 1;
+        transition: $delay-time;
+    }
+
+    &Text::after {
+        border-color: transparent transparent $color-black;
+        border-style: solid;
+        border-width: 5px;
+        bottom: 100%;
+        content: ' ';
+        left: 50%;
+        margin-left: -5px;
+        position: absolute;
+    }
+}

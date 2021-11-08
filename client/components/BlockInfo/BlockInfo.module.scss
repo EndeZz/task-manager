@@ -1,0 +1,30 @@
+@import '../../common';
+
+.blockInfo {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    line-height: 21px;
+    margin-bottom: 20px;
+
+    &TextFirst {
+        color: $color-black;
+        font-family: 'RR';
+        font-size: $font-size14;
+        margin-right: 5px;
+    }
+
+    &Fill {
+        border-bottom: 1px solid $color-blue-outline;
+        flex-grow: 1;
+        height: 11px;
+        margin-right: 5px;
+    }
+
+    &TextLast {
+        color: $color-black;
+        font-family: 'RM';
+        font-size: $font-size14;
+    }
+}

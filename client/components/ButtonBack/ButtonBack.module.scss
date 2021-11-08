@@ -1,0 +1,39 @@
+@import '../../common';
+
+.buttonBack {
+    background: inherit;
+    justify-content: flex-start;
+    transition: $delay-time;
+
+    &Hovered:hover {
+        background: inherit;
+        padding: 0 20px;
+        transition: $delay-time;
+    }
+
+    &Text {
+        color: $color-black;
+        font-family: 'RM';
+        font-size: $font-size24;
+
+        &::before {
+            content: url(/public/images/UI_Kit/buttons/back.svg);
+            height: 12px;
+            margin-right: 20px;
+            width: 23px;
+        }
+    }
+
+    &TextSmall {
+        color: $color-blue;
+        font-family: 'RM';
+        font-size: $font-size14;
+
+        &::before {
+            content: url(/public/images/UI_Kit/buttons/back.svg);
+            height: 12px;
+            margin-right: 10px;
+            width: 23px;
+        }
+    }
+}

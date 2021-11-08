@@ -1,0 +1,107 @@
+@import '../../common';
+
+.mainPage {
+    height: 100vh;
+    width: 100%;
+
+    &Content {
+        background: $color-background-main;
+        margin: 0 auto;
+        max-width: 1280px;
+        min-height: 100vh;
+        padding: 0 30px;
+    }
+
+    &WrapButtonBack {
+        align-items: center;
+        display: flex;
+        height: 92px;
+        justify-content: flex-start;
+    }
+
+    &EditBlockWrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &LeftCollumn {
+        background: $color-background-main;
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+    }
+
+    &WrapBlock {
+        background: $color-white;
+        border: 1px solid $color-border-bottom-header;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        padding: 30px;
+    }
+
+    &WrapBlock > * {
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &BlockFiles {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    &RightCollumn {
+        background: $color-white;
+        border: 1px solid $color-border-bottom-header;
+        border-radius: 4px;
+        display: flex;
+        flex-direction: column;
+        max-height: 289px;
+        max-width: 394px;
+        padding: 30px;
+    }
+
+    &RightCollumn > * {
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 30px;
+        }
+    }
+
+    &ErrorWrap {
+        display: none;
+    }
+
+    &Error {
+        &Text {
+            align-items: center;
+            color: $color-red;
+            display: flex;
+            flex-wrap: nowrap;
+            font-family: 'RM';
+            font-size: $font-size14;
+            margin: -10px 0 30px;
+
+            &::before {
+                align-items: center;
+                background: $color-red;
+                border-radius: 50%;
+                color: $color-white;
+                content: '❗';
+                display: flex;
+                height: 18px;
+                justify-content: center;
+                margin-right: 10px;
+                padding-top: 2px;
+                width: 18px;
+            }
+        }
+    }
+}

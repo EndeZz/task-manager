@@ -1,0 +1,77 @@
+@import '../../common';
+
+.photoPlayer {
+    border-radius: 6px;
+    display: block;
+
+    &:fullscreen {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        .photoPlayerImg {
+            max-height: 100%;
+            max-width: 100%;
+        }
+
+        .photoPlayerButtonsWrap {
+            background: inherit;
+            bottom: 0;
+            height: 0;
+            width: 0;
+        }
+
+        .photoPlayerFullScreen {
+            height: 0;
+            width: 0;
+        }
+    }
+
+    &:hover {
+        .photoPlayerButtonsWrap {
+            height: 40px;
+            transition: $delay-time;
+        }
+
+        .photoPlayerFullScreen {
+            background: inherit;
+            background: url(/public/images/UI_Kit/buttons/video-audio-photo-player/fullscreen-icon.svg) center/16px 16px no-repeat;
+
+            height: 16px;
+            opacity: 1;
+            transition: $delay-time;
+        }
+    }
+
+    &Wrap {
+        height: auto;
+        width: 100%;
+    }
+
+    &Img {
+        max-height: 597px;
+        max-width: 100%;
+        object-fit: contain;
+        position: relative;
+    }
+
+    &ButtonsWrap {
+        align-items: center;
+        background: $color-shadow-opacity04;
+        bottom: 0;
+        display: flex;
+        height: 0;
+        justify-content: flex-end;
+        padding: 0 17px;
+        position: absolute;
+        transition: $delay-time;
+        width: 100%;
+    }
+
+    &FullScreen {
+        height: 0;
+        opacity: 0;
+        transition: $delay-time;
+        width: 16px;
+    }
+}

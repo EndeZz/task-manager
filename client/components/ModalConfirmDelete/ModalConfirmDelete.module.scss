@@ -1,0 +1,83 @@
+@import '../../common';
+
+.modal {
+    align-items: center;
+    background: $color-shadow-opacity085;
+    cursor: auto;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    overflow-y: hidden;
+    position: fixed;
+    top: 0;
+    transition: $delay-time;
+    width: 100vw;
+    z-index: 1001;
+
+    &Panel {
+        background: $color-white;
+        border: 1px solid $color-border-bottom-header;
+        border-radius: 4px;
+        height: 166px;
+        padding: 20px;
+        width: 394px;
+    }
+
+    &PanelWrapCross {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &PanelCross {
+        align-self: flex-end;
+        background: url(/public/images/UI_Kit/buttons/button-close.svg) center/10px 10px no-repeat;
+        height: 10px;
+        transition: $delay-time;
+        width: 10px;
+
+        &:hover {
+            background: url(/public/images/UI_Kit/buttons/button-close-hover.svg) center/10px 10px no-repeat;
+            transition: $delay-time;
+        }
+    }
+
+    &PanelWrap {
+        align-items: center;
+        display: flex;
+        margin-bottom: 20px;
+        padding: 0 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &PanelText {
+        color: $color-black;
+        font-family: 'RM';
+        font-size: $font-size20;
+    }
+
+    &PanelButton {
+        background: $color-lite-blue;
+        border-radius: 4px;
+        color: $color-blue;
+        font-family: 'RM';
+        font-size: $font-size14;
+        height: 40px;
+        padding: 12px 15px;
+        transition: $delay-time;
+
+        &:hover {
+            background: $color-blue;
+            color: $color-white;
+            transition: $delay-time;
+        }
+    }
+
+    &PanelPadding {
+        width: 20px;
+    }
+}

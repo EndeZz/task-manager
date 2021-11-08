@@ -1,0 +1,55 @@
+@import '../../common';
+
+.avatarButton {
+    align-items: center;
+    background: inherit;
+    border-radius: 4px;
+    color: $color-blue;
+    cursor: pointer;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 34px;
+    justify-content: center;
+    max-width: 100%;
+    padding: 6px 10px;
+    position: relative;
+    transition: $delay-time;
+
+    &Hovered:hover {
+        background: $color-lite-blue;
+        border-radius: 4px;
+        transition: $delay-time;
+    }
+
+    &Actived:active {
+        background: $color-blue;
+        color: $color-white;
+
+        .avatarButtonText::before {
+            background: inherit;
+            content: url(/public/images/new_user/upload-white.svg);
+            transition: $delay-time;
+        }
+    }
+
+    &Text {
+        font-family: 'RM';
+        font-size: $font-size14;
+
+        &::before {
+            content: url(/public/images/new_user/upload.svg);
+            height: 12px;
+            margin-right: 10px;
+            transition: $delay-time;
+            width: 12px;
+        }
+    }
+
+    &Input {
+        height: 0.1px;
+        opacity: 0;
+        position: absolute;
+        width: 0.1px;
+        z-index: -10;
+    }
+}

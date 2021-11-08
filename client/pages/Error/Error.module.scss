@@ -1,0 +1,38 @@
+@import '../../common';
+
+.pageError {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+
+    &Content {
+        align-items: center;
+        background: $color-background-main;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        width: 1280px;
+    }
+
+    &Img {
+        background: url(/public/images/page_404/404.svg) center/425px 169px no-repeat;
+        height: 169px;
+        margin-bottom: 40px;
+        width: 425px;
+    }
+
+    &Title {
+        color: $color-black;
+        font-family: 'RM';
+        font-size: $font-size24;
+        margin-bottom: 10px;
+    }
+
+    &Description {
+        color: $color-black;
+        font-family: 'RR';
+        font-size: $font-size14;
+        margin-bottom: 30px;
+    }
+}

@@ -1,0 +1,48 @@
+@import '../../common';
+
+.publish {
+    border: 1px solid $color-blue-outline;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    height: 168px;
+    justify-content: space-between;
+    margin-right: 20px;
+    padding: 3px 3px 10px;
+    width: 181px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &Hovered:hover {
+        background: $color-lite-blue;
+        border: 1px solid $color-blue;
+        cursor: pointer;
+    }
+
+    &ItemWrapperImg {
+        border-radius: 4px;
+        height: 109px;
+        margin-bottom: 10px;
+        max-width: 175px;
+        overflow: hidden;
+    }
+
+    &ItemInfo {
+        color: $color-black;
+        font-family: 'RR';
+        font-size: $font-size12;
+        line-height: 18px;
+        margin-bottom: 4px;
+        padding-left: 10px;
+    }
+
+    &ItemTimeDate {
+        color: $text-black-opacity;
+        font-family: 'RR';
+        font-size: $font-size12;
+        line-height: 14px;
+        padding-left: 10px;
+    }
+}

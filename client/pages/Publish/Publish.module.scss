@@ -1,0 +1,46 @@
+@import '../../common';
+
+.publish {
+    height: 100vh;
+    width: 100%;
+
+    &Content {
+        background: $color-background-main;
+        margin: 0 auto;
+        max-width: 1280px;
+        min-height: 100vh;
+        padding: 0 30px;
+    }
+
+    &WrapperButtonBack {
+        align-items: center;
+        display: flex;
+        height: 92px;
+        justify-content: flex-start;
+    }
+
+    &WrapperFiles {
+        background: $color-white;
+        border: 1px solid $color-blue-outline;
+        border-bottom: 1px solid $color-blue-outline;
+        border-radius: 4px 4px 0 0;
+        padding: 30px;
+    }
+
+    &FilesBox {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &WrapperRename {
+        background: $color-white;
+        border: 1px solid $color-blue-outline;
+        border-radius: 0 0 4px 4px;
+        border-top: 0;
+        padding: 30px;
+    }
+
+    &WrapperRename > * {
+        margin-bottom: 30px;
+    }
+}

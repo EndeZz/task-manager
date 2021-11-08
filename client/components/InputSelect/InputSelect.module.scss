@@ -1,0 +1,64 @@
+@import '../../common';
+
+.inputSelect {
+    &Title {
+        color: $color-black;
+        font-family: 'RM';
+        font-size: $font-size12;
+        margin-bottom: 9px;
+    }
+
+    &Wrap {
+        display: inline-block;
+        position: relative;
+
+        &Actived {
+            .inputSelectWrapIcon {
+                transform: rotate(180deg);
+                transition: $delay-time;
+            }
+
+            .select {
+                display: block;
+            }
+        }
+
+        &Input {
+            background: $color-white;
+            border: 1px solid $color-blue-outline;
+            border-radius: 4px;
+            font-family: 'RR';
+            font-size: $font-size14;
+            height: 40px;
+            overflow: hidden;
+            padding: 0 42px 0 15px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            &Hovered:hover {
+                border: 1px solid $color-grey-blue;
+                transition: $delay-time;
+            }
+
+            &Actived,
+            &Actived:hover {
+                border: 1px solid $color-blue;
+                transition: $delay-time;
+            }
+        }
+
+        &Icon {
+            background: url(/public/images/UI_Kit/buttons/arrow_down-icon.svg) center/7px 7px no-repeat;
+            height: 7px;
+            position: absolute;
+            right: 18px;
+            top: 18px;
+            transition: $delay-time;
+            width: 7px;
+        }
+    }
+}
+
+.error {
+    border: 1px solid $color-red;
+}

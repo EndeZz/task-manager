@@ -1,0 +1,43 @@
+@import '../../common';
+
+.modal {
+    align-items: center;
+    background: $color-background-main;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100%;
+
+    &Container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &Img {
+        height: 70px;
+        margin-bottom: 51px;
+        width: 70px;
+    }
+
+    &Panel {
+        background: $color-white;
+        border: 1px solid $color-border-bottom-header;
+        border-radius: 4px;
+        padding: 30px;
+    }
+
+    &Panel > * {
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &Title {
+        color: $color-black;
+        font-family: 'RM';
+        font-size: $font-size24;
+    }
+}
