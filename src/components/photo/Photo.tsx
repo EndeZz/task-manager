@@ -1,7 +1,7 @@
 import ButtonBig from '../buttons/ButtonBig/ButtonBig';
 import './photo.scss';
 
-function Photo(props: { text: string }) {
+function Photo() {
   return (
     <div className="photo">
       <div className="photo__img">
