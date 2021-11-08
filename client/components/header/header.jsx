@@ -3,9 +3,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Navigation from '../navigation/navigation';
 
-import Index from '../../pages/index';
-import Tasks from '../../pages/tasks/tasks';
-import Users from '../../pages/users/users';
 
 const Header = (  props  ) => {
 
