@@ -55,7 +55,7 @@ function Task() {
               <FileLabel type="video"></FileLabel>
             </div>
             <div className="task__body__result__load">
-              <img src="/public/icons/plus.svg" alt="add" />
+              <img src="/icons/plus.svg" alt="add" />
             </div>
           </div>
           <div className="task__body__comment">

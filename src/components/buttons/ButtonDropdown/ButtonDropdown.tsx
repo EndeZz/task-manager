@@ -4,7 +4,7 @@ import '../buttons.scss';
 function ButtonDropdown() {
   return (
     <button className="button button__dropdown">
-      <img src="../../../public/icons/arrow.svg" alt="" />
+      <img src="/icons/arrow.svg" alt="" />
     </button>
   );
 }

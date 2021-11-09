@@ -18,7 +18,7 @@ function TaskCard(props: {
         <span className="task_card__info__author">{props.author}</span>
       </div>
       <div className="task_card__info__date">
-        <img src="/public/icons/date.svg" alt="Дата" />
+        <img src="/icons/date.svg" alt="Дата" />
         <span className="task_card__info__date__text">{props.date}</span>
       </div>
       <StatusLabel type={props.status}></StatusLabel>

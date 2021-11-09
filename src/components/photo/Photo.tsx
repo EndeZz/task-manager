@@ -6,7 +6,7 @@ function Photo() {
   return (
     <div className="photo">
       <div className="photo__img">
-        <img src="/public/icons/profile.svg" alt="Изображение профиля" />
+        <img src="/icons/profile.svg" alt="Изображение профиля" />
       </div>
       <div className="photo__button">
         <ButtonBig type='upload' color='blue' text='Загрузить аватар'></ButtonBig>

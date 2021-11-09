@@ -4,7 +4,7 @@ import './notification.scss';
 function Notification() {
   return (
     <div className="notification">
-      <img src="../../../public/icons/bell.svg" alt="Уведомление" />
+      <img className="notification__icon" src="/icons/bell.svg" alt="Уведомление" />
     </div>
   );
 }

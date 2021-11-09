@@ -9,7 +9,7 @@ function Message(props: { type: string, author: string, task: string, date: stri
           case 'comment':
             return (
               <div>
-                <img className="message__icon" src="/public/icons/comment.svg" alt="Новый комментарий" />
+                <img className="message__icon" src="/icons/comment.svg" alt="Новый комментарий" />
                 <div className="message__text">
                   <p>Новый комментарий в задаче
                     <span className="message__text-bold">{props.task}</span>
@@ -21,7 +21,7 @@ function Message(props: { type: string, author: string, task: string, date: stri
           case 'attach':
             return (
               <div>
-                <img className="message__icon" src="/public/icons/attach.svg" alt="Новый контент" />
+                <img className="message__icon" src="/icons/attach.svg" alt="Новый контент" />
                 <div className="message__text">
                   <p>
                     <span className="message__text-bold">{props.author}</span>
@@ -35,7 +35,7 @@ function Message(props: { type: string, author: string, task: string, date: stri
           case 'task_video':
             return (
               <div>
-                <img className="message__icon" src="/public/icons/video-notification.svg" alt="Новая задача" />
+                <img className="message__icon" src="/icons/video-notification.svg" alt="Новая задача" />
                 <div className="message__text">
                   <p>
                     <span className="message__text-bold">{props.author}</span>
@@ -48,7 +48,7 @@ function Message(props: { type: string, author: string, task: string, date: stri
           case 'task_photo':
             return (
               <div>
-                <img className="message__icon" src="/public/icons/photo-notification.svg" alt="Новая задача" />
+                <img className="message__icon" src="/icons/photo-notification.svg" alt="Новая задача" />
                 <div className="message__text">
                   <p>
                     <span className="message__text-bold">{props.author}</span>
@@ -61,7 +61,7 @@ function Message(props: { type: string, author: string, task: string, date: stri
           case 'audio_video':
             return (
               <div>
-                <img className="message__icon" src="/public/icons/audio-notification.svg" alt="Новая задача" />
+                <img className="message__icon" src="/icons/audio-notification.svg" alt="Новая задача" />
                 <div className="message__text">
                   <p>
                     <span className="message__text-bold">{props.author}</span>

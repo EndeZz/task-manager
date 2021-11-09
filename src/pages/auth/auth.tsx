@@ -6,7 +6,7 @@ import './auth.scss';
 function AuthComponent() {
   return (
     <section className="auth">
-      <img className="auth__logo" src="/public/icons/logo.svg" alt="логотип" />
+      <img className="auth__logo" src="/icons/logo.svg" alt="логотип" />
       <div className="auth__form">
         <h1 className="auth__form__h1">Вход</h1>
         <InputComponent type="text" label="Email" placeholder='Введите email' id='email'></InputComponent>

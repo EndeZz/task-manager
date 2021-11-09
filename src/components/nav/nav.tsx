@@ -15,6 +15,9 @@ function Nav(props: { role: 'admin' | 'manager' | 'content-maker' }) {
                 <li className="button nav__btn">
                   <a href="/tasks">Задачи</a>
                 </li>
+                <li className="button nav__btn">
+                  <a href="/users">Пользователи</a>
+                </li>
               </ul>
             );
           default:
@@ -25,9 +28,6 @@ function Nav(props: { role: 'admin' | 'manager' | 'content-maker' }) {
                 </li >
                 <li className="button nav__btn">
                   <a href="/tasks">Задачи</a>
-                </li>
-                <li className="button nav__btn">
-                  <a href="/users">Пользователи</a>
                 </li>
               </ul>
             );

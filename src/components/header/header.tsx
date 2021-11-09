@@ -10,7 +10,7 @@ function Header() {
       <header className="header">
         <div className="header__nav">
           <a href="/">
-            <img src="/public/icons/logo.svg" alt="логотип"/>
+            <img src="/icons/logo.svg" alt="логотип"/>
           </a>
           <Nav role="admin"></Nav>
         </div>

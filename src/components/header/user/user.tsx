@@ -14,7 +14,7 @@ function User(props: { name: string }) {
         <span className="profile__info__name">
           {props.name}
         </span>
-        <img src="../../../public/profile/avatar.png" alt="Фото пользователя" />
+        <img className="profile__info__img" src="/profile/avatar.png" alt="Фото пользователя" />
         <div onClick={onClick}>
           <ButtonDropdown></ButtonDropdown>
         </div>

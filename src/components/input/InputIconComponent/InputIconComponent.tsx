@@ -12,7 +12,7 @@ function InputIconComponent(props: { label: string, placeholder: string, type: '
           placeholder={props.placeholder}
           type={props.type}
           id={props.id}></InputPattern>
-        <img src={`/public/icons/${props.id}.svg`} alt={props.id} />
+        <img src={`/icons/${props.id}.svg`} alt={props.id} />
       </div>
     </div>
   );
