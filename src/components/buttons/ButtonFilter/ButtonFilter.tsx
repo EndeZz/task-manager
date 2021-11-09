@@ -1,5 +1,5 @@
 import React from 'react';
-import './buttons.scss';
+import '../buttons.scss';
 
 function ButtonFilter(props: { text: string }) {
   return (

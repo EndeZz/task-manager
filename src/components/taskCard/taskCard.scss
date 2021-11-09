@@ -1,4 +1,5 @@
-@import '../label/label.scss';
+@import '../labels/ContentLabel/ContentLabel.scss';
+@import '../labels/StatusLabel/StatusLabel.scss';
 
 .task_card {
   background: $white;
