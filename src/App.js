@@ -33,7 +33,7 @@ function App() {
         <Route path={PAGES.TASKNEW} element={<TaskNew></TaskNew>}></Route>
         <Route path={PAGES.TASKS} element={<Tasks></Tasks>}></Route>
         <Route path={PAGES.USER} element={<User></User>}></Route>
-        <Route path={PAGES.Users} element={<Users></Users>}></Route>
+        <Route path={PAGES.USERS} element={<Users></Users>}></Route>
       </Routes>
     </Router>
     </div>
