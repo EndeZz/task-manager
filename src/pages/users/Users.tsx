@@ -7,7 +7,6 @@ import UserCard from '../../components/userCard/UserCard';
 import Modal from '../../components/modal/Modal';
 import './users.scss';
 
-
 function Users() {
   return (
     <div>

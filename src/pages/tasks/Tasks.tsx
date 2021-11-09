@@ -20,7 +20,7 @@ function Tasks() {
             placeholder='Введите название задачи или имя ответственного'
             id='search'></InputIconComponent>
           <SelectStatus></SelectStatus>
-          <InputIconComponent 
+          <InputIconComponent
             type='date'
             label='Срок выполнения'
             placeholder='Укажите дату'

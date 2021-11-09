@@ -30,7 +30,7 @@ function User() {
               placeholder='Введите e-mail'
               id='email'
             ></InputComponent>
-            <SelectComponent 
+            <SelectComponent
               items={['Администратор', 'Контент-мейкер', 'Менеджер']}
               type="text"
               label="Роль"
