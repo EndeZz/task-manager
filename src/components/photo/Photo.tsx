@@ -1,3 +1,4 @@
+import React from 'react';
 import ButtonBig from '../buttons/ButtonBig/ButtonBig';
 import './photo.scss';
 

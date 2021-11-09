@@ -1,3 +1,4 @@
+import React from 'react';
 import InputIconComponent from '../../input/InputIconComponent/InputIconComponent';
 import StatusLabel from '../../labels/StatusLabel/StatusLabel';
 import '../select.scss';

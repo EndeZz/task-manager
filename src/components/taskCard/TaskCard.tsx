@@ -3,7 +3,13 @@ import ContentLabel from '../labels/ContentLabel/ContentLabel';
 import StatusLabel from '../labels/StatusLabel/StatusLabel';
 import './taskCard.scss';
 
-function TaskCard(props: { type: "audio" | "video" | "photo" , name: string, author: string, date: string, status: "work" | "approve" | "done" }) {
+function TaskCard(props: { 
+  type: "audio" | "video" | "photo" , 
+  name: string, 
+  author: string, 
+  date: string, 
+  status: "work" | "approve" | "done" 
+}) {
   return (
     <div className="task_card">
       <div className="task_card__info">
@@ -22,15 +28,15 @@ function TaskCard(props: { type: "audio" | "video" | "photo" , name: string, aut
             case 'done':
               return (
                 <ButtonMini type="delete" color='lightblue'></ButtonMini>
-              )
+              );
             default:
               return (
                 <div>
                   <ButtonMini type="edit" color='lightblue'></ButtonMini>
                   <ButtonMini type="delete" color='lightblue'></ButtonMini>
                 </div>
-              )
-            }  
+              );
+          }
         })()}
       </div>
     </div>

@@ -1,3 +1,4 @@
+import React from 'react';
 import './FileLabel.scss';
 
 function FileLabel(props: { type: 'video' | 'audio' | 'photo' }) {
@@ -18,7 +19,7 @@ function FileLabel(props: { type: 'video' | 'audio' | 'photo' }) {
                   <span>mov</span>
                 </div>
               </div>
-            )
+            );
           case 'photo':
             return (
               <div>
@@ -32,7 +33,7 @@ function FileLabel(props: { type: 'video' | 'audio' | 'photo' }) {
                   <span>png</span>
                 </div>
               </div>
-            )
+            );
           case 'audio':
             return (
               <div>
@@ -40,8 +41,12 @@ function FileLabel(props: { type: 'video' | 'audio' | 'photo' }) {
                   <span>mp3</span>
                 </div>
               </div>
-            )
-          }
+            );
+          default:
+            return (
+              <div></div>
+            );
+        }
       })()}
     </div>
   );

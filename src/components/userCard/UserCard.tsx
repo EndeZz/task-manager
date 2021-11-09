@@ -1,7 +1,13 @@
+import React from 'react';
 import ButtonMini from '../buttons/ButtonMini/ButtonMini';
 import './userCard.scss';
 
-function UserCard(props: { photo: string, name: string, email: string, role: "Администратор" | "Контент-мейкер" | "Менеджер" }) {
+function UserCard(props: {
+  photo: string, 
+  name: string, 
+  email: string, 
+  role: "Администратор" | "Контент-мейкер" | "Менеджер" 
+}) {
   return (
     <div className="user_card">
       <div className="user_card__info">

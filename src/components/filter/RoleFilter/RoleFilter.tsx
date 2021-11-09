@@ -1,3 +1,4 @@
+import React from 'react';
 import ButtonFilter from '../../buttons/ButtonFilter/ButtonFilter';
 import InputLabelPattern from '../../input/InputLabelPattern/InputLabelPattern';
 import './RoleFilter.scss';

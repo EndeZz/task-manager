@@ -1,3 +1,4 @@
+import React from 'react';
 import './notification.scss';
 
 function Notification() {

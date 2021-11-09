@@ -1,3 +1,4 @@
+import React from 'react';
 import '../input.scss';
 
 function InputPattern(props: { placeholder: string, type: 'text' | 'date', id: string }) {

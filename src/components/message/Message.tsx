@@ -1,3 +1,4 @@
+import React from 'react';
 import './message.scss';
 
 function Message(props: { type: string, author: string, task: string, date: string }) {
@@ -10,41 +11,27 @@ function Message(props: { type: string, author: string, task: string, date: stri
               <div>
                 <img className="message__icon" src="/public/icons/comment.svg" alt="Новый комментарий" />
                 <div className="message__text">
-                  <p>Новый комментарий в задаче 
+                  <p>Новый комментарий в задаче
                     <span className="message__text-bold">{props.task}</span>
                   </p>
                   <span className="message__date">{props.date}</span>
                 </div>
               </div>
-            )
+            );
           case 'attach':
             return (
               <div>
                 <img className="message__icon" src="/public/icons/attach.svg" alt="Новый контент" />
                 <div className="message__text">
-                  <p>Новый комментарий в задаче 
-                    <span className="message__text-bold">{props.task}</span>
+                  <p>
+                    <span className="message__text-bold">{props.author}</span>
                     <span> загрузил контент в задаче </span>
                     <span className="message__text-bold">{props.task}</span>
                   </p>
                   <span className="message__date">{props.date}</span>
                 </div>
               </div>
-            )
-            case 'attach':
-              return (
-                <div>
-                  <img className="message__icon" src="/public/icons/attach.svg" alt="Новый контент" />
-                  <div className="message__text">
-                    <p>Новый комментарий в задаче 
-                      <span className="message__text-bold">{props.author}</span>
-                      <span> загрузил контент в задаче </span>
-                      <span className="message__text-bold">{props.task}</span>
-                    </p>
-                    <span className="message__date">{props.date}</span>
-                  </div>
-                </div>
-              )
+            );
           case 'task_video':
             return (
               <div>
@@ -57,7 +44,7 @@ function Message(props: { type: string, author: string, task: string, date: stri
                   <span className="message__date">{props.date}</span>
                 </div>
               </div>
-            )
+            );
           case 'task_photo':
             return (
               <div>
@@ -70,7 +57,7 @@ function Message(props: { type: string, author: string, task: string, date: stri
                   <span className="message__date">{props.date}</span>
                 </div>
               </div>
-            )
+            );
           case 'audio_video':
             return (
               <div>
@@ -83,8 +70,12 @@ function Message(props: { type: string, author: string, task: string, date: stri
                   <span className="message__date">{props.date}</span>
                 </div>
               </div>
-            )
-          }  
+            );
+          default:
+            return (
+              <div></div>
+            );
+        }
       })()}
     </div>
   );

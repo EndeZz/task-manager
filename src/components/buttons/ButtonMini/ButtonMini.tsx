@@ -1,3 +1,4 @@
+import React from 'react';
 import '../buttons.scss';
 
 function ButtonMini(props: { type: string, color: 'blue' | 'clear' | 'lightblue' }) {

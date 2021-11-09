@@ -1,3 +1,4 @@
+import React from 'react';
 import Header from '../../components/header/header';
 import Heading from '../../components/heading/heading';
 import Message from '../../components/message/Message';

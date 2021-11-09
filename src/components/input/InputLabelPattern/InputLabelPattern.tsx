@@ -1,3 +1,4 @@
+import React from 'react';
 import '../input.scss';
 
 function InputLabelPattern(props: { label: string, id: string }) {

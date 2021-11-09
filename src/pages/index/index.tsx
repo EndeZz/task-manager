@@ -1,4 +1,6 @@
+import React from 'react';
 import Header from '../../components/header/header';
+// import InputComponent from '../../components/input/InputComponent/InputComponent';
 import CardComponent from '../../components/card/card';
 import ContentFilter from '../../components/filter/ContentFilter/ContentFilter';
 import './index.scss';

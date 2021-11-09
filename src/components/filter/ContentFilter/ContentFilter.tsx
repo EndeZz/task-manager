@@ -1,3 +1,4 @@
+import React from 'react';
 import ButtonContent from '../../buttons/ButtonContent/ButtonContent';
 import InputLabelPattern from '../../input/InputLabelPattern/InputLabelPattern';
 import './ContentFilter.scss';

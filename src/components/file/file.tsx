@@ -1,7 +1,8 @@
-import ButtonMain from "../buttons/buttonMain/buttonMain";
+import React from 'react';
+import ButtonMain from '../buttons/buttonMain/buttonMain';
 import './file.scss';
 
-function File(props: { type: string, name: string, size: string } ) {
+function File(props: { type: string, name: string, size: string }) {
   return (
     <div className="file">
       <div className="file__info">

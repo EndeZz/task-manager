@@ -1,3 +1,4 @@
+import React from 'react';
 import ButtonMain from '../../components/buttons/buttonMain/buttonMain';
 import Header from '../../components/header/header';
 import './404.scss';

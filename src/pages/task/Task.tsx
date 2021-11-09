@@ -1,17 +1,13 @@
-import ButtonBig from "../../components/buttons/ButtonBig/ButtonBig";
-import ButtonMain from "../../components/buttons/buttonMain/buttonMain";
-import ButtonMini from "../../components/buttons/ButtonMini/ButtonMini";
-// include ../../components/error/error
-import File from "../../components/file/file";
-// include ../../components/filter/filter
-import Header from "../../components/header/header";
-import InputComponent from "../../components/input/InputComponent/InputComponent";
-import ContentLabel from "../../components/labels/ContentLabel/ContentLabel";
-import StatusLabel from "../../components/labels/StatusLabel/StatusLabel";
-import FileLabel from "../../components/labels/FileLabel/FileLabel";
-// include ../../components/modal/modal
-// include ../../components/select/select
-// include ../../components/task_card/task_card
+import React from 'react';
+import ButtonBig from '../../components/buttons/ButtonBig/ButtonBig';
+import ButtonMain from '../../components/buttons/buttonMain/buttonMain';
+import ButtonMini from '../../components/buttons/ButtonMini/ButtonMini';
+import File from '../../components/file/file';
+import Header from '../../components/header/header';
+import InputComponent from '../../components/input/InputComponent/InputComponent';
+import ContentLabel from '../../components/labels/ContentLabel/ContentLabel';
+import StatusLabel from '../../components/labels/StatusLabel/StatusLabel';
+import FileLabel from '../../components/labels/FileLabel/FileLabel';
 
 function Task() {
   return (
@@ -34,7 +30,16 @@ function Task() {
             <h1 className="h1">Заголовок задачи с другой стороны консультация с широким активом позволяет</h1>
             <div className="task__body__content__text">
               <p>
-                Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности позволяет оценить значение форм развития. Значимость этих проблем настолько очевидна, что новая модель организационной деятельности требуют от нас анализа системы обучения кадров, соответствует насущным потребностям. Товарищи! постоянный количественный рост и сфера нашей активности требуют определения и уточнения позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что постоянный количественный рост и сфера нашей активности в значительной степени обуславливает создание системы обучения кадров, соответствует насущным потребностям.
+                Не следует, однако забывать, что постоянный количественный рост и
+                сфера нашей активности позволяет оценить значение форм развития.
+                Значимость этих проблем настолько очевидна, что новая модель организационной
+                деятельности требуют от нас анализа системы обучения кадров,
+                соответствует насущным потребностям. Товарищи! постоянный количественный
+                рост и сфера нашей активности требуют определения и уточнения позиций,
+                занимаемых участниками в отношении поставленных задач. Повседневная
+                практика показывает, что постоянный количественный рост и сфера
+                нашей активности в значительной степени обуславливает создание
+                системы обучения кадров, соответствует насущным потребностям.
               </p>
             </div>
             <div className="task__body__content__files ">

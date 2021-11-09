@@ -1,12 +1,12 @@
+import React from 'react';
 import ButtonDropdown from '../../buttons/ButtonDropdown/ButtonDropdown';
 import './user.scss';
 
 function User(props: { name: string }) {
-
   const onClick = () => {
     const dropdownMenu = document.querySelector('.profile__dropdown');
-    dropdownMenu.removeAttribute("hidden");
-  }
+    dropdownMenu.removeAttribute('hidden');
+  };
 
   return (
     <div className="profile">
@@ -15,9 +15,11 @@ function User(props: { name: string }) {
           {props.name}
         </span>
         <img src="../../../public/profile/avatar.png" alt="Фото пользователя" />
-        <ButtonDropdown></ButtonDropdown>
+        <div onClick={onClick}>
+          <ButtonDropdown></ButtonDropdown>
+        </div>
       </div>
-      <div className="profile__dropdown" hidden> 
+      <div className="profile__dropdown" hidden>
         <ul className="profile__dropdown__list">
           <li>
             <div className="profile__dropdown__list__item">

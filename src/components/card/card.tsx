@@ -1,7 +1,14 @@
+import React from 'react';
 import ContentLabel from '../labels/ContentLabel/ContentLabel';
 import './card.scss';
 
-export default function CardComponent(props: {type: string, duration: string, name: string, author: string, date: string}) {
+export default function CardComponent(props: {
+  type: string,
+  duration: string,
+  name: string,
+  author: string,
+  date: string
+}) {
   return (
       <div className='card'>
         <img src="../../../public/img/beach.jfif" alt="Пляж" />

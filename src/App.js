@@ -1,10 +1,11 @@
+import React from 'react';
 import './App.scss';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from 'react-router-dom';
-import ROUTER from './router/routes'
+import ROUTER from './router/routes';
 import AuthComponent from './pages/auth/auth';
 import IndexComponent from './pages/index/index';
 import Error404 from './pages/404/404';

@@ -1,3 +1,4 @@
+import React from 'react';
 import ButtonBig from '../../components/buttons/ButtonBig/ButtonBig';
 import ButtonMain from '../../components/buttons/buttonMain/buttonMain';
 import Header from '../../components/header/header';

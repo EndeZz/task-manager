@@ -1,3 +1,4 @@
+import React from 'react';
 import ButtonBig from '../buttons/ButtonBig/ButtonBig';
 import './heading.scss';
 
@@ -11,12 +12,11 @@ function Heading(props: { text: string }) {
               <ButtonBig type='back' color='blue' text=''></ButtonBig>
               <h1 className="heading__text">{props.text}</h1>
             </div>
-          ) 
-        } else {
-          return (
-            <ButtonBig type='back' color='blue' text=''></ButtonBig>
-          ) 
+          );
         }
+        return (
+          <ButtonBig type='back' color='blue' text=''></ButtonBig>
+        );
       })()}
     </div>
   );

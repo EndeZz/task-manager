@@ -1,3 +1,4 @@
+import React from 'react';
 import './StatusLabel.scss';
 
 function StatusLabel(props: { type: 'work' | 'approve' | 'done' }) {
@@ -8,16 +9,20 @@ function StatusLabel(props: { type: 'work' | 'approve' | 'done' }) {
           case 'work':
             return (
               <span className={`text__${props.type}`}>В работе</span>
-            )
+            );
           case 'approve':
             return (
               <span className={`text__${props.type}`}>Ожидает согласования</span>
-            )
+            );
           case 'done':
             return (
               <span className={`text__${props.type}`}>Выполнено</span>
-            )
-          }  
+            );
+          default:
+            return (
+              <div></div>
+            );
+        }
       })()}
     </div>
   );

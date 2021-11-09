@@ -1,3 +1,4 @@
+import React from 'react';
 import ButtonMain from '../../components/buttons/buttonMain/buttonMain';
 import InputComponent from '../../components/input/InputComponent/InputComponent';
 import './auth.scss';
