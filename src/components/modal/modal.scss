@@ -1,0 +1,79 @@
+@import '../buttons/buttons.scss';
+@import '../../styles/variables.scss';
+@import '../../styles/text.scss';
+
+.modal {
+  display: none;
+
+  &__content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    max-width: 28.1em;
+    width: 100%;
+    max-height: 11.86em;
+    height: 100%;
+    background: $white;
+    border-radius: 4px;
+    padding: 2.1em;
+
+    &__title {
+      @include h2__text;
+    }
+
+    &__buttons {
+      display: flex;
+      margin-top: 1.4em;
+
+      .button__icon {
+        display: none;
+      }
+
+      .button__text {
+        margin: 0;
+      }
+
+      button:first-of-type {
+        margin-right: 1.4em;
+      }
+    }
+  }
+}
+
+.modal.show {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  overflow-y: auto;
+  z-index: 99;
+}
+
+.overlay {
+  position: fixed;
+  border: none;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 98;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  background-color: $black;
+}
+
+.overlay.show {
+  pointer-events: auto;
+  opacity: 0.85;
+}
