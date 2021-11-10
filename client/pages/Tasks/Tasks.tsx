@@ -26,7 +26,7 @@ const Tasks = (): ReactElement => {
         async function getData(url: string, collback: any): Promise<void> {
             try {
                 const response = await fetch('http://localhost:3000' + url);
-                collback(await response.json());
+                //collback(await response.json());
                 if (!cleanupFunction) collback(await response.json());
             } catch (error) {
                 console.error(error);
