@@ -11,7 +11,7 @@ function Header() {
         <a href="/">
           <img src="/icons/logo.svg" alt="логотип"/>
         </a>
-        <Nav role="admin"></Nav>
+        <Nav role="admin" page="/"></Nav>
       </div>
       <div className="header__user">
         <Notification></Notification>

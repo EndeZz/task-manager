@@ -1,29 +1,42 @@
 @import '../buttons/buttons.scss';
 @import '../../styles/style.scss';
 
-.nav__list {
-  display: flex;
-  justify-content: start;
-  list-style: none;
+.nav {
+  margin-left: 2.1em;
 
-  .nav__btn {
-    background: transparent;
-    padding: 0.64em 0.85em;
-    border: none;
+  &__list {
+    display: flex;
+    justify-content: start;
+    list-style: none;
 
-    .button__text {
-      color: $black;
-    }
-
-    &:hover {
+    .nav__btn {
+      background: transparent;
+      padding: 0.64em 0.85em;
+      border: none;
+  
       .button__text {
-        color: $blue;
+        color: $black;
+      }
+  
+      &:hover {
+        .button__text {
+          color: $blue;
+        }
+      }
+  
+      .active,
+      &:active {
+        background: $ltblue;
+  
+        .button__text {
+          color: $blue;
+        }
       }
     }
-
-    &:active {
+  
+    .nav__btn.active {
       background: $ltblue;
-
+  
       .button__text {
         color: $blue;
       }
