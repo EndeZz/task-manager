@@ -1,29 +1,31 @@
 import React from 'react';
 import './StatusLabel.scss';
 
+function fileSwitcher(type: 'work' | 'approve' | 'done') {
+  let text = '';
+  switch (type) {
+    case 'work':
+      text = 'В работе';
+      break;
+    case 'approve':
+      text = 'Ожидает согласования';
+      break;
+    case 'done':
+      text = 'Выполнено';
+      break;
+    default:
+      return null;
+  }
+
+  return (
+    <span className={`text__${type}`}>{text}</span>
+  );
+}
+
 function StatusLabel(props: { type: 'work' | 'approve' | 'done' }) {
   return (
     <div className="status_label">
-      {(() => {
-        switch (props.type) {
-          case 'work':
-            return (
-              <span className={`text__${props.type}`}>В работе</span>
-            );
-          case 'approve':
-            return (
-              <span className={`text__${props.type}`}>Ожидает согласования</span>
-            );
-          case 'done':
-            return (
-              <span className={`text__${props.type}`}>Выполнено</span>
-            );
-          default:
-            return (
-              null
-            );
-        }
-      })()}
+      {fileSwitcher(props.type)}
     </div>
   );
 }

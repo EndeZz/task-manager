@@ -11,6 +11,20 @@ function TaskCard(props: {
   date: string,
   status: 'work' | 'approve' | 'done'
 }) {
+  let button = null;
+
+  switch (props.status) {
+    case 'done':
+      button = <ButtonMini type="delete" color='lightblue'></ButtonMini>;
+      break;
+    default:
+      button =
+        <Fragment>
+          <ButtonMini type="edit" color='lightblue'></ButtonMini>
+          <ButtonMini type="delete" color='lightblue'></ButtonMini>
+        </Fragment>;
+  }
+
   return (
     <div className="task_card">
       <div className="task_card__info">
@@ -24,21 +38,7 @@ function TaskCard(props: {
       </div>
       <StatusLabel type={props.status}></StatusLabel>
       <div className="task_card__buttons">
-        {(() => {
-          switch (props.status) {
-            case 'done':
-              return (
-                <ButtonMini type="delete" color='lightblue'></ButtonMini>
-              );
-            default:
-              return (
-                <Fragment>
-                  <ButtonMini type="edit" color='lightblue'></ButtonMini>
-                  <ButtonMini type="delete" color='lightblue'></ButtonMini>
-                </Fragment>
-              );
-          }
-        })()}
+        {button}
       </div>
     </div>
   );
