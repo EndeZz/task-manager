@@ -18,8 +18,7 @@ function TaskCard(props: {
       button = <ButtonMini type="delete" color='lightblue'></ButtonMini>;
       break;
     default:
-      button =
-        <Fragment>
+      button = <Fragment>
           <ButtonMini type="edit" color='lightblue'></ButtonMini>
           <ButtonMini type="delete" color='lightblue'></ButtonMini>
         </Fragment>;

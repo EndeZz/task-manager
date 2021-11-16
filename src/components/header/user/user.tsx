@@ -1,6 +1,9 @@
 import React from 'react';
+import ROUTER from '../../../router/routes';
 import ButtonDropdown from '../../buttons/ButtonDropdown/ButtonDropdown';
 import './user.scss';
+
+const { PAGES } = ROUTER;
 
 function User(props: { name: string }) {
   // const onClick = () => {
@@ -21,12 +24,12 @@ function User(props: { name: string }) {
         <ul className="profile__dropdown__list">
           <li>
             <div className="profile__dropdown__list__item">
-              <a className="profile__dropdown__list__item__text" href="/profile">Профиль</a>
+              <a className="profile__dropdown__list__item__text" href={PAGES.PROFILE}>Профиль</a>
             </div>
           </li>
           <li>
             <div className="profile__dropdown__list__item">
-              <a className="profile__dropdown__list__item__text" href="/auth">Выйти</a>
+              <a className="profile__dropdown__list__item__text" href={PAGES.AUTH}>Выйти</a>
             </div>
           </li>
         </ul>

@@ -1,10 +1,15 @@
 import React from 'react';
+import ROUTER from '../../../router/routes';
 import './notification.scss';
+
+const { PAGES } = ROUTER;
 
 function Notification() {
   return (
     <div className="notification">
-      <img className="notification__icon" src="/icons/bell.svg" alt="Уведомление" />
+      <a className="notification__icon" href={PAGES.NOTIFICATIONS}>
+        <img src="/icons/bell.svg" alt="Уведомление" />
+      </a>
     </div>
   );
 }
