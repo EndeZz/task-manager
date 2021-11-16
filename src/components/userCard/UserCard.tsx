@@ -11,7 +11,7 @@ function UserCard(props: {
   return (
     <div className="user_card">
       <div className="user_card__info">
-        <img src={`/profile/${props.photo}.png`} alt="Фото профиля" />
+        <img className="user_card__info__img" src={`/profile/${props.photo}.png`} alt="Фото профиля" />
         <span className="user_card__info__name">{props.name}</span>
         <span className="user_card__info__email">{props.email}</span>
         <span className="user_card__info__role">{props.role}</span>
