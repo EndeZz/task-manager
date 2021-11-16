@@ -1,5 +1,4 @@
-import React from 'react';
-import Header from '../../components/header/header';
+import React, { Fragment } from 'react';
 import InputIconComponent from '../../components/input/InputIconComponent/InputIconComponent';
 import RoleFilter from '../../components/filter/RoleFilter/RoleFilter';
 import ButtonMain from '../../components/buttons/buttonMain/buttonMain';
@@ -9,9 +8,8 @@ import './users.scss';
 
 function Users() {
   return (
-    <div>
-      <Header></Header>
-      <div className="users">
+    <Fragment>
+            <div className="users">
         <div className="users__filter">
           <InputIconComponent
             type='text'
@@ -68,7 +66,7 @@ function Users() {
         </ul>
       </div>
       <Modal type="user"></Modal>
-    </div>
+    </Fragment>
   );
 }
 

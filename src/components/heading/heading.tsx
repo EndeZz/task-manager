@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ButtonBig from '../buttons/ButtonBig/ButtonBig';
 import './heading.scss';
 
@@ -8,10 +8,10 @@ function Heading(props: { text: string }) {
       {(() => {
         if (props.text !== '') {
           return (
-            <div>
+            <Fragment>
               <ButtonBig type='back' color='blue' text=''></ButtonBig>
               <h1 className="heading__text">{props.text}</h1>
-            </div>
+            </Fragment>
           );
         }
         return (

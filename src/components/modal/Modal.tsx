@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ButtonMain from '../buttons/buttonMain/buttonMain';
 import ButtonMini from '../buttons/ButtonMini/ButtonMini';
 import './modal.scss';
 
 function Modal(props: { type: 'user' | 'task' }) {
   return (
-    <div>
+    <Fragment>
       <div className="modal">
         <div className="modal__content">
           <ButtonMini type="clear" color="clear"></ButtonMini>
@@ -25,7 +25,7 @@ function Modal(props: { type: 'user' | 'task' }) {
                 );
               default:
                 return (
-                  <div></div>
+                  null
                 );
             }
           })()}
@@ -36,7 +36,7 @@ function Modal(props: { type: 'user' | 'task' }) {
         </div>
       </div>
       <div className="overlay"></div>
-    </div>
+    </Fragment>
   );
 }
 

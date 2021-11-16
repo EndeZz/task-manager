@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './message.scss';
 
 function Message(props: { type: string, author: string, task: string, date: string }) {
@@ -8,7 +8,7 @@ function Message(props: { type: string, author: string, task: string, date: stri
         switch (props.type) {
           case 'comment':
             return (
-              <div>
+              <Fragment>
                 <img className="message__icon" src="/icons/comment.svg" alt="Новый комментарий" />
                 <div className="message__text">
                   <p>Новый комментарий в задаче
@@ -16,11 +16,11 @@ function Message(props: { type: string, author: string, task: string, date: stri
                   </p>
                   <span className="message__date">{props.date}</span>
                 </div>
-              </div>
+              </Fragment>
             );
           case 'attach':
             return (
-              <div>
+              <Fragment>
                 <img className="message__icon" src="/icons/attach.svg" alt="Новый контент" />
                 <div className="message__text">
                   <p>
@@ -30,11 +30,11 @@ function Message(props: { type: string, author: string, task: string, date: stri
                   </p>
                   <span className="message__date">{props.date}</span>
                 </div>
-              </div>
+              </Fragment>
             );
           case 'task_video':
             return (
-              <div>
+              <Fragment>
                 <img className="message__icon" src="/icons/video-notification.svg" alt="Новая задача" />
                 <div className="message__text">
                   <p>
@@ -43,11 +43,11 @@ function Message(props: { type: string, author: string, task: string, date: stri
                   </p>
                   <span className="message__date">{props.date}</span>
                 </div>
-              </div>
+              </Fragment>
             );
           case 'task_photo':
             return (
-              <div>
+              <Fragment>
                 <img className="message__icon" src="/icons/photo-notification.svg" alt="Новая задача" />
                 <div className="message__text">
                   <p>
@@ -56,11 +56,11 @@ function Message(props: { type: string, author: string, task: string, date: stri
                   </p>
                   <span className="message__date">{props.date}</span>
                 </div>
-              </div>
+              </Fragment>
             );
           case 'audio_video':
             return (
-              <div>
+              <Fragment>
                 <img className="message__icon" src="/icons/audio-notification.svg" alt="Новая задача" />
                 <div className="message__text">
                   <p>
@@ -69,11 +69,11 @@ function Message(props: { type: string, author: string, task: string, date: stri
                   </p>
                   <span className="message__date">{props.date}</span>
                 </div>
-              </div>
+              </Fragment>
             );
           default:
             return (
-              <div></div>
+              null
             );
         }
       })()}

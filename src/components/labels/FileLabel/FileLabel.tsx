@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './FileLabel.scss';
 
 function FileLabel(props: { type: 'video' | 'audio' | 'photo' }) {
@@ -8,7 +8,7 @@ function FileLabel(props: { type: 'video' | 'audio' | 'photo' }) {
         switch (props.type) {
           case 'video':
             return (
-              <div>
+              <Fragment>
                 <div className="file_label__text">
                   <span>avi</span>
                 </div>
@@ -18,11 +18,11 @@ function FileLabel(props: { type: 'video' | 'audio' | 'photo' }) {
                 <div className="file_label__text">
                   <span>mov</span>
                 </div>
-              </div>
+              </Fragment>
             );
           case 'photo':
             return (
-              <div>
+              <Fragment>
                 <div className="file_label__text">
                   <span>gif</span>
                 </div>
@@ -32,19 +32,19 @@ function FileLabel(props: { type: 'video' | 'audio' | 'photo' }) {
                 <div className="file_label__text">
                   <span>png</span>
                 </div>
-              </div>
+              </Fragment>
             );
           case 'audio':
             return (
-              <div>
+              <Fragment>
                 <div className="file_label__text">
                   <span>mp3</span>
                 </div>
-              </div>
+              </Fragment>
             );
           default:
             return (
-              <div></div>
+              null
             );
         }
       })()}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import './ContentLabel.scss';
 
 function ContentLabel(props: { type: 'video' | 'audio' | 'photo' }) {
@@ -8,28 +8,28 @@ function ContentLabel(props: { type: 'video' | 'audio' | 'photo' }) {
         switch (props.type) {
           case 'video':
             return (
-              <div>
+              <Fragment>
                 <img className="content_label__img" src="/icons/video.svg" alt="Видео" />
                 <span className={`content_label__${props.type}`}>Видео</span>
-              </div>
+              </Fragment>
             );
           case 'photo':
             return (
-              <div>
+              <Fragment>
                 <img className="content_label__img" src="/icons/photo.svg" alt="Фото" />
                 <span className={`content_label__${props.type}`}>Фото</span>
-              </div>
+              </Fragment>
             );
           case 'audio':
             return (
-              <div>
+              <Fragment>
                 <img className="content_label__img" src="/icons/audio.svg" alt="Аудио" />
                 <span className={`content_label__${props.type}`}>Аудио</span>
-              </div>
+              </Fragment>
             );
           default:
             return (
-              <div></div>
+              null
             );
         }
       })()}

@@ -1,5 +1,4 @@
-import React from 'react';
-import Header from '../../components/header/header';
+import React, { Fragment } from 'react';
 // import InputComponent from '../../components/input/InputComponent/InputComponent';
 import CardComponent from '../../components/card/card';
 import ContentFilter from '../../components/filter/ContentFilter/ContentFilter';
@@ -7,8 +6,7 @@ import './index.scss';
 
 function Index() {
   return (
-    <div className="">
-      <Header></Header>
+    <Fragment>
       <div className="filters">
         <ContentFilter></ContentFilter>
       </div>
@@ -25,7 +23,7 @@ function Index() {
           </li>
         </ul>
       </div>
-    </div>
+    </Fragment>
   );
 }
 

@@ -1,5 +1,4 @@
-import React from 'react';
-import Header from '../../components/header/header';
+import React, { Fragment } from 'react';
 import Heading from '../../components/heading/heading';
 import ButtonMain from '../../components/buttons/buttonMain/buttonMain';
 import InputComponent from '../../components/input/InputComponent/InputComponent';
@@ -11,8 +10,7 @@ import './user.scss';
 
 function User() {
   return (
-    <div>
-      <Header></Header>
+    <Fragment>
       <div className="user">
         <Heading text="Пользователь"></Heading>
         <div className="user__information">
@@ -49,7 +47,7 @@ function User() {
         </div>
       </div>
       <Modal type="user"></Modal>
-    </div>
+    </Fragment>
   );
 }
 

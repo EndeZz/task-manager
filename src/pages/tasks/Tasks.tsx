@@ -1,5 +1,4 @@
-import React from 'react';
-import Header from '../../components/header/header';
+import React, { Fragment } from 'react';
 import ButtonMain from '../../components/buttons/buttonMain/buttonMain';
 import InputIconComponent from '../../components/input/InputIconComponent/InputIconComponent';
 import SelectStatus from '../../components/select/SelectStatus/SelectStatus';
@@ -10,8 +9,7 @@ import './tasks.scss';
 
 function Tasks() {
   return (
-    <div>
-      <Header></Header>
+    <Fragment>
       <div className="tasks">
         <div className="tasks__filter">
           <InputIconComponent
@@ -74,7 +72,7 @@ function Tasks() {
         </ul>
       </div>
       <Modal type="task"></Modal>
-    </div>
+    </Fragment>
   );
 }
 

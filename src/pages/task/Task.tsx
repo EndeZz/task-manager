@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ButtonBig from '../../components/buttons/ButtonBig/ButtonBig';
 import ButtonMain from '../../components/buttons/buttonMain/buttonMain';
 import ButtonMini from '../../components/buttons/ButtonMini/ButtonMini';
 import File from '../../components/file/file';
-import Header from '../../components/header/header';
 import InputComponent from '../../components/input/InputComponent/InputComponent';
 import ContentLabel from '../../components/labels/ContentLabel/ContentLabel';
 import StatusLabel from '../../components/labels/StatusLabel/StatusLabel';
@@ -11,8 +10,7 @@ import FileLabel from '../../components/labels/FileLabel/FileLabel';
 
 function Task() {
   return (
-    <div>
-      <Header></Header>
+    <Fragment>
       <div className="task__buttons ">
         <ButtonBig type="back" color="blue" text="К списку задач"></ButtonBig>
         <div className="task__buttons__edit">
@@ -84,7 +82,7 @@ function Task() {
           </ul>
         </div>
       </section>
-    </div>
+    </Fragment>
   );
 }
 

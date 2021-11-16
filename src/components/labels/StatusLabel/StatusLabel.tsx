@@ -20,7 +20,7 @@ function StatusLabel(props: { type: 'work' | 'approve' | 'done' }) {
             );
           default:
             return (
-              <div></div>
+              null
             );
         }
       })()}

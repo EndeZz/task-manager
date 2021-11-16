@@ -3,10 +3,10 @@ import ButtonDropdown from '../../buttons/ButtonDropdown/ButtonDropdown';
 import './user.scss';
 
 function User(props: { name: string }) {
-  const onClick = () => {
-    const dropdownMenu = document.querySelector('.profile__dropdown');
-    dropdownMenu.removeAttribute('hidden');
-  };
+  // const onClick = () => {
+  //   const dropdownMenu = document.querySelector('.profile__dropdown');
+  //   dropdownMenu.removeAttribute('hidden');
+  // };
 
   return (
     <div className="profile">
@@ -15,9 +15,7 @@ function User(props: { name: string }) {
           {props.name}
         </span>
         <img className="profile__info__img" src="/profile/avatar.png" alt="Фото пользователя" />
-        <div onClick={onClick}>
-          <ButtonDropdown></ButtonDropdown>
-        </div>
+        <ButtonDropdown></ButtonDropdown>
       </div>
       <div className="profile__dropdown" hidden>
         <ul className="profile__dropdown__list">

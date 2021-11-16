@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ButtonMini from '../buttons/ButtonMini/ButtonMini';
 import ContentLabel from '../labels/ContentLabel/ContentLabel';
 import StatusLabel from '../labels/StatusLabel/StatusLabel';
@@ -32,10 +32,10 @@ function TaskCard(props: {
               );
             default:
               return (
-                <div>
+                <Fragment>
                   <ButtonMini type="edit" color='lightblue'></ButtonMini>
                   <ButtonMini type="delete" color='lightblue'></ButtonMini>
-                </div>
+                </Fragment>
               );
           }
         })()}
