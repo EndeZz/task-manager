@@ -18,7 +18,7 @@ function Task() {
           <ButtonMini type="edit" color="blue"></ButtonMini>
         </div>
       </div>
-      <section className="task">
+      <div className="task">
         <div className="task__body">
           <div className="task__body__content">
             <div className="task__body__content__labels">
@@ -81,7 +81,7 @@ function Task() {
             </li>
           </ul>
         </div>
-      </section>
+      </div>
     </Fragment>
   );
 }

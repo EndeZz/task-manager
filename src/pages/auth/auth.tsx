@@ -5,7 +5,7 @@ import './auth.scss';
 
 function AuthComponent() {
   return (
-    <section className="auth">
+    <div className="auth">
       <img className="auth__logo" src="/icons/logo.svg" alt="логотип" />
       <div className="auth__form">
         <h1 className="auth__form__h1">Вход</h1>
@@ -13,7 +13,7 @@ function AuthComponent() {
         <InputComponent type="text" label="Пароль" placeholder='Введите пароль' id='password'></InputComponent>
         <ButtonMain type="login" color="blue" text="Войти"></ButtonMain>
       </div>
-    </section>
+    </div>
   );
 }
 

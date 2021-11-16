@@ -5,7 +5,7 @@ import './notifications.scss';
 
 function Notifications() {
   return (
-    <section className="notifications">
+    <div className="notifications">
       <Heading text="Уведомления"></Heading>
       <ul className="notifications__list">
         <li className="notifications__item">
@@ -30,7 +30,7 @@ function Notifications() {
           <Message type="comment" author="" task="Новая задача" date="09:51 14.02.2020"></Message>
         </li>
       </ul>
-    </section>
+    </div>
   );
 }
 
