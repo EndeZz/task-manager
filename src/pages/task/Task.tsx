@@ -11,7 +11,7 @@ import FileLabel from '../../components/labels/FileLabel/FileLabel';
 function Task() {
   return (
     <Fragment>
-      <div className="task__buttons ">
+      <div className="task__buttons">
         <ButtonBig type="back" color="blue" text="К списку задач"></ButtonBig>
         <div className="task__buttons__edit">
           <ButtonMini type="edit" color="blue"></ButtonMini>

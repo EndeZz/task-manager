@@ -31,10 +31,13 @@
   }
 
   &__dropdown {
-    border: 1px solid transparent;
     position: absolute;
+    border: 1px solid transparent;
     margin-top: 3.5em;
     margin-right: 1.4em;
+    overflow: hidden;
+    overflow-y: auto;
+    z-index: 99;
 
     &:hover {
       filter: drop-shadow(0 0.28em 0.28em rgba(0, 0, 0, 0.25));
@@ -72,4 +75,26 @@
       }
     }
   }
+}
+
+.overlay {
+  position: fixed;
+  border: none;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 98;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.overlay.show {
+  pointer-events: auto;
+  opacity: 0;
 }
