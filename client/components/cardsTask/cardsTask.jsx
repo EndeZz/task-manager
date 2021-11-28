@@ -1,6 +1,7 @@
 import '../button/button';
+import './cardsTask.scss'
 
-import React, {Component} from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import Button from '../button/button';
 import EditImg from '../../../public/img/edit--icon.svg'
@@ -21,30 +22,65 @@ import EditImg from '../../../public/img/edit--icon.svg'
 // ]
 
 
-class CardTask extends Component {
-    render() {
-        return pug`
-            ${this.props.children[1].map((item, ind) => pug`
-                li(class=${item.className})
-                    img(class=${item.className + "__photo"} src=${item.icon} alt="")
-                    span(class=${ `${item.className + "__title"} ${item.className}__title--${item.color}` }) ${item.title}
-                    p(class=${item.className + "__text"}) ${item.text}
-                        span(class=${item.className + "__text-gradient"})
-                    span(class=${item.className + "__author"}) ${item.author}
-                    date(class=${item.className + "__data"}) ${item.data}
-                    span(class=${ `${item.className}__process ${item.className}__process--${item.statusColor}`}) ${item.statusName}
-                    div(class=${item.className + "__buttons"})
-                        div(class=${item.className + "__inner-edit"})
-                            button(class=${ `${item.classEditBtn} ${item.classReset} ${item.classEditBtn}--${item.bgEditBtn}` })
-                                img(class=${item.classEditBtn + "__img"} src=${item.imgEdit} alt="Кнопка редактирования")
-                        div(class=${item.className + "__inner-del"})
-                            button(className=${ `${item.classDelBtn} ${item.classReset} ${item.classDelBtn}--${item.bgDelBtn}` })
-                                img(className=${ `${item.classDelBtn + "__img"} ${item.classDelBtn + "__img"}--${item.bgDelBtn}`} src=${item.imgDel} alt="Кнопка")
+const CardTask = ( props ) => {
 
-            `)}
-        `;
+    const [idPostDel, setIdPostDel] = useState(false);
+    // props.deletePost(idPostDel)
+
+    const mountedRef = useRef(false)
+
+    useEffect(() => {
+        mountedRef.current = true
+        return () => {
+            mountedRef.current = false
+        }
+    }, [])
+
+    useEffect(() => {
+        if(mountedRef.current) {
+            props.idPost(idPostDel)
+        }
+    }, [idPostDel])
+        return (
+            props.lists.map((item, ind) => 
+                <li className="user-card" key={item.id}>
+                    <img className="user-card__photo" src={item.preview} alt="" />
+                    <span className="user-card__title user-card__title--item" > {item.type.name} </span>
+                    <p className="user-card__text" > {item.name} 
+                        <span className ="user-card__text-gradient" ></span>
+                    </p>  
+                    <span className="user-card__author" > {item.executor.name} </span>
+                    <date className="user-card__data" > {item.dateExpired} </date>
+                    {
+                        item.status.name === "В работе" ?
+                        <span className="user-card__process user-card__process--pink" > {item.status.name} </span>
+                        :
+                        item.status.name === "Выполнено" ?
+                        <span className="user-card__process user-card__process--green" > {item.status.name} </span>
+                        :
+                        item.status.name === "Ожидает согласования" ?
+                        <span className="user-card__process user-card__process--blue" > {item.status.name} </span>
+                        :
+                        <span className="user-card__process user-card__process--black" > {item.status.name} </span>
+
+                    }
+                    <div className="user-card__buttons" >
+                        <div className="user-card__inner-edit" >
+                            <button className="edit-btn btn-reset edit-btn--blue" >
+                                <img className="edit-btn__img" src={item.editImg} alt="Кнопка редактирования" />
+                            </button>
+                        </div>
+                        <div className="user-card__inner-del" >
+                            <button className="delete-btn btn-reset delete-btn--blue" onClick={() => setIdPostDel(item)}>
+                                <img className="delete-btn__img delete-btn__img--blue"  src={item.delImg} alt="Кнопка" />
+                            </button>
+                        </div>
+                    </div>
+                </li>
+
+            )
+        )
     }
-}
 
 // classEditBtn: "edit-btn", claddDelBtn: "delete-btn", classReset: "btn-reset", bgEditBtn: "blue", bgDelBtn: "blue", imgEdit: `${EditImg}`, imgDel: `${DelBtn}`
 export default CardTask;

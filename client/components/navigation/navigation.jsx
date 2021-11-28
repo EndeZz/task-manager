@@ -21,24 +21,24 @@ import Tasks from '../../pages/tasks/tasks';
 //     {"active" : "", "link" : "/users.html", "text" : "Пользователи"}
 //   ]
 
-const Navigation = (props) => {
+const Navigation = ( props ) => {
     console.log("propsNav", props)
 
         return (
-            // this.props.children[1].map((item, ind) =>
-                <ul className="header__menu-list">
+            // props.nav.map((item, ind) =>
+                <ul className="header__menu-list" key>
                     <li className="header__menu-item">
-                        <a className="active" href="/">Главная</a>
+                        <NavLink exact to="/">Главная</NavLink>
                     </li>
                     <li className="header__menu-item">
-                        <a href="/tasks">Задачи</a>
+                        <NavLink to="/tasks">Задачи</NavLink>
                     </li>
                     <li className="header__menu-item">
-                        <a href="/users">Пользователи</a>
+                        <NavLink to="/users">Пользователи</NavLink>
                     </li>
                 </ul>
-            // )
-        ) 
+            )
+        // ) 
     }
 
 

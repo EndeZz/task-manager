@@ -2,37 +2,21 @@ const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
+// const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin')
+const EsLintPlugin = require('eslint-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
 
-const SRC = path.resolve(__dirname, 'node_modules');
 
 module.exports = {
   context: path.resolve(__dirname, 'client'),
   // context: PATHS.src,
   mode: 'development',
-  entry: {
-    index: './pages/index/index.jsx',
-    tasks: './pages/tasks/tasks.jsx',
-    task: './pages/task/task.jsx',
-    publish: './pages/publish/publish.jsx',
-    taskNew: './pages/task-new/task-new.jsx',
-    users: './pages/users/users.jsx',
-    user: './pages/user/user.jsx',
-    auth: './pages/auth/auth.jsx',
-    notifications: './pages/notifications/notifications.jsx',
-    404: './pages/404/404.jsx',
-    profile: './pages/profile/profile.jsx',
-    main: './pages/main.jsx'
-  },
+  entry: path.join(__dirname, './client', 'index.jsx'),
   resolve: {
     extensions: ['.tsx', '.ts', '.js', '.jsx'],
-    alias: {        
-      'react-router-dom': path.resolve('./node_modules/react-router-dom')
-    }
   },
   output: {
     filename: `./js/${filename('js')}`,
@@ -54,68 +38,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `./css/${filename('css')}`
     }),
-    new ScriptExtHtmlWebpackPlugin({
-      async: ['user', 'users']
-    }),
+    // new EsLintPlugin({extensions: ['.tsx', '.ts', '.js', '.jsx']}),
     new HTMLWebpackPlugin({
-      template: './pages/index/index.pug',
-      filename: 'index.html',
-      inject: true,
-    }),
-    new HTMLWebpackPlugin({
-      template: './pages/tasks/tasks.pug',
-      filename: 'tasks.html',
-      inject: true,
-    }),
-    new HTMLWebpackPlugin({
-      template: './pages/task/task.pug',
-      filename: 'task.html',
-      inject: true,
-    }),
-    new HTMLWebpackPlugin({
-      template: './pages/publish/publish.pug',
-      filename: 'publish.html',
-      inject: true,
-    }),
-    new HTMLWebpackPlugin({
-      template: './pages/task-new/task-new.pug',
-      filename: 'task-new.html',
-      inject: true,
-    }),
-    new HTMLWebpackPlugin({
-      template: './pages/users/users.pug',
-      filename: 'users.html',
-      inject: true,
-    }),
-    new HTMLWebpackPlugin({
-      template: './pages/user/user.pug',
-      filename: 'user.html',
-      inject: true,
-    }),
-    new HTMLWebpackPlugin({
-      template: './pages/auth/auth.pug',
-      filename: 'auth.html',
-      inject: true,
-    }),
-    new HTMLWebpackPlugin({
-      template: './pages/notifications/notifications.pug',
-      filename: 'notifications.html',
-      inject: true,
-    }),
-    new HTMLWebpackPlugin({
-      template: './pages/404/404.pug',
-      filename: '404.html',
-      inject: true,
-    }),
-    new HTMLWebpackPlugin({
-      template: './pages/profile/profile.pug',
-      filename: 'profile.html',
-      inject: true,
-    }),
-    new HTMLWebpackPlugin({
-      template: './pages/main.pug',
-      filename: 'main.html',
-      inject: true,
+      template: path.join(__dirname, 'client', 'index.html'),
     }),
   ],
   devtool: isProd ? false : 'source-map',
@@ -132,10 +57,6 @@ module.exports = {
           }
         }]
       },
-      // { test: /\.pug$/, 
-      //   use: [require.resolve('babel-loader'), 
-      //   require.resolve('pug-as-jsx-loader')] 
-      // },
       {
         test: /\.(js|tsx|jsx|ts)?$/,
         exclude: /node_modules/,
@@ -147,16 +68,16 @@ module.exports = {
           }
         }
       },
-      {
-        test: /\.tsx$/,
-        exclude: /node-modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-react', '@babel/preset-typescript']
-          }
-        }
-      },
+      // {
+      //   test: /\.tsx$/,
+      //   exclude: /node-modules/,
+      //   use: {
+      //     loader: 'babel-loader',
+      //     options: {
+      //       presets: ['@babel/preset-react', '@babel/preset-typescript']
+      //     }
+      //   }
+      // },
       {
         test: /\.html$/,
         loader: 'html-loader'
@@ -190,11 +111,6 @@ module.exports = {
           filename: `./public/${filename('[ext]')}`
         }
       },
-      // {
-      //   test: /\.mp3$/,
-      //   include: SRC,
-      //   loader: 'file-loader'
-      // },
       {
         test: /\.(?:|woff)$/,
         type: 'asset/resource',

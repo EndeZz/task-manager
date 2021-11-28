@@ -1,0 +1,21 @@
+                <li className={item.classCard + "__column"} key={item.id}>
+                    <img className={item.classCard + "__column-img"} src={item.url} />
+                    <figure className={item.classCard + "__column-info"} >
+                        <figcaption className={item.classCard + "__column-name"} href="#" >
+                            <a className={item.classCard + "__column-link"} >
+                                <img  alt="" />
+                                <span className={` ${item.classCard + "__column-type"} ${item.classCard + "__column-name"}--${item.color} `} > {item.type.name} </span>
+                                {/* <span className={item.classCard + "__column-duration"} >
+                                    <time className={ `${item.classCard + "__column-time"} ${item.classCard + "__column-name"}--${item.color}`} dateTime="06:31" > {item.duration} </time>
+                                </span> */}
+                            </a>
+                            <figcaption className={item.classCard + "__column-descr"} >
+                                <p className={item.classCard + "__column-text"} > {item.name} </p>
+                                <span className={item.classCard + "__column-author"} > {item.author.name} </span>
+                                <span className={item.classCard + "__column-data"} >
+                                    <time className={item.classCard + "__column-public_data"} dateTime="14.02.2020 09:21" > {item.dateCreated} </time>
+                                </span>
+                            </figcaption>
+                        </figcaption>
+                    </figure>
+                </li>

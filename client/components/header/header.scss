@@ -108,7 +108,10 @@
 
     &__user-block {
         margin-right: 1.42rem;
-        min-width: 7.14rem;
+        width: 7.14rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     &__user-photo {

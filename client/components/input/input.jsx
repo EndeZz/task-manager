@@ -1,19 +1,24 @@
 import './input.scss';
-import React, {Component} from 'react';
+import React, { useEffect, useState } from 'react';
 
 
-class Input extends Component {
-    render() {
-        return pug`
-            ${this.props.children[1].map((item, ind) => pug`
-                div(className=${item.classInput})
-                    label(className=${item.classInput + '__title'}) ${item.label}
-                    input(className=${item.classInput + '__input'} required="required" type="text" placeholder=${item.placeholder})
-                    img(className=${item.classInput + '__img'} src=${item.img})
+const Input = ( props ) => {
+    const [ search, setSearch] = useState('')
+    // const [calendarSearch, setCalendarSearch] = useState('')
+    useEffect(() => {
+        // console.log(task)
+        props.onSearch(search)
+    }, [search])
 
-            `)}
-        `;
-    }
+        return(
+            props.items.map((item, ind) => 
+                <div className={item.classInput} key={ind}>
+                    <label className={item.classInput + '__title'}>{item.label}</label>
+                    <input className={item.classInput + '__input'} required="required" type="text" placeholder={item.placeholder} onChange={(e) => setSearch(e.target.value)} value={search} />
+                    <img className={item.classInput + '__img'} src={item.img} />
+                </div>
+            )
+        )
 }
 
 

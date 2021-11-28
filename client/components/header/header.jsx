@@ -6,38 +6,49 @@ import Navigation from '../navigation/navigation';
 
 const Header = (  props  ) => {
 
-    console.log("setIs", props)
-
     const handleLogOut = () => {
+        localStorage.setItem('isLoggedIn', false)
         props.setIsLoggedIn(false)
     }
-    console.log("logged", props.isLoggedIn)
     
-        return pug`
-            ${props.children[1].map((item, ind) => pug`
-                Router
-                    div(class=${item.className}) 
-                        .container 
-                            .header-block  
-                                .header__logo-img 
-                                    a 
-                                        img(src=${item.logoImg})
-                                nav.header__menu        
-                                    Navigation
-                                .header__notif-block                
-                                    a(class="header__notif-link header__notif-link_border", href="#")
-                                        img(src=${item.notifImg})
-                                        span(class=${item.classNotif}) ${item.notifCount}
-                                .header__user-block ${item.nameUser}
-                                .header__user-photo 
-                                    img.header__user-img(src=${item.logoPers} alt="Логотип пользователя")
-                                ul.header__user-profile 
-                                    li.header__user-item 
-                                        a.header__user-log(href="#") Профиль
-                                    li.header__user-item 
-                                        a(class="header__user-goout" href="#" onClick=${handleLogOut}) Выход
-            `)} 
-        `;
+        return (
+            props.isLoggedIn ?
+                props.head.map((item, ind) =>
+                    <div className={item.className} key >
+                        <div className="container" >
+                            <div className="header-block" >
+                                <div className="header__logo-img"> 
+                                    <a > 
+                                        <img src={item.logoImg} ></img>
+                                    </a>
+                                </div>
+                                <nav className="header__menu" >        
+                                    <Navigation nav={props.nav} />
+                                </nav>
+                                <div className="header__notif-block" >                
+                                    <a className="header__notif-link header__notif-link_border" href="#" >
+                                        <img src={item.notifImg} />
+                                        <span className={item.classNotif} > {item.notifCount} </span>
+                                    </a>
+                                </div>
+                                <div className="header__user-block" > {props.userName} </div>
+                                <div className="header__user-photo" > 
+                                    <img className="header__user-img" src={item.logoPers} alt="Логотип пользователя" />
+                                </div>
+                                <ul className="header__user-profile" > 
+                                    <li className="header__user-item" > 
+                                        <Link className="header__user-log" to="#" > Профиль </Link>
+                                    </li>
+                                    <li className="header__user-item" > 
+                                        <Link className="header__user-goout" to="/auth" onClick={handleLogOut} > Выход </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div> 
+                    </div>
+                ) 
+            : ''
+        )
 }
 
 

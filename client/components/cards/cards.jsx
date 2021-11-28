@@ -3,50 +3,80 @@ import './cards.scss';
 
 import VideoModal from '../videoModal/videoModal';
 
-import React, {Component} from 'react';
+import React from 'react';
+import { useHistory } from 'react-router-dom'
 import { useState } from 'react';
 // import { getEnvironmentData } from 'worker_threads';
 
 
-// const getData = (img, text, datePublic, typeName) => {
-//     const [modal, setModal] = useState(false)
-//     const [tempdata, setTempData] = useState([])
-//     let tempData = [img, text, datePublic, typeName]
-//     setTempData(item => [1, ...tempData])
-//     return setModal
-// }
 
 
 
 
 const Cards = (props) => { 
-    const [modal, setModal] = useState(false)
-    const [tempdata, setTempData] = useState([])
-
-    const getData = (img, text, datePublic, typeName) => {
-        let tempData = [img, text, datePublic, typeName]
-        setTempData(item => [1, ...tempData])
-        return setModal
-    }  
-        return pug`
-            ${props.children[1].map((item, ind) => pug`
-                li(class=${item.classCard + "__column"})
-                    img(class=${item.classCard + "__column-img"} src=${item.img} alt=${item.altText})
-                    figure(class=${item.classCard + "__column-info"})
-                        figcaption(class=${item.classCard + "__column-name"} href="#")
-                            a(class=${item.classCard + "__column-link"})
-                                img(src=${item.icon} alt="")
-                                span(class=${` ${item.classCard + "__column-type"} ${item.classCard + "__column-name"}--${item.color} `}) ${item.typeName}
-                                span(class=${item.classCard + "__column-duration"})
-                                    time(class= ${ `${item.classCard + "__column-time"} ${item.classCard + "__column-name"}--${item.color}`} datetime="06:31") ${item.duration}
-                            figcaption(class=${item.classCard + "__column-descr"})
-                                p(class=${item.classCard + "__column-text"}) ${item.text}
-                                span(class=${item.classCard + "__column-author"}) ${item.author}
-                                span(class=${item.classCard + "__column-data"})
-                                    time(class=${item.classCard + "__column-public_data"} datetime="14.02.2020 09:21") ${item.public}
-            ` )} 
-        `;
-    }
+    console.log('propsCards', props.cards)
+    const { push } = useHistory()
+        return (
+            // eslint-disable-next-line react/prop-types
+            props.cards.length > 0 ? 
+                // eslint-disable-next-line react/prop-types
+                props.cards.map( item =>
+                    <li className="card__column" key={item.id} onClick={() => push(`/task/${item.type.name}`)}>
+                        <img className="card__column-img" src={item.url} />
+                        <figure className="card__column-info" >
+                        <figcaption className="card__column-name" href="#" >
+                            <a className="card__column-link" >
+                                <img  alt=""  src={item.preview}/>
+                                {
+                                    item.type.name === "Видео" ? 
+                                    <span className="card__column-type card__column-name--blue "  > {item.type.name} </span>
+                                    :
+                                    item.type.name === "Фото" ? 
+                                    <span className="card__column-type card__column-name--green "  > {item.type.name} </span>
+                                    : 
+                                    item.type.name === "Аудио" ? 
+                                    <span className="card__column-type card__column-name--yellow "  > {item.type.name} </span>
+                                    : 
+                                    item.type.name === "Фильм" ? 
+                                    <span className="card__column-type card__column-name--blue "  > {item.type.name} </span>
+                                    : ''
+                                }
+                            {   item.duration ? 
+                                <span className="card__column-duration" >
+                                    {
+                                        item.type.name === "Видео" ?
+                                        <time className="card__column-time card__column-name--blue"  dateTime="06:31" > {item.duration} </time>
+                                        :
+                                        item.type.name === "Аудио" ?
+                                        <time className="card__column-time card__column-name--yellow"  dateTime="06:31" > {item.duration} </time>
+                                        :
+                                        item.type.name === "Фильм" ?
+                                        <time className="card__column-time card__column-name--blue"  dateTime="06:31" > {item.duration} </time>
+                                        : ''
+                                    }
+                                </span>
+                                : ''
+                            }
+                            </a>
+                                <figcaption className="card__column-descr" >
+                                    <p className="card__column-text" > {item.name} </p>
+                                    {/* <span className="card__column-author" > {item.author.name} </span> */}
+                                    <span className="card__column-data" >
+                                        <time className="card__column-public_data" dateTime="14.02.2020 09:21" > {item.dateCreated} </time>
+                                    </span>
+                                </figcaption>
+                            </figcaption>
+                        </figure>
+                    </li>
+                ) 
+            : ''
+            // eslint-disable-next-line react/prop-types
+            // props.isPend == false ?
+            // <span className="nothingFound">По вашему запросу нет нужных карточек</span>
+            // : ''
+            
+        )
+    }   
 
 export default Cards;
 
@@ -55,32 +85,27 @@ export default Cards;
 
 
 
-// class Cards extends Component {
-    
-//     render() {
-        
-//         return pug`
-//             ${this.props.children[1].map((item, ind) => pug`
-//                 li(class=${item.classCard + "__column"})
-//                     img(class=${item.classCard + "__column-img"} src=${item.img} alt=${item.altText} onClick=${() => getData(item.img, item.text, item.public, item.typeName)})
-//                     figure(class=${item.classCard + "__column-info"})
-//                         figcaption(class=${item.classCard + "__column-name"} href="#")
-//                             a(class=${item.classCard + "__column-link"})
-//                                 img(src=${item.icon} alt="")
-//                                 span(class=${` ${item.classCard + "__column-type"} ${item.classCard + "__column-name"}--${item.color} `}) ${item.typeName}
-//                                 span(class=${item.classCard + "__column-duration"})
-//                                     time(class= ${ `${item.classCard + "__column-time"} ${item.classCard + "__column-name"}--${item.color}`} datetime="06:31") ${item.duration}
-//                             figcaption(class=${item.classCard + "__column-descr"})
-//                                 p(class=${item.classCard + "__column-text"}) ${item.text}
-//                                 span(class=${item.classCard + "__column-author"}) ${item.author}
-//                                 span(class=${item.classCard + "__column-data"})
-//                                     time(class=${item.classCard + "__column-public_data"} datetime="14.02.2020 09:21") ${item.public}
-
-//                 ${ modal === true ? <VideoModal /> : ''}
-//             `)}
-//         `;
-//     }
-// }
+{/* <li className={item.classCard + "__column"} key={item.id}>
+<img className={item.classCard + "__column-img"} src={item.url} />
+<figure className={item.classCard + "__column-info"} >
+    <figcaption className={item.classCard + "__column-name"} href="#" >
+        <a className={item.classCard + "__column-link"} >
+            <img  alt="" />
+            <span className={` ${item.classCard + "__column-type"} ${item.classCard + "__column-name"}--${item.color} `} > {item.type.name} </span>
+             <span className={item.classCard + "__column-duration"} >
+                <time className={ `${item.classCard + "__column-time"} ${item.classCard + "__column-name"}--${item.color}`} dateTime="06:31" > {item.duration} </time>
+            </span> 
+        </a>
+        <figcaption className={item.classCard + "__column-descr"} >
+            <p className={item.classCard + "__column-text"} > {item.name} </p>
+            <span className={item.classCard + "__column-author"} > {item.author.name} </span>
+            <span className={item.classCard + "__column-data"} >
+                <time className={item.classCard + "__column-public_data"} dateTime="14.02.2020 09:21" > {item.dateCreated} </time>
+            </span>
+        </figcaption>
+    </figcaption>
+</figure>
+</li>  */}
 
 
 // export default Cards;

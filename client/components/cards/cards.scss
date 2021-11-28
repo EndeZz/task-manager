@@ -34,7 +34,7 @@
     &__column-img:hover {
         box-shadow: 0px 0.67rem 1.79rem rgba(0, 0, 0, 0.9);
         transform: scale(1.1);
-        border-radius: 6.92rem;
+        border-radius: 2rem;
     }
 
     &__column-name_image {
@@ -81,4 +81,14 @@
     &__column-data {
         opacity: 0.6;
     }
+}
+
+
+.nothingFound {
+    display: inline-block;
+    color: red;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    text-transform: uppercase;
 }
