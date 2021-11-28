@@ -44,7 +44,7 @@ import Header from '../header/header';
                      render={( props ) => <Auth {...props} setIsLoggedIn={setIsLoggedIn} setUserName={setUserName} /> }
                     />
                     {/* <Route path="/notifications" component={Notifications} /> */}
-                    <Route path="/fault" component={Fault} />
+                    <Route component={Fault} />
                     {/* <Route path="/profile" component={Prof} /> */}
                 </Switch> 
             </BrowserRouter>
