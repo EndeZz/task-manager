@@ -29,7 +29,7 @@ import Header from '../header/header';
                 <Header head={headerData} nav={nav} userName={userName} isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
                 <Switch>
                     {/* <Route exact path="/" component={Index}/>  */}
-                    <Route exact path="/" >
+                    <Route path="/home" >
                         <Index cards={cards} setCards={setCards} />
                     </Route> 
                     <Route path="/tasks"  >
@@ -40,11 +40,11 @@ import Header from '../header/header';
                     <Route path="/taskNew" component={TaskNew} />
                     <Route path="/users" component={Users} />
                     <Route path="/user" component={User} /> */}
-                    <Route path="/auth" 
+                    <Route exact path="/" 
                      render={( props ) => <Auth {...props} setIsLoggedIn={setIsLoggedIn} setUserName={setUserName} /> }
                     />
                     {/* <Route path="/notifications" component={Notifications} /> */}
-                    <Route component={Fault} />
+                    <Route path="/fault" component={Fault} />
                     {/* <Route path="/profile" component={Prof} /> */}
                 </Switch> 
             </BrowserRouter>

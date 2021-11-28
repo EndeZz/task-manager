@@ -40,7 +40,7 @@ const Header = (  props  ) => {
                                         <Link className="header__user-log" to="#" > Профиль </Link>
                                     </li>
                                     <li className="header__user-item" > 
-                                        <Link className="header__user-goout" to="/auth" onClick={handleLogOut} > Выход </Link>
+                                        <Link className="header__user-goout" to="/" onClick={handleLogOut} > Выход </Link>
                                     </li>
                                 </ul>
                             </div>

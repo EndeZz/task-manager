@@ -41,7 +41,23 @@ const Fault = () => {
       return (
         <>
             <div>
-                Потерялись ???
+                <Header head={headerData} nav={nav} />
+                <div className="main">
+                  <div className="container">
+                    <div className="error">
+                      <div className="error__descr">
+                        <figure className="error__card">
+                          <img src={errorImg} alt="" className="error__img" />
+                        </figure>
+                        <h3 className="error__title">Потерялись ?</h3>
+                        <p className="error__text"> Страница, которую вы ищите не существует, либо была удалена </p>
+                        <div className="error__btn">
+                          <Button btn={noticesBtn}/>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
         </>
       )

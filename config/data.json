@@ -216,6 +216,23 @@
       "format": "jpg",
       "url": "./public/4..jpg",
       "preview": "./public/blue--icon..svg"
+    },
+    {
+      "id": 14,
+      "type": {
+        "id": 14,
+        "name": "Видео"
+      },
+      "name": "Название повседневная практика показывает",
+      "dateCreated": "2021-09-12 08:13:31",
+      "author": {
+        "id": 14,
+        "name": "Аркадий Юрченко"
+      },
+      "duration": "3:20",
+      "format": "jpg",
+      "url": "./public/1..jpg",
+      "preview": "./public/blue--icon..svg"
     }
   ],
   "tasks": [

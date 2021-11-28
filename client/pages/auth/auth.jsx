@@ -61,7 +61,7 @@ const Auth = ( props ) => {
     // eslint-disable-next-line react/prop-types
     props.setIsLoggedIn(true)
     // eslint-disable-next-line react/prop-types
-    props.history.push('/')
+    props.history.push('/home')
     console.log('asd')
   }
 
