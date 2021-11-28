@@ -1,4 +1,3 @@
-import './404.pug';
 import './404.scss';
 import '../../styles/common.scss';
 import '../../styles/fonts.scss';
@@ -38,26 +37,17 @@ const headerData = [
 ]
 
 
-class Fault extends Component {
-    render() {
-      return pug`
-        div
-          Header head=${headerData} nav=${nav}
-          .main 
-            .container 
-                .error 
-                    .error__descr
-                        figure(class="error__card")
-                            img(class="error__img" src=${errorImg})
-                        h3(class="error__title") Потерялись
-                        p(class="error__text") Страница, которую вы ищите не существует, либо была удалена
-                        div(class="error__btn")
-                            Button btn=${noticesBtn}
+const Fault = () => {
+      return (
+        <>
+            <div>
+                Потерялись ???
+            </div>
+        </>
+      )
 
 
-                                           
-      `
-    }
+                                    
   }
 
 export default Fault;
