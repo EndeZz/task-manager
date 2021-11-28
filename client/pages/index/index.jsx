@@ -1,25 +1,17 @@
-import './index.pug';
 import './index.scss';
 import '../../styles/common.scss';
 import '../../styles/fonts.scss';
 
 import '../../components/modals/modals.jsx';
 
-import { BtnAudioCard } from '../../components/button/button';
-import { BtnPhotoCard } from '../../components/button/button';
-import { BtnVideoCard } from '../../components/button/button';
+// import { BtnAudioCard } from '../../components/button/button';
+// import { BtnPhotoCard } from '../../components/button/button';
+// import { BtnVideoCard } from '../../components/button/button';
 
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
+import React, { useRef } from 'react';
+import { useState, useEffect } from "react"
+import axios from 'axios';
 
-import Navigation from '../../components/navigation/navigation';
-import Header from '../../components/header/header';
-import Input from '../../components/input/input';
-import Button from '../../components/button/button';
-import Cards from '../../components/cards/cards';
-import VideoModal from '../../components/videoModal/videoModal';
-import PhotoModal from '../../components/photoModal/photoModal';
-import AudioModal from '../../components/audioModal/audioModal';
 
 import logoIcon from '../../../public/img/logo.svg'
 import bluebell from '../../../public/img/bluebell.svg'
@@ -48,157 +40,237 @@ import volumeIcon from '../../../public/img/video/volume-icon.svg'
 import fullscreenIcon from '../../../public/img/video/fullscreen-icon.svg'
 import arrowLeft from '../../../public/img/video/arrow-left.svg'
 import photoImg from '../../../public/img/cards/2.jpg'
-import Tasks from '../tasks/tasks';
+
+
+import Input from '../../components/input/input';
+import Button from '../../components/button/button';
+import Header from '../../components/header/header';
+import Cards from '../../components/cards/cards';
+import Controls from '../../components/controls/controls';
+import { AllTasks, Content, ContentData } from '../../../config/config';
+import InputCalendar from '../../components/inputCalendar/inputCalendar';
+// import Tasks from '../tasks/tasks';
 
 
 export const searchInput = [
-  {
-    classInput: "search-block", 
-    label: "Поиск", 
-    placeholder: "Введите название имя исполнителя",
-    img:  `${searchImg}`
-  }
+    {
+        classInput: "search-block", 
+        label: "Поиск", 
+        placeholder: "Введите название имя исполнителя",
+        img:  `${searchImg}`
+    }
 ]
 const calendarInput = [
-  {
-    classInput: "search-block", 
-    label: "Дата публикации", 
-    placeholder: "Укажите дату публикации",
-    img: `${calendarImg}`
-  }
+    {
+        classInput: "search-block", 
+        label: "Дата публикации", 
+        placeholder: "Укажите дату публикации",
+        img: `${calendarImg}`
+    }
 ]
 
 
 const videoBtn = [
-  {
-    classBtn: "btn-video",
-    classReset: "btn-reset",
-    bgBtn: "blue",
-    text: "Видео",
-    img: `${videoIcon}`
-  }
+    {
+        classBtn: "btn-video",
+        classReset: "btn-reset",
+        bgBtn: "blue",
+        text: "Видео",
+        img: `${videoIcon}`
+    }
 ]
 const photoBtn = [
-  {
-    classBtn: "btn-photo",
-    classReset: "btn-reset",
-    bgBtn: "green",
-    text: "Фото",
-    img: `${photoIcon}`
-  }
+    {
+        classBtn: "btn-photo",
+        classReset: "btn-reset",
+        bgBtn: "green",
+        text: "Фото",
+        img: `${photoIcon}`
+    }
 ]
 const audioBtn = [
-  {
-    classBtn: "btn-audio",
-    classReset: "btn-reset",
-    bgBtn: "yellow",
-    text: "Аудио",
-    img: `${audioIcon}`
-  }
+    {
+        classBtn: "btn-audio",
+        classReset: "btn-reset",
+        bgBtn: "yellow",
+        text: "Аудио",
+        img: `${audioIcon}`
+    }
 ]
 
 
 
-const cards = [
-  {classCard: "card", img: `${CardImg1}`, icon: `${blueIcon1}`, color: "blue", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Аркадий Юрченко", public: "03:21 17.08.2021", duration: "8:31", type: "video", typeName: "Видео"},
-  {classCard: "card", img: `${CardImg2}`, icon: `${greenIcon2}`, color: "green", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Оскар Калинин", public: "09:21 14.02.2020", duration: "", type: "photo", typeText: "Фото", typeName: "Фото"},
-  {classCard: "card", img: `${CardImg3}`, icon: `${yellowIcon3}`, color: "yellow", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Валерий Яковлев", public: "21:21 17.02.2021", duration: "2:31", duration: "2:31", type: "audio", typeName: "Аудио"},
-  {classCard: "card", img: `${CardImg4}`, icon: `${greenIcon2}`, color: "green", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "София Лебедевa", public: "05:21 11.02.2021", duration: "", type: "photo", typeText: "Фото", typeName: "Фото"},
-  {classCard: "card", img: `${CardImg5}`, icon: `${blueIcon1}`, color: "blue", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Альбина Ткаченко", public: "09:21 03.07.2021", duration: "2:31", type: "video", typeName: "Видео"},
-  {classCard: "card", img: `${CardImg6}`, icon: `${greenIcon2}`, color: "green", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Данил Плотников", public: "09:21 04.01.2021", duration: "", type: "photo", typeText: "Фото", typeName: "Фото"},
-  {classCard: "card", img: `${CardImg2}`, icon: `${yellowIcon3}`, color: "yellow", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Валерий Яковлев", public: "09:21 28.11.2021", duration: "2:31", type: "audio", typeName: "Аудио"},
-  {classCard: "card", img: `${CardImg1}`, icon: `${greenIcon2}`, color: "green", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Оскар Калинин", public: "09:21 14.02.2020", duration: "", type: "photo", typeText: "Фото", typeName: "Фото"},
-  {classCard: "card", img: `${CardImg5}`, icon: `${blueIcon1}`, color: "blue", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Аркадий Юрченко", public: "06:21 14.02.2020", duration: "2:31", type: "video", typeName: "Видео"}
+const cardsLists = [
+    {classCard: "card", img: `${CardImg1}`, icon: `${blueIcon1}`, color: "blue", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Аркадий Юрченко", public: "03:21 17.08.2021", duration: "8:31", type: "video", typeName: "Видео"},
+    {classCard: "card", img: `${CardImg2}`, icon: `${greenIcon2}`, color: "green", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Оскар Калинин", public: "09:21 14.02.2020", duration: "", type: "photo", typeText: "Фото", typeName: "Фото"},
+    {classCard: "card", img: `${CardImg3}`, icon: `${yellowIcon3}`, color: "yellow", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Валерий Яковлев", public: "21:21 17.02.2021", duration: "2:31", type: "audio", typeName: "Аудио"},
+    {classCard: "card", img: `${CardImg4}`, icon: `${greenIcon2}`, color: "green", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "София Лебедевa", public: "05:21 11.02.2021", duration: "", type: "photo", typeText: "Фото", typeName: "Фото"},
+    {classCard: "card", img: `${CardImg5}`, icon: `${blueIcon1}`, color: "blue", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Альбина Ткаченко", public: "09:21 03.07.2021", duration: "2:31", type: "video", typeName: "Видео"},
+    {classCard: "card", img: `${CardImg6}`, icon: `${greenIcon2}`, color: "green", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Данил Плотников", public: "09:21 04.01.2021", duration: "", type: "photo", typeText: "Фото", typeName: "Фото"},
+    {classCard: "card", img: `${CardImg2}`, icon: `${yellowIcon3}`, color: "yellow", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Валерий Яковлев", public: "09:21 28.11.2021", duration: "2:31", type: "audio", typeName: "Аудио"},
+    {classCard: "card", img: `${CardImg1}`, icon: `${greenIcon2}`, color: "green", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Оскар Калинин", public: "09:21 14.02.2020", duration: "", type: "photo", typeText: "Фото", typeName: "Фото"},
+    {classCard: "card", img: `${CardImg5}`, icon: `${blueIcon1}`, color: "blue", altText: "Видео - скалистый берег", text: "Название повседневная практика показывает", author: "Аркадий Юрченко", public: "06:21 14.02.2020", duration: "2:31", type: "video", typeName: "Видео"}
 ]
 
 
 const videoModal = [
-  {classModal: "player-block", classDop: "controls", nameModal: "Видео", img: `${videoImg}`, video: `${videoPage}`, playIcon: `${playIcon}`, volumeIcon: `${volumeIcon}`, fullscreenIcon: `${fullscreenIcon}`}
-  // {classModal: "audio-block", classDop: "", nameModal: "Аудио"}
+    {classModal: "player-block", classDop: "controls", nameModal: "Видео", img: `${videoImg}`, video: `${videoPage}`, playIcon: `${playIcon}`, volumeIcon: `${volumeIcon}`, fullscreenIcon: `${fullscreenIcon}`}
+    // {classModal: "audio-block", classDop: "", nameModal: "Аудио"}
 ]
 
 
 const photoModal = [
-  {classModal: "photo-block", classDop: "", nameModal: "Фото", img: `${photoImg}`, arrowLeft: `${arrowLeft}`},
-  // {classModal: "audio-block", classDop: "", nameModal: "Аудио"}
+    {classModal: "photo-block", classDop: "", nameModal: "Фото", img: `${photoImg}`, arrowLeft: `${arrowLeft}`},
+    // {classModal: "audio-block", classDop: "", nameModal: "Аудио"}
 ]
 
 // import audioMusic from '../../../public/audio/audio.mp3'
 const audioMusic = require('../../../public/audio/audio.mp3')
 
 const audioModal = [
-  {classModal: "audio-block", classDop: "", nameModal: "Аудио", img: `${photoImg}`, arrowLeft: `${arrowLeft}`, playIcon: `${playIcon}`, audioMusic: `${audioMusic}`, volumeIcon: `${volumeIcon}`},
-  // {classModal: "audio-block", classDop: "", nameModal: "Аудио"}
+    {classModal: "audio-block", classDop: "", nameModal: "Аудио", img: `${photoImg}`, arrowLeft: `${arrowLeft}`, playIcon: `${playIcon}`, audioMusic: `${audioMusic}`, volumeIcon: `${volumeIcon}`},
+    // {classModal: "audio-block", classDop: "", nameModal: "Аудио"}
 ]
 
-const nav = [
-  {className: "header", active : "active", "text" : "Главная", href: "/index"},
-  {className: "header", active : "", "text" : "Задачи", href: "/tasks"},
-  {className: "header", active : "",  "text" : "Пользователи", href: "/users"}
+export const nav = [
+    {className: "header", active : "active", "text" : "Главная", href: "/index"},
+    {className: "header", active : "", "text" : "Задачи", href: "/tasks"},
+    {className: "header", active : "",  "text" : "Пользователи", href: "/users"}
 ]
 
-const headerData = [
-  {className: "header-block", classNotif: "header__notif-count", logoImg: `${logoIcon}`, notifImg: `${bluebell}`, notifCount: "4", nameUser: "Василий Петров", logoPers: `${logoPerson}`}
+export const headerData = [
+    {className: "header-block", classNotif: "header__notif-count", logoImg: `${logoIcon}`, notifImg: `${bluebell}`, notifCount: "4", nameUser: "Василий Петров", logoPers: `${logoPerson}`}
 ]
 
 
-const Index = ( {isLoggedIn, setIsLoggedIn} ) => {
-    return pug`
-      div
-        Header head=${headerData} nav=${nav} isLogged=${isLoggedIn} setLogged=${setIsLoggedIn}
-        .main 
-          .info
-            .container 
-              .search
-                Input items=${searchInput}
-                Input items=${calendarInput}
-                .info__content 
-                  label(className="info__search-title") Тип контента
-                  .info__content-block
-                    Button btn=${videoBtn}
-                    Button btn=${photoBtn}
-                    Button btn=${audioBtn}
-              .card
-                ul(className="card__row")
-                  Cards cards=${cards}
-              .loader
-              VideoModal modals=${videoModal}
-              PhotoModal modals=${photoModal}
+// eslint-disable-next-line react/prop-types
+const Index = ( { cards, setCards } ) => {
+    // const [cards, setCards] = useState([])
+    let [ filteredTasks, setFilteredTasks ] = useState(cards)
+    const [ filteredTasksButton, setfilteredTasksButton ] = useState(cards)    
+    const [filteredPolls, setfilteredPolls] = React.useState(null)
+    const [ isPending, setIsPending ] = useState(true)
+    const [ isLoader, setIsLoader ] = useState(true)
 
-    `
+    const mountedRef = useRef(false)
+
+
+    const handleSearch = (search, calendarSearch) => {
+        let data = [...cards];
+
+        if(search) {
+            data = data.filter(c => c.type.name.toLowerCase().includes(search.toLowerCase()) ||
+                                    c.dateCreated.replace(/[^\d]/g, '').includes(search.replace(/[^\d]/g, '') || 
+                                    c.type.name.toLowerCase().includes(search.toLowerCase())))
+        }
+        setFilteredTasks(data)
+    }
+
+    setTimeout(() => {
+        setIsLoader(false)
+    }, 1000)
+    useEffect(() => {
+        setTimeout(() => {
+            axios.get( ContentData ).then(( response ) => {
+                setCards(response.data)
+                setIsPending(false)
+            })
+            // fetch(ContentData)
+            // .then(res => {
+            //     return res.json()
+            // })
+            // .then((data) => {
+            //     console.log('dataServer', data)
+            //     if(mountedRef.current) {
+            //         setCards(data)
+            //         setIsPending(false)
+            //     }
+            // })
+        }, 1500)
+    }, [])
+
+    useEffect(() => {
+        // setfilteredPolls([...cards].filter(e => e.type.name === "Фото"));
+        setfilteredPolls([...cards]);
+    }, [])
+    useEffect(() => {
+        handleSearch();
+        // eslint-disable-next-line
+      }, [cards]);
+
+    const photo = [...cards].filter(e => e.type.name === 'Фото')
+    const video = [...cards].filter(e => e.type.name === 'Видео')
+    const audio = [...cards].filter(e => e.type.name === 'Аудио')
+
+
+    function showVideoBtn() {
+        setfilteredPolls(video)
+    }
+    function showPhotoBtn() {
+        setfilteredPolls(photo)
+    }
+    function showAudioBtn() {
+        setfilteredPolls(audio)
+    }
+
+
+    console.log('filteredPolls', filteredPolls)
+    return (
+        <div>
+        { isLoader == true ?
+        isLoader && <div className="loader-container"><div className="isLoader">Home - Loading...</div></div>
+            : 
+            <>
+                {/* <Header head={headerData} nav={nav} /> */}
+                <div className="main">
+                    <div className="info">
+                        <div className="container">
+                            <div className="search">
+                                {/* <Controls /> */}
+                                <Input items={searchInput} onSearch={handleSearch} />
+                                <InputCalendar items={calendarInput} onSearch={handleSearch} />
+                                <div className="info__content">
+                                    <label className="info__search-title">Тип контента</label>
+                                    <div className="info__content-block">
+                                        <Button btn={videoBtn} />
+                                        <Button btn={photoBtn} />
+                                        <Button btn={audioBtn} />
+                                        {/* <Button btn={videoBtn} onClick={() => showVideoBtn()} /> */}
+                                        {/* <Button btn={photoBtn} onClick={() => showPhotoBtn()} /> */}
+                                        {/* <Button btn={audioBtn} onClick={() => showAudioBtn()} /> */}
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="card">
+                                {isPending && <div className="loader"></div>}
+                                <ul className="card__row">
+                                    {filteredTasks && <Cards cards={filteredTasks} isPend={isPending} />}
+                                </ul>
+                            </div>
+                            {/* <div className="loader"></div> */}
+                            {/* <VideoModal modals={videoModal} /> */}
+                            {/* <PhotoModal modals={videoModal} /> */}
+                        </div>
+                    </div>
+                </div></>
+        }
+        </div>
+    )
 }
 
 export default Index;
 
-// class Index extends Component {
-//     render() {
-//       return pug`
-//         div
-//           Header head=${headerData} nav=${nav}
-//           .main 
-//             .info
-//               .container 
-//                 .search
-//                   Input items=${searchInput}
-//                   Input items=${calendarInput}
-//                   .info__content 
-//                     label(className="info__search-title") Тип контента
-//                     .info__content-block
-//                       Button btn=${videoBtn}
-//                       Button btn=${photoBtn}
-//                       Button btn=${audioBtn}
-//                 .card
-//                   ul(className="card__row")
-//                     Cards cards=${cards}
-//                 .loader
-//                 VideoModal modals=${videoModal}
-//                 PhotoModal modals=${photoModal}
 
-//       `
-//     }
-//   }
+{/* <div className="card" >
+<ul className="card__row" >
+  <Cards cards={cards}/>
+</ul>
+</div> */}
 
-// export default Index;
+
+{/* <div className="loader"></div>
+<VideoModal modals={videoModal} />
+<PhotoModal modals={videoModal} /> */}
 
 // ReactDOM.render(React.createElement(Index), document.getElementById("root"));
 
