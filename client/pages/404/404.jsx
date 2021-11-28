@@ -4,6 +4,7 @@ import '../../styles/fonts.scss';
 
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import { Link } from 'react-router-dom';
 
 
 import Header from '../../components/header/header';
@@ -52,7 +53,9 @@ const Fault = () => {
                         <h3 className="error__title">Потерялись ?</h3>
                         <p className="error__text"> Страница, которую вы ищите не существует, либо была удалена </p>
                         <div className="error__btn">
-                          <Button btn={noticesBtn}/>
+                          <Link to="/home" >
+                            <Button btn={noticesBtn}/>
+                          </Link>
                         </div>
                       </div>
                     </div>
