@@ -507,7 +507,7 @@
       "id": 1,
       "name": "Семён Щеглов",
       "email": "user1@example.com",
-      "avatar": "./img/profile/pic1.png",
+      "avatar": "../public/img",
       "role": {
         "id": 1,
         "name": "Администратор"
@@ -517,7 +517,7 @@
       "id": 2,
       "name": "София Мельник",
       "email": "user2@example.com",
-      "avatar": "./img/profile/pic2.png",
+      "avatar": "../public/img",
       "role": {
         "id": 2,
         "name": "Менеджер"
@@ -527,7 +527,7 @@
       "id": 3,
       "name": "Инесса Соловьёвa",
       "email": "user3@example.com",
-      "avatar": "./img/profile/pic4.png",
+      "avatar": "../public/img",
       "role": {
         "id": 3,
         "name": "Контент-мейкер"
@@ -537,7 +537,7 @@
       "id": 4,
       "name": "Станислав Щукин",
       "email": "user4@example.com",
-      "avatar": "./img/profile/pic6.png",
+      "avatar": "../public/img",
       "role": {
         "id": 3,
         "name": "Контент-мейкер"
@@ -547,7 +547,7 @@
       "id": 5,
       "name": "Альбина Ткаченко",
       "email": "user6@example.com",
-      "avatar": "./img/profile/pic5.png",
+      "avatar": "../public/img",
       "role": {
         "id": 2,
         "name": "Менеджер"
@@ -557,7 +557,7 @@
       "id": 6,
       "name": "Оскар Калинин",
       "email": "user6@example.com",
-      "avatar": "./img/profile/pic3.png",
+      "avatar": "../public/img",
       "role": {
         "id": 2,
         "name": "Контент-мейкер"
