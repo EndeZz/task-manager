@@ -1,13 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link,
-  Redirect,
-  useHistory,
-  useLocation,
-  NavLink
+  Route
 } from 'react-router-dom';
 
 import Header from "../../components/header/header";
@@ -25,10 +20,19 @@ import data from '../../../server/UserResponseDto.json';
 import { UserInterface } from "../../utils/interface";
 import Task from "../___task/task";
 import userApi from "../../api/user";
+import axios from "axios";
 
 export default function App() {
   const user = data[0]
-  let [userInfo, setUserInfo] = useState(user)
+  let [userInfo, setUserInfo] = useState(user as UserInterface)
+  let [uInfo, setUInfo] = useState([])
+
+  const api = userApi();
+  useEffect(() => {
+    api.getUsers()
+      .then(responce => setUInfo(responce.data))
+  }, [])
+
 
   const pages = [
     { id: 'main', link: '/', component: <Main /> },
@@ -46,7 +50,6 @@ export default function App() {
   function setUser(value: UserInterface) {
     setUserInfo(value)
   }
-
   return (
     <Router>
       <Switch>

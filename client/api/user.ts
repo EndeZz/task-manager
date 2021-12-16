@@ -1,17 +1,11 @@
 import { UserInterface } from "../utils/interface";
+import axios from "axios";
 
 export default function apiUsers() {
   const url = 'http://localhost:3000/users';
   return {
     async getUsers() {
-      try {
-        const response = await fetch(url)
-          .then(response => response.json())
-        return response
-      }
-      catch (error) {
-        console.error(error);
-      }
+      return axios.get(url)
     },
 
     async getUser(props: string) {
