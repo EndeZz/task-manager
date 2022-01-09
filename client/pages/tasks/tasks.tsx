@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Label from '../../components/label/label';
 import Input from '../../components/input/input';
 import Checkbox from '../../components/checkbox/checkbox';
@@ -13,15 +13,26 @@ import format from '../../utils/format';
 
 import './tasks.scss';
 import { useHistory } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchDeleteTask, fetchGetTasks } from '../../store/async/asyncTasks';
+import { TaskFullInterface } from '../../utils/interface';
 
 
 export default function Tasks() {
+
+  const dispatch = useDispatch();
+  const tasks: TaskFullInterface[] = useSelector((state: { tasks: { tasks: [] } }) => state.tasks.tasks)
   let [searchTask, setSearchTask] = useState({
     text: '' as string,
     date: '' as string,
     status: '' as string,
     type: [] as string[]
   })
+
+  useEffect(() => {
+    dispatch(fetchGetTasks())
+    console.log(tasks)
+  }, [])
 
   let [cardTask, setCardTask] = useState(data)
   let [isShowModal, setShowModal] = useState({ modal: false, id: 0 })
@@ -62,9 +73,9 @@ export default function Tasks() {
   }
 
   function deleteTask(answer: boolean) {
-    (answer)
-      ? setCardTask(cardTask.filter(item => item.id !== isShowModal.id))
-      : null
+    if (answer) {
+      dispatch(fetchDeleteTask(isShowModal.id))
+    }
     setShowModal({ modal: false, id: 0 })
   }
 
@@ -97,13 +108,19 @@ export default function Tasks() {
         </div>
         <div className="content-tasks">
           <ol className="content-tasks__list">
-            {cardTask.map((item) => {
-              if (((item.name.toLowerCase()).indexOf(searchTask.text.toLowerCase()) !== -1 || (item.executor.name.toLowerCase()).indexOf(searchTask.text.toLowerCase()) !== -1) && ((format(item.dateExpired).indexOf((searchTask.date).replace(/\//g, ".").replace(/\s/g, "")) !== -1) || searchTask.date === '') && ((searchTask.type).indexOf(item.type.name) !== -1 || searchTask.type.length === 0) && (item.status.name === searchTask.status || searchTask.status === '')) {
-                return <Task task={item} key={item.id} delete={() => showDeleteMessage(item.id)} edit={() => redirect('task-new', item.id)} />
-              }
-              else return null
+            {tasks.filter((item) => {
+              return ((item.name.toLowerCase()).indexOf(searchTask.text.toLowerCase()) !== -1
+                || (item.executor.name.toLowerCase()).indexOf(searchTask.text.toLowerCase()) !== -1)
+                && ((format(item.dateExpired).indexOf((searchTask.date).replace(/\//g, ".").replace(/\s/g, "")) !== -1)
+                  || searchTask.date === '')
+                && ((searchTask.type).indexOf(item.type.name) !== -1
+                  || searchTask.type.length === 0)
+                && (item.status.name === searchTask.status
+                  || searchTask.status === '')
+            }).map(item => {
+              return <Task task={item} key={item.id} delete={() => showDeleteMessage(item.id)} edit={() => redirect('task-new', item.id)} />
+            })
             }
-            )}
           </ol>
         </div>
       </div>

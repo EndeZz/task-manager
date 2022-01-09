@@ -446,7 +446,7 @@
       }
     }
   ],
-  "task": [
+  "tasks": [
     {
       "id": 1,
       "name": "Название повседневная практика показывает",
@@ -609,23 +609,23 @@
         }
       ],
       "author": {
-        "id": 0,
-        "name": "string",
-        "email": "user@example.com",
-        "avatar": "string",
+        "id": 6,
+        "name": "Эльза Калининa",
+        "email": "user6@example.com",
+        "avatar": "/img/users/6.jpg",
         "role": {
-          "id": 0,
+          "id": 1,
           "name": "admin"
         }
       },
       "executor": {
-        "id": 0,
-        "name": "string",
-        "email": "user@example.com",
-        "avatar": "string",
+        "id": 3,
+        "name": "Инесса Соловьёвa",
+        "email": "user3@example.com",
+        "avatar": "/img/users/3.jpg",
         "role": {
-          "id": 0,
-          "name": "admin"
+          "id": 3,
+          "name": "contentMaker"
         }
       },
       "dateCreated": "2021-10-16T23:47:55.468Z",
@@ -653,6 +653,44 @@
         "id": 1,
         "name": "feedback"
       }
+    },
+    {
+      "name": "Название задачи",
+      "type": {
+        "id": 1,
+        "name": "video"
+      },
+      "description": "Описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание ",
+      "files": [],
+      "author": {
+        "id": 1,
+        "name": "Семён Щеглов",
+        "email": "user1@example.com",
+        "avatar": "/img/users/1.jpg",
+        "role": {
+          "id": 1,
+          "name": "admin"
+        }
+      },
+      "executor": {
+        "id": 4,
+        "name": "Станислав Щукин",
+        "email": "user4@example.com",
+        "avatar": "/img/users/4.jpeg",
+        "role": {
+          "id": 3,
+          "name": "contentMaker"
+        }
+      },
+      "dateCreated": "2021-12-20T00:22:54.239Z",
+      "dateExpired": "2022-12-01T20:00:00.000Z",
+      "contents": [],
+      "comments": [],
+      "status": {
+        "id": 1,
+        "name": "inWork"
+      },
+      "id": 4
     }
   ]
 }

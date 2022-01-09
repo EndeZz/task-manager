@@ -42,7 +42,7 @@ export interface TasksInterface {
 }
 
 export interface TaskFullInterface {
-  id: number;
+  id?: number;
   name: string;
   type: Info
   description: string;

@@ -9,7 +9,6 @@ import './calendar.scss';
 registerLocale('ru', ru)
 
 export default function Calendar(props: { placeholder: string, value: string, editValue: Function, selectDay: Function }) {
-
   function editValue(e: { target: HTMLInputElement }) {
     props.editValue(e);
   }

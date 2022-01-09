@@ -3,7 +3,7 @@ import React from 'react';
 import Type from '../type/type';
 import Svg from '../svg/svg';
 import ButtonTask from '../button-task/button-task';
-import { TasksInterface } from '../../utils/interface';
+import { TaskFullInterface } from '../../utils/interface';
 
 import { status } from '../../utils/vars';
 
@@ -12,7 +12,7 @@ import './task.scss';
 import format from '../../utils/format';
 import { Link } from 'react-router-dom';
 
-export default function Task(props: { task: TasksInterface, delete: Function, edit: Function }) {
+export default function Task(props: { task: TaskFullInterface, delete: Function, edit: Function }) {
   const text = (status.filter((item) => item.id === props.task.status.name))[0].text;
   return (
     <li className='content-tasks__item task'>
